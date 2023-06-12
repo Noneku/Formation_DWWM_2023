@@ -1,12 +1,18 @@
 <?php
 
-    $tab = [];
+$Valeurs = array(1,2,5,8);
+$Valeurs2= array();
 
-    for ($i=0; $i < 5; $i++) { 
-        $nbr = readline("Entre un nombre : ");
-        //Add 1 to result of nbr
-        $tab[$i] = $nbr + 1;
-        var_dump($tab);
+
+for ($i=0; $i < count($Valeurs); $i++) { //parcours le tableau 
+
+    $Valeurs2[$i]= $Valeurs[$i]+1;
+
     }
-    
+
+print_r($Valeurs2);
+
+
+
+
 ?>

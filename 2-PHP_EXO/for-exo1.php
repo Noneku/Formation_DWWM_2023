@@ -19,8 +19,12 @@ résultat attendu :
     ...
 
 */
+for ($i=0; $i <100 ; $i++) { 
 
-for ($i=1 ; $i <= 10; $i++) { 
-    echo $i * 2;
+   if($i%2==0){
+    echo "\n";
+   echo $i;
+}
+
 }
 

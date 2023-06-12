@@ -11,21 +11,19 @@ define('TICKET_AUCUN', 0);
 define('TICKET_NORMAL', 1);
 define('TICKET_ZAP', 2);
 
-$billet = TICKET_ZAP;
-$stations = 3;
+$billet = TICKET_AUCUN;
+$stations = 4;
 
 echo "billet: $billet\n";
 echo "stations: $stations\n";
 
 if ($billet == TICKET_NORMAL) {
     echo "en règle\n";
-} else if ($billet == TICKET_ZAP) {
-    if ($stations <= ZAP_MAX) {
+} else if ($billet == TICKET_ZAP &&$stations <= ZAP_MAX ) {
+  
         echo "en règle\n";
-    } else {
-        echo "en fraude\n";
-    }
-} else {
+ 
+}else {
     echo "en fraude\n";
 }
 

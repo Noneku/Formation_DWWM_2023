@@ -1,15 +1,21 @@
 <?php
+/*Ecrire un algo qui creer un triangle 
+exemple
+1
+12
+123
+1234 */
+// Declaration des variables
 
-//Variables
-$nb = readline("Entrer un nombre : ");
-$stock = "";
+$nb= readline("donner un nombre : ");
+$i=1;
+$boucle="";
 
-//Traitement
-for ($i=1; $i <= $nb ; $i++) {
-    //Add turn of loop in stock of type String
-    $stock .= $i;
-    echo $stock."\n";
+//traitement
+for ($i=1; $i <=$nb; $i++) { 
+    
+    $boucle.=$i;//concatenation
+    echo $boucle."\n";
 }
-
 
 ?>

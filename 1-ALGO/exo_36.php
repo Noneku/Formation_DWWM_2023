@@ -1,21 +1,22 @@
 <?php
 
-$tab1 = [2,5,8,4];
-$tab2 = [6,7];
-$result = [];
-$sum = 0;
+$Valeurs = array(1,2,5,8);
+$Valeurs2= array(2,3);
+$somme=0;
 
-for ($i=0; $i < count($tab2) ; $i++) { 
-    
-    for ($j=0; $j < count($tab1); $j++) { 
+for ($i=0; $i < count($Valeurs2); $i++) { //parcours le tableau $Valeurs2
 
-        $result[$j] = $tab2[$i] * $tab1[$j];
+    for ($j=0; $j < count($Valeurs); $j++) { //parcours le tableau $Valeurs
 
-        $sum += $result[$j];
+        $somme+=$Valeurs2[$i]*$Valeurs[$j]; //effectue le calcul.
+       
+
     }
-      
-}
 
-echo $sum
+ }
+echo $somme;
+
+
+
 
 ?>

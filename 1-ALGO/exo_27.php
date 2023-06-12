@@ -1,19 +1,23 @@
 <?php
+/*Ecrire un algo qui permet donner le resultatd'un etudiant a un module
+moyenne de oral et ecrit
+-module oral coef1
+-module ecrit coef2 */
+// Declaration des variables
 
-//Variables
+$oral= readline("donner la note de l'oral : ");
+$ecrit=readline("donner la note de l'écrit: ");
+$moyenne=0;
+//calcul de la moyenne 
+$moyenne=((2*$ecrit)+$oral)/3;
 
-$module = readline("Entrer un module : ");
-$coef1 = readline("Entrer une note (Coef : 1) : "); //Note Oral
-$coef2 = readline("Entrer une note (Coef : 2) : "); //Note écrit
+if ($moyenne<10) {
 
-//Traitement
-$moyenne = ((2*$coef1)+$coef2) / 3;
+    echo "vous êtes recalés";
 
-//Si la moyenne est >= à 10 alors ADMIS
-if($moyenne >= 10){
-    echo "Vous avez réussis, votre moyenne est de : $moyenne, du module : $module";
 }else {
-    echo "Echec !";
-}
 
+    echo"Félicitation vous êtes diplomés avec une moyenne de ".$moyenne ;
+
+}
 ?>

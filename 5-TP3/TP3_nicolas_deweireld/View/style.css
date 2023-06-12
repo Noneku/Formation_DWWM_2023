@@ -1,0 +1,72 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;1,100;1,200&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: #F5EFE7;
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 150px;
+}
+
+
+input{
+    border-radius: 5px;
+    width: 200px;
+    height: 50px;
+    font-size:medium;
+    color: #F5EFE7;
+    background-color: rgb(33, 53, 85);
+} 
+    /* gere l'affichage du tableau */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    grid-template-rows: repeat(2,auto);
+    column-gap: 20px;
+    row-gap: 100px;
+    padding: 200px;
+}
+/* gere les elements du tableau */
+.grid-item {
+    background-image: url("./img/bureau.jpg");
+    width:500px;
+    height: 200px;
+    background-size: 550px;
+    background-repeat: 0;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+/*affichage des boutons*/
+.boutons{
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    padding-right: 50px;
+    margin-left: 700px;
+    margin-right: 700px;
+    margin-bottom:-100px;
+}
+/*boutons de modification de salle*/
+#modif{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+/*bouton de création du Json*/
+/* #json{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}  */

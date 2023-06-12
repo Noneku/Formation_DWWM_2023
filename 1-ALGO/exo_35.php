@@ -1,13 +1,14 @@
 <?php
-//Array Declarations
-$tab1 = [1,2,3,4,5];
-$tab2 = [1,2,3,4,5];
-$tabResult = [];
+/* ecrire un algo qui permet de calculer la somme des valeurs d'un tableau
+ */
+$Valeurs = array(1,2,5,8,9);
+$Valeurs2= array(2,3,4,5,8);
+$somme=array();
+for ($i=0; $i < count($Valeurs); $i++) { 
+    
+   $somme[$i]=$Valeurs[$i]+$Valeurs2[$i];
 
-for ($i=0; $i < count($tab1); $i++) { 
-    //Add  totals of content $tab1 and $tab2 in $tabResult -> index 0
-    $tabResult[$i] = $tab1[$i] + $tab2[$i];
 }
+print_r($somme);
 
-var_dump($tabResult);
 ?>
