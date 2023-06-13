@@ -3,31 +3,28 @@
 class Cercle
 {
     private Point $centre;
-    private $rayon;
-    private $x;
-    private $y;
+    private int $rayon;
 
-    public function __construct(int $x, int $y, int $rayon)
+    public function __construct(float $x, float $y, int $rayon)
     {
-        $this->x = $x;
-        $this->y = $y;
+        $this->centre = new Point($x,$y);
         $this->rayon = $rayon;
     }
 
     public function getPerimetre(): float
     {
-        return ($this->rayon * 2) * pi();
+        return round(($this->rayon * 2) * pi(),2);
     }
 
     public function getSurface(): float
     {
-        return pi() * pow($this->rayon, 2);
+        return round(pi() * pow($this->rayon, 2),2);
     }
 
-    public function appartient(Point $point): bool
+    public function appartient(): bool
     {
-        $distance = pow(($point->getAbcisse() - $this->x), 2) + pow(($point->getOrdonnee() - $this->y), 2);
-        $distance = round(sqrt($distance), 0);
+        $distance = pow(($this->centre->getAbcisse() - $this->centre->getAbcisse()), 2) + pow(($this->centre->getOrdonnee() - $this->centre->getOrdonnee()), 2);
+        $distance = sqrt($distance);
         if ($distance <= pow($this->rayon, 2)) {
             return true;
         } else {
@@ -37,6 +34,6 @@ class Cercle
 
     public function afficher(): void
     {
-        echo "CERCLE(" . $this->x . "," . $this->y . "," . $this->rayon . ")";
+        echo "CERCLE(" . $this->centre->getAbcisse() . "," . $this->centre->getOrdonnee() . "," . $this->rayon . ")";
     }
 }

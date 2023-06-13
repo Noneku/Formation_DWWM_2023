@@ -5,7 +5,7 @@ class Client
     protected  string $CIN;
     protected  string $Nom;
     protected  string $Prenom;
-    protected  int $Tel;
+    protected  string $Tel;
 
     public function __construct(string $CIN, string $Nom, string $Prenom, string $Tel)
     {

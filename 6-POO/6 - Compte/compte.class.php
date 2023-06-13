@@ -5,16 +5,18 @@
 class Compte extends Client
 {
     private Client $client;
-    private $solde;
-    private static int $code = 0;
+    private float $solde;
+    private static int $nbCpt = 0;
+    private int $code;
 
     // public function __construct(float $solde, Client $client)
-    public function __construct($CIN,  $Nom,  $Prenom,  $Tel, $solde)
+    public function __construct(string $CIN, string $Nom, string $Prenom, string $Tel, float $solde)
     {
         $this->client = new Client($CIN,  $Nom,  $Prenom,  $Tel);
         $this->solde = $solde;
         // $this->client = $client;
-        self::$code++;
+        self::$nbCpt++;
+        $this->code = self::$nbCpt;
     }
 
     public function crediter($somme)
@@ -35,7 +37,7 @@ class Compte extends Client
     public function debiter($somme)
     {
         if ($this->solde >= $somme) {
-            $this->solde = $this->solde - $somme;
+            $this->solde -= $somme;
         } else {
             return "Solde insuffisant";
         }
@@ -43,7 +45,7 @@ class Compte extends Client
 
     public function debiterCpt($somme, Compte $compte)
     {
-        if ($this->solde <= $somme) {
+        if ($this->solde >= $somme) {
             $this->solde -= $somme;
             $compte->solde += $somme;
         } else {
@@ -63,7 +65,7 @@ class Compte extends Client
 
     public function nbCompteCree()
     {
-        echo "Nombre de compte crée: " . self::$code;
+        echo "Nombre de compte crée: " . $this->code;
     }
 
     /**
@@ -71,7 +73,7 @@ class Compte extends Client
      */
     public function getCode()
     {
-        return self::$code;
+        return $this->code;;
     }
 
     /**
