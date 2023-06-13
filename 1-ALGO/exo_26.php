@@ -1,19 +1,18 @@
 <?php
 
-$A = readline("Entrer un nombre A : ");
-$B = readline("Entrer un nombre B : ");
-$C = readline("Entrer un nombre C : ");
+$a = readline("saisir un nombre");
+$b = readline("saisir un nombre");
+$c = readline("saisir un nombre");
+$delta =  ($b*$b) - (4*$a*$c);
 
-// Delta = B² - 4ac
-$delta = $B * $B -4 * $A * $C; //Reponse = Discriminant
-echo $delta."\n";
-
-if($delta > 0 || $delta = 0){
-
-    $result = -$B + sqrt($delta) / 2 * $A;
-    echo $result;
-}else{
-    echo "Equation Impossible";
-    
+if ($delta < 0) {
+    echo "pas de solutions possible";
+} else if ($delta == 0) {
+    echo "x = ".-$b/(2*$a);
+} else {
+    echo "x1 =".(-$b-sqrt($delta)) / (2*$a);
+    echo "\n";
+    echo "x2 =".(-$b+sqrt($delta)) / (2*$a);
 }
+
 ?>

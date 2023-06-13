@@ -1,15 +1,11 @@
 <?php
 
-//Variables
-$nb = readline("Entrer un nombre : ");
-$stock = "";
+$num = intval(readline("Entrez le nombre de lignes du triangle : "));
 
-//Traitement
-for ($i=1; $i <= $nb ; $i++) {
-    //Add turn of loop in stock of type String
-    $stock .= $i;
-    echo $stock."\n";
+for ($i = 1; $i <= $num; $i++) {
+    
+    for ($j = 1; $j <= $i; $j++) {
+        echo $j;
+    }
+    echo "\n";
 }
-
-
-?>

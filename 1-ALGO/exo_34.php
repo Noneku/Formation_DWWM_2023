@@ -1,10 +1,10 @@
 <?php
 
-$tab = [1,2,3,4,5];
-$result = 0;
-for ($i=0; $i < count($tab); $i++) { 
-    $result += $tab[$i];
+$tab = array(1,2,3,4);
+$resultat = 0;
+for ($i = 0; $i < count($tab); $i++) {
+    $resultat += $tab[$i];
 }
+echo $resultat;
 
-echo "La somme du tableau est de : $result";
 ?>

@@ -20,7 +20,7 @@ résultat attendu :
 
 */
 
-for ($i=1 ; $i <= 10; $i++) { 
-    echo $i * 2;
+for ($i = 0; $i <= 100; $i++) {
+    echo $i;
+    echo "\n";
 }
-

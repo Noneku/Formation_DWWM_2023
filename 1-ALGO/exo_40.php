@@ -1,33 +1,27 @@
 <?php
+$max = 0;
+$tab = array(
+    array(1, 2, 3, 4, 5, 6, 7, 8),
+    array(9, 10, 11, 12, 13, 14, 15, 16),
+    array(17, 18, 19, 20, 21, 22, 23, 24),
+    array(25, 26, 27, 28, 29, 30, 31, 32),
+    array(33, 34, 35, 36, 37, 38, 39, 40),
+    array(41, 42, 43, 44, 45, 46, 47, 48),
+    array(49, 50, 51, 52, 53, 54, 55, 56),
+    array(57, 58, 59, 60, 61, 62, 63, 64),
+    array(65, 66, 67, 68, 69, 70, 71, 72),
+    array(73, 74, 75, 76, 77, 78, 79, 80),
+    array(81, 82, 83, 84, 85, 86, 87, 88),
+    array(89, 90, 91, 92, 93, 94, 95, 96)
+);
 
-//Déclaration de variable
-    $better = [];
-    $T = [
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8]
-    ];
-//loop on size number of element in $T
- for ($i=0; $i < count($T); $i++) {
-        //Browse the elements in 8 array
-        for ($j=0; $j < count($T[$i]) ; $j++) { 
+for ($i = 0; $i < count($tab); $i++) {
 
-            //Compare element[0] with next element
-            if($T[0][$j] >= $T[0][$j + 1]){
-                //If the first element superior, stock this in $better
-                $better[$i] = $T[0][$j];
-            
-            }
+    for ($j = 0; $j < count($tab[$i]); $j++) {
+
+        if ($tab[$i][$j] > $max) {
+            $max = $tab[$i][$j];
         }
- }
-var_dump($better);
-?>
+    }
+}
+echo $max;

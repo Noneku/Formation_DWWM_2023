@@ -1,13 +1,19 @@
 <?php
-//2 Variables sexe et $age
-$sexe = readline("Entrer votre sexe : ");
-$age = readline("Entrer votre âge : ");
 
-if($sexe == "H" && $age >= 20){
-    echo "Vous êtes imposables";
-}elseif (($sexe == "F") && ($age >= 18 && $age <= 35)) {
-    echo "Vous êtes imposables";
-}else{
-    echo "Vous n'êtes pas imposables";
+$sexe = readline("entrer votre sexe");
+$age = readline("entrer votre age");
+$impot;
+
+if ($sexe == "H" && $age > 20) {
+    $impot = true;
+} else if ($sexe == "F" && $age >= 18 && $age <= 35) {
+    $impot = true;
+} else {
+    $impot = false;
 }
-?>
+
+if ($impot) {
+    echo "Imposable";
+} else {
+    echo "Non imposable";
+}

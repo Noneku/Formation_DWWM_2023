@@ -6,7 +6,7 @@ require 'lib-user-input.php';
 $loop = true;
 
 while ($loop) {
-    $age = readline('quel âge avez-vous ?');
+    $age = user_input_get_answer('quel âge avez-vous ?');
 
     if (is_numeric($age)) {
         echo "vous avez $age ans";

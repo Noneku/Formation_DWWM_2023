@@ -1,7 +1,14 @@
 <?php
-$noms = ["test", "he", "ijr"];
+$a = readline("entrer un premier nom: ");
+$b = readline("entrer un second nom: ");
+$c = readline("entrer un troisième nom: ");
 
-for ($i=0; $i < count($noms); $i++) { 
-    echo $noms[$i]."\n";
+if ($a < $b && $b < $c) {
+    echo "Les noms sont rangés dans l'ordre alphabétique.";
+} 
+
+else {
+    echo "Les noms ne sont pas rangés dans l'ordre alphabétiqu";
 }
+
 ?>

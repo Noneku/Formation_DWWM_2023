@@ -1,26 +1,13 @@
 <?php
 
-//Variables
-$check;
-$nbrUser1 = readline("Entrer un nombre\n");
-$nbrUser2 = readline("Entrer un nombre\n");
+$a = readline("entrer un premier nombre : ");
+$b = readline("entrer un second nombre : ");
 
-//Algo
-if($nbrUser1 >= 1){
-    //Display
-    $result1 = "Votre nombre $nbrUser1 est positif\n";
-}
-else {
-    //Display
-     $result1 = "Votre nombre $nbrUser1 est negatif\n";
-}
-if($nbrUser2 >= 1){
-    //Display
-    $result2 = "Votre nombre $nbrUser2 est positif\n";
-}
-else {
-    $result2 = "Votre nombre $nbrUser2 est negatif\n";
+if ($a > 0 && $b > 0) {
+    echo $a." et " . $b . " sont positif";
+} else {
+    echo "les produits sont negatif";
 }
 
-print("Nombre numéro 1 : ".$result1."Nombre numéro 2 : ".$result2);
+
 ?>

@@ -1,8 +1,8 @@
 <?php
-$A = readline("Entrer un nombre : ");
-$B = readline("Entrer un nombre : ");
 
-$result = ($A + $B) /2;
+$a = readline("Entrer un nombre");
+$b = readline("Entrer un nombre");
+$c = ($a+$b)/2;
 
-echo "La moyenne est de $result";
+echo $c;
 ?>

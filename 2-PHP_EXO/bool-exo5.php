@@ -17,28 +17,25 @@ echo "demande: $demande\n";
 echo "places_normales: $places_normales\n";
 echo "places_carte_fidelite: $places_carte_fidelite\n";
 
-switch ($carte_fidelite) {
-    case $demande <= $places_carte_fidelite :
-        echo "la réservation est enregistrée\n";
-        break;
-    case $demande <= $places_normales :
-        echo "la réservation est enregistrée\n";
-         break;
-    case !$carte_fidelite && $demande <= $places_normales :
-             echo "la réservation est enregistrée\n";
-         break;
-    
-    default:
-        echo "il n'y a pas assez de places\n";
-        break;
+if (($carte_fidelite && $demande <= $places_carte_fidelite)
+    || ($carte_fidelite && $demande <= $places_normales)
+    || (!$carte_fidelite && $demande <= $places_normales)) {
+    echo "la réservation est enregistrée\n";
+} else {
+    echo "il n'y a pas assez de places\n";
 }
 
+if ($carte_fidelite || !$carte_fidelite) {
+    
+    switch($demande) {
+        case $places_carte_fidelite:
+            echo "la réservation est enregistrée\n";
+            break;
 
-// if (($carte_fidelite && $demande <= $places_carte_fidelite)
-//     || ($carte_fidelite && $demande <= $places_normales)
-//     || (!$carte_fidelite && $demande <= $places_normales)) {
-//     echo "la réservation est enregistrée\n";
-// } else {
-//     echo "il n'y a pas assez de places\n";
-// }
-
+        case $places_normales:
+            echo "la réservation est enregistrée\n";
+            break;
+    }
+} else {
+    echo "il n'y a pas assez de places\n";
+}
