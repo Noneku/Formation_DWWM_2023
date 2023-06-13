@@ -3,6 +3,8 @@
         private float $solde;
         private static int $code = 0;
 
+        private array $history = [];
+
         private Client $proprietaire;
 
         public function __construct($solde, $proprietaire){
@@ -18,6 +20,8 @@
             $this->setSolde( $solde += $somme);
             
             echo "Votre compte à été créditer de  + $somme";
+
+            array_push($this->history, "Votre compte a été créditer de $somme €");
         }
 
         public function crediterCPT(float $somme, Compte $compte) : void{
@@ -38,6 +42,8 @@
                     Avant -> $targetOldSold € \n
                     Apres -> $targetSold €
                     Pour un transfère de $somme € \n";
+
+                    array_push($this->history, "Virement de $somme € vers le compte N°" . $compte->getCode());
         }
 
         public function debiter(float $somme) : void {
@@ -46,7 +52,8 @@
              //Add to the current sum, the new $somme
              $this->setSolde( $solde -= $somme);
              
-             echo "Votre compte à été débiter de  - $somme";
+             echo "Votre compte à été débiter de  - $somme €";
+             array_push($this->history, "Débit d'un montant de $somme €");
         }
 
         public function debiterCPT(float $somme, Compte $compte) : void {
@@ -68,6 +75,9 @@
                     Avant -> $targetOldSold € \n
                     Apres -> $targetSold €
                     Pour un transfère de $somme € \n";
+
+                    array_push($this->history, "Virement de $somme € du compte" . $compte->getCode() . "vers votre compte courant");
+
         }
         
         public function affichage() : void{
@@ -78,7 +88,15 @@
             Prenom : " . $this->proprietaire->getPrenom() . "\n
             CIN : " . $this->proprietaire->getCin() . "\n
             Tel : " . $this->proprietaire->getTel() . "\n
-            Solde : $this->solde";
+            Solde : $this->solde \n\n
+            HISTORIQUE : \n";
+            $this->displayHistoryAccount();
+        }
+
+        public function displayHistoryAccount() : void{
+            foreach ($this->history as $key => $value) {
+                print $value . "\n\n";
+            }
         }
 
         /**
