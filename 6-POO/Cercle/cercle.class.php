@@ -28,10 +28,9 @@ class Cercle {
         //Si le tous est égal au rayon du cercle ALORS ce point appartient au cercle
 
         $distanceCentrePoint = pow(($point->getAbcisse() - $this->x),2) + pow(($point->getOrdonnee() - $this->y),2);
-        var_dump("distanceCentrePoint = $distanceCentrePoint");
+        
         //Racine carre de la distance des deux point
         $checkDistance = round(sqrt($distanceCentrePoint), 0);
-        var_dump("Check Rayon = $checkDistance");
 
         if($checkDistance <= $this->rayon){
             return "Ce point appartient au Cercle";
