@@ -4,12 +4,13 @@ class Point
     private $abcisse;
     private $ordonnee;
 
-    public function __construct(float $x, float $y){
-        $this->abcisse = $x;
-        $this->ordonnee = $y;
+    public function __construct(float $abscisse, float $ordonnee){
+        $this->abcisse = $abscisse;
+        $this->ordonnee = $ordonnee;
     }
 
-    public function norme(): String{
+    public function norme() : String {
+        
         $distance = sqrt(($this->abcisse*$this->abcisse)+($this->ordonnee*$this->ordonnee));
         return "la norme du point (".$this->abcisse.","."$this->ordonnee".") est : "."$distance";
         
@@ -58,3 +59,4 @@ class Point
 
 
 }
+?>
