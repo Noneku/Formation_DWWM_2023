@@ -19,7 +19,7 @@ class Article
         $this->PrixHT = $PrixHT;
         self::$nbArticle++;
     }
-     
+
 
     //Methode Calcul du PrixTTc
     public function CalculerPrixTTC(): float
@@ -39,7 +39,7 @@ class Article
         echo "Le Prix TTC : ".$this->CalculerPrixTTC()."\n";
 
 
-        
+    
     }
 
 

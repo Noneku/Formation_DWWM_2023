@@ -9,10 +9,9 @@ class Point
         $this->ordonnee = $y;
     }
 
-    public function norme(): String{
+    public function norme(): float{
         $distance = sqrt(($this->abcisse*$this->abcisse)+($this->ordonnee*$this->ordonnee));
-        return "la norme du point (".$this->abcisse.","."$this->ordonnee".") est : "."$distance";
-        
+        return $distance;
     }
 
     /**
