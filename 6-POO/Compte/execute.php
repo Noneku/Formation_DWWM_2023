@@ -2,7 +2,6 @@
 include("./client.class.php");
 include("./compte.class.php");
 
-
 $client1 = new Client("512163AFGH", "Gacem", "Nassim", "062345871");
 $compte1 = new Compte(1000, $client1);
 

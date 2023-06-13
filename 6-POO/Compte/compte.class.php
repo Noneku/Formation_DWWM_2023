@@ -71,14 +71,13 @@
         }
         
         public function affichage() : void{
-            require("./client.class.php");
 
             print "
-            Compte numéro : $this->code\n
+            Compte numéro : " . self::$code . "\n
             Nom : " . $this->proprietaire->getNom() ."\n
             Prenom : " . $this->proprietaire->getPrenom() . "\n
-            CIN : " . $owner->getCin() . "\n
-            Tel : " . $owner->getTel() . "\n
+            CIN : " . $this->proprietaire->getCin() . "\n
+            Tel : " . $this->proprietaire->getTel() . "\n
             Solde : $this->solde";
         }
 
