@@ -1,26 +1,39 @@
 <?php
-    //Varaibles
-    $noteArray = [];
-    $betterNote = [];
-    $sum = 0;
-    $moyenne = 0;
-    //Traitement
-    for ($i=0; $i < 5; $i++) { 
-        //Ask 5 times, to enter value by User
-        $note = readline("Entrer les notes : ");
-        //Insert note of user in $noteArray
-        $noteArray[$i] = $note;
-        //Calcul moyen first time take a sum of values
-        $sum += $noteArray[$i];
-        //Get moyen
-        $moyenne = $sum / count($noteArray);
-        //Check if note in noteArray are better, if True insert in $betterNote Array
-        if($noteArray[$i] > $moyenne){
-            $betterNote[$i] = $noteArray[$i];
-        }
-    }
 
-    echo "La moyenne de la classe est de : ".$moyenne."\n";
-    echo "Les meilleurs notes sont : "."\n";
-    print_r($betterNote);
+/*Toujours et encore sur le même principe, ecrivez un algo permettant, à l'utilisateur de saisir les notes d'une classe.
+ Le programme, une fois la saisie,
+
+  renvoie le nombre de ces notes supérieures à la moyenne de la classe */ 
+
+//Declaration
+  $valeur = readline("Combien de valeur souhaitez-vous ? : ");
+  $moyenne = null;
+  $tab = array();
+  $nbrNote = 1;
+  $nbrNoteSup = 0;
+  $total = 0;
+
+//Instructions
+
+  for ($i=0; $i < $valeur; $i++) { 
+    $tab[$i] = readline("Choisir votre nombre : ");
+  }
+
+  for ($i=0; $i < count($tab); $i++) { 
+    $total += $tab[$i];
+    $moyenne = $total / $nbrNote ;
+    $nbrNote++;
+  }
+
+  for ($i=0; $i < count($tab); $i++) { 
+    if($tab[$i] > $moyenne){
+        $nbrNoteSup++;
+        
+        // print_r($tab[$i]);
+        // echo"\n";
+       ;
+    }
+  }echo"Nombre de note supérieur à la moyenne : $nbrNoteSup ";
+  
+  
 ?>

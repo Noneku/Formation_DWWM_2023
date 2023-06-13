@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "Gilmer_Heavy";
+  src: url(./items/Font/Gilmer_Heavy.ttf);
+}
+
+@font-face {
+  font-family: "Gilmer_light";
+  src: url(./items/Font/Gilmer_Light.otf);
+}
+
+@font-face {
+  font-family: "Caslon";
+  src: url(./items/Font/F37Caslon-RegularDisplay.otf);
+}
+
+
+body {
+  background: #8fc1a7;
+  background-attachment: fixed;
+  font-family: "Caslon";
+  font-size: 1.2em;
+}
+
+header {
+  font-family: "Gilmer_Heavy";
+  width: auto;
+  background-color: rgba(255, 255, 255, 0.603);
+  /* height: 10em; */
+  font-size: 3em;
+  color: #78bd8f;
+  text-align: center;
+  text-shadow: 0  10px  20px black;
+  display: flex;
+  flex-direction: column;
+justify-content: space-around;
+}
+
+#contenu_header{
+  height: 100%;
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+align-items: center;
+
+}
+header h1{
+  text-shadow: 0  10px  20px black;
+}
+
+
+
+header img{
+    position: absolute;
+    top : 0px;
+    left: 0px;
+    transition: ease-in 0.2s;
+}
+
+
+header img:hover{
+transform: scale(120%);
+transform :translateX(-10%);
+}
+
+video#tambour{
+  border-radius: 50%;
+  /* width: 50%;
+  height: 50%; */
+  transform: scale(70%);
+}
+
+h2{
+    font-family: "Gilmer_Heavy";
+    text-align: center;
+    background-color: aliceblue;
+    width: 100%;
+    border-radius: 10PX;
+}
+
+section{
+filter: blur(1.5rem);
+transition: ease-in-out 1.5s;
+}
+section:hover{
+filter: blur(0);
+}
+
+.groupe {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+  margin: 5%;
+  border-radius: 47px;
+  background: #8fc1a7;
+  box-shadow: 20px -20px 60px #7aa48e, -20px 20px 60px #a4dec0;
+  height: 10em;
+  transition: ease-in-out 0.8s;
+  padding: 2%;
+}
+
+.groupe:hover {
+  transform: scale(150%);
+  box-shadow: 20px -20px 60px #111614, -20px 20px 60px #a4dec0;
+}
+
+.ligne1 {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2%;
+}
+
+#plan {
+  display: flex;
+  justify-content: center;
+  width: AUTO;
+}
+
+#plan h1 {
+  font-family: "Gilmer_Heavy";
+  font-size: 4em;
+  padding: 2%;
+  background-color: azure;
+  width: 100%;
+  text-align: center;
+  border-radius: 30px;
+}
+
+.ligne2 {
+  display: flex;
+  justify-content: center;
+}

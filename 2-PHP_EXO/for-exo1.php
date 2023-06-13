@@ -20,7 +20,12 @@ résultat attendu :
 
 */
 
-for ($i=1 ; $i <= 10; $i++) { 
-    echo $i * 2;
+//Instruction
+for ($i = 0 ; $i<100 ; $i++){
+    //si modulo de $i = 0 alors il est pair 
+    if($i % 2 == 0){
+        //afficher $i
+        echo $i."\n";
+    }
 }
 

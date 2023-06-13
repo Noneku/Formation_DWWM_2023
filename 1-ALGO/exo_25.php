@@ -1,8 +1,22 @@
 <?php
-$A = readline("Entrer un nombre : ");
-$B = readline("Entrer un nombre : ");
 
-$result = ($A + $B) /2;
+/*ecrire un algorithme saisissant 2 variables entières qui calcule et affiche leur moyenne*/
 
-echo "La moyenne est de $result";
+//Declarations
+$nb1 = readline("Saisir nombre 1 : ");
+$nb2 = readline("Saisir nombre 2 : ");
+$moyenne = ($nb1 + $nb2)/2;
+
+//Affichage
+
+echo "La moyenne des deux nombre est $moyenne.";
+
+
+
+
+
+
+
+
+
 ?>

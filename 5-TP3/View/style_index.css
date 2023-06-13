@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "Gilmer_Heavy";
+  src: url(./items/Font/Gilmer_Heavy.ttf);
+}
+
+@font-face {
+  font-family: "Gilmer_light";
+  src: url(./items/Font/Gilmer_Light.otf);
+}
+
+@font-face {
+  font-family: "Caslon";
+  src: url(./items/Font/F37Caslon-RegularDisplay.otf);
+}
+
+
+
+header{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0px 50px 100px #438e6b;
+}
+
+header h1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-shadow: 0  10px  20px black;
+}
+
+body {
+  background: #000000;
+  background-attachment: fixed;
+  font-family: "Caslon";
+  font-size: 1.2em;
+  color: aliceblue;
+  height: auto;
+}
+
+body h1{
+  font-family: "Gilmer_Heavy";
+  text-align: center;
+  font-size: 5EM;
+  margin-top: 5%;
+}
+
+
+
+h2{
+    font-family: "Gilmer_Heavy";
+    text-align: center;
+    background-color: aliceblue;
+    width: 80%;
+    border-radius: 10PX;
+    color: black;
+    padding: 1%;
+}
+
+
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 5%;
+}
+
+#melanger{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #a4dec0;
+padding: 1%;
+border-radius: 2em ;
+transition: all 0.8s ease-in-out ;
+height: 300PX;
+margin-bottom: 5%;
+width: 30%;
+}
+
+#melanger:hover{
+  box-shadow: 0px 10px 30px #ffffff;
+  transform: scale(120%);
+}
+
+/* #afficher{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #a4dec0;
+  padding: 1%;
+  border-radius: 2em ;
+  transition: all 0.8s ease-in-out ;
+  height: 300PX;
+  margin-bottom: 2%;
+} */
+
+/* #afficher:hover{
+  box-shadow: 0px 10px 30px #ffffff;
+  transform: scale(120%);
+} */
+
+input[type = "submit"]{
+  border: none;
+  font-size: 1em;
+  margin-top: 5%;
+  border-radius: 10px;
+  padding : 5%;
+  font-size: 1.5em;
+  cursor: pointer;
+  transition: ease-in-out 0.5s;
+}
+
+
+
+input[type = "submit"]:hover{
+  background-color: #000000;
+  color: #a4dec0;
+}
+
+
+footer{
+  background-color: #a4dec0;
+  height: 3EM;
+}
+
+
+
+

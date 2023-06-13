@@ -1,19 +1,22 @@
 <?php
 
-//Variables
+/* Ecrire un algorithme qui permet donner le résultat d'un étudiant à un module 
+sachant que ce module est sanctionné par 
+une note d'oral de coefficient 1 et 
+une note d'écrit de coefficient 2. 
+La moyenne obtenue doit être supérieure ou égale à 10 pour valider le module. */
 
-$module = readline("Entrer un module : ");
-$coef1 = readline("Entrer une note (Coef : 1) : "); //Note Oral
-$coef2 = readline("Entrer une note (Coef : 2) : "); //Note écrit
+$noteEcrit = readline("Saisir la note ecrit de l'éléve : ");
+$noteOral = readline("Saisir la note oral de l'éléve : ");
 
-//Traitement
-$moyenne = ((2*$coef1)+$coef2) / 3;
+$moyenne = (($noteEcrit*1) + ($noteOral*2))/3;
 
-//Si la moyenne est >= à 10 alors ADMIS
 if($moyenne >= 10){
-    echo "Vous avez réussis, votre moyenne est de : $moyenne, du module : $module";
-}else {
-    echo "Echec !";
+    echo "L'éléve a validé son module avec $moyenne de moyenne.";
+}else{
+    echo "L'éléve n'a pas validé son module avec $moyenne de moyenne.";
 }
+
+
 
 ?>

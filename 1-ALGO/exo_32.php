@@ -1,14 +1,12 @@
 <?php
+/*Ecrire un algo qui déclare un tableau de 9 notes, dont on fait ensuite saisir les valeurs par l'utlisateur*/ 
 
-//Variables
-$tab = [];
+$tab = array("","","","","","","","","");
 
-for ($i=0; $i < 9; $i++) { 
-    //Déclarer $nbr dans une boucle permet de le demander 9 fois
-    $nbr = readline("Entrer un nombre : ");
-    //Insert the value of $nbr in Array $tab
-    $tab[$i] = $nbr;
+for ($i = 0 ; $i<count($tab); $i++){
+    $nb = readline("Saisir un nombre : ");
+    $tab[$i] = $nb;
 }
+print_r($tab);
 
-var_dump($tab)
-?> ;
+?>

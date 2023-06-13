@@ -12,24 +12,16 @@ define('TICKET_NORMAL', 1);
 define('TICKET_ZAP', 2);
 
 $billet = TICKET_ZAP;
-$stations = 4;
+$stations = 3;
 
 echo "billet: $billet\n";
 echo "stations: $stations\n";
 
-if ($billet == TICKET_NORMAL || $billet == TICKET_ZAP && $stations <= ZAP_MAX) {
+//Instructions enlever l'ancien else if, pour grouper les éléments qui donnent "en règle" avec un OU
+
+if ($billet == TICKET_NORMAL ||  ($billet == TICKET_ZAP && $stations <= ZAP_MAX) ) {
     echo "en règle\n";
 } else {
     echo "en fraude\n";
 }
-
-/*if ($billet == TICKET_NORMAL) {
-    echo "en règle\n";
-} else if ($billet == TICKET_ZAP && $stations <= ZAP_MAX) {
-    echo "en règle\n";
-} else {
-    echo "en fraude\n";
-}
-*/
-
 
