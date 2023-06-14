@@ -3,14 +3,10 @@
 include "client.class.php";
 include "compte.class.php";
 
-$client = new Client("123456789", "Dupont", "Jean", "0123456789");
-$client->afficher();
 
-$client2 = new Client("625456429", "Muzan", "Kibutsuji", "0229556689");
-$client2->afficher();
 
-$compte1 = new Compte(30000,$client);
-$compte2 = new Compte(2000,$client2);
+$client1 = new Compte(30000,"123456789", "Dupont", "Jean", "0123456789");
+$client2 = new Compte(3000,"EE222322CC", "Kibutsuji" , "Muzan", "2334254789");
 
 
 
@@ -18,23 +14,26 @@ $compte2 = new Compte(2000,$client2);
 // var_dump($client);
 // var_dump($client2);
 
-$compte1->crediter(10000);
+$client1->crediter(10000);
 
-$compte1->afficherResume();
+$client1->afficherResume();
 
-$compte2->crediterCpt(3000 , $compte1);
+$client2->crediterCpt(3000 , $client1);
 
-$compte1->afficherResume();
-
-$compte1->debiter(10000);
-
-$compte1->afficherResume();
+$client1->afficherResume();
+$client2->afficherResume();
 
 
-$compte1->debiterCpt(4000 , $compte2);
+$client1->debiter(10000);
+
+$client1->afficherResume();
 
 
-$compte2->afficherResume();
+$client1->debiterCpt(4000 , $client2);
+
+
+$client2->afficherResume();
+$client1->afficherResume();
 
 
 Compte::afficherNombreComptes();

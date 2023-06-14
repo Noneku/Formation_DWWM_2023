@@ -2,16 +2,23 @@
 
 class Compte
 {
+    //Declaration
     private static $counter = 0;
-    
+    //Injection de la class Client dans Compte
+    private Client $client; 
+
     private int $numéroCompte;
     private float $solde;
-    private $propriétaire;
 
-    public function __construct($solde,$propriétaire) {
-        $this->numéroCompte = self::$counter++;
+
+    public function __construct(int $solde ,string $CIN , string $nom , string $prenom , string $tel) {
+
+        $this-> client =new Client($CIN , $nom , $prenom , $tel);//Composition avec Client, dépendance forte 
+
+        $this->numéroCompte = self::$counter++; //compteur pour le nombre de compte
+
         $this->solde = $solde;
-        $this->propriétaire = $propriétaire;
+       
     }
 
 
@@ -19,6 +26,7 @@ class Compte
 
 function crediter(float $somme): void{
     $this->solde += $somme;
+    echo "****************************************************\n";
     echo "Opération effectuée : compte créditer de $somme euros\n";
 
 }
@@ -31,7 +39,8 @@ public function crediterCpt(float $somme, $compteADébiter): void {
   
         $compteADébiter->solde -= $somme;
         $this->solde += $somme;
-        echo "Opération effectuée .\n";
+        echo "****************************************************\n";
+        echo "Opération effectuée crediterCpt .\n";
    
 }
 
@@ -39,6 +48,7 @@ public function crediterCpt(float $somme, $compteADébiter): void {
 
 function debiter($somme): void{
     $this->solde -= $somme;
+    echo "****************************************************\n";
     echo "Opération effectuée : compte débiter de $somme euros\n";
 }
 
@@ -49,41 +59,30 @@ public function debiterCpt(float $somme, $compteACréditer): void {
   
         $compteACréditer->solde += $somme;
         $this->solde -= $somme;
-        echo "Opération effectuée.\n";
+        echo "****************************************************\n";
+        echo "Opération effectuée débiterCpt.\n";
    
 }
 
 
-
+//Affichage des attributs class Compte et les attributs liés à la dépendance avec class Client
 public function afficherResume() {
     echo "\nRésumé du compte :\n";
     echo "Numéro de compte : " . $this->numéroCompte . "\n";
     echo "Solde : " . $this->solde . "\n";
-    echo "Informations du propriétaire :\n";
-    echo "CIN : " . $this->propriétaire->getCIN() . "\n";
-    echo "Nom : " . $this->propriétaire->getNom() . "\n";
-    echo "Prénom : " . $this->propriétaire->getPrenom() . "\n";
-    echo "Tél : " . $this->propriétaire->getTel() . "\n";
+    echo "Informations du client :\n";
+    echo "CIN : " . $this->client->getCIN() . "\n";
+    echo "Nom : " . $this->client->getNom() . "\n";
+    echo "Prénom : " . $this->client->getPrenom() . "\n";
+    echo "Tél : " . $this->client->getTel() . "\n";
 }
 
 
 
   public static function afficherNombreComptes() {
+    echo "****************************************************\n";
         echo "Nombre de comptes créés : " . self::$counter . "\n";
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     /**
@@ -107,21 +106,21 @@ public function afficherResume() {
     }
 
     /**
-     * Get the value of propriétaire
+     * Get the value of client
      */ 
-    public function getPropriétaire(): string
+    public function getclient()
     {
-        return $this->propriétaire;
+        return $this->client;
     }
 
     /**
-     * Set the value of propriétaire
+     * Set the value of client
      *
      * @return  self
      */ 
-    public function setPropriétaire($propriétaire)
+    public function setclient($client)
     {
-        $this->propriétaire = $propriétaire;
+        $this->client = $client;
 
         return $this;
     }
@@ -146,8 +145,4 @@ public function afficherResume() {
         return $this;
     }
 }
-
-
-
-
 ?>
