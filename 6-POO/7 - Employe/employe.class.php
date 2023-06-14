@@ -44,9 +44,11 @@ class Employe
     function augmentationDuSalaire(): void
     {
         if ($this->getAnciennete() >= 10) {
-            $this->Salaire *= 1.10;
+            $this->Salaire *= 1.05;
         } else if ($this->getAnciennete() >= 5) {
             $this->Salaire *= 1.02;
+        } else if ($this->getAnciennete() > 10) {
+            $this->Salaire *= 1.1;
         }
     }
 
