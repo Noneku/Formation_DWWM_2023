@@ -19,12 +19,12 @@ class Compte extends Client
         $this->code = self::$nbCpt;
     }
 
-    public function crediter($somme)
+    public function crediter($somme): float
     {
         return $this->solde += $somme;
     }
 
-    public function crediterCpt($somme, Compte $compte)
+    public function crediterCpt($somme, Compte $compte): float
     {
         if ($compte->solde >= $somme) {
             $this->solde += $somme;
@@ -34,7 +34,7 @@ class Compte extends Client
         }
     }
 
-    public function debiter($somme)
+    public function debiter($somme): float
     {
         if ($this->solde >= $somme) {
             $this->solde -= $somme;
@@ -43,7 +43,7 @@ class Compte extends Client
         }
     }
 
-    public function debiterCpt($somme, Compte $compte)
+    public function debiterCpt($somme, Compte $compte): float
     {
         if ($this->solde >= $somme) {
             $this->solde -= $somme;
@@ -53,7 +53,7 @@ class Compte extends Client
         }
     }
 
-    public function Resume()
+    public function Resume(): void
     {
         echo "Prénom: " . $this->client->getPrenom() . "\n";
         echo "Nom: " . $this->client->getNom() . "\n";
@@ -63,7 +63,7 @@ class Compte extends Client
     }
 
 
-    public function nbCompteCree()
+    public function nbCompteCree(): void
     {
         echo "Nombre de compte crée: " . $this->code;
     }
@@ -71,7 +71,7 @@ class Compte extends Client
     /**
      * Get the value of code
      */
-    public function getCode()
+    public function getCode(): int
     {
         return $this->code;;
     }
@@ -81,7 +81,7 @@ class Compte extends Client
      *
      * @return  self
      */
-    public function setCode($code)
+    public function setCode($code): self
     {
         $this->code = $code;
 

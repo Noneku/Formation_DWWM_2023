@@ -1,14 +1,14 @@
 <?php
 class Employe
 {
-    private $Matricule;
-    private $Nom;
-    private $Prenom;
-    private $DateNaissance;
-    private $DateEmbauche;
-    private $Salaire;
+    private int $Matricule;
+    private string $Nom;
+    private string $Prenom;
+    private string $DateNaissance;
+    private string $DateEmbauche;
+    private int $Salaire;
 
-    public function __construct($Matricule, $Nom, $Prenom, $DateNaissance, $DateEmbauche, $Salaire)
+    public function __construct(int $Matricule, string $Nom, string $Prenom, string $DateNaissance, string $DateEmbauche, int $Salaire)
     {
         $this->Matricule = $Matricule;
         $this->Nom = $Nom;
@@ -19,16 +19,21 @@ class Employe
     }
 
 
-    function getAge()
+    function getAge(): int
     {
         // 01/02/2002
         $date = date('d/m/Y');
         $date = explode("/", $date);
         $age = explode("/", $this->DateNaissance);
-        return $date[2] - $age[2];
+
+        if ($date[1] < $age[1]) {
+            return $date[2] - $age[2];
+        } else {
+            return $date[2] - $age[2] - 1;
+        }
     }
 
-    function getAnciennete()
+    function getAnciennete(): int
     {
         $date = date('d/m/Y');
         $date = explode("/", $date);
@@ -36,18 +41,16 @@ class Employe
         return $date[2] - $an[2];
     }
 
-    function augmentationDuSalaire()
+    function augmentationDuSalaire(): void
     {
         if ($this->getAnciennete() >= 10) {
             $this->Salaire *= 1.10;
-            // echo "10";
         } else if ($this->getAnciennete() >= 5) {
             $this->Salaire *= 1.02;
-            // echo "5";
         }
     }
 
-    function afficherEmploye()
+    function afficherEmploye(): void
     {
         echo "- Matricule: " . $this->Matricule . "\n";
         echo "- Nom complet: " . strtoupper($this->Nom) . " " . ucfirst($this->Prenom) . "\n";
@@ -59,7 +62,7 @@ class Employe
     /**
      * Get the value of Matricule
      */
-    public function getMatricule()
+    public function getMatricule(): string
     {
         return $this->Matricule;
     }
@@ -69,7 +72,7 @@ class Employe
      *
      * @return  self
      */
-    public function setMatricule($Matricule)
+    public function setMatricule($Matricule): self
     {
         $this->Matricule = $Matricule;
 
@@ -79,7 +82,7 @@ class Employe
     /**
      * Get the value of Nom
      */
-    public function getNom()
+    public function getNom(): string
     {
         return $this->Nom;
     }
@@ -89,7 +92,7 @@ class Employe
      *
      * @return  self
      */
-    public function setNom($Nom)
+    public function setNom($Nom): self
     {
         $this->Nom = $Nom;
 
@@ -99,7 +102,7 @@ class Employe
     /**
      * Get the value of Prenom
      */
-    public function getPrenom()
+    public function getPrenom(): string
     {
         return $this->Prenom;
     }
@@ -109,7 +112,7 @@ class Employe
      *
      * @return  self
      */
-    public function setPrenom($Prenom)
+    public function setPrenom($Prenom): self
     {
         $this->Prenom = $Prenom;
 
@@ -119,7 +122,7 @@ class Employe
     /**
      * Get the value of DateNaissance
      */
-    public function getDateNaissance()
+    public function getDateNaissance(): string
     {
         return $this->DateNaissance;
     }
@@ -129,7 +132,7 @@ class Employe
      *
      * @return  self
      */
-    public function setDateNaissance($DateNaissance)
+    public function setDateNaissance($DateNaissance): self
     {
         $this->DateNaissance = $DateNaissance;
 
@@ -139,7 +142,7 @@ class Employe
     /**
      * Get the value of DateEmbauche
      */
-    public function getDateEmbauche()
+    public function getDateEmbauche(): string
     {
         return $this->DateEmbauche;
     }
@@ -149,7 +152,7 @@ class Employe
      *
      * @return  self
      */
-    public function setDateEmbauche($DateEmbauche)
+    public function setDateEmbauche($DateEmbauche): self
     {
         $this->DateEmbauche = $DateEmbauche;
 
@@ -159,7 +162,7 @@ class Employe
     /**
      * Get the value of Salaire
      */
-    public function getSalaire()
+    public function getSalaire(): string
     {
         return $this->Salaire;
     }
@@ -169,7 +172,7 @@ class Employe
      *
      * @return  self
      */
-    public function setSalaire($Salaire)
+    public function setSalaire($Salaire): self
     {
         $this->Salaire = $Salaire;
 
