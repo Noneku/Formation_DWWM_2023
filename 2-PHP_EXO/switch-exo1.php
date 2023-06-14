@@ -6,7 +6,7 @@ traduire les blocs conditionnels `if` en blocs conditionnels `switch`
 
 bloc 1
 résultat attendu :
-c"est vrai
+c'est vrai
 
 bloc 2
 résultat attendu :
@@ -18,7 +18,7 @@ résultat attendu :
 
 bloc 4
 résultat attendu :
-$variable est un nomnbre entier
+$variable est un nombre entier
 
 */
 
@@ -26,6 +26,11 @@ $variable est un nomnbre entier
 if (true) {
     echo "c'est vrai";
     echo PHP_EOL;
+}
+
+switch (true) {
+    case true:
+        echo "C'est vrai !", "\n";
 }
 
 // bloc 2
@@ -37,6 +42,14 @@ if ($i == 100) {
 } else {
     echo "différent de cent";
     echo PHP_EOL;
+}
+
+switch ($i) {
+    case ($i == 100):
+        echo "$i est égal à cent \n";
+        break;
+    default:
+    echo "$i est différent de cent \n";
 }
 
 // bloc 3

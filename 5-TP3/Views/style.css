@@ -1,0 +1,104 @@
+
+body {
+    background: linear-gradient(#4B88A2, black);
+    background-repeat: no-repeat;
+    background-position: cover;
+}
+
+h1 {
+    color:black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-size: 50px;
+    text-shadow: white 10px 0 10px;
+}
+
+
+.Groupes {
+    display: flex;
+    flex-direction: column;
+    margin-right:1700px;
+    width: 100%;
+    align-items: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: 100px;
+    font-size: large;
+    font-weight: bold;
+}
+
+
+.Groupe1_2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    background-image: url(./Images/5560058-apprentissage-et-enseignement-entreprise-bureau-au-travail-interieur-moderne-armoire-de-bureau-avec-ordinateur-illustrationle-coloree-dans-la-conceptionle-de-style-dessin-anime-plat-vectoriel.jpg);
+    border: 5px solid black;
+    height: 200%;
+}
+
+
+.Groupe3_4 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 200px;
+    background-image: url(./Images/5560058-apprentissage-et-enseignement-entreprise-bureau-au-travail-interieur-moderne-armoire-de-bureau-avec-ordinateur-illustrationle-coloree-dans-la-conceptionle-de-style-dessin-anime-plat-vectoriel.jpg);
+    border: 5px solid black;
+    height: 200%;
+}
+
+
+
+.Groupe_1 {
+    /* background-color: #4B88A2; */
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+   
+}
+
+.Groupe_2 {
+    /* background-color: #4B88A2; */
+    height: 10%;
+    /* display: flex;
+    flex-direction: row; */
+   
+
+}
+
+.Groupe_3 {
+    /* background-color: #4B88A2; */
+    height: 10%;
+ 
+}
+
+.Groupe_4 {
+    /* background-color: #4B88A2; */
+    height: 10%;
+
+}
+
+
+input {
+    border-radius: 10px;
+    padding:13px;
+    background-color:#4B88A2;
+    color:black;
+    margin-top: 50px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+input:hover {
+    box-shadow: 4px 4px 2px 2px black;
+}
+
+.Boutons {
+    margin-left: 50px;
+    display:flex;
+    justify-content: space-evenly;
+    margin-bottom: 200px;
+}
+
+

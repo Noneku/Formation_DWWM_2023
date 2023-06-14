@@ -1,52 +1,29 @@
 <?php
 
-//Variables
-$sizeArray = readline("Choisissez la taille de votre tableau : ");
-$tab = [];
-$positif = [];
-$negatif = [];
+// Ecrire un algo qui demande de saisir un nb de valeurs à entrer, de les intégrer dans un tableau et de déterminer le nombre de valeurs négatives & positives saisies 
 
-//Traitement
-for ($i=0; $i < $sizeArray; $i++) {
-    //Insert in $tab the number of loops in $sizeArray
-    $tab[] = $i; //Size of $tab = $sizeArray
-    $insertArray = readline("Entrer votre valeur : ");
-    //Insert number by user in $tab
-    $tab[$i] = $insertArray;
+// Déclaration :
+$nbSaisies = readline("Entrez le nombre de saisie à faire : ");
+$val = array();
+$nbPos = 0;
+$nbNeg = 0;
 
-    //Compare negatif and positif numbers
-    if($tab[$i] > 0){
-        //All numbers positif in $tab push in $positif
-        $positif[$i] = $tab[$i];
-    }
-    else{
-        //All numbers positif in $tab push in $negatif
-        $negatif[$i] = $tab[$i];
-    }
-}
-//Display
-echo "Le nombre de negatif est de : ".count($negatif)."\n"."Le nombre de positif est de : ".count($positif);
 
-//Optimisation
-/*
-<?php
-$nbValeurs = readline("Combien de valeurs?");
+// Instructions :
+for ($i = 0; $i < $nbSaisies; $i++) {
+    $val[$i] = readline("Saisir un nombre à insérer dans le tableau : ");
 
-$tab = array();
-
-$negatif = 0;
-$positif = 0;
-for ($i = 0; $i < $nbValeurs; $i++) {
-    $tab[$i] = readline("Entrer une note");    
-
-    if ($tab[$i] < 0) {
-        $negatif++;
+    if ($val[$i]>0) {
+        $nbPos++;
     } else {
-        $positif++;
+        $nbNeg++;
     }
 }
-echo "Il y a ".$negatif."Nombre negatif et".$positif."Nombre positif\n";
 
-?>
- */
+
+// Affichage :
+print_r($val);
+echo "Il y a $nbPos nombre(s) positif(s) et $nbNeg nombre(s) négatif(s).";
+
+
 ?>

@@ -1,26 +1,18 @@
 <?php
 
-//Variables
-$check;
-$nbrUser1 = readline("Entrer un nombre\n");
-$nbrUser2 = readline("Entrer un nombre\n");
+// Ecire un algo qui demande deux nb à l'utilisateur et l'informe ensuite si leur produit est négatif ou positif 
 
-//Algo
-if($nbrUser1 >= 1){
-    //Display
-    $result1 = "Votre nombre $nbrUser1 est positif\n";
-}
-else {
-    //Display
-     $result1 = "Votre nombre $nbrUser1 est negatif\n";
-}
-if($nbrUser2 >= 1){
-    //Display
-    $result2 = "Votre nombre $nbrUser2 est positif\n";
-}
-else {
-    $result2 = "Votre nombre $nbrUser2 est negatif\n";
+// Déclaration : 
+$nb1 = readline("Entrez un premier nombre : ");
+$nb2 = readline("Entrez un deuxième nombre : "); 
+
+// Instruction / Affichage : 
+if (($nb1 > 0 and $nb2 > 0) || ($nb1 < 0 and $nb2 < 0)) {
+    echo "Le produit de $nb1 et $nb2 est positif.";
+} else {
+    echo "Le produit de $nb1 et $nb2 est négatif.";
 }
 
-print("Nombre numéro 1 : ".$result1."Nombre numéro 2 : ".$result2);
+// ?>
+
 ?>

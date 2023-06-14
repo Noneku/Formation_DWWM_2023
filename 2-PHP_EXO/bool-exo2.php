@@ -17,19 +17,20 @@ $stations = 4;
 echo "billet: $billet\n";
 echo "stations: $stations\n";
 
-if ($billet == TICKET_NORMAL || $billet == TICKET_ZAP && $stations <= ZAP_MAX) {
+// Code de base :
+// if ($billet == TICKET_NORMAL) {
+//     echo "en règle\n";
+// } else if ($billet == TICKET_ZAP && $stations <= ZAP_MAX) {
+//     echo "en règle\n";
+// } else {
+//     echo "en fraude\n";
+// }
+
+
+// Code modifié / résultat exercice : 
+if (($billet == TICKET_NORMAL) || ($billet == TICKET_ZAP && $stations <= ZAP_MAX)) {
     echo "en règle\n";
 } else {
     echo "en fraude\n";
 }
-
-/*if ($billet == TICKET_NORMAL) {
-    echo "en règle\n";
-} else if ($billet == TICKET_ZAP && $stations <= ZAP_MAX) {
-    echo "en règle\n";
-} else {
-    echo "en fraude\n";
-}
-*/
-
 

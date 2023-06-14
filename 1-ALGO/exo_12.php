@@ -1,14 +1,23 @@
 <?php
 
-$prixHT = readline ("Entrez le prix HT: ");
-$nombreArticle = readline ("Entrez le nombre d'article:  ");
-$tauxTVA = 0.20;
-$ttc = $nombreArticle * $prixHT * (1 + $tauxTVA);
+// Ecrire un algo qui lit le prix HT d'un article, le nb d'articles et le taux de TVA et fournit le prix TTC correspondant 
 
-echo $prixHT;
+
+// Déclaration : 
+$prixHT = readline("Indiquez le prix HT de votre article : ");
+$nbArticles = readline("Indiquez le nombre d'articles : ");
+$TVA = 5.5/100;
+
+// Calcul : 
+$prixTotal = $prixHT*$nbArticles*(1+$TVA);
+
+// Affichage :
+echo "Prix HT : $prixHT €.";
 echo "\n";
-echo $nombreArticle;
+echo "Nombre d'articles : $nbArticles.";
 echo "\n";
-echo " le prix TTC est de :". $ttc ."€";
+echo "Montant de la TVA : $TVA.";
+echo "\n";
+echo "Le prix total à régler est : $prixTotal €.";
 
 ?>

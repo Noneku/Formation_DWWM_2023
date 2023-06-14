@@ -1,12 +1,22 @@
 <?php
 
-    $tab = [];
+// Ecrire un algo qui permet la saisie d'un nombre quelconque de valeurs ; ces valeurs doivent ensuite être augmentées de 1 et apparaître dans un nouveau tableau 
 
-    for ($i=0; $i < 5; $i++) { 
-        $nbr = readline("Entre un nombre : ");
-        //Add 1 to result of nbr
-        $tab[$i] = $nbr + 1;
-        var_dump($tab);
-    }
-    
+// Déclaration :
+$nbVal = readline("Entrez le nombre de valeurs que vous voulez saisir : "); 
+$tab1 = array();
+$tab2 = array();
+
+
+// Instruction : 
+for ($i = 0; $i < $nbVal; $i++) {
+    $tab1[$i] = readline("Entrez votre valeur : ");
+    $tab2[$i] = $tab1[$i]+1;
+}
+
+
+// Affichage :
+print_r($tab1);
+print_r($tab2);
+
 ?>

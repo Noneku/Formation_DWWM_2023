@@ -1,33 +1,23 @@
 <?php
 
-//Déclaration de variable
-    $better = [];
-    $T = [
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8]
-    ];
-//loop on size number of element in $T
- for ($i=0; $i < count($T); $i++) {
-        //Browse the elements in 8 array
-        for ($j=0; $j < count($T[$i]) ; $j++) { 
+// écrire un algo qui recherche la plus grande valeur d'un tableau T à 2 dimensions 
 
-            //Compare element[0] with next element
-            if($T[0][$j] >= $T[0][$j + 1]){
-                //If the first element superior, stock this in $better
-                $better[$i] = $T[0][$j];
-            
-            }
+// Déclaration : 
+
+$pg = 0;
+$tabT = [[12, 8, 7, 6, 4, 2], [6, 8, 9, 5, 7, 4], [12, 3, 8, 13, 16, 20]];
+
+// Instructions :
+for ($i = 0; $i < 3; $i++) {
+    for ($j = 0; $j < count($tabT[$i]); $j++) {
+
+        if ($pg < $tabT[$i][$j]) {
+            $pg = $tabT[$i][$j];
         }
- }
-var_dump($better);
+    }
+}
+
+// Affichage : 
+print_r($tabT);
+echo "Le plus grand nombre des tableaux est : $pg.";
 ?>

@@ -1,22 +1,18 @@
 <?php
 
-//Variables
-$nbr1 = readline("Entrer un nombre : ");
-$nbr2 = readline("Entrer un second nombre : ");
-$total = $nbr1 * $nbr2;
+// Ecrire un algo qui demande un nb et l'informe si le nb est positif ou négatif en incluant le 0
 
-//Traitement
-if($total > 0){
-    echo "Le résultat est $total donc positif";
-}
-else{
-    if($total === 0){
-        $total = null;
-        echo "Le résultat est null";
-    }
-    else {
-        echo "Le résultat est $total donc négatif";
-    }
+// Déclaration :
+$nb = readline("Entrez un nombre : ");
+
+
+// Instruction / Affichage : 
+if ($nb == 0) {
+    echo "$nb est nul.";
+} else if ($nb > 0) {
+    echo "$nb est positif.";
+} else if ($nb < 0) {
+    echo "$nb est negatif.";
 }
 
 ?>

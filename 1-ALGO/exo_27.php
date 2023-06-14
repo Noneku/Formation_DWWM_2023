@@ -1,19 +1,18 @@
 <?php
 
-//Variables
+// Ecrire un algo qui donne le résultat (validé ou non) d'un module en fonction d'une note oral de coef 1 et d'une note écrit de coef 2
 
-$module = readline("Entrer un module : ");
-$coef1 = readline("Entrer une note (Coef : 1) : "); //Note Oral
-$coef2 = readline("Entrer une note (Coef : 2) : "); //Note écrit
+// Déclaration :
+$note1 = readline("Entrez votre note d'écrit : ");
+$note2 = readline("Entrez votre note d'oral : ");
+$note2Coef = $note2*2;
+$moy = ($note1+$note2Coef)/3;
 
-//Traitement
-$moyenne = ((2*$coef1)+$coef2) / 3;
-
-//Si la moyenne est >= à 10 alors ADMIS
-if($moyenne >= 10){
-    echo "Vous avez réussis, votre moyenne est de : $moyenne, du module : $module";
-}else {
-    echo "Echec !";
+// Instruction :
+if ($moy>=10) {
+    echo "Bravo ! Vous avez validé votre module, beau travail !";
+} else {
+    echo "Désolé, votre module n'est pas validé, il fallait mieux réviser ...";
 }
 
 ?>

@@ -1,0 +1,33 @@
+
+
+body {
+    background-image: url(./Images/NoCode.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+
+.Titre {
+    color:white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin-top: 450px;
+    font-size: 100px;
+    text-shadow: black 10px 0 10px;
+}
+
+
+input {
+    border-radius: 10px;
+    padding:13px;
+    background-color:#A56617;
+    color:black;
+    margin-top: 50px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+input:hover {
+    box-shadow: 4px 4px 2px 2px rgb(0,0,0);
+}
+
