@@ -87,4 +87,24 @@ class Compte extends Client
 
         return $this;
     }
+
+    /**
+     * Get the value of client
+     */ 
+    public function getClient(): Client
+    {
+        return $this->client;
+    }
+
+    /**
+     * Set the value of client
+     *
+     * @return  self
+     */ 
+    public function setClient($client): self
+    {
+        $this->client = $client;
+
+        return $this;
+    }
 }
