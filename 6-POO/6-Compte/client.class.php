@@ -4,31 +4,31 @@ class Client
 
 {
 
-    private string $cin;
+    private string $cni;
     private string $nom;
     private string $prenom;
     private string $tel;
 
 
-    public function __construct ($cin, $nom, $prenom, $tel) {
-        $this->cin = $cin;
+    public function __construct ($cni, $nom, $prenom, $tel) {
+        $this->cni = $cni;
         $this->nom = $nom;
         $this->prenom = $prenom;
         $this->tel = $tel;
     }
 
 
-    public function afficher () : void {
-        echo "- CIN : " .$this->cin. "\n- Nom : " .$this->nom. "\n- Prénom : " .$this->prenom. "\n- Tel : " .$this->tel. "\n";
-    }
+    // public function afficher () : void {
+    //     echo "- CNI : " .$this->cni. "\n- Nom : " .$this->nom. "\n- Prénom : " .$this->prenom. "\n- Tel : " .$this->tel. "\n";
+    // }
     
 
     /**
      * Get the value of cin
      */ 
-    public function getCin()
+    public function getCni()
     {
-        return $this->cin;
+        return $this->cni;
     }
 
     /**
@@ -36,9 +36,9 @@ class Client
      *
      * @return  self
      */ 
-    public function setCin($cin)
+    public function setCni($cni)
     {
-        $this->cin = $cin;
+        $this->cni = $cni;
 
         return $this;
     }

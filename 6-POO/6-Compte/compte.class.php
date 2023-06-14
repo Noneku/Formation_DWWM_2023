@@ -7,13 +7,16 @@ class Compte
 
 {
     private float $solde = 0;
-    public static int $code = 1;
+    public int $code;
     private Client $client;
-    public int $cpt;
+    public static int $cpt = 0;
 
-    public function __construct ($client) {
-        $this->client = $client;
-        $this->cpt = self::$code++;
+    public function __construct ($cni, $nom, $prenom, string $tel, $solde) {
+        $this->client = new Client ($cni, $nom, $prenom, $tel);
+        $this->solde = $solde;
+
+        self::$cpt++;
+        $this->code = self::$cpt;
     }
 
 
@@ -38,13 +41,15 @@ class Compte
         return $compte->solde += $somme;
     }
 
-    public function afficherCpte ($client) {
-        echo "Numéro de compte : " .$this->cpt. "\n";
+    public function afficherCpte () {
+        echo "Numéro de compte : " .$this->code. "\n";
         echo "Propriétaire du compte : \n";
-        $client->afficher(). "\n";
         echo "Solde du compte : " .$this->solde. "€\n\n";
+        echo "CNI : " . $this->client->getCni(). "\n" ;
+        echo "Nom : " . $this->client->getNom(). "\n" ;
+        echo "Prénom : " . $this->client->getPrenom(). "\n" ;
+        echo "Tel : " . $this->client->getTel(). "\n" ;
     }
-
 
 
     /**
@@ -87,6 +92,9 @@ class Compte
 
         return $this;
     }
+
+
+
 }
 
 
