@@ -1,21 +1,35 @@
 <?php
 
+
 $tab1 = [2,5,8,4];
 $tab2 = [6,7];
-$result = [];
-$sum = 0;
+$tab = 0;
+$i = 0;
+$j = 0;
 
-for ($i=0; $i < count($tab2) ; $i++) { 
-    
-    for ($j=0; $j < count($tab1); $j++) { 
 
-        $result[$j] = $tab2[$i] * $tab1[$j];
+for ($i=0; $i < sizeof($tab1) ; $i++) { 
+    $tab1[$i];
 
-        $sum += $result[$j];
+    for ($j=0; $j <sizeof($tab2) ; $j++) { 
+      $tab += $tab1[$i] * $tab2[$j] ;
     }
-      
 }
 
-echo $sum
+print_r($tab);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ?>

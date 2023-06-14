@@ -1,19 +1,28 @@
 <?php
+echo "saisi un entier";
+$a = trim(fgets(STDIN));
+echo "saisi un entier";
+$b = trim(fgets(STDIN));
+echo "saisi un entier";
+$c = trim(fgets(STDIN));
 
-$A = readline("Entrer un nombre A : ");
-$B = readline("Entrer un nombre B : ");
-$C = readline("Entrer un nombre C : ");
+$delta=pow($b,2)-(4*$a*$c);
 
-// Delta = B² - 4ac
-$delta = $B * $B -4 * $A * $C; //Reponse = Discriminant
-echo $delta."\n";
-
-if($delta > 0 || $delta = 0){
-
-    $result = -$B + sqrt($delta) / 2 * $A;
-    echo $result;
-}else{
-    echo "Equation Impossible";
-    
+if ($delta<0) {
+    echo "l'equation n'a pas de solution";
 }
+elseif($delta==0)
+{
+
+$x = $b/(2*$a);
+echo "l'equation a une solution x = $x";
+
+}
+
+else{
+$x1
+
+
+}
+
 ?>

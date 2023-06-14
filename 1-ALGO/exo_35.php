@@ -1,13 +1,22 @@
 <?php
-//Array Declarations
-$tab1 = [1,2,3,4,5];
-$tab2 = [1,2,3,4,5];
-$tabResult = [];
 
-for ($i=0; $i < count($tab1); $i++) { 
-    //Add  totals of content $tab1 and $tab2 in $tabResult -> index 0
-    $tabResult[$i] = $tab1[$i] + $tab2[$i];
+$tab=[];
+
+$tab1 =array(4,8,7,9,1,5,4,6);
+   
+ $tab2 = array(7,6,5,2,1,3,7,4);
+
+
+for ($i=0; $i <8 ; $i++) { 
+    $tab[$i] =$tab1 + $tab2;
+
+
 }
 
-var_dump($tabResult);
+
+$tab = array_merge($tab1,$tab2); //fusion des deux tableaux
+$total = array_sum($tab);  //Addition des sommes
+
+echo $total; //Affiche 
+
 ?>
