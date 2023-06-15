@@ -1,6 +1,7 @@
 <?php
 
 class Employe {
+
     private string $matricule;
     private string $nom;
     private string $prenom;
@@ -12,8 +13,8 @@ class Employe {
     public function __construct($matricule, $nom, $prenom, $dateNaissance, $dateEmbauche, $salaire){
 
         $this->matricule = $matricule;
-        $this->nom = $nom;
-        $this->prenom = $prenom;
+        $this->nom = strtoupper($nom);
+        $this->prenom = ucfirst(strtolower($prenom));
         $this->dateNaissance = DateTime::createFromFormat('d/m/Y', $dateNaissance);
         $this->dateEmbauche = DateTime::createFromFormat('d/m/Y',$dateEmbauche);
         $this->salaire = $salaire;
