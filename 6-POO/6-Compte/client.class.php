@@ -2,10 +2,11 @@
 
 class Client
 {
+    //Declarations
     private string $CIN;
     private string $nom;
     private string $prenom;
-    private int $tel;
+    private string $tel;
 
     function __construct($CIN, $nom , $prenom , $tel)
     {
@@ -15,7 +16,7 @@ class Client
         $this -> tel = $tel; 
     }
 
-
+//Afficher les attributs de la class Client
     public function afficher() {
         echo "Informations du client :\n";
         echo "CIN : " . $this->CIN . "\n";
@@ -32,7 +33,7 @@ class Client
     /**
      * Get the value of CIN
      */ 
-    public function getCIN(): int
+    public function getCIN()
     {
         return $this->CIN;
     }
@@ -72,7 +73,7 @@ class Client
     /**
      * Get the value of tel
      */ 
-    public function getTel(): int
+    public function getTel()
     {
         return $this->tel;
     }
