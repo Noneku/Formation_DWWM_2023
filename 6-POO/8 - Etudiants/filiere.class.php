@@ -6,14 +6,16 @@ class Filiere
     private static $nbCpt = 0;
     private string $code;
     private string $libelle;
+    private array $listeEtudiant;
 
-    public function __construct($code, $libelle)
+    public function __construct($code, $libelle, $listeEtudiant)
     {
 
         $this->code = $code;
         $this->libelle = $libelle;
         self::$nbCpt++;
         $this->id = self::$nbCpt;
+        $this->listeEtudiant = $listeEtudiant;
     }
 
     public function __toString()
@@ -81,6 +83,26 @@ class Filiere
     public function setId($id)
     {
         $this->id = $id;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of listeEtudiant
+     */ 
+    public function getListeEtudiant()
+    {
+        return $this->listeEtudiant;
+    }
+
+    /**
+     * Set the value of listeEtudiant
+     *
+     * @return  self
+     */ 
+    public function setListeEtudiant($listeEtudiant)
+    {
+        $this->listeEtudiant = $listeEtudiant;
 
         return $this;
     }

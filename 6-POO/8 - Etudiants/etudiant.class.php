@@ -1,38 +1,33 @@
 <?php
 
-class Etudiant {
+class Etudiant
+{
     private int $id;
     private string $nom;
     private string $prenom;
     private string $dateNaissance;
-    private Filiere $libelle;
+    // private Filiere $libelle;
     private static $nbCpt = 0;
 
-    public function __construct($nom,$prenom,$dateNaissance,$code,$libele)
+    public function __construct($nom, $prenom, $dateNaissance)
     {
-
         $this->nom = $nom;
         $this->prenom = $prenom;
         $this->dateNaissance = $dateNaissance;
-        $this->libelle = new Filiere($code,$libele);
+        // $this->libelle = new Filiere($code, $libele);
         self::$nbCpt++;
         $this->id = self::$nbCpt;
     }
 
     public function __toString()
     {
-        return "Je suis ".$this->getPrenom()." ".$this->getNom().", ma date de naissance est :".$this->getDateNaissance()." ".$this->libelle->__toString()."\n";
-
+        return "Je suis " . $this->getPrenom() . " " . $this->getNom() . ", ma date de naissance est : " . $this->getDateNaissance() . "\n";
     }
 
-    public function getCode()
-    {
-        return $this->libelle->getCode();
-    }
 
     /**
      * Get the value of dateNaissance
-     */ 
+     */
     public function getDateNaissance()
     {
         return $this->dateNaissance;
@@ -42,7 +37,7 @@ class Etudiant {
      * Set the value of dateNaissance
      *
      * @return  self
-     */ 
+     */
     public function setDateNaissance($dateNaissance)
     {
         $this->dateNaissance = $dateNaissance;
@@ -52,7 +47,7 @@ class Etudiant {
 
     /**
      * Get the value of prenom
-     */ 
+     */
     public function getPrenom()
     {
         return $this->prenom;
@@ -62,7 +57,7 @@ class Etudiant {
      * Set the value of prenom
      *
      * @return  self
-     */ 
+     */
     public function setPrenom($prenom)
     {
         $this->prenom = $prenom;
@@ -72,7 +67,7 @@ class Etudiant {
 
     /**
      * Get the value of nom
-     */ 
+     */
     public function getNom()
     {
         return $this->nom;
@@ -82,7 +77,7 @@ class Etudiant {
      * Set the value of nom
      *
      * @return  self
-     */ 
+     */
     public function setNom($nom)
     {
         $this->nom = $nom;
@@ -92,7 +87,7 @@ class Etudiant {
 
     /**
      * Get the value of id
-     */ 
+     */
     public function getId()
     {
         return $this->id;
@@ -102,7 +97,7 @@ class Etudiant {
      * Set the value of id
      *
      * @return  self
-     */ 
+     */
     public function setId($id)
     {
         $this->id = $id;

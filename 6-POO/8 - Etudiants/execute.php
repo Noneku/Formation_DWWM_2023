@@ -3,49 +3,64 @@
 include_once "filiere.class.php";
 include_once "etudiant.class.php";
 
-$etu1 = new Etudiant("nomé", "prhen", "01/02/2000", 1, "Français");
-$etu2 = new Etudiant("nomé", "preen", "01/02/2000", 2, "Anglais");
-$etu3 = new Etudiant("nomé", "prjen", "01/02/2000", 2, "Anglais");
-$etu4 = new Etudiant("nomé", "precn", "01/02/2000", 3, "Math");
-$etu5 = new Etudiant("nomé", "prean", "01/02/2000", 3, "Math");
+$tFrancais = array();
+$tAnglais = array();
+$tMath = array();
 
-// $nbEtu = 5;
-// for ($i = 1; $i <= $nbEtu; $i++) {
-//     ${"etu" . $i} = new Etudiant(
-//         $Nom = readline("Nom: "),
-//         $Prenom = readline("Prenom: "),
-//         "01/02/2000",
-//         $code = readline("Code: "),
-//         $libele = readline("libele: ")
-//     );
-// }
+$nbEtu = 3;
 
-for ($i = 1; $i <= 5; $i++) {
-    $temp = ${"etu" . $i};
-    switch ($temp->getCode()) {
+for ($i = 1; $i <= $nbEtu; $i++) {
+
+    $nom = readline("Nom: ");
+    $prenom = readline("prenom: ");
+    $dateNaissance = readline("Date: ");
+
+    $etu[$i] = new Etudiant($nom, $prenom, $dateNaissance);
+
+    $t = readline("Matiere: ");
+
+    switch ($t) {
         case 1:
-            $Francais[] = $temp;
+            $tFrancais[] = $etu[$i];
             break;
-
         case 2:
-            $Anglais[] = $temp;
+            $tAnglais[] = $etu[$i];
             break;
-
         case 3:
-            $Math[] = $temp;
+            $tMath[] = $etu[$i];
+            break;
+        default:
+            echo "Erreur";
             break;
     }
 }
 
-echo "Français: ";
-echo "\n";
-echo $Francais[0];
-echo "\n";
-echo "Anglais: ";
-echo "\n";
-echo $Anglais[0];
-echo $Anglais[1];
-echo "Math: ";
-echo "\n";
-echo $Math[0];
-echo $Math[1];
+$Francais = new Filiere(1, "Français", $tFrancais);
+$Anglais = new Filiere(2, "Anglais", $tAnglais);
+$Math = new Filiere(3, "Math", $tMath);
+
+
+if ($Francais->getListeEtudiant() != null) {
+    echo "Français: ";
+    echo "\n";
+    foreach ($Francais->getListeEtudiant() as $Etudiant) {
+        echo $Etudiant;
+    }
+}
+
+if ($Anglais->getListeEtudiant() != null) {
+    echo "\n";
+    echo "Anglais: ";
+    echo "\n";
+    foreach ($Anglais->getListeEtudiant() as $Etudiant2) {
+        echo $Etudiant2;
+    }
+}
+if ($Math->getListeEtudiant() != null) {
+    echo "\n";
+    echo "Math: ";
+    echo "\n";
+    foreach ($Math->getListeEtudiant() as $Etudiant3) {
+        echo $Etudiant3;
+    }
+}
