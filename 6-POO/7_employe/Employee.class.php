@@ -16,8 +16,8 @@ class Employe
         $this->matricule = $matricule;
         $this->nom = $nom;
         $this->prenom = $prenom;
-        $this->datedeNaissance=$datedeNaissance; 
-        $this->dateEmbauche=$dateEmbauche;  
+        $this->datedeNaissance = $datedeNaissance; 
+        $this->dateEmbauche = $dateEmbauche;  
         $this->salaire = $salaire;
     }
 
@@ -25,8 +25,8 @@ class Employe
     public function Age()
     {
        
-        $today=new DateTime(); 
-        $dateNaisssance=new DateTime($this->datedeNaissance);
+        $today= new DateTime(); //Creation d'une date par la class DateTime
+        $dateNaisssance= new DateTime($this->datedeNaissance);
         $age = $dateNaisssance->diff($today)->y;
         return $age;
        
@@ -34,8 +34,8 @@ class Employe
     //Calcul l'anciennete de l'employe
     public function Anciennete()
     {
-        $today=new DateTime(); 
-        $dateEmbauche=new DateTime($this->dateEmbauche);
+        $today= new DateTime(); 
+        $dateEmbauche= new DateTime($this->dateEmbauche);
         $anciennete= $dateEmbauche->diff($today)->y;
        
         return $anciennete;
@@ -82,7 +82,7 @@ class Employe
    }
 
 
-
+   //Fonctions getter et setter
 
 
 
