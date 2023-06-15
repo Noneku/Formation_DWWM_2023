@@ -127,25 +127,6 @@ class Etudiant{
         return $this;
     }
 
-    /**
-     * Get the value of filiere
-     */ 
-    public function getFiliere()
-    {
-        return $this->filiere;
-    }
-
-    /**
-     * Set the value of filiere
-     *
-     * @return  self
-     */ 
-    public function setFiliere($filiere)
-    {
-        $this->filiere = $filiere;
-
-        return $this;
-    }
 }
 
 
