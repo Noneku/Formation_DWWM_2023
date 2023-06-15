@@ -1,26 +1,27 @@
 <?php
 
 class Etudiant {
-    
     private int $id;
     private string $nom;
     private string $prenom;
     private DateTime $dateNaissance;
-    
+
     private Filiere $filiere;
 
     private static int $nbrStudent = 0;
 
     
-    public function __construct($nom, $prenom, $dateNaissance) {
+    public function __construct($nom, $prenom, $dateNaissance,$code,$libelle) {
 
+
+        $this->filiere = new Filiere($code, $libelle);
         $this->id = self::$nbrStudent++;
         $this->nom = $nom;
         $this->prenom = $prenom;
         $this->dateNaissance = DateTime::createFromFormat('d/m/Y', $dateNaissance);
-
     }
 
+        
     
 
     /**
@@ -94,6 +95,21 @@ class Etudiant {
         $this->dateNaissance = $dateNaissance;
         return $this;
     }
-}
+     
+        /**
+        * @return Filiere
+        */
+        public function getFiliere(): Filiere {
+            return $this->filiere;
+        }
+          
+        /**
+         * @return string
+         */
+        public function __toString(): string {
+            return "\nEtudiant : \nId: {$this->id}, \nNom: {$this->nom}, \nPrenom: {$this->prenom}, \nDateNaissance: {$this->dateNaissance->format('d-m-Y')}";
+        }
+        
+    }
 
 ?>

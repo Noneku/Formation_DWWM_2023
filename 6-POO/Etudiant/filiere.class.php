@@ -5,6 +5,12 @@ class Filiere {
     private int $id;
     private string $code;
     private string $libelle;
+
+    public static array $branches = [
+        "IT" => "Informatique",
+        "TIC" => "Tehcno Info Communication",
+        "BC" => "Boucherie"
+    ];
     
     private static int $nbrFiliere = 0;
 
@@ -16,6 +22,13 @@ class Filiere {
         $this->libelle = $libelle;
     }
 
+    public function checkLibelleExist($libelle) : void{
+        foreach ($this->branches as $key => $value) {
+            if($libelle = $value) {
+                
+            }
+        }
+    }
     /**
      * Get the value of id
      *
@@ -65,5 +78,19 @@ class Filiere {
     public function setLibelle(string $libelle): self {
         $this->libelle = $libelle;
         return $this;
+    }
+
+    /**
+    * @return string
+    */
+    public function __toString(): string {
+    	return "\nFiliere : \nId: {$this->id}\n, \nCode: {$this->code}\n, \nLibelle: {$this->libelle}\n";
+    }
+
+    /**
+    * @return array
+    */
+    public function getBranches(): array {
+    	return $this->branches;
     }
 }
