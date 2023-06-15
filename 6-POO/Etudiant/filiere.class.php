@@ -9,11 +9,11 @@ class Filiere {
     private static int $nbrFiliere = 0;
 
     
-    public function __construct($nom, $prenom, $libelle) {
+    public function __construct($code, $libelle) {
 
         $this->id = self::$nbrFiliere++;
-        $this->code = $nom;
-        $this->libelle = $prenom;
+        $this->code = $code;
+        $this->libelle = $libelle;
     }
 
     /**
