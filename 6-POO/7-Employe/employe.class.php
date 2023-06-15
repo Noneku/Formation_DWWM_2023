@@ -6,25 +6,66 @@ class Employe
     private int $matricule;
     private string $nom;
     private string $prenom;
-    private DateTime $dateNaissance;
-    private DateTime $dateEmbauche;
+    private string $dateNaissance;
+    private string $dateEmbauche;
     private float $salaire;
 
-    public function __construct ($matricule, $nom, $prenom) {
+
+    public function __construct ($matricule, $nom, $prenom, $dateNaissance, $dateEmbauche, $salaire) {
         $this->matricule = $matricule;
         $this->nom = $nom;
         $this->prenom = $prenom;
-        $this->dateNaissance = DateTime::createFromFormat('d-m-y',readline ("Indiquez votre date de naissance (jj-mm-aaaa) : "));
-        $this->dateEmbauche = DateTime::createFromFormat('d-m-Y', readline ("Indiquez votre date d'embauche (jj-mm-aaaa) : "));
+        $this->dateNaissance = $dateNaissance;
+        $this->dateEmbauche = $dateEmbauche;
+        $this->salaire = $salaire;
     }
 
    
 
-    // public function age () {
-    //     $dateJour = DateTime::createFromFormat(time('d-m-Y'), $dateJour);
-    //     $age =  date_diff($dateJour, $dateNaissance);
-    //     return $age;
-    // }
+    public function age () : float {
+        $dateJour = date ('d-m-Y');
+        $age =  date_diff(date_create($this->dateNaissance), date_create($dateJour));
+        return $age->format('%y');
+    }
+
+
+    public function anciennete () : float {
+        $dateJour = date ('d-m-Y');
+        $anciennete =  date_diff(date_create($this->dateEmbauche), date_create($dateJour));
+        return $anciennete->format('%y');
+    }
+
+
+    public function augmentationDuSalaire () : void {
+
+        $anciennete =  $this->anciennete();
+
+        if ($anciennete < 5) {
+            $this->salaire += $this->salaire * 0.02;
+        } elseif ($anciennete < 10) {
+            $this->salaire += $this->salaire * 0.05;
+        } else {
+            $this->salaire += $this->salaire * 0.1;
+        }
+    }
+
+
+    public function afficherEmploye () : void {
+
+        $dateJour = date ('d-m-Y');
+        $age =  date_diff(date_create($this->dateNaissance), date_create($dateJour));
+
+        $dateJour = date ('d-m-Y');
+        $anciennete =  date_diff(date_create($this->dateEmbauche), date_create($dateJour));
+
+
+        echo "Matricule : " .$this->matricule. "\n";
+        echo "Nom complet : " .ucfirst($this->prenom). " " .strtoupper($this->nom). "\n";
+        echo "Age : " .$age->format('%y'). " ans \n";
+        echo "Ancienneté : " .$anciennete->format('%y'). " ans \n";
+        echo "Salaire : " .$this->salaire. " € \n\n";
+    }
+
 
      /**
      * Get the value of matricule
