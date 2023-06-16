@@ -1,26 +1,13 @@
 <?php
+include 'Cercle.class.php';
 
-include"Cercle.class.php";
+$c1 = new Cercle(1, 2, 3);
+//print_r($c1);
 
-$abcisse=readline("Donner l'abscisse du cercle : ");
-$ordonnee=readline("Donner l'ordonnee du cercle : ");
-$rayon=$abcisse=readline("Donner le rayon du cercle : ");
-$abcisse=readline("Donner l'abscisse du point : ");
-$ordonnee=readline("Donner l'ordonnee du point : ");
+//echo $c1->get_centre()->getAbcisse();
 
-$point=new Point(2,3);
-$c=new Cercle($abcisse,$ordonnee,$rayon);
-echo $c->afficher($point);
-echo"\n";
-
-
-
-
-
-
-
-
-
+$pt1 =  $c1->get_centre();
+echo $pt1->norme();
 
 
 
