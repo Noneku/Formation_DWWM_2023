@@ -27,26 +27,26 @@ for ($i=0; $i < $nb; $i++) {
 $f1=new Filliere("IT","Informatique",$informatique);
 
 
-//Creation de la liste de la filière 2 
+// //Creation de la liste de la filière 2 
 $nb = readline("Combien d'élèves veulent s'inscrire dans la filière ?");
 
 for ($i=0; $i < $nb; $i++) { 
     $nom=readline("donnez le nom de l'étudiant  : ");
     $prenom=readline("donnez le prénom de l'étudiant  : ");
-    $date=readline("donnez la date de naisssance de l'étudiant  : ");
+    // $date=readline("donnez la date de naisssance de l'étudiant  : ");
     $technodeInfoetComm[]=$etudiant[$i]=new Etudiant($nom,$prenom,$date);
 }
 
 $f2 =new Filliere("TIC","Techno de l'info et de la communication",$technodeInfoetComm);
 
-//Creation de la liste de la filière 3
+// //Creation de la liste de la filière 3
 $nb = readline("Combien d'élèves veulent s'inscrire dans la filière ?");
 
 for ($i=0; $i < $nb; $i++) { 
     $nom=readline("donnez le nom de l'étudiant  : ");
     $prenom=readline("donnez le prénom de l'étudiant  : ");
-    $date=readline("donnez la date de naisssance de l'étudiant  : ");
-    $informatique[]=$etudiant[$i]=new Etudiant($nom,$prenom,$date);
+    // $date=readline("donnez la date de naisssance de l'étudiant  : ");
+    $genieCivil[]=$etudiant[$i]=new Etudiant($nom,$prenom,$date);
 }
 
 $f3=new Filliere("GC","Genie Civil",$genieCivil);
@@ -61,7 +61,7 @@ echo $f2->getNom();
 echo "\n";
 echo $f3->getNom();
 echo "\n";
-
+echo "\n";
 echo $f1;
 echo "\n";
 echo "\n";
