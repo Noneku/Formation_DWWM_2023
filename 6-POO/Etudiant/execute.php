@@ -61,11 +61,16 @@ for ($i=0; $i < count($studentsLists); $i++) {
 
 }
 
-$sortArray['IT'] = $tempIT;
-$sortArray['GC'] = $tempGC;
-$sortArray['COM'] = $tempCOM;
+$sortArray['Informatique'] = $tempIT;
+$sortArray['GénieCivil'] = $tempGC;
+$sortArray['Communication'] = $tempCOM;
 
-var_dump($sortArray);
+//Display
+
+var_dump($sortArray['Informatique']);
+var_dump($sortArray['GénieCivil']);
+var_dump($sortArray['Communication']);
+
 ?>
 
 
