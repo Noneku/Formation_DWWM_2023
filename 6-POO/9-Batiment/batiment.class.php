@@ -1,69 +1,51 @@
 <?php
-class Batiment
+
+
+Class Batiment
 {
+    protected $adresse;
+    protected $superficie;
 
-//Declaration
-    private string $adresse ;
-    private float $superficie;
+    public function __construct(string $adresse, float $superficie)
+    {
+        $this->adresse = $adresse;
+        $this->superficie = $superficie;
+    }
 
-//Création du construct
-function __construct($adresse , $superficie){
-
- $this->adresse = $adresse;
- $this->superficie = $superficie;
-}
-
-
-
-
-
-
-
-
-
-
-
-
+    public function __toString()
+    {
+        return "Le bâtiment ce trouve a l'adresse : " . $this->adresse . ", a une superficie de : " . $this->superficie . "mm²";
+    }
 
     /**
-     * Get the value of adresse
-     */ 
-    public function getAdresse()
+     * @return string
+     */
+    public function getAdresse(): string
     {
         return $this->adresse;
     }
 
     /**
-     * Set the value of adresse
-     *
-     * @return  self
-     */ 
-    public function setAdresse($adresse)
+     * @param string $adresse
+     */
+    public function setAdresse(string $adresse)
     {
         $this->adresse = $adresse;
-
-        return $this;
     }
 
     /**
-     * Get the value of superficie
-     */ 
-    public function getSuperficie()
+     * @return float
+     */
+    public function getSuperficie(): float
     {
         return $this->superficie;
     }
 
     /**
-     * Set the value of superficie
-     *
-     * @return  self
-     */ 
-    public function setSuperficie($superficie)
+     * @param float $superficie
+     */
+    public function setSuperficie(float $superficie)
     {
         $this->superficie = $superficie;
-
-        return $this;
     }
 }
-
-?>

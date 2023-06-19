@@ -1,9 +1,25 @@
 <?php
-include_once "batiment.class.php";
-include "maison.class.php";
+include "Batiment.class.php";
+include "Maison.class.php";
 
-$newMaison = new Maison(3, "7 Rue Paul Rault",120 );
+//création d'objet Maison
+    $adresse = "1 rue du molinel";
+    $superficie = 120;
+    $nbPieces = 7;
+    $maison = new Maison($adresse, $superficie, $nbPieces);
 
-echo $newMaison;
+//Création Objet Batiment
+    $adresse = "2 rue tata" ;
+    $superficie = "200";
+    $bat = new Batiment($adresse, $superficie);
 
-?>
+
+
+print_r($maison);
+echo "\n";
+print_r($bat);
+
+
+echo $bat;
+echo "\n";
+echo $maison;

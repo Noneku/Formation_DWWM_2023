@@ -1,64 +1,37 @@
 <?php
 
 
-//Maison hérite de Batiment
 class Maison extends Batiment
 {
-//Declaration
-private int $nbPieces;
+    private $nbPieces;
 
+    public function __construct(string $adresse, float $superficie, int $nbPieces)
+    {
+        parent::__construct($adresse, $superficie);
+        $this->nbPieces = $nbPieces;
+    }
 
+    public function __toString()
+    {
+        return parent::__toString() . ", et se compose de : " . $this->nbPieces . " pieces";
+    }
 
-//Création du construct avec des paramètres du parent
-function __construct($nbPieces, $adresse , $superficie)
-{
-    //appelle du construct de parent 
-    parent::__construct($adresse , $superficie);
+    /**
+     * @return int
+     */
+    public function getNbPieces(): int
+    {
+        return $this->nbPieces;
+    }
 
-    //parametre de Maison
-    $this->nbPieces = $nbPieces;
-}
+    /**
+     * @param int $nbPieces
+     */
+    public function setNbPieces(int $nbPieces)
+    {
+        $this->nbPieces = $nbPieces;
+    }
 
-
-
-//Conversion de l'objet en type string
-function __toString()
-{
-
-  return "Adresse : ".$this -> getAdresse().
-  "\n D'une superficie : ".$this-> getSuperficie()."\n Avec ".
-  $this->nbPieces." pieces"; 
-
-}
-
-
-
-
-
-
-
-
-
-/**
- * Get the value of nbPieces
- */ 
-public function getNbPieces()
-{
-return $this->nbPieces;
-}
-
-/**
- * Set the value of nbPieces
- *
- * @return  self
- */ 
-public function setNbPieces($nbPieces)
-{
-$this->nbPieces = $nbPieces;
-
-return $this;
-}
 
 
 }
-?>
