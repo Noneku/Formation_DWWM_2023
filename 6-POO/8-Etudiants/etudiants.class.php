@@ -1,5 +1,7 @@
 <?php
 
+// Création de la classe Etudiant :
+
 class Etudiant 
 
 {
@@ -18,10 +20,11 @@ class Etudiant
         $this->id = self::$cpt;
     }
 
+
+    // Fonction toString permettant d'afficher les informations des étudiants :
     public function __toString () {
         return "Je suis l'étudiant " .$this->prenom. " " .$this->nom. " et ma date de naissance est : " .$this->dateNaissance. "\n";
     }
-
 
 
     /**

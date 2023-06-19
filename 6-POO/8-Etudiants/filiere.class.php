@@ -1,6 +1,6 @@
 <?php
 
-
+// Création de la classe Filière :
 
 class Filiere 
 
@@ -21,13 +21,12 @@ class Filiere
     }
 
 
+    // Fonction toString permettant d'associer et d'afficher les étudiants à leur filière :
     public function __toString () : string {
-        $etudiant = implode($this->id, $this->listeEtu);
+        $etudiant = implode("\n", $this->listeEtu);
         return "\nFilière : " .$this->libelle. "\n" .$etudiant;
     }
 
-
-    // Code : " .$this->code. "\nLibellé : " .$this->libelle. "\n 
 
 
     /**
