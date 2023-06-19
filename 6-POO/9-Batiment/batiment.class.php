@@ -1,9 +1,9 @@
 <?php
 class Batiment {
     private string $adresse;
-    private int $superficie;
+    private float $superficie;
 
-    function __construct(string $adresse, int $superficie) {
+    function __construct(string $adresse, float $superficie) {
     	$this->adresse = $adresse;
     	$this->superficie = $superficie;
     
@@ -26,14 +26,14 @@ class Batiment {
     /**
     * @return int
     */
-    public function getSuperficie(): int {
+    public function getSuperficie(): float {
     	return $this->superficie;
     }
 
     /**
     * @param int $superficie
     */
-    public function setSuperficie(int $superficie): void {
+    public function setSuperficie(float $superficie): void {
     	$this->superficie = $superficie;
     }
 

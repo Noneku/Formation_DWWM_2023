@@ -3,7 +3,8 @@
 class Maison extends Batiment {
     private int $nbPieces;
 
-    function __construct(int $nbPieces) {
+    function __construct(string $adresse, int $superficie,int $nbPieces) {
+        parent::__construct($adresse, $superficie);
     	$this->nbPieces = $nbPieces;
     
     }
