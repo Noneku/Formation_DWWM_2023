@@ -46,8 +46,7 @@ if ($Francais->getListeEtudiant() != null) {
     foreach ($Francais->getListeEtudiant() as $Etudiant) {
         echo $Etudiant;
     }
-}
-
+} 
 if ($Anglais->getListeEtudiant() != null) {
     echo "\n";
     echo "Anglais: ";
