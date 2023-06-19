@@ -5,12 +5,6 @@ class Filiere {
     private int $id;
     private string $code;
     private string $libelle;
-
-    public static array $branches = [
-        "IT" => "Informatique",
-        "TIC" => "Tehcno Info Communication",
-        "BC" => "Boucherie"
-    ];
     
     private static int $nbrFiliere = 0;
 
