@@ -2,16 +2,19 @@
 class Batiment
 {
 
-
+//Declaration
     private string $adresse ;
-    private $superficie;
+    private float $superficie;
 
-
+//Création du construct
 function __construct($adresse , $superficie){
 
  $this->adresse = $adresse;
  $this->superficie = $superficie;
 }
+
+
+
 
 
 
