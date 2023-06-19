@@ -1,6 +1,6 @@
 <?php
 
-include_once "personne.class.php";
+
 class Etudiant extends Personne
 {
 
@@ -10,7 +10,7 @@ class Etudiant extends Personne
 //initalisation du construct
 
 function __construct($id , $nom , $prenom , $cne){
-    
+
     //construction du construct avec celui du parent
    parent::__construct($id , $nom , $prenom);
    $this->cne = $cne;

@@ -1,6 +1,6 @@
 <?php
 
-include_once "employe.class.php";
+
 
 
 class Professeur extends Employe
@@ -32,7 +32,7 @@ function __construct($specialite, $salaire, $id , $nom , $prenom){
 
 
 
-    
+
 
     /**
      * Get the value of specialite

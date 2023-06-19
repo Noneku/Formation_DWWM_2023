@@ -17,7 +17,7 @@ function __construct($id , $nom , $prenom){
 
     }
 
-    //fonction to string de personne
+    //fonction to string de Personne
     function __toString()
     {
         return "Je suis ".$this->nom." ". $this->prenom;

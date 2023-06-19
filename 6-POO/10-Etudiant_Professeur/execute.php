@@ -18,7 +18,7 @@ $professeur1 = new Professeur("JAVA/JEE" , 5700.0 , 2 ,"OBA" ,"Kevin");
 $professeur2 = new Professeur("PHP" , 5000.0 , 2 ,"MAGASSOUBA" ,"Cheick");
 
 
-
+//Affichage
 echo "La liste des employes : \n";
 echo $employe1."\n";
 echo $employe2."\n";
