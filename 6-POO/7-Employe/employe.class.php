@@ -60,6 +60,7 @@ class Employé
         $prenomMaj = ucfirst(strtolower($this->prenom));
         echo "Matricule : $this->matricule \n"; 
         echo "Nom complet :".$nomMajuscule . " " . "$prenomMaj \n"; 
+        
         echo  $this-> calculateAge(). "\n"; 
         echo  $this->calculateAncienneté()."\n"; 
         echo "Salaire : $this->salaire \n"; 
