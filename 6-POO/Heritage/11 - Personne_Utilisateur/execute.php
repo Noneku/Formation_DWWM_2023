@@ -21,6 +21,7 @@ $nbUti = 3;
 
 
 for ($i = 1; $i <= $nbUti; $i++) {
+
     $nom = readline("Nom: ");
     $prenom = readline("prenom: ");
     $mail = readline("mail: ");
