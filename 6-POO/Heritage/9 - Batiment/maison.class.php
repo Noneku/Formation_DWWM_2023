@@ -2,28 +2,16 @@
 class Maison extends Batiment
 {
     private $nbPieces;
-    private $adresse;
-    private $superficie;
 
     public function __construct($adresse, $superficie, $nbPieces)
     {
-        $this->adresse = new Batiment($adresse);
-        $this->superficie = $superficie;
+        parent::__construct($adresse,$superficie);
         $this->nbPieces = $nbPieces;
     }
 
     public function __toString()
     {
-        echo "Cette maison situé au " . $this->getAdresse() . " avec une superficie de " . $this->getSuperficie() . " et a " . $this->nbPieces . " pieces";
-    }
-    public function getAdresse()
-    {
-        return $this->adresse;
-    }
-
-    public function getSuperficie()
-    {
-        return $this->superficie;
+        return "Cette maison situé au " . $this->getAdresse() . " avec une superficie de " . $this->getSuperficie() . " et a " . $this->nbPieces . " pieces";
     }
 
     /**

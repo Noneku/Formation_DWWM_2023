@@ -2,18 +2,19 @@
 
 class Batiment
 {
-    private $adresse;
-    private $superficie;
+    protected $adresse;
+    protected $superficie;
 
-    public function __construct($adresse)
+    public function __construct($adresse, $superficie)
     {
         $this->adresse = $adresse;
+        $this->superficie = $superficie;
     }
 
 
     public function __toString()
     {
-        return $this->adresse;
+        return "Ce batiment est situé au " . $this->getAdresse();
     }
 
     /**
