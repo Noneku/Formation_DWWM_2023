@@ -1,9 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
-namespace null;
-
 class Personne
 {
     protected int $id;
@@ -13,9 +9,11 @@ class Personne
     protected string $telephone;
     protected float $salaire;
 
+    protected static int $cptId = 0;
 
-    function __construct(int $id, string $nom, string $prenom, string $mail, string $telephone, float $salaire) {
-    	$this->id = $id;
+    function __construct(string $nom, string $prenom, string $mail, string $telephone, float $salaire) {
+
+    	$this->id = self::$cptId++;
     	$this->nom = $nom;
     	$this->prenom = $prenom;
     	$this->mail = $mail;

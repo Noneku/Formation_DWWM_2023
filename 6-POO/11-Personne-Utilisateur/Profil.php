@@ -1,18 +1,16 @@
 <?php
 
-declare(strict_types=1);
-
-namespace null;
-
 class Profil
 {
     private int $id;
     private string $code;
     private string $libelle;
     
+    protected static int $cptId = 0;
 
-    function __construct(int $id, string $code, string $libelle) {
-    	$this->id = $id;
+    function __construct(string $code, string $libelle) {
+
+    	$this->id = self::$cptId++;
     	$this->code = $code;
     	$this->libelle = $libelle;
     

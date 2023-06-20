@@ -1,20 +1,63 @@
 <?php
 
-declare(strict_types=1);
-
-namespace null;
-
-class Utilisateur
+include('./Personne.php');
+include('./Profil.php');
+class Utilisateur extends Personne
 {
     private string $login;
     private string $password;
     private string $service;
 
-    function __construct(string $login, string $password, string $service) {
+    private Profil $profil;
+
+    function __construct(string $nom, string $prenom, string $mail, string $telephone, float $salaire, string $login, string $password, string $service, string $code, string $libelle) {
+
     	$this->login = $login;
     	$this->password = $password;
     	$this->service = $service;
-    
+
+        parent::__construct($nom, $prenom, $mail, $telephone, $salaire);
+
+        $this->profil = new Profil($code, $libelle);
+
+
+        echo "\n";
+        $this->affiche() . "\n\n";
+        $this->calculerSalaire();
+        echo "\n";
+    }
+
+    public function calculerSalaire() : float {
+            $oldSalaire = $this->salaire;
+        
+        //Increase 10% or 40 % depending on post code (Manager 10% - DG 40%)
+
+            if($this->profil->getLibelle() === "Manager"){
+
+               $this->salaire *= 1.10;
+
+                echo "\033[33mAttention cette personne posséde une augmentation de 10%\033[0m\n";
+                echo "Avant augmentation : $oldSalaire €\n";
+                echo "Salaire avec augmentation : $this->salaire €\n";
+
+            } 
+            if ($this->profil->getLibelle() === "Directeur general"){
+
+                $this->salaire *= 1.40;
+
+                echo "\033[33mAttention cette personne posséde une augmentation de 40%\033[0m \n";
+                echo "Avant augmentation : $oldSalaire €\n";
+                echo "Salaire avec augmentation : $this->salaire €\n";
+            }
+
+        return $this->salaire;
+    }
+
+    public function affiche() : void {
+        echo parent::__toString() . "\n";
+        echo $this->__toString() . "\n";
+        echo "***************\n";
+
     }
 
     /**
@@ -64,5 +107,15 @@ class Utilisateur
     */
     public function __toString(): string {
     	return "Login: {$this->login}, Password: {$this->password}, Service: {$this->service}";
+    }
+
+
+
+    /**
+     * Get the value of profil
+     */ 
+    public function getProfil()
+    {
+        return $this->profil;
     }
 }
