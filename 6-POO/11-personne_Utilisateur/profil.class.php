@@ -1,7 +1,61 @@
 <?php
+    class Profil 
+    {
+
+        private string $code;
+        private string $libelle;
+
+        public function __construct($libelle,$code)
+        {
+           
+            $this->libelle = $libelle; 
+            $this->code = $code;
+        }
+
+        
 
 
 
 
 
+        /**
+         * Get the value of code
+         */ 
+        public function getCode()
+        {
+                return $this->code;
+        }
+
+        /**
+         * Set the value of code
+         *
+         * @return  self
+         */ 
+        public function setCode($code)
+        {
+                $this->code = $code;
+
+                return $this;
+        }
+
+        /**
+         * Get the value of libelle
+         */ 
+        public function getLibelle()
+        {
+                return $this->libelle;
+        }
+
+        /**
+         * Set the value of libelle
+         *
+         * @return  self
+         */ 
+        public function setLibelle($libelle)
+        {
+                $this->libelle = $libelle;
+
+                return $this;
+        }
+    }
 ?>
