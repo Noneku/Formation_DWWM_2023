@@ -29,7 +29,7 @@ for ($i = 0 ; $i < count($utilisateurs); $i++) {
     if ($utilisateurs[$i]->getProfil()->getLibelle() !== "Manager") {
         echo "\nIdentifiant : " .$utilisateurs[$i]->getProfil()->getId();
         echo $utilisateurs[$i]->__toString();
-}
+    }
 }
 
 echo "\nListe des managers : ";
@@ -39,6 +39,6 @@ for ($i = 0 ; $i < count($utilisateurs); $i++) {
     if ($utilisateurs[$i]->getProfil()->getLibelle() == "Manager") {
         echo "\nIdentifiant : " .$utilisateurs[$i]->getProfil()->getId();
         echo $utilisateurs[$i]->__toString();
-}
+    }
 }
 ?>
