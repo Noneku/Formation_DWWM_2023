@@ -1,33 +1,33 @@
 <?php
 
-//Déclaration de variable
-    $better = [];
-    $T = [
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8]
-    ];
-//loop on size number of element in $T
- for ($i=0; $i < count($T); $i++) {
-        //Browse the elements in 8 array
-        for ($j=0; $j < count($T[$i]) ; $j++) { 
+$tab[0] = [1, 2, 4, 8, 16,5,4,8];
+$tab[1] = [1, 3, 9, 27, 81,56,56,80];
+$tab[2] = [1, 3, 9, 27, 81,56,56,65];
+$tab[3] = [1, 3, 9, 27, 81,56,56,612];
+$tab[4] = [1, 3, 9, 27, 81,56,56,80];
+$tab[5] = [1, 3, 9, 27, 81,56,56,6];
+$tab[6] = [1, 3, 9, 27, 81,56,56,64];
+$tab[7] = [1, 3, 9, 27, 81,56,56,6];
+$tab[8] = [1, 3, 9, 27, 81,56,56,64];
+$tab[9] = [1, 3, 9, 27, 81,56,56,64];
+$tab[10] = [1, 3, 9, 27, 81,56,56,65];
+$tab[11] = [1, 3, 9, 27, 81,56,56,64];
 
-            //Compare element[0] with next element
-            if($T[0][$j] >= $T[0][$j + 1]){
-                //If the first element superior, stock this in $better
-                $better[$i] = $T[0][$j];
-            
-            }
-        }
- }
-var_dump($better);
+$pg = 0;
+$pos = 0;
+
+
+// montr ele plus grand chiffre d'un tableau multidimensionnel//
+for ($i=0; $i < count($tab) ; $i++) { 
+
+    for($j=0; $j < count($tab[$j]) ; $j++){
+        if ($tab[$i][$j]> $pg) {
+            $pg = $tab[$i][$j];
+        } 
+    }  
+}
+
+print_r ($tab);
+
+echo "le plus grand nombre est ".$pg;
 ?>

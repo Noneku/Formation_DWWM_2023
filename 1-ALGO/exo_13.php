@@ -1,14 +1,20 @@
 <?php
 
-//Variables
-$nbrUser = readline("Entre run nombre\n");
-//Algo
-if($nbrUser >= 1){
-    //Display
-    echo "Votre nombre est positif";
+/*déclaration*/;
+
+$nb1 = trim(fgets(STDIN));
+$nb2 = trim(fgets(STDIN));
+
+
+
+//calcul 
+
+
+if ($nb1<0 || $nb2<0) {
+    echo "le produit est négatif";
 }
-else {
-    //Display
-    echo"Votre nombre est négatif";
-}
-?>
+else echo "le nombre est positif";
+
+
+ ?>
+

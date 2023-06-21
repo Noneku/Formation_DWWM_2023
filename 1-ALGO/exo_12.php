@@ -1,14 +1,29 @@
 <?php
 
-$prixHT = readline ("Entrez le prix HT: ");
-$nombreArticle = readline ("Entrez le nombre d'article:  ");
-$tauxTVA = 0.20;
-$ttc = $nombreArticle * $prixHT * (1 + $tauxTVA);
+/*déclaration*/;
 
-echo $prixHT;
-echo "\n";
-echo $nombreArticle;
-echo "\n";
-echo " le prix TTC est de :". $ttc ."€";
+$nb = readline('Saisie le nombre article ');
+$tva = readline('Saisie Taux TVA en pourcentage ');
+$prix = readline('Saisie le prix ');
 
-?>
+//calcul 
+
+
+$MTva  = $prix*($tva/100)*$nb;
+$PrixTTC= $nb*$prix*(($tva/100)+1);
+
+
+
+// resultat
+
+echo "le prix HT est  ".$prix*$nb," €";
+echo "\n";
+echo "le Taux de TVA est  ".$tva,"%";
+echo "\n";
+echo "la TVA est  ".$MTva," €";
+echo "\n";
+echo "Le prix total est ".$PrixTTC," €";
+
+
+ ?>
+ 

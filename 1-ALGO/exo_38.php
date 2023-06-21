@@ -1,18 +1,31 @@
 <?php
-    $tab = [];
-    $better = 0;
-        for ($i=0; $i <= 5; $i++) { 
-            $nbr = readline("Entrer un nombre : ");
+$nbl = readline("Saisissez un nombre de ligne");
+$tab1 = array ();
+$stock = 0;
+$pstock = 1;
+$i = 0;
 
-            $tab[$i] = $nbr;
-            
-            if($i == 5){
-                for ($j=0; $j < count($tab) - 1; $j++) { 
-                    if($tab[$j] > $tab[$j+1]){
-                        $better = $tab[$j];
-                    }
-                }
-            }
-        }
-        print_r($better);
+
+for ($i=0; $i < $nbl; $i++) { 
+
+    $tab1[$i] = readline("Saisissez un nombre");
+ 
+}
+print_r ($tab1);
+
+for ($i=0; $i < $nbl; $i++) { 
+    if($stock < $tab1[$i]){
+        $stock = $tab1[$i];
+        $pstock = $i;
+
+    }else{
+        
+    
+    }
+    
+ 
+}
+print_r ($tab1);
+
+echo "le plus grand chiffre est ".$stock." saisie en position ".$pstock;
 ?>

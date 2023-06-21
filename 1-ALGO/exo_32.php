@@ -1,14 +1,15 @@
 <?php
+$note = array ("","","","","","","","","");
 
-//Variables
-$tab = [];
 
-for ($i=0; $i < 9; $i++) { 
-    //Déclarer $nbr dans une boucle permet de le demander 9 fois
-    $nbr = readline("Entrer un nombre : ");
-    //Insert the value of $nbr in Array $tab
-    $tab[$i] = $nbr;
+// boucle affiche rles nombre en tableau avec 9 ligne
+
+
+for($i=0; $i < 9; $i++){
+    echo "Saisir un nombre : ";
+    $note[$i] = trim(fgets(STDIN));
+   //  $note[$i] = $nb1;
 }
 
-var_dump($tab)
-?> ;
+print_r($note)
+?>

@@ -1,12 +1,21 @@
 <?php
+$nbl = readline("Saisissez un nombre de ligne");
+$tab1 = array ();
+$tab2 = array ();
+$i = 0;
 
-    $tab = [];
+//décaler un tableau en faisant un autre tableau
+for ($i=0; $i < $nbl; $i++) { 
 
-    for ($i=0; $i < 5; $i++) { 
-        $nbr = readline("Entre un nombre : ");
-        //Add 1 to result of nbr
-        $tab[$i] = $nbr + 1;
-        var_dump($tab);
-    }
-    
+    $tab1[$i] = readline("Saisissez un nombre");
+ 
+}
+print_r ($tab1);
+
+for ($i=0; $i < $nbl; $i++) { 
+
+    $tab2[$i] = $tab1[$i] + 1;
+ 
+}
+print_r ($tab2);
 ?>

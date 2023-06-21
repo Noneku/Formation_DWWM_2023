@@ -1,8 +1,13 @@
 <?php
-$A = readline("Entrer un nombre : ");
-$B = readline("Entrer un nombre : ");
 
-$result = ($A + $B) /2;
+$a = readline("Saisissez un nombre premier nombre : ");
+$b = readline("Saisissez un autre deuxieme nombre: ");
 
-echo "La moyenne est de $result";
+
+// Instruction faire la moyenne
+
+echo "La moyenne est de ".($a+$b)/2;
+
+
+
 ?>

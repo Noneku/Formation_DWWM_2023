@@ -1,0 +1,74 @@
+/* *{
+    size : 100%;
+} */
+body{
+    margin :0;
+    padding:0;
+    background-color:white;
+    background-image:url('./IMG/fond2.jpg');
+    background-repeat:no-repeat;
+    background-size: cover;
+}
+
+header{
+    background-color:#FFF;
+    text-align:center;
+    padding : 1px 0;
+    margin : 1px 0;
+    background-color:#669933;
+}
+
+main{
+    max-width:100%;
+
+}
+
+form{
+    margin-top: 18%;
+    display: flex;
+    justify-content: center;
+}
+.tab{
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+    justify-items: center;
+
+}
+
+.button1{
+    border: none;
+    width : 180px;
+    border-radius: 20px;
+    margin-bottom: 3px;
+    background-color: transparent;
+    font-family:'Eraser', sans-serif;
+    color: #FFF;
+    font-size: 25px;
+
+}
+
+.button1:hover{
+    color: black;
+    font-weight: italic;
+}
+
+.button2{
+    border: none;
+    margin-bottom: 10px;
+    background-color: transparent;
+    font-family:'Eraser', sans-serif;
+    color: #FFF;
+    font-size: 25px;
+
+}
+
+.button2:hover{
+    color: black;
+    font-weight: italic;
+}
+footer{
+    background-color:#669933;
+    text-align:center;
+    clear:both;
+}
