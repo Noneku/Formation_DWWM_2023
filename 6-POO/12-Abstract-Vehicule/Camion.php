@@ -1,11 +1,5 @@
 <?php
-
-declare(strict_types=1);
-namespace Camion;
-
-use Vehicule;
-
-
+require_once('Vehicule.php');
 class Camion extends Vehicule
 {
     public function demarrer()

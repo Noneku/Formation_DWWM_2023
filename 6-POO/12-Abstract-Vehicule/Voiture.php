@@ -1,13 +1,18 @@
 <?php
 
-declare(strict_types=1);
-
-namespace null;
-
-use null\Vehicule as Vehicule;
+require_once('Vehicule.php');
 
 
 class Voiture extends Vehicule
 {
-    <Voiture class="demar"></Voiture>
+    public function demarrer()
+    {
+        echo "Je demarre";
+    }
+
+    public function accelerer()
+    {
+        echo "j'accelere";
+    }
+
 }
