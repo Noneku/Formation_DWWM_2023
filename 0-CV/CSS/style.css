@@ -1,0 +1,90 @@
+body {
+background-color: black;
+color:white;
+background-size: cover;
+font-weight:bold;
+font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+header {
+background-size: cover;
+text-transform : uppercase;
+}
+
+#photo {
+border-radius: 50%;
+}
+
+#infos  {
+align-content:space-between;
+flex-wrap: wrap-reverse;
+flex-direction:column-reverse;
+text-align: center;
+}
+    
+
+h1 {
+text-align: center;
+color:rgb(41, 3, 53);
+text-shadow:0 4px 0 #aa195d;
+}
+
+h2 {
+font-style: oblique;
+text-decoration: underline overline;
+color:#870587;
+}
+
+section {
+justify-content: flex-start;
+flex-flow:wrap
+}
+    
+
+#Expérience {
+border-width: thick;
+border-radius: 5px;
+border-style:solid;
+text-align: center;
+align-self: flex-start;
+border-radius: 30px;
+margin-top:10px;
+margin-bottom:10px;
+margin-left: 700px ;
+margin-right: 700px;
+border-color: #870587;
+}
+
+#Formation {
+border-width: thick;
+border-radius: 5px;
+border-style:solid;
+text-align: center;
+align-self: center;
+border-radius: 30px;
+margin-top:10px;
+margin-bottom:10px;
+margin-left: 700px ;
+margin-right: 700px;
+border-color: #870587;
+}
+
+#Compétences {
+border-width: thick;
+border-radius: 5px;
+border-style:solid;
+text-align: center;
+align-self: flex-end;
+border-radius: 30px;
+margin-top:10px;
+margin-bottom:10px;
+margin-left: 700px ;
+margin-right: 700px;
+border-color: #870587;
+}
+
+ul {
+list-style-type: none;
+}
+
+
