@@ -35,6 +35,7 @@ for ($i=0; $i < $nbUtilisateur; $i++) {
     $listeUtilisateur[$i] = new Profil($nom, $prenom, $mail, $telephone, $salaire, $login, $password, $service, $code, $libelle);
 } 
 
+// Double boucle qui, pour chaque profil existant, énumère tout les utilisateurs crées et affiche ceux du profil correspondant
 foreach ($listeProfil as $key => $value) {
     echo $value . " : \n\n";
     for ($i=0; $i < count($listeUtilisateur); $i++) { 
