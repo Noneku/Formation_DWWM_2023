@@ -6,12 +6,15 @@ abstract class Vehicule
     private int $matricule;
     private int $annee;
     private float $prix;
+    public static int $cpt = 455;
 
 
-    public function __construct ($matricule, $annee, $prix) {
-        $this->matricule = $matricule;
+    public function __construct ($annee, $prix) {
         $this->annee = $annee;
         $this->prix = $prix;
+
+        self::$cpt++;
+        $this->matricule = self::$cpt;
     }
 
     public function demarrer () {
@@ -22,7 +25,11 @@ abstract class Vehicule
 
     }
 
-    
+    public function __toString () : string {
+        return "\nMatricule : " .$this->matricule. "\nAnnée du modèle : " .$this->annee. "\nPrix : " .$this->prix. " €";
+    }
+
+
 
 
 
