@@ -6,7 +6,10 @@ include "profil.class.php";
 $nbUtilisateur = readline("Combien d'utilisateurs souhaites-tu ajouter ? ");
 
 // Array contenant la liste des profils
-$listeProfil = array("CP"=>"Chef de projet", "MN"=>"Manager", "DP"=>"Directeur de projet", "DRH"=>"Directeur des ressources humaines", "DG"=>"Directeur général");
+$listeProfil = array("Chef de projet", "Manager", "Directeur de projet", "Directeur des ressources humaines", "Directeur général");
+
+// Array contenant la liste des libelle des profils
+$listeLibelle =  array("CP", "MN", "DP", "DRH", "DG");
 
 // Array vide futur conteneur de la liste des utilisateurs
 $listeUtilisateur = array();
@@ -25,11 +28,18 @@ for ($i=0; $i < $nbUtilisateur; $i++) {
     foreach ($listeProfil as $key => $value) {
         if ($service == $value) {
             $code = $j;
-            $libelle = $key;
+            $libelle = $listeLibelle[$j];
         }
         $j++;
     }
     $listeUtilisateur[$i] = new Profil($nom, $prenom, $mail, $telephone, $salaire, $login, $password, $service, $code, $libelle);
 } 
 
-$listeUtilisateur[0]->affiche();
+foreach ($listeProfil as $key => $value) {
+    echo $value . " : \n\n";
+    for ($i=0; $i < count($listeUtilisateur); $i++) { 
+        if ($listeUtilisateur[$i]->getService() == $value) {
+            $listeUtilisateur[$i]->affiche();
+        }
+    }
+}

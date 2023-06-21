@@ -20,4 +20,49 @@ class Profil
     {
         echo $this->utilisateur->affiche() . "Code : " . $this->code . "\nLibelle : " . $this->libelle . "\n";
     }
+
+    public function getService(): string
+    {
+        return $this->utilisateur->getService();
+    }
+
+    /**
+     * Get the value of code
+     */ 
+    public function getCode()
+    {
+        return $this->code;
+    }
+
+    /**
+     * Set the value of code
+     *
+     * @return  self
+     */ 
+    public function setCode($code)
+    {
+        $this->code = $code;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of libelle
+     */ 
+    public function getLibelle()
+    {
+        return $this->libelle;
+    }
+
+    /**
+     * Set the value of libelle
+     *
+     * @return  self
+     */ 
+    public function setLibelle($libelle)
+    {
+        $this->libelle = $libelle;
+
+        return $this;
+    }
 }
