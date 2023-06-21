@@ -29,10 +29,7 @@ public function __construct($nom , $prenom , $mail , $telephone , $salaire)
 
 
 //Methode abstraite
-public function calculerSalaire(){
-    
-}
-
+abstract function calculerSalaire() : float;
 
 
 
