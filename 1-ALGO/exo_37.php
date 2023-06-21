@@ -1,12 +1,20 @@
 <?php
+    // Déclaration tableau
+    $nombreValeurs = readline("Combien de valeurs voulez-vous entrer ? ");
 
-    $tab = [];
+    $tableau = array();  
 
-    for ($i=0; $i < 5; $i++) { 
-        $nbr = readline("Entre un nombre : ");
-        //Add 1 to result of nbr
-        $tab[$i] = $nbr + 1;
-        var_dump($tab);
+    // Boucle pour la saisie des valeurs
+    for ($i = 0; $i < $nombreValeurs; $i++) {
+        $valeur = readline("Entrez la valeur numéro " . ($i+1) . ": ");
+        $tableau[] = $valeur;
     }
-    
+
+    // Boucle pour augmenter chaque valeur de 1
+    for ($i = 0; $i < $nombreValeurs; $i++) {
+        $tableau[$i] += 1;
+    }
+
+    // Affichage du nouveau tableau
+    print_r($tableau);
 ?>

@@ -1,13 +1,16 @@
 <?php
-//2 Variables sexe et $age
-$sexe = readline("Entrer votre sexe : ");
-$age = readline("Entrer votre âge : ");
+    // Demande l'âge du parisien
+    echo "Veuillez entrer l'âge du parisien : ";
+    $age = trim(fgets(STDIN));
 
-if($sexe == "H" && $age >= 20){
-    echo "Vous êtes imposables";
-}elseif (($sexe == "F") && ($age >= 18 && $age <= 35)) {
-    echo "Vous êtes imposables";
-}else{
-    echo "Vous n'êtes pas imposables";
-}
+    // Demande le sexe du parisien
+    echo "Veuillez entrer le sexe du parisien (M pour masculin, F pour féminin) : ";
+    $sexe = trim(fgets(STDIN));
+
+    // Vérifie si le parisien est imposable
+    if (($sexe == 'M' && $age > 20 || ($sexe == 'F' && $age >= 18 && $age <= 35))) {
+       echo "imposable";
+    } else {
+        echo "non imposable";
+    }
 ?>

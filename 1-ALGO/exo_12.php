@@ -1,14 +1,13 @@
 <?php
+//Variables
+$PHT = 100;
+$nbArticles = 3;
+$TVA = 0.20;
+$TTC;
 
-$prixHT = readline ("Entrez le prix HT: ");
-$nombreArticle = readline ("Entrez le nombre d'article:  ");
-$tauxTVA = 0.20;
-$ttc = $nombreArticle * $prixHT * (1 + $tauxTVA);
+//Calcul
+$TTC = $nbArticles * $PHT * (1 + $TVA);
 
-echo $prixHT;
-echo "\n";
-echo $nombreArticle;
-echo "\n";
-echo " le prix TTC est de :". $ttc ."€";
-
+//Affichage
+echo "Le prix total est de : " . $TTC;
 ?>

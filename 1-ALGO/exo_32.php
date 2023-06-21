@@ -1,14 +1,15 @@
 <?php
+    // Déclaration d'un tableau vide pour stocker les notes
+    $notes = array();
 
-//Variables
-$tab = [];
+    // Boucle pour demander à l'utilisateur de saisir 9 notes
+    for ($i = 0; $i < 9; $i++) {
+        echo "Veuillez entrer la note numéro " . ($i+1) . ": ";
+        $note = trim(fgets(STDIN));
+        $notes[] = $note;
+    }
 
-for ($i=0; $i < 9; $i++) { 
-    //Déclarer $nbr dans une boucle permet de le demander 9 fois
-    $nbr = readline("Entrer un nombre : ");
-    //Insert the value of $nbr in Array $tab
-    $tab[$i] = $nbr;
-}
-
-var_dump($tab)
-?> ;
+    // Affichage du tableau des notes
+    print_r($notes);
+    
+?>

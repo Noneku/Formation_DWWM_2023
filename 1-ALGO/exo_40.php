@@ -1,33 +1,25 @@
 <?php
+// variable du tableau à deux dimensions de 12x8
+    $T = array();  
 
-//Déclaration de variable
-    $better = [];
-    $T = [
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8]
-    ];
-//loop on size number of element in $T
- for ($i=0; $i < count($T); $i++) {
-        //Browse the elements in 8 array
-        for ($j=0; $j < count($T[$i]) ; $j++) { 
-
-            //Compare element[0] with next element
-            if($T[0][$j] >= $T[0][$j + 1]){
-                //If the first element superior, stock this in $better
-                $better[$i] = $T[0][$j];
-            
+    $maxValeur = 0;  
+    
+    for ($i=0; $i <12; $i++) { 
+        for ($j=0; $j <8 ; $j++) { 
+          $T[$i][$j]=rand(1,100);
+      }
+      
+      
+          }
+      //Boucle for
+    for ($i = 0; $i < 12; $i++) { 
+        for ($j = 0; $j < 8; $j++) {
+            if ($T[$i][$j] > $maxValeur) { 
+                $maxValeur = $T[$i][$j];  
             }
         }
- }
-var_dump($better);
+    }
+      
+    print_r($maxValeur);
+    
 ?>

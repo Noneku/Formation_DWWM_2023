@@ -1,14 +1,14 @@
 <?php
+    // Demande un nombre à l'utilisateur
+    echo "Veuillez entrer un nombre : ";
 
-//Variables
-$nbrUser = readline("Entre run nombre\n");
-//Algo
-if($nbrUser >= 1){
-    //Display
-    echo "Votre nombre est positif";
-}
-else {
-    //Display
-    echo"Votre nombre est négatif";
-}
+    // Récupère le nombre saisi par l'utilisateur
+    $nombre = trim(fgets(STDIN));
+
+    // Affichage du résultat
+    if ($nombre > 0) {
+        echo "Le nombre est positif.";
+    } else if ($nombre < 0) {
+        echo "Le nombre est négatif.";
+    }
 ?>

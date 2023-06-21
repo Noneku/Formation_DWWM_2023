@@ -1,8 +1,13 @@
 <?php
-$A = readline("Entrer un nombre : ");
-$B = readline("Entrer un nombre : ");
+    // Demande la première variable à l'utilisateur
+    echo "Veuillez entrer le premier nombre : ";
+    $nombre1 = trim(fgets(STDIN));
 
-$result = ($A + $B) /2;
+    // Demande la deuxième variable à l'utilisateur
+    echo "Veuillez entrer le deuxième nombre : ";
+    $nombre2 = trim(fgets(STDIN));
 
-echo "La moyenne est de $result";
+    // Calcule et affiche la moyenne
+    $moyenne = ($nombre1 + $nombre2) / 2;
+    echo "La moyenne des deux nombres est : " . $moyenne;
 ?>

@@ -1,26 +1,15 @@
 <?php
+    // Demande deux nombres à l'utilisateur
+    echo "Veuillez entrer le premier nombre non nul : ";
+    $nombre1 = trim(fgets(STDIN));
 
-//Variables
-$check;
-$nbrUser1 = readline("Entrer un nombre\n");
-$nbrUser2 = readline("Entrer un nombre\n");
+    echo "Veuillez entrer le second nombre non nul : ";
+    $nombre2 = trim(fgets(STDIN));
 
-//Algo
-if($nbrUser1 >= 1){
-    //Display
-    $result1 = "Votre nombre $nbrUser1 est positif\n";
-}
-else {
-    //Display
-     $result1 = "Votre nombre $nbrUser1 est negatif\n";
-}
-if($nbrUser2 >= 1){
-    //Display
-    $result2 = "Votre nombre $nbrUser2 est positif\n";
-}
-else {
-    $result2 = "Votre nombre $nbrUser2 est negatif\n";
-}
-
-print("Nombre numéro 1 : ".$result1."Nombre numéro 2 : ".$result2);
+    // Vérifie si le produit est positif ou négatif sans calculer le produit
+    if (($nombre1 > 0 && $nombre2 > 0) || ($nombre1 < 0 && $nombre2 < 0)) {
+        echo "Le produit des deux nombres serait positif.";
+    } else {
+        echo "Le produit des deux nombres serait négatif.";
+    }
 ?>

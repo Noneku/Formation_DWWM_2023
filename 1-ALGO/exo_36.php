@@ -1,21 +1,19 @@
 <?php
+    // Déclaration des deux tableaux
+    $tableau1 = array(2, 5, 8, 4);
+    $tableau2 = array(6, 7);
 
-$tab1 = [2,5,8,4];
-$tab2 = [6,7];
-$result = [];
-$sum = 0;
+    $schtroumpf = 0;  
 
-for ($i=0; $i < count($tab2) ; $i++) { 
-    
-    for ($j=0; $j < count($tab1); $j++) { 
+    // Parcourir chaque élément du tableau 1
+    for ($i = 0; $i < count($tableau1); $i++) {
 
-        $result[$j] = $tab2[$i] * $tab1[$j];
-
-        $sum += $result[$j];
+        // Parcourir chaque élément du tableau 2
+        for ($j = 0; $j < count($tableau2); $j++) {
+            $schtroumpf += $tableau1[$i] * $tableau2[$j];
+        }
     }
-      
-}
 
-echo $sum
-
+    // Affichage du schtroumpf
+    echo "Le Schtroumpf est : " . $schtroumpf;
 ?>

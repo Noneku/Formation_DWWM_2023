@@ -1,22 +1,16 @@
 <?php
+    // Demande un nombre à l'utilisateur
+    echo "Veuillez entrer un nombre : ";
 
-//Variables
-$nbr1 = readline("Entrer un nombre : ");
-$nbr2 = readline("Entrer un second nombre : ");
-$total = $nbr1 * $nbr2;
+    // Récupère le nombre saisi par l'utilisateur
+    $nombre = trim(fgets(STDIN));
 
-//Traitement
-if($total > 0){
-    echo "Le résultat est $total donc positif";
-}
-else{
-    if($total === 0){
-        $total = null;
-        echo "Le résultat est null";
+    // Vérifie si le nombre est positif, négatif ou zéro
+    if ($nombre > 0) {
+        echo "Le nombre est positif.";
+    } else if ($nombre < 0) {
+        echo "Le nombre est négatif.";
+    } else {
+        echo "Le nombre est nul.";
     }
-    else {
-        echo "Le résultat est $total donc négatif";
-    }
-}
-
 ?>

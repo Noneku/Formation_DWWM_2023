@@ -1,19 +1,19 @@
 <?php
+    // Demande la note d'oral à l'utilisateur
+    echo "Veuillez entrer la note d'oral : ";
+    $noteOral = trim(fgets(STDIN));
 
-//Variables
+    // Demande la note d'écrit à l'utilisateur
+    echo "Veuillez entrer la note d'écrit : ";
+    $noteEcrit = trim(fgets(STDIN));
 
-$module = readline("Entrer un module : ");
-$coef1 = readline("Entrer une note (Coef : 1) : "); //Note Oral
-$coef2 = readline("Entrer une note (Coef : 2) : "); //Note écrit
+    // Calcule la moyenne
+    $moyenne = ($noteOral * 1 + $noteEcrit * 2) / 3;
 
-//Traitement
-$moyenne = ((2*$coef1)+$coef2) / 3;
-
-//Si la moyenne est >= à 10 alors ADMIS
-if($moyenne >= 10){
-    echo "Vous avez réussis, votre moyenne est de : $moyenne, du module : $module";
-}else {
-    echo "Echec !";
-}
-
+    // Affiche le résultat
+    if ($moyenne >= 10) {
+        echo "Le module est validé. Votre moyenne est : " . $moyenne;
+    } else {
+        echo "Le module n'est pas validé. Votre moyenne est : " . $moyenne;
+    }
 ?>
