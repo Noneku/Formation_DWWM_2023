@@ -19,6 +19,7 @@ résultat attendu :
     ...
 
 */
-for ($i=1; $i < 100; $i++) { 
-    echo $i * 3 ."\n";
+
+for ($i=3; $i <= 100; $i += 3) { 
+    echo $i . "\n";
 }

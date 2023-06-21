@@ -1,41 +1,43 @@
 <?php
-
 //en input un tablo associatif avec la liste des students à sauvegarder dans un fichier.txt
 //nom du fichier : save_students_date-heureminiteseconde.txt dans le repertoire sauvegarde
-function studentsToFile(array $studentList) : void {
-    
-    //Create File save_student AND Import Array $studentList in file save_student
-    file_put_contents("../Modele/sauvegardes/save_student_" . date("DMY-His") .".txt",$studentList);
-}
-function loadStudentsFromFile (String $pathFile) : array {
-    //Put 1 element in array after line break
-    $listeStudents = explode("\n",file_get_contents($pathFile));
-    foreach ($listeStudents as $key => $value) {
-        unset($listeStudents[$key]);
-        $listeStudents["Place_".$key] = $value;
-    }
-    return $listeStudents;
+function studentsToFile(array $studentList) : void{
+    file_put_contents('Modele/sauvegardes/save_students_'.date('d-m-y__H-i-s').'.txt', $studentList);
 }
 
-function saveStudentsToCSVFile(array $studentListSave) : void {
-    //Replace all " " by ";" in studentListSave
-    foreach ($studentListSave as $key => $value) {
-        $studentListSave[$key] = "  ".$key." ".$value;
-            // str_replace(substr($value, -1),";", $studentListSave);
-        }
-    
-    //Save a copy files in SAVE-FOLDER and exclude hide file
-    $saveFolder = preg_grep('/^([^.])/', scandir("../Modele/sauvegardes"));
-    //Browse a folder "sauvegardes"
-    foreach ($saveFolder as $key => $value) {
-        //Replace the extension of file ".txt" to ".csv"
-        $value = str_replace("txt", "csv",$value);
-        //Create new file from $studentListSave and put him in directory CSV
-        file_put_contents("./".$value,$studentListSave);
-        }
-     
+
+//charger la liste des students à partir un fichier (listStudents.txt)
+function loadStudentsFromFile (String $pathFile) : array{
+    // Lecture du fichier
+    $pathFile = file_get_contents($pathFile);
+
+    // Explosion du fichier pour le transformer en array
+    $studentList = explode("\n", $pathFile);
+
+    // Second array pour les places du futur tableau associatif
+    $place = array();
+
+    // Ajout des valeurs dans le tableau place
+    for ($i=0; $i < 16; $i++) { 
+        $place[$i] = 'Place_' . $i + 1;
     }
 
+    // Combinaison des deux arrays
+    $studentList = array_combine($place, $studentList);
+
+    // Retourner le résultat
+    return($studentList);
+}
+
+
+//sauvegarde de la liste des students au format CSV (le separateur entre le nom et prenom ";")
+function saveStudentsToCSVFile(array $studentList) : void{
+    // Remplacement des espacements par ";"
+    $studentList = str_replace(' ', ';', $studentList);
+
+    // Sauvegarde au format CSV
+    file_put_contents('Modele/sauvegardes/save_students_bis_'.date('d-m-y__H-i-s').'.csv', $studentList);
+}
 
 
 /*en en entrée un tableau associatif de stagiaire [K,V], en sorti un tableau associatif
@@ -58,17 +60,25 @@ ex :
 ["Place_15" => "OLIVIER Quentin"]
 ["Place_16" => "GACEM Nassim"]
 */
-function shufflePositions(array $studentList ) : array{
-    //Take values of $StudentList
-    $randomSortValue = array_values($studentList);
-    //Random Sort
-    shuffle($randomSortValue);
-    //Take keys of $StudentList
-    $keysStudentListeArray = array_keys($studentList);
-    //Fusion Key Array and Values Array
-    $studentList = array_combine($keysStudentListeArray, $randomSortValue);
-    
-     return $studentList;
-}
+function shufflePositions(array $studentList ) : array {
+    // Array place pour stocker les keys qui seront perdues avec le shuffle
+    $place = array();
 
+    // Boucle foreach pour stocker les valeurs place qui seront perdues après le shuffle
+    foreach ($studentList as $key => $value) {
+        $place[$key] = $key;
+    }
+
+    // Mélange des valeurs de l'array studentList
+    shuffle($studentList);
+
+    // Fusion du tableau studentList avec le tableau place pour récupérer les places perdues via le shuffle
+    $studentList = array_combine($place, $studentList);
+
+    // Boucle foreach afin d'afficher dans les futures sauvegardes les noms ET les places correspondantes
+    foreach ($studentList as $key => $value) {
+        $studentList[$key] = $key . ' => ' . $value . "\n";
+    }
+    return($studentList);
+}
 ?>

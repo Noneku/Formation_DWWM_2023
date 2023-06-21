@@ -146,6 +146,8 @@ for ($i = 0; $i <= 100; $i++) {
         $unite = 'huit';
     } else if ($reste_des_dizaines == 9) {
         $unite = 'neuf';
+    } else if ($reste_des_dizaines == 10) {
+        $unite = 'dix';
     }
 
     if ($reste_des_centaines == 0) {
@@ -221,8 +223,9 @@ for ($i = 0; $i <= 100; $i++) {
     } else if ($i == 79) {
         $nombre = 'soixante-dix-neuf';
     }
-    
+
     // exceptions 90+
+    // @todo il manque 91, 92, 93, 94, 95, 96, 97, 98, 99, inspirez vous du bloc "exceptions 70+" et complétez le code
     if ($i == 91) {
         $nombre = 'quatre-vingt-onze';
     } else if ($i == 92) {
@@ -233,7 +236,6 @@ for ($i = 0; $i <= 100; $i++) {
         $nombre = 'quatre-vingt-quatorze';
     } else if ($i == 95) {
         $nombre = 'quatre-vingt-quinze';
-    // @todo il manque 76, 77, 78 et 79, complétez le code
     } else if ($i == 96) {
         $nombre = 'quatre-vingt-seize';
     } else if ($i == 97) {
@@ -243,10 +245,7 @@ for ($i = 0; $i <= 100; $i++) {
     } else if ($i == 99) {
         $nombre = 'quatre-vingt-dix-neuf';
     }
-    // exceptions 90+
-    // @todo il manque 91, 92, 93, 94, 95, 96, 97, 98, 99, inspirez vous du bloc "exceptions 70+" et complétez le code
 
     echo "$i : $nombre";
     echo PHP_EOL;
 }
-

@@ -1,13 +1,16 @@
 <?php
-//Array Declarations
-$tab1 = [1,2,3,4,5];
-$tab2 = [1,2,3,4,5];
-$tabResult = [];
+    // Deux arrays
+    $tab1 = array(4, 8, 7, 9, 1, 5, 4, 6);
+    $tab2 = array(7, 6, 5, 2, 1, 3, 7, 4);
 
-for ($i=0; $i < count($tab1); $i++) { 
-    //Add  totals of content $tab1 and $tab2 in $tabResult -> index 0
-    $tabResult[$i] = $tab1[$i] + $tab2[$i];
-}
+    // Troisième array vide
+    $somme = array();
 
-var_dump($tabResult);
+    // Boucle pour additionner les deux tableaux valeur par valeur
+    for ($i=0; $i < count($tab1); $i++) { 
+        $somme[$i] = $tab1[$i] + $tab2[$i];
+    }
+    
+    // Affichage
+    print_r($somme);
 ?>

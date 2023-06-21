@@ -1,9 +1,13 @@
 <?php
 include "functions.php";
 
-$studentsList = loadStudentsFromFile("ListeStagiaire.txt");
+// Execution des fonctions
+// Chargement de la liste des students et stockage dans la variable studenList
+$studentList = loadStudentsFromFile('ListeStagiaire.txt');
 
-studentsToFile($studentsList);
+// Sauvegarde de la liste des students
+studentsToFile($studentList);
 
-saveStudentsToCSVFile($studentsList);
+// Sauvegarde de la liste des students au format CSV
+saveStudentsToCSVFile($studentList);
 ?>

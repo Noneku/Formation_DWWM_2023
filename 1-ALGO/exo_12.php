@@ -1,14 +1,10 @@
 <?php
+    // Demander des valeurs
+    $ht = readline("Quel est le prix de l'article HT? ");
+    $nbArticle = readline("Combien y a t il d'article? ");
+    $tva = $ht / 100 * 10;
+    $ttc = $nbArticle * $ht * (1 + $tva);
 
-$prixHT = readline ("Entrez le prix HT: ");
-$nombreArticle = readline ("Entrez le nombre d'article:  ");
-$tauxTVA = 0.20;
-$ttc = $nombreArticle * $prixHT * (1 + $tauxTVA);
-
-echo $prixHT;
-echo "\n";
-echo $nombreArticle;
-echo "\n";
-echo " le prix TTC est de :". $ttc ."€";
-
+    // Affichage
+    echo "L'article vaut $ht euros, il y a $nbArticle articles et la TVA est de $tva euro. Le prix total TTC est de $ttc euros.";
 ?>

@@ -18,12 +18,13 @@ résultat attendu :
 
 bloc 4
 résultat attendu :
-$variable est un nomnbre entier
+$variable est un nombre entier
 
 */
 
 // bloc 1
-if (true) {
+switch (true) {
+case true:
     echo "c'est vrai";
     echo PHP_EOL;
 }
@@ -31,28 +32,30 @@ if (true) {
 // bloc 2
 $i = 2;
 
-if ($i == 100) {
+switch ($i) {
+case 100:
     echo "égal à cent";
     echo PHP_EOL;
-} else {
+    break;
+default:
     echo "différent de cent";
     echo PHP_EOL;
 }
 
 // bloc 3
-$password = "toto";
+$password = "1234";
 
-if ($password == "toto") {
+switch ($password) {
+case "toto":
     echo "vous êtes loggé";
     echo PHP_EOL;
-}
-else if ($password == "1234") {
+    break;
+case "1234":
+case "abcd":
     echo "êtes-vous un robot ?";
     echo PHP_EOL;
-} else if ($password = "abcd") {
-    echo "êtes-vous un robot ?";
-    echo PHP_EOL;
-} else {
+    break;
+default:
     echo "mauvais mot de passe";
     echo PHP_EOL;
 }
@@ -60,17 +63,21 @@ else if ($password == "1234") {
 // bloc 4
 $variable = 1;
 
-if (is_string($variable)) {
+switch (true) {
+case is_string($variable):
     echo "$variable est une chaîne de caractères";
     echo PHP_EOL;
-} else if (is_float($variable)) {
+    break;
+case is_float($variable):
     echo "$variable est un nombre à virgule flottante";
     echo PHP_EOL;
-} else if (is_array($variable)) {
+    break;
+case is_array($variable):
     echo "$variable est une liste ";
     echo PHP_EOL;
-} else if  (is_int($variable)) {
-    echo "$variable est un nomnbre entier";
+    break;
+case is_int($variable):
+    echo "$variable est un nombre entier";
     echo PHP_EOL;
+    break;
 }
-

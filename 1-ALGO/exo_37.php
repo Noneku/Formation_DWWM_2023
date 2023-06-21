@@ -1,12 +1,19 @@
 <?php
+    // Variable
+    $i = 0;
 
-    $tab = [];
+    // Array valeurs
+    $valeurs = array();
 
-    for ($i=0; $i < 5; $i++) { 
-        $nbr = readline("Entre un nombre : ");
-        //Add 1 to result of nbr
-        $tab[$i] = $nbr + 1;
-        var_dump($tab);
+    // Demander combien de valeurs on souhaite entrer
+    $nb = readline("Combien de valeurs souhaites-tu entrer ? ");
+
+    // Ecriture des valeurs via une boucle
+    for ($i=0; $i < $nb; $i++) {
+        $valeurs[$i] = readline("Ecris une valeur ");
+        $valeurs[$i]++;
     }
-    
+
+    // Affichage
+    print_r($valeurs);
 ?>

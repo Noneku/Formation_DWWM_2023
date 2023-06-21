@@ -1,15 +1,12 @@
 <?php
+    // Saisie
+    $nb = readline("Combien veux-tu de lignes ? ");
 
-//Variables
-$nb = readline("Entrer un nombre : ");
-$stock = "";
-
-//Traitement
-for ($i=1; $i <= $nb ; $i++) {
-    //Add turn of loop in stock of type String
-    $stock .= $i;
-    echo $stock."\n";
-}
-
-
+    // Conditions
+    for ($lim = 1; $lim <= $nb; $lim++) {
+        for ($i = 1; $i <= $lim; $i++) {
+            echo $i;
+        }
+        echo "\n";
+    }
 ?>

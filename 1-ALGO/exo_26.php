@@ -1,19 +1,17 @@
 <?php
+    // Saisies
+    $a = readline("Choisis une valeur pour le a ");
+    $b = readline("Choisis une valeur pour le b ");
+    $c = readline("Choisis une valeur pour le c ");
 
-$A = readline("Entrer un nombre A : ");
-$B = readline("Entrer un nombre B : ");
-$C = readline("Entrer un nombre C : ");
+    // Variable delta
+    $delta = $b * $b - 4 * $a * $c;
 
-// Delta = B² - 4ac
-$delta = $B * $B -4 * $A * $C; //Reponse = Discriminant
-echo $delta."\n";
-
-if($delta > 0 || $delta = 0){
-
-    $result = -$B + sqrt($delta) / 2 * $A;
-    echo $result;
-}else{
-    echo "Equation Impossible";
-    
-}
+    if ($delta < 0) {
+        echo "L'équation ".$a."x + ".$b."x + ".$c." n'a pas de racine";
+    } elseif ($delta == 0) {
+        echo "L'équation ".$a."x + ".$b."x + ".$c." a comme unique racine : ".-$b / (2 * $a);
+    } elseif ($delta > 0) {
+        echo "L'équation ".$a."x + ".$b."x + ".$c." a deux racines qui sont : ".(-$b - sqrt($delta)) / (2 * $a)." et : ".(-$b + sqrt($delta)) / (2 * $a);
+    }
 ?>

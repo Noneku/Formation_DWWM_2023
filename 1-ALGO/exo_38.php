@@ -1,18 +1,24 @@
 <?php
-    $tab = [];
-    $better = 0;
-        for ($i=0; $i <= 5; $i++) { 
-            $nbr = readline("Entrer un nombre : ");
+    // Variable
+    $max = 0;
+    $pos = 0;
 
-            $tab[$i] = $nbr;
-            
-            if($i == 5){
-                for ($j=0; $j < count($tab) - 1; $j++) { 
-                    if($tab[$j] > $tab[$j+1]){
-                        $better = $tab[$j];
-                    }
-                }
-            }
+    // Demander le nombre de valeurs à entrer
+    $nb = readline("Combien de valeurs souhaites-tu entrer ? ");
+
+    // Array "valeurs"
+    $valeurs = array();
+
+    // Saisie des valeurs via une boucle
+    for ($i=0; $i < $nb; $i++) { 
+        $valeurs[$i] = readline("Saisis une valeur ");
+
+        // Recherche de la valeur la plus grande via une condition
+        if ($valeurs[$i] > $max) {
+            $max = $valeurs[$i];
+            $pos = $i;
         }
-        print_r($better);
+    }
+
+    echo "La valeur la plus grande du tableau est : " . $max . " et elle occupe la position " . $pos . " du tableau";
 ?>

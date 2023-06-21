@@ -1,7 +1,11 @@
 <?php
-$noms = ["test", "he", "ijr"];
+// Demander 3 noms
+$nom1 = readline("Ecris un nom ");
+$nom2 = readline("Ecris un second nom ");
+$nom3 = readline("Ecris un troisième nom ");
 
-for ($i=0; $i < count($noms); $i++) { 
-    echo $noms[$i]."\n";
-}
+// Verification
+$tab = array("$nom1", "$nom2", "$nom3");
+sort($tab);
+print_r($tab);
 ?>

@@ -12,36 +12,19 @@ vous êtes sur la page d'accueil
 $page = 'home';
 
 switch ($page) {
-    case 'about':
-        echo 'vous êtes sur la page « à propos »';
-        echo PHP_EOL;
-        break;
-        case 'contact':
-            echo 'vous êtes sur la page « contact »';
-             echo PHP_EOL;
-            break;
-            case 'home':
-                echo 'vous êtes sur la page d\'accueil';
-            echo PHP_EOL;
-                break;
-    
-    default:
-        echo 'page non trouvée :(';
-        echo PHP_EOL;
-        break;
-}
-/*
-if ($page == 'about') {
+case "about":
     echo 'vous êtes sur la page « à propos »';
     echo PHP_EOL;
-} else if ($page == 'contact') {
+    break;
+case "contact":
     echo 'vous êtes sur la page « contact »';
     echo PHP_EOL;
-} else if ($page == 'home') {
+    break;
+case "home":
     echo 'vous êtes sur la page d\'accueil';
     echo PHP_EOL;
-} else {
+    break;
+default:
     echo 'page non trouvée :(';
     echo PHP_EOL;
-}*/
-
+}

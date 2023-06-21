@@ -1,37 +1,29 @@
 <?php
 
 //en input un tablo simple avec la liste des students à sauvegarder dans un fichier.txt
-//nom du fichier : save_students_date-heureminiteseconde.txt dans le repertoire sauvegarde
-function studentsToFile(array $studentList) : void {
-    
-    //Create File save_student AND Import Array $studentList in file save_student
-    file_put_contents("./sauvegardes/save_student_" . date("DMY-His") .".txt",$studentList);
+//nom du fichier : save_students_date-heureminiteseconde.txt dans le repertoire sauvegardes
+function studentsToFile(array $studentList) : void{
+    file_put_contents('sauvegardes/save_students_'.date('d-m-y__H-i-s').'.txt', $studentList);
 }
 
 //charger la liste des students à partir un fichier (listStudents.txt)
-function loadStudentsFromFile (String $pathFile) : array {
-    //Put 1 element in array after line break
-    $listeStudents = explode("\n",file_get_contents($pathFile));
+function loadStudentsFromFile (string $pathFile) : array{
+    // Lecture du fichier
+    $pathFile = file_get_contents($pathFile);
 
-    return $listeStudents;
+    // Explosion du fichier pour le transformer en array
+    $studentList = explode("\n", $pathFile);
+
+    // Retourner le résultat
+    return($studentList);
 }
 
 //sauvegarde de la liste des students au format CSV (le separateur entre le nom et prenom ";")
-function saveStudentsToCSVFile(array $studentListSave) : void {
+function saveStudentsToCSVFile(array $studentList) : void{
+    // Remplacement des espacements par ";"
+    $studentList = str_replace(' ', ';', $studentList);
 
-    //Replace all " " by ";" in studentListSave
-        $studentListSave = str_replace(" ", "; ",$studentListSave);
-    
-    //Save a copy files in SAVE-FOLDER and exclude hide file
-    $saveFolder = preg_grep('/^([^.])/', scandir("./sauvegardes"));
-    //Browse a folder "sauvegardes"
-    foreach ($saveFolder as $key => $value) {
-        //Replace the extension of file ".txt" to ".csv"
-        $value = str_replace("txt", "csv",$value);
-        //Create new file from $studentListSave and put him in directory CSV
-        file_put_contents("./CSV/".$value,$studentListSave);
-        }
-    }
-
-
+    // Sauvegarde au format CSV
+    file_put_contents('sauvegardes/save_students_bis_'.date('d-m-y__H-i-s').'.csv', $studentList);
+}
 ?>
