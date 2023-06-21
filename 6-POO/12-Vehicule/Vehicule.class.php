@@ -1,20 +1,20 @@
 <?php
 abstract class  Vehicule{
 
-private static int $matricule;
+private  int $matricule;
 private string $annee;
 private float $prix;
-
+private static int $nb=0;
 
 public function __construct($annee,$prix)
 {
-    
+    $this->matricule = self::$nb;
+    $this->annee = $annee;
+    $this->prix = $prix;
 }
+
 Abstract  function Demarrer();
 abstract function Accelerer();
-
-
-
 
 
 
