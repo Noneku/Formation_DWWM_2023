@@ -1,0 +1,46 @@
+/* GENERAL RULES */
+body {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+}
+.blockPrincipal{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+}
+img {
+    border-style: double;
+    border-radius: 50%;
+}
+/* GENERAL RULES */
+
+/*********LEFT SIDE*********/
+.leftSide {
+    width: 30%;
+    background-color: rgba(0, 0, 0, 0.83);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: azure;
+
+}
+.leftSide > div {
+    width: 80%;
+}
+
+/*********RIGHT SIDE*********/
+.rightSide {
+    width: 70%;
+    margin-left: 1rem;
+}
+.title {
+    text-align: center;
+}
+.centreI p {
+    font-size: small;
+}
+
+
