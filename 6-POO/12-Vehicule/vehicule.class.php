@@ -20,14 +20,9 @@ function __construct($matricule , $année , $modele , $prix )
 
 
 
-function démarrer(){
+abstract function démarrer();
 
-
-}
-
-function avancer(){
-
-}
+abstract function avancer();
 
 
 
