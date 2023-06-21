@@ -1,22 +1,20 @@
 <?php
+//on declare et saisie des variables
+echo "entrer un nbr";
+$nbr = trim(fgets(STDIN));
 
-//Variables
-$nbr1 = readline("Entrer un nombre : ");
-$nbr2 = readline("Entrer un second nombre : ");
-$total = $nbr1 * $nbr2;
+//on teste 
 
-//Traitement
-if($total > 0){
-    echo "Le résultat est $total donc positif";
+ if ($nbr == 0) {
+    echo "ce nombre est null";
+
 }
-else{
-    if($total === 0){
-        $total = null;
-        echo "Le résultat est null";
-    }
-    else {
-        echo "Le résultat est $total donc négatif";
-    }
+elseif($nbr>0) {
+   echo "le nbr est positif";
 }
+elseif($nbr<0) {
+    echo "le nbr est negatif";
+}
+
 
 ?>

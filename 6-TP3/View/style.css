@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+
+body {
+  background-image: url(../Ctrl/image/fond_vege.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: Arial, Helvetica, sans-serif; 
+  display: flex;
+  justify-content: center;
+  
+}
+
+
+
+.main {
+  text-align: center;
+}
+
+
+h1 {
+  padding: 6px;
+  color: azure;
+  box-shadow: 0 0 15px rgb(33, 199, 171);
+  background-color: rgb(9, 153, 127);
+  border-radius: 10px;
+  text-align: center;
+  transition: 0.5s;
+}
+
+h1:hover {
+  transform: scale(1.5);
+  background-color: green;
+}
+
+.table-container {
+  margin-bottom: 20px;
+ 
+}
+
+.table-container table {
+  width: 100%;
+  color: rgb(11, 11, 10);
+  box-shadow: 0 0 15px rgb(166, 218, 226);
+  border-radius: 7px;
+  margin-bottom: 20px;
+  display:flex;
+  justify-content: center;
+}
+
+
+.table-container table:hover
+{
+  opacity: 0;
+}
+
+
+
+
+.table-container table
+ {
+transition: 1s;
+}
+
+.table-container table:hover
+{
+  transform: scale(1);
+  background-color: blanchedalmond;
+  opacity: 1;
+}
+
+
+
+.table-container td {
+  padding: 10px;
+}
+
+
+  

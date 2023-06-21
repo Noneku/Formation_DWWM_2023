@@ -1,8 +1,16 @@
 <?php
-$A = readline("Entrer un nombre : ");
-$B = readline("Entrer un nombre : ");
 
-$result = ($A + $B) /2;
+echo "saisi un entier";
+$val1 = trim(fgets(STDIN));
+echo "saisi un entier";
+$val2 = trim(fgets(STDIN));
 
-echo "La moyenne est de $result";
+
+$moy = $val1 + $val2/2;
+
+echo "afficher $moy";
+
+
+
+
 ?>
