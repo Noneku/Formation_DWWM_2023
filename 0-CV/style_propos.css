@@ -1,0 +1,129 @@
+@font-face{
+	font-family: 'Gilmer_Light';
+    src: url(./items/Font/Gilmer_Light.ttf);
+}
+
+@font-face{
+	font-family: 'Gilmer_Heavy';
+    src: url(./items/Font/Gilmer_Heavy.ttf);
+}
+*{
+	margin: 0px;
+	padding: 0px;
+	
+}
+
+
+ header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+    background: rgba(0,223,192,1);
+    ;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.603) 33%, rgba(0,223,192,1) 92%);
+ }
+
+ body
+ {
+     background-attachment: fixed;
+     background-image: url("contenu/image/17583.jpg");
+     Background-repeat: no-repeat;
+     Background-size: cover;
+     background-position: center;
+     background-color: whitesmoke;
+     color:black;
+     text-align: center;
+     margin: auto;
+     margin-left: 100px;
+     margin-right: 100px;
+     font-family: 'Gilmer_Light'
+ }
+
+body{
+    
+    background-attachment: fixed;
+        background-size: cover;
+        background: rgb(251,241,210);
+        background: linear-gradient(198deg, rgba(251,241,210,1) 33%, rgba(0,223,192,1) 92%);
+        background-repeat: no-repeat;
+        height: 100%;
+        margin:auto;
+    }
+
+    p{
+        font-family: 'Gilmer_Heavy';
+        text-align: center;
+    }
+h4{
+    color: crimson;
+    font-size: 5em;
+}
+
+    h1,h2
+{
+	font-family: 'Gilmer Heavy';
+	color: #F6FADE;
+	font-size: 5em;
+	text-shadow: 2px 2px 4px black;
+}
+
+h3
+{
+	color: #F6FADE;
+	font-size: 3em;
+}
+
+p
+{
+	font-size: 3em;
+	text-align: center;
+	color: white;
+	text-shadow: 2px 2px 4px black;
+    margin-bottom: 2%;
+}
+.photo_moi
+{
+
+	 margin-left: auto;
+    margin-right: auto;
+    width: 10%;
+
+}
+
+p.présentation
+{
+	font-size: 3em;
+	text-shadow: 2px 2px 4px whitesmoke;
+	text-align: center;
+	color: black;
+	border: 5px solid whitesmoke;
+	border-radius: 20px;
+	background-color: whitesmoke;
+	Background-size: cover;
+	padding: 20px;
+    width: 100%;
+    margin-top: 5%;
+}
+
+img.insta 
+{
+	margin-top: auto;
+	margin-bottom: 45px;
+}
+
+img.facebook
+{
+	margin-top: auto;
+	margin-bottom: 70px;
+}
+
+a
+{
+color: whitesmoke;
+}
+
+a:hover
+{
+	color: black;
+}

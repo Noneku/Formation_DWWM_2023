@@ -1,0 +1,154 @@
+@font-face{
+	font-family: 'Gilmer_Light';
+    src: url(./items/Font/Gilmer_Light.ttf);
+}
+
+@font-face{
+	font-family: 'Gilmer_Heavy';
+    src: url(./items/Font/Gilmer_Heavy.ttf);
+}
+*{
+	margin: 0px;
+	padding: 0px;
+	
+}
+
+
+ header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+    background: rgba(0,223,192,1);
+    ;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.603) 33%, rgba(0,223,192,1) 92%);
+ }
+
+ /* header>*:last-child{
+    display: flex;
+    justify-self: flex-start;
+ } */
+body{
+background-attachment: fixed;
+    background: rgb(251,241,210);
+background: linear-gradient(22deg, rgba(251,241,210,1) 33%, rgba(0,223,192,1) 92%);
+}
+a #maison{
+    display: flex;
+    justify-content: center;
+    width: 50px;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.555);
+    padding: 10px;
+    border-radius: 10px;
+    transition: all 1s;
+}
+
+a #maison:hover{
+    width: 50px;
+    background-color: rgb(18, 255, 215);
+    padding: 10px;
+    border-radius: 40px;
+    width: 100px;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 7em;
+    height: 200px;
+    font-family: 'Gilmer_Heavy';
+    text-align: center;
+    /* background: rgba(0,223,192,1);
+    ;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.603) 33%, rgba(0,223,192,1) 92%); */
+    
+    transition: all 1s;
+    border-radius: 0 0 20px 20px;
+    margin: auto;
+}
+
+h1:hover{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 7em;
+    color: aliceblue;
+    height: 200px;
+    font-family: 'Gilmer_Heavy';
+    text-align: center;
+   
+}
+
+nav{
+    height: 1000px;
+    margin-bottom: 20%;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5%;
+}
+
+.sounds #mail{
+    display: flex;
+    align-items: end;
+}
+
+/* nav .contact1{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 500px;
+    margin-top: 10%;
+   
+}
+
+nav .contact2{
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+   
+} */
+
+
+.logo{
+    min-width: 100px;
+    width: 200px;
+    max-width: 400px;
+    background-color: rgba(240, 248, 255, 0.205);
+    padding: 100px;
+    border-radius: 40px ;
+    transition: all 1s;
+}
+
+.logo:hover{
+    min-width: 100px;
+    width: 200px;
+    max-width: 400px;
+    background-color: rgb(33, 136, 226);
+    box-shadow: 0px 10px 10px rgb(28, 121, 105);
+    padding: 100px;
+    border-radius: 40px ;
+}
+
+.tel1{
+    min-width: 100px;
+    width: 200px;
+    max-width: 400px;
+    padding: 100px;
+    border-radius: 40px ;
+}
+
+button{
+    border: none;
+    border-radius: 40px;
+}
+
+li{
+    list-style: none;
+}
