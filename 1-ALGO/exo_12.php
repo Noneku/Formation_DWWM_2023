@@ -1,14 +1,18 @@
 <?php
+// declaration de variables
 
-$prixHT = readline ("Entrez le prix HT: ");
-$nombreArticle = readline ("Entrez le nombre d'article:  ");
-$tauxTVA = 0.20;
-$ttc = $nombreArticle * $prixHT * (1 + $tauxTVA);
+$prixHt = readline("le prix hors taxe d'un article est ");
+$nbrArticle = readline("entrez le nombre d'article");
+$tauxTva = 0.20;
 
-echo $prixHT;
-echo "\n";
-echo $nombreArticle;
-echo "\n";
-echo " le prix TTC est de :". $ttc ."€";
+
+// calcul
+
+$prixTtc = $nbrArticle * $prixHt *(1+$tauxTva);
+
+// affichage 
+
+echo $prixTtc ;
+
 
 ?>

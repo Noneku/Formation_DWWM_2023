@@ -1,13 +1,17 @@
 <?php
-//Array Declarations
-$tab1 = [1,2,3,4,5];
-$tab2 = [1,2,3,4,5];
-$tabResult = [];
+//  declaration des tableau
+$tab1 = array (4,8,7,9,1,5,4,6);
+$tab2 = array(7,6,5,2,1,3,7,4);
+$tab3 = array ();
 
-for ($i=0; $i < count($tab1); $i++) { 
-    //Add  totals of content $tab1 and $tab2 in $tabResult -> index 0
-    $tabResult[$i] = $tab1[$i] + $tab2[$i];
+// boucle pour $i allant de 0 a la longueur du tableau $tab2 $i++ avance de 1 en 1
+for ($i = 0 ; $i < count ($tab2) ; $i++)
+{
+    
+    $tab3[$i] = $tab1[$i] + $tab2[$i];
+    
 }
 
-var_dump($tabResult);
+// affichage
+print_r ($tab3);
 ?>

@@ -1,5 +1,22 @@
 <?php
 
+
+
+for ($i = 0; $i <= 100 ; $i++ ){
+
+    if ($i % 3 == 0) {
+    echo $i . " ";
+
+
+    }
+
+
+}
+
+
+
+?>
+
 /*
 
 afficher les nombres divisibles par 3, entre 1 et 100
@@ -19,6 +36,3 @@ résultat attendu :
     ...
 
 */
-for ($i=1; $i < 100; $i++) { 
-    echo $i * 3 ."\n";
-}

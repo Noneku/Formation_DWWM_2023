@@ -1,26 +1,19 @@
 <?php
 
-//Variables
-$check;
-$nbrUser1 = readline("Entrer un nombre\n");
-$nbrUser2 = readline("Entrer un nombre\n");
+    #On déclare et saisit les variables
 
-//Algo
-if($nbrUser1 >= 1){
-    //Display
-    $result1 = "Votre nombre $nbrUser1 est positif\n";
-}
-else {
-    //Display
-     $result1 = "Votre nombre $nbrUser1 est negatif\n";
-}
-if($nbrUser2 >= 1){
-    //Display
-    $result2 = "Votre nombre $nbrUser2 est positif\n";
-}
-else {
-    $result2 = "Votre nombre $nbrUser2 est negatif\n";
-}
+    echo "Entrez le premier nombre : ";
+    $nb1 = trim(fgets(STDIN));
 
-print("Nombre numéro 1 : ".$result1."Nombre numéro 2 : ".$result2);
+    echo "Entrez le second nombre : ";
+    $nb2 = trim(fgets(STDIN));
+
+    #On teste le signe du produit des deux nombres
+
+    if (($nb1 > 0 and $nb2 > 0) || ($nb1 < 0 and $nb2 < 0)) {
+        echo "Le produit est positif";
+    }
+    else {
+        echo "Le produit est négatif";
+    }
 ?>

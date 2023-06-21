@@ -1,3 +1,4 @@
+
 <?php
 
 /*
@@ -168,7 +169,7 @@ for ($i = 0; $i <= 100; $i++) {
     } else if ($reste_des_centaines == 80) {
         $dizaine = 'quatre-vingt';
     } else if ($reste_des_centaines == 90) {
-        $dizaine = 'quatre-vingt-dix';
+        $dizaine = 'quatre vingt-dix';
     }
 
     if ($i == 0) {
@@ -215,38 +216,39 @@ for ($i = 0; $i <= 100; $i++) {
     } else if ($i == 76) {
         $nombre = 'soixante-seize';
     } else if ($i == 77) {
-        $nombre = 'soixante-dix-sept';
+        $nombre = 'soixante dix-sept';
     } else if ($i == 78) {
-        $nombre = 'soixante-dix-huit';
+        $nombre = 'soixante dix-huit';
     } else if ($i == 79) {
-        $nombre = 'soixante-dix-neuf';
+        $nombre = 'soixante dix-neuf';
     }
-    
+
     // exceptions 90+
     if ($i == 91) {
-        $nombre = 'quatre-vingt-onze';
+        $nombre = 'quatre vingt-onze';
     } else if ($i == 92) {
-        $nombre = 'quatre-vingt-douze';
+        $nombre = 'quatre vingt-douze';
     } else if ($i == 93) {
-        $nombre = 'quatre-vingt-treize';
+        $nombre = 'quatre vingt-treize';
     } else if ($i == 94) {
-        $nombre = 'quatre-vingt-quatorze';
+        $nombre = 'quatre vingt-quatorze';
     } else if ($i == 95) {
-        $nombre = 'quatre-vingt-quinze';
-    // @todo il manque 76, 77, 78 et 79, complétez le code
+        $nombre = 'quatre vingt-quinze';
     } else if ($i == 96) {
-        $nombre = 'quatre-vingt-seize';
+        $nombre = 'quatre vingt-seize';
     } else if ($i == 97) {
-        $nombre = 'quatre-vingt-dix-sept';
+        $nombre = 'quatre vingt dix-sept';
     } else if ($i == 98) {
-        $nombre = 'quatre-vingt-dix-huit';
+        $nombre = 'quatre vingt dix-huit';
     } else if ($i == 99) {
-        $nombre = 'quatre-vingt-dix-neuf';
+        $nombre = 'quatre vingt dix-neuf';
     }
-    // exceptions 90+
+
+}
+    
+
     // @todo il manque 91, 92, 93, 94, 95, 96, 97, 98, 99, inspirez vous du bloc "exceptions 70+" et complétez le code
 
     echo "$i : $nombre";
     echo PHP_EOL;
-}
-
+    ?>

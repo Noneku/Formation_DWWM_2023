@@ -1,14 +1,16 @@
-<?php
+<?PHP
 
-//Variables
-$tab = [];
+$tab = array () ; 
 
-for ($i=0; $i < 9; $i++) { 
-    //Déclarer $nbr dans une boucle permet de le demander 9 fois
-    $nbr = readline("Entrer un nombre : ");
-    //Insert the value of $nbr in Array $tab
-    $tab[$i] = $nbr;
+for ($i=0 ; $i < 9 ;$i++ ) {
+
+    $tab[$i] = readline("entrez la note :");
 }
 
-var_dump($tab)
-?> ;
+print_r($tab);
+
+
+
+
+
+?>

@@ -1,10 +1,18 @@
 <?php
 
-$tab = [1,2,3,4,5];
-$result = 0;
-for ($i=0; $i < count($tab); $i++) { 
-    $result += $tab[$i];
+// declaration d'un tableau prérempli
+$tab = array (1,2,3,4,5) ;
+
+$resultat = 0;
+// tant que $i est inferieur a la longueur du tableau 
+for ($i = 0 ; $i < count ($tab) ; $i++) {
+ 
+    // resultat =  resultat plus $i (valeur dans le tableau)
+    $resultat += $tab [$i] ;
+
+
 }
 
-echo "La somme du tableau est de : $result";
+echo "la somme est $resultat ";
+
 ?>

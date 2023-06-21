@@ -1,12 +1,15 @@
 <?php
+$valeur = readline("saisissez valeur");
+$tab = array();
 
-    $tab = [];
+for ($i=0; $i < $valeur; $i++) { 
+    $tab[$i] = readline("entrez une note");
+    $tab[$i]+=  1 ;
+}
 
-    for ($i=0; $i < 5; $i++) { 
-        $nbr = readline("Entre un nombre : ");
-        //Add 1 to result of nbr
-        $tab[$i] = $nbr + 1;
-        var_dump($tab);
-    }
     
+
+
+print_r($tab);
+
 ?>

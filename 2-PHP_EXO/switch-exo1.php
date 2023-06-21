@@ -28,6 +28,7 @@ if (true) {
     echo PHP_EOL;
 }
 
+
 // bloc 2
 $i = 2;
 

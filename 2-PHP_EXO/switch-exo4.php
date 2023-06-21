@@ -1,6 +1,6 @@
-<?php
 
-/*
+
+<!-- /*
 
 traduire le bloc conditionnel `if` en bloc conditionnel `switch`
 
@@ -11,30 +11,37 @@ $variable est une chaîne de caractères
 $variable est un nombre à virgule flottante
 $variable est un nombre entier
 
-*/
+*/ -->
+
+<?php
 
 $liste = array(null, new stdClass(), 'cours de php', 4.2, 42);
 
 for ($i = 0; $i < count($liste); $i++) {
 
-    $variable = $liste[$i];
+    $variable = $liste[$i];}
 
-    if (is_null($variable)) {
-        echo '$variable a la valeur NULL';
-        echo PHP_EOL;
-    } else if (is_object($variable)) {
-        echo '$variable est un objet';
-        echo PHP_EOL;
-    } else if (is_string($variable)) {
-        echo '$variable est une chaîne de caractères';
-        echo PHP_EOL;
-    } else if (is_float($variable)) {
-        echo '$variable est un nombre à virgule flottante';
-        echo PHP_EOL;
-    } else if (is_int($variable)) {
-        echo '$variable est un nombre entier';
-        echo PHP_EOL;
+    switch ($variable) {
+        case 'null':
+            echo " variable is null";
+            break;
+
+            case "is objet":
+                echo "variable est un objet";
+                break;
+
+                case "is string" :
+                    echo " variable est une chaine de caractere";
+                    break;
+
+                    case "is float" : 
+                         echo " variable est un numbre a virgule flottante";
+                         break;
+
+                         case 'is int':
+                            echo '$variable est un nombre entier';
+                            break;
+        
     }
 
-}
-
+?>

@@ -1,5 +1,22 @@
 <?php
 
+
+
+
+for ($i = 0; $i <= 100 ; $i++ ){
+
+    if ($i % 3 == 1) {
+    echo $i . " ";
+
+
+    }
+
+
+}
+
+
+
+?>
 /*
 
 afficher les nombres non divisibles par 3, entre 1 et 100
@@ -20,8 +37,3 @@ résultat attendu :
 
 */
 
-for ($i=1; $i < 100; $i++) { 
-    if($i % 3){
-        echo $i."\n";
-    }
-}

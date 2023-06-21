@@ -1,0 +1,29 @@
+body {
+
+ background-image: url("fond-ecran-wallpaper-image-abstrait-couleur-20-1024x640.jpg");
+
+ background-size: cover;
+
+}
+
+.click {
+
+  background-color: violet;
+}
+
+.place {
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+    margin-top: 20%;
+   
+
+}
+
+.place :hover {
+
+    
+    transform: scale(1.5);
+
+}
+
