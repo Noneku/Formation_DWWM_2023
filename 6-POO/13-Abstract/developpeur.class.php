@@ -1,10 +1,12 @@
 <?php
 
-
+//Héritage de la classe Personne
 class Developpeur extends Personne
 {
 
-private string $specialite; 
+private string $specialite;
+
+
 
 public function __construct($specialite , $nom , $prenom , $mail , $telephone , $salaire )
 {
@@ -12,10 +14,11 @@ public function __construct($specialite , $nom , $prenom , $mail , $telephone , 
     $this->specialite = $specialite;
 }
 
-
+//Instanciation de la méthode abstraite calculerSalaire()
 public function calculerSalaire(): float{
     return $this->salaire += ($this->salaire * 25 ) /100;
 }
+
 
 public function afficher(): void{
 

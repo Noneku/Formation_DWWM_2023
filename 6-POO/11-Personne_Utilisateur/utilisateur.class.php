@@ -1,6 +1,6 @@
 <?php
 
-
+//Héritage de la classe Personne
 class Utilisateur extends Personne
 {
    private Profil $profil;
@@ -11,7 +11,7 @@ class Utilisateur extends Personne
 
    
 
-
+//Injection de dépendance de la class Profil
    function __construct($nom , $prenom , $mail , $telephone , $login , $password , $service , $salaire , $code , $libelle)
     {
         parent::__construct($nom , $prenom , $mail , $telephone , $salaire);
@@ -38,7 +38,7 @@ class Utilisateur extends Personne
       }
 
       
-  
+         //Affichage 
       public function affiche(): void
       {
           echo "ID: " . $this->id . "\n";

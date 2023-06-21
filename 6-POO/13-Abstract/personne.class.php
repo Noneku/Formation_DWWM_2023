@@ -1,5 +1,6 @@
 <?php
 
+//class Abstract 
 
 abstract class Personne
 {
@@ -27,7 +28,7 @@ public function __construct($nom , $prenom , $mail , $telephone , $salaire)
 
 
 
-
+//Methode abstraite
 public function calculerSalaire(){
     
 }

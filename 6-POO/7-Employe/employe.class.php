@@ -36,6 +36,7 @@ class Employé
         
     }
 
+
     public function calculateAncienneté(){
         
         $today = new DateTime();
@@ -43,6 +44,8 @@ class Employé
         $ancienneté = $embaucheDateObj->diff($today)->y ;
         return "Il a ".$ancienneté." ans d'ancienneté \n";
     }
+
+
 
     function augmentationDuSalaire(){
         if($this->calculateAncienneté() < 5){
@@ -54,6 +57,8 @@ class Employé
         }
     }
 
+
+    
     function afficherEmployé(){
 
         $nomMajuscule = strtoupper($this->nom);
