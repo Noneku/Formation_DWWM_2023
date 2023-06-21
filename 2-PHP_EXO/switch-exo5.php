@@ -17,16 +17,38 @@ NOTE : la valeur de X change à chaque exécution
 
 */
 
+// $i = rand(0, 100);
+
+// if ($i > 50) {
+//     echo "$i est plus grand que 50";
+//     echo PHP_EOL;
+// } else if ($i < 50) {
+//     echo "$i est plus petit que 50";
+//     echo PHP_EOL;
+// } else {
+//     echo "$i est égal à 50";
+//     echo PHP_EOL;
+// }
+
+// correction
+
 $i = rand(0, 100);
 
-if ($i > 50) {
-    echo "$i est plus grand que 50";
-    echo PHP_EOL;
-} else if ($i < 50) {
-    echo "$i est plus petit que 50";
-    echo PHP_EOL;
-} else {
-    echo "$i est égal à 50";
-    echo PHP_EOL;
+switch (true) {
+
+case ($i > 50):
+echo "$i est plus grand que 50";    
+echo PHP_EOL;
+break;
+
+case ($i < 50):
+echo "$i est plus petit que 50";
+echo PHP_EOL;
+break;
+
+echo "$i est égal à 50";
+echo PHP_EOL;
+break;
+
 }
 

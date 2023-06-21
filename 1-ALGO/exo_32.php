@@ -1,14 +1,17 @@
 <?php
+// Ecrire un alhgorithme qui déclare un tableau de 9 notes,dont on fait ensuite saisir les valeurs par l'utilisateur. 
 
-//Variables
-$tab = [];
+// Variables
+$note = array();
 
-for ($i=0; $i < 9; $i++) { 
-    //Déclarer $nbr dans une boucle permet de le demander 9 fois
-    $nbr = readline("Entrer un nombre : ");
-    //Insert the value of $nbr in Array $tab
-    $tab[$i] = $nbr;
-}
+// Boucle for
+for ($i = 0; $i < 9 ;$i++) {
+    
+// Affichage des notes saisies
+$note[$i]= readline("Entrer la note : ");
 
-var_dump($tab)
-?> ;
+}  
+    
+print_r($note);
+
+?>

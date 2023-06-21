@@ -28,4 +28,3 @@ list($roues, $pedales, $moteur) = get_random_vehicle();
 echo "roues: $roues\n";
 echo "pedales: " . boolean_to_string($pedales) . "\n";
 echo "moteur: " . boolean_to_string($moteur) . "\n";
-

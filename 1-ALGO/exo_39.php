@@ -1,26 +1,30 @@
 <?php
-    //Varaibles
-    $noteArray = [];
-    $betterNote = [];
-    $sum = 0;
-    $moyenne = 0;
-    //Traitement
-    for ($i=0; $i < 5; $i++) { 
-        //Ask 5 times, to enter value by User
-        $note = readline("Entrer les notes : ");
-        //Insert note of user in $noteArray
-        $noteArray[$i] = $note;
-        //Calcul moyen first time take a sum of values
-        $sum += $noteArray[$i];
-        //Get moyen
-        $moyenne = $sum / count($noteArray);
-        //Check if note in noteArray are better, if True insert in $betterNote Array
-        if($noteArray[$i] > $moyenne){
-            $betterNote[$i] = $noteArray[$i];
-        }
-    }
+// Toujours et encore sur le même principe, écrivez un algorithme permettant, à l'utilisateur de saisir les notes d'une classe. Le programme, une fois la saisie terminée, renvoie le nombre de ces notes supérieurs à la moyenne de la classe. 
 
-    echo "La moyenne de la classe est de : ".$moyenne."\n";
-    echo "Les meilleurs notes sont : "."\n";
-    print_r($betterNote);
+// Saisir le nombre d'étudiants dans la classe 
+$tab = array();
+$total = 0;
+$noteSuperieur = array();
+
+// Boucle for pour entre un nombre 
+for ($i = 0; $i < 5; $i++) {
+    $nb = readline("Entrer un nombre");
+    $tab[$i] = ($nb);
+    $total += $tab[$i];
+}
+
+// Calculer la moyenne 
+$moyenne = $total / count($tab);
+
+// Boucle for pour checher les moyenne au dessus de la moyenne 
+for ($i = 0; $i < 5; $i++) {
+
+    if ($tab[$i] > $moyenne) {
+        $noteSuperieur[$i] = $tab[$i];
+    }
+}
+
+// Affichage 
+print_r($noteSuperieur);
+
 ?>

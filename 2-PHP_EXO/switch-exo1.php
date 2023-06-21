@@ -45,8 +45,7 @@ $password = "toto";
 if ($password == "toto") {
     echo "vous êtes loggé";
     echo PHP_EOL;
-}
-else if ($password == "1234") {
+} else if ($password == "1234") {
     echo "êtes-vous un robot ?";
     echo PHP_EOL;
 } else if ($password = "abcd") {
@@ -69,8 +68,7 @@ if (is_string($variable)) {
 } else if (is_array($variable)) {
     echo "$variable est une liste ";
     echo PHP_EOL;
-} else if  (is_int($variable)) {
+} else if (is_int($variable)) {
     echo "$variable est un nomnbre entier";
     echo PHP_EOL;
 }
-

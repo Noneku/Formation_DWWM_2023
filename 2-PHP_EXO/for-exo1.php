@@ -17,10 +17,12 @@ résultat attendu :
     18
     20
     ...
-
 */
 
-for ($i=1 ; $i <= 10; $i++) { 
-    echo $i * 2;
-}
 
+echo "Les nombres pairs sont : ";
+for ($i = 1; $i <= 100; $i++) {
+    if ($i % 2 == 0) {
+        echo $i . "\n";
+    }
+}

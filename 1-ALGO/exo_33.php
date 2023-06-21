@@ -1,52 +1,32 @@
 <?php
+// Ecrivez un algorithme permettant à l'utilisateur de saisir un nombre quelconque de valeurs, qui devront être stockés dans un tableau. L'utilisateur doit donc commencer par entrer le nombre de valeurs qu'il compte saisir. Il effectuera ensuite cette saisie. Enfin, une fois la saisie terminée, le programme affichera le nombre de valeurs positives. 
 
-//Variables
-$sizeArray = readline("Choisissez la taille de votre tableau : ");
-$tab = [];
-$positif = [];
-$negatif = [];
+// Variables
+$nbValeursPositives = 0;
+$nbValeursNegatives = 0;
 
-//Traitement
-for ($i=0; $i < $sizeArray; $i++) {
-    //Insert in $tab the number of loops in $sizeArray
-    $tab[] = $i; //Size of $tab = $sizeArray
-    $insertArray = readline("Entrer votre valeur : ");
-    //Insert number by user in $tab
-    $tab[$i] = $insertArray;
+// Demande à l'utilisateur de saisir le nombre de valeurs
+$numValeurs = readline("Combien de valeurs souhaitez-vous saisir ? ");
 
-    //Compare negatif and positif numbers
-    if($tab[$i] > 0){
-        //All numbers positif in $tab push in $positif
-        $positif[$i] = $tab[$i];
-    }
-    else{
-        //All numbers positif in $tab push in $negatif
-        $negatif[$i] = $tab[$i];
-    }
+// Crée un tableau pour stocker les valeurs saisies
+$valeurs = [];
+
+// Saisie des valeurs
+for ($i = 1; $i <= $numValeurs; $i++) {
+    $valeurs[$i]= readline("Entrer un nombre: ");
+
+    if ($valeurs[$i] > 0) {      
+    $nbValeursPositives++;
 }
-//Display
-echo "Le nombre de negatif est de : ".count($negatif)."\n"."Le nombre de positif est de : ".count($positif);
 
-//Optimisation
-/*
-<?php
-$nbValeurs = readline("Combien de valeurs?");
-
-$tab = array();
-
-$negatif = 0;
-$positif = 0;
-for ($i = 0; $i < $nbValeurs; $i++) {
-    $tab[$i] = readline("Entrer une note");    
-
-    if ($tab[$i] < 0) {
-        $negatif++;
-    } else {
-        $positif++;
-    }
+else{
+    $nbValeursNegatives++;
 }
-echo "Il y a ".$negatif."Nombre negatif et".$positif."Nombre positif\n";
 
-?>
- */
+}
+
+// Affiche le nombre de valeurs positives
+echo "Le nombre de valeurs positives est : $nbValeursPositives\n";
+echo "Le nombre de valeurs négatives est : $nbValeursNegatives\n";
+
 ?>

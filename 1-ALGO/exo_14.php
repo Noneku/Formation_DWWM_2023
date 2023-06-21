@@ -1,26 +1,22 @@
 <?php
+// Ecrire un algorithme qui demande deux nombres à l'utilisateur et l'informe ensuite si leur produit est négatif ou positif (on laisse de côté le cas où le produit est nul). Attention toutefois : on ne doit pas calculer le produit des deux nombres
 
-//Variables
-$check;
-$nbrUser1 = readline("Entrer un nombre\n");
-$nbrUser2 = readline("Entrer un nombre\n");
 
-//Algo
-if($nbrUser1 >= 1){
-    //Display
-    $result1 = "Votre nombre $nbrUser1 est positif\n";
-}
-else {
-    //Display
-     $result1 = "Votre nombre $nbrUser1 est negatif\n";
-}
-if($nbrUser2 >= 1){
-    //Display
-    $result2 = "Votre nombre $nbrUser2 est positif\n";
-}
-else {
-    $result2 = "Votre nombre $nbrUser2 est negatif\n";
-}
+    #On déclare et saisit les variables
 
-print("Nombre numéro 1 : ".$result1."Nombre numéro 2 : ".$result2);
+    echo "Entrez le premier nombre : ";
+    $nb1 = trim(fgets(STDIN));
+
+    echo "Entrez le second nombre : ";
+    $nb2 = trim(fgets(STDIN));
+
+    #On teste le signe du produit des deux nombres
+
+    if (($nb1 > 0 and $nb2 > 0) || ($nb1 < 0 and $nb2 < 0)) {
+        echo "Le produit est positif";
+    }
+    else {
+        echo "Le produit est négatif";
+    }
 ?>
+     

@@ -1,33 +1,38 @@
 <?php
+// Soit un tableau T à deux dimensions (12,8) préalablement rempli de valeurs numériques. Ecrire un algorithme qui recherche la plus grande valeur au sein de ce tableau. 
 
-//Déclaration de variable
-    $better = [];
-    $T = [
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8]
-    ];
-//loop on size number of element in $T
- for ($i=0; $i < count($T); $i++) {
-        //Browse the elements in 8 array
-        for ($j=0; $j < count($T[$i]) ; $j++) { 
+// Tableau à deux dimensions (12,8) préalablement rempli
+$tableau = [
+    [1, 2, 3, 4, 5, 6, 7, 8],
+    [9, 10, 11, 12, 13, 14, 15, 16],
+    [17, 18, 19, 20, 21, 22, 23, 24],
+    [25, 26, 27, 28, 29, 30, 31, 32],
+    [33, 34, 35, 36, 37, 38, 39, 40],
+    [41, 42, 43, 44, 45, 46, 47, 48],
+    [49, 50, 51, 52, 53, 54, 55, 56],
+    [57, 58, 59, 60, 61, 62, 63, 64],
+    [65, 66, 67, 68, 69, 70, 71, 72],
+    [73, 74, 75, 76, 77, 78, 79, 80],
+    [81, 82, 83, 84, 85, 86, 87, 88],
+    [89, 90, 91, 92, 93, 94, 95, 96]
+];
 
-            //Compare element[0] with next element
-            if($T[0][$j] >= $T[0][$j + 1]){
-                //If the first element superior, stock this in $better
-                $better[$i] = $T[0][$j];
-            
-            }
+// Initialisation de la plus grande valeur avec la première valeur du tableau
+$plusGrandeValeur= $tableau[0][0];
+
+// Mettre à jour la plus grande valeur 
+for ($i = 0; $i < count($tableau); $i++) {
+ 
+    for ($j = 0; $j < count($tableau[$i]); $j++) {
+        $valeur = $tableau[$i][$j];
+
+        if ($valeur > $plusGrandeValeur) {
+            $plusGrandeValeur = $valeur;
         }
- }
-var_dump($better);
+    }
+}
+
+// Afficher la plus grande valeur trouvée
+print_r($plusGrandeValeur);
+
 ?>

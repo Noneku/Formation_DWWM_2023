@@ -17,11 +17,11 @@ résultat attendu :
     13
     14
     ...
-
 */
 
-for ($i=1; $i < 100; $i++) { 
-    if($i % 3){
-        echo $i."\n";
+echo "Les nombres pairs sont : ";
+for ($i = 1; $i <= 100; $i++) {
+    if ($i % 3 != 0) {
+        echo $i . "\n";
     }
 }
