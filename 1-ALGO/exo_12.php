@@ -11,4 +11,5 @@ echo $nombreArticle;
 echo "\n";
 echo " le prix TTC est de :". $ttc ."€";
 
+
 ?>

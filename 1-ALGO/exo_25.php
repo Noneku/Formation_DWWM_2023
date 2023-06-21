@@ -1,8 +1,15 @@
 <?php
-$A = readline("Entrer un nombre : ");
-$B = readline("Entrer un nombre : ");
 
-$result = ($A + $B) /2;
+//  saisir 2 valeurs et calculer la moyenne
 
-echo "La moyenne est de $result";
+// saisie des entiers 
+$saisieNb1 = (int) readline("Entrez le premier nombre: ");
+$saisieNb2 = (int) readline("Entrez le deuxieme nombre: "); 
+
+// calcul de la moyenne
+
+$moyenne = ($saisieNb1 + $saisieNb2) / 2;
+
+echo "la moyenne est de " . $moyenne;
+
 ?>

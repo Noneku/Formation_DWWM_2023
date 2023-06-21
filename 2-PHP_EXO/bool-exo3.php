@@ -17,27 +17,8 @@ echo "demande: $demande\n";
 echo "places_normales: $places_normales\n";
 echo "places_carte_fidelite: $places_carte_fidelite\n";
 
-
-/*
 if ($carte_fidelite) {
-    if ($demande <= $places_carte_fidelite && $demande <= $places_normales) {
-        echo "la réservation est enregistrée\n";
-    } else {
-        echo "il n'y a pas assez de places\n";
-    }
-} else {
-    if ($demande <= $places_normales) {
-        echo "la réservation est enregistrée\n";
-    } else {
-        echo "il n'y a pas assez de places\n";
-    }
-}*/
-
-
-
-
-if ($carte_fidelite) {
-    if ($demande <= $places_carte_fidelite) {
+    if ($demande <= $places_carte_fidelite ) {
         echo "la réservation est enregistrée\n";
     } else if ($demande <= $places_normales) {
         echo "la réservation est enregistrée\n";
@@ -52,3 +33,13 @@ if ($carte_fidelite) {
     }
 }
 
+//  CORRECTION 
+
+if ($carte_fidelite) {
+    if ($demande <= $places_carte_fidelite && $demande <= $places_normales) {
+        
+        echo "la réservation est enregistrée\n";
+    } else {
+        echo "il n'y a pas assez de places\n";
+    }
+} 

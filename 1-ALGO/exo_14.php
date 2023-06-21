@@ -1,26 +1,24 @@
 <?php
 
-//Variables
-$check;
-$nbrUser1 = readline("Entrer un nombre\n");
-$nbrUser2 = readline("Entrer un nombre\n");
+//  Ecrire un algorithme qui demande un nombre à l'utilisateur et l'informe ensuite si ce nombre est positif ou négatif ( on laisse de coté ou le nombre vaut 0)
+// on ne calcul pas le produit des 2 nombres 
 
-//Algo
-if($nbrUser1 >= 1){
-    //Display
-    $result1 = "Votre nombre $nbrUser1 est positif\n";
-}
-else {
-    //Display
-     $result1 = "Votre nombre $nbrUser1 est negatif\n";
-}
-if($nbrUser2 >= 1){
-    //Display
-    $result2 = "Votre nombre $nbrUser2 est positif\n";
-}
-else {
-    $result2 = "Votre nombre $nbrUser2 est negatif\n";
+echo " Entrez votre premier nombre : ";
+$nb1 =  trim(fgets(STDIN));
+
+echo " Entrez votre deuxieme nombre : ";
+$nb2 =  trim(fgets(STDIN));
+
+$condition1 = $nb1 <0;
+$condition2= $nb2 <0;
+
+// || = ou;  c'est soit vrai ou soit faux mais pas les deux 
+
+if ($condition1  ||  $condition2) {
+
+    echo " votre nombre est négatif";
+} else {
+    echo " votre nombre est positif";
 }
 
-print("Nombre numéro 1 : ".$result1."Nombre numéro 2 : ".$result2);
 ?>

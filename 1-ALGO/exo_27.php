@@ -1,19 +1,22 @@
 <?php
 
-//Variables
+//  calcul de la moyenne de 2 notes dont une à un coeff 1 et l'autre coeff 2, la moyenne de ces 2 notes doivent etre supérieures à 10 pour valider le module
+// saisie de 2 notes 
 
-$module = readline("Entrer un module : ");
-$coef1 = readline("Entrer une note (Coef : 1) : "); //Note Oral
-$coef2 = readline("Entrer une note (Coef : 2) : "); //Note écrit
+$saisieNote1 = readline("Entrez la premiere note: ");
+$saisieNote2 = readline("Entrez le deuxieme nombre: "); 
 
-//Traitement
-$moyenne = ((2*$coef1)+$coef2) / 3;
+//  calcul de la moyenne des notes 
+$calculnote1 = $saisieNote1 * 1;
+$calculnote2 = $saisieNote2 * 2;
+$resultatMoyenne = ($calculnote1 + $calculnote2) / 3;
 
-//Si la moyenne est >= à 10 alors ADMIS
-if($moyenne >= 10){
-    echo "Vous avez réussis, votre moyenne est de : $moyenne, du module : $module";
-}else {
-    echo "Echec !";
+// condition
+
+if ($resultatMoyenne >=10) {
+    echo "Module validé, moyenne de ".round($resultatMoyenne, 2);
+} else {
+    echo "Module non validé, moyenne de ".round($resultatMoyenne, 2);
 }
 
 ?>

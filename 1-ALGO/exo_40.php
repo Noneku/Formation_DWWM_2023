@@ -1,33 +1,42 @@
 <?php
 
-//Déclaration de variable
-    $better = [];
-    $T = [
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8]
-    ];
-//loop on size number of element in $T
- for ($i=0; $i < count($T); $i++) {
-        //Browse the elements in 8 array
-        for ($j=0; $j < count($T[$i]) ; $j++) { 
+// Soit un tableau T a deux dimenssions (12,8) préalablement rempli de valeur numériques. Ecrire un algorithme qui recherche la plus grande valeur 
+// au sein de ce tableau 
 
-            //Compare element[0] with next element
-            if($T[0][$j] >= $T[0][$j + 1]){
-                //If the first element superior, stock this in $better
-                $better[$i] = $T[0][$j];
-            
-            }
+$nbMax = null;
+
+$tableau = array (
+    array (1, 2, 3, 4, 5, 6, 7, 8),
+    array (9, 10, 45, 40, 4, 10, 22, 8),
+    array (9, 10, 45, 40, 4, 10, 22, 8),
+    array (9, 10, 45, 40, 4, 10, 22, 8),
+    array (9, 10, 45, 40, 4, 80, 22, 8),
+    array (9, 10, 45, 40, 4, 10, 22, 8),
+    array (9, 10, 45, 40, 4, 10, 22, 8),
+    array (9, 132, 45, 40, 4, 10, 22, 8),
+    array (9, 10, 45, 40, 4, 70, 22, 8),
+    array (9, 10, 45, 40, 4, 10, 22, 8),
+    array (9, 10, 45, 40, 4, 10, 22, 8),
+    array (9, 10, 90, 40, 4, 10, 22, 8),
+
+);
+
+//  cette première boucle permet de parcourir les 12 lignes du tableau
+for ( $i=0; $i < count($tableau); $i++ ) {
+
+// cette deuxieme boucle permet de parcourir la longueur du tableau et chaques index grace à count($tableau[$j];
+    for ( $j = 0; $j < count($tableau[$j]); $j++) {
+
+// la condition permet de parcourir chaque ligne et chaque index du tableau 
+        if ($tableau[$i][$j] > $nbMax) {
+
+            $nbMax = $tableau[$i][$j];
+
         }
- }
-var_dump($better);
+    }
+
+}
+
+echo "le nombre max est : ".$nbMax; 
+
 ?>

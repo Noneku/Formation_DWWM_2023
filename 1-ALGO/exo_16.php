@@ -1,22 +1,17 @@
 <?php
+//  Ecrire un algorithme qui demande un nombre à l'utilisateur et l'informe ensuite si ce nombre est positif ou négatif 
+// (on inclus cette fois ci où le nombre vaut 0)
 
-//Variables
-$nbr1 = readline("Entrer un nombre : ");
-$nbr2 = readline("Entrer un second nombre : ");
-$total = $nbr1 * $nbr2;
+// Permet de demander de saisir un nombre , attention le echo est avant la variable 
+echo " Entrez votre nombre : ";
+$nb =  trim(fgets(STDIN));
 
-//Traitement
-if($total > 0){
-    echo "Le résultat est $total donc positif";
-}
-else{
-    if($total === 0){
-        $total = null;
-        echo "Le résultat est null";
-    }
-    else {
-        echo "Le résultat est $total donc négatif";
-    }
+$condition = $nb <= 0;
+
+if ($condition) {
+    echo " votre nombre est négatif";
+} else {
+    echo " votre nombre est positif";
 }
 
 ?>

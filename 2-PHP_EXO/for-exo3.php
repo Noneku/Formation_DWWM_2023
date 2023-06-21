@@ -20,8 +20,22 @@ résultat attendu :
 
 */
 
-for ($i=1; $i < 100; $i++) { 
-    if($i % 3){
-        echo $i."\n";
-    }
+
+$nb = null;
+
+for ( $i = 1;  $i <= 100 ; $i++) {
+    
+    if ($i % 3 !== 0) {
+        
+        echo $i;
+        $nb++;
+        echo "\n";
+
+} 
+
 }
+
+echo "\n";
+echo "il y a : ". $nb." nombres non divisibles pas 3";
+
+?>

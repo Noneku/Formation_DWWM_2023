@@ -13,130 +13,238 @@ $variable a la valeur null
 
 */
 
-$variable = null;
+$variable = 42;
+
+// if (is_int($variable)) {
+//     echo '$variable est un nombre entier';
+//     echo PHP_EOL;
+// } else if (is_string($variable)) {
+//     echo '$variable est une chaîne de caractères';
+//     echo PHP_EOL;
+// } else if (is_float($variable)) {
+//     echo '$variable est un nombre à virgule flottante';
+//     echo PHP_EOL;
+// } else if (is_object($variable)) {
+//     echo '$variable est un objet';
+//     echo PHP_EOL;
+// } else if (is_null($variable)) {
+//     echo '$variable a la valeur NULL';
+//     echo PHP_EOL;
+// }
+
+
+//  SWITCH 
+
 
 switch ($variable) {
-    case is_int($variable):
-        echo '$variable est un nombre entier';
-        echo PHP_EOL;
-        break;
 
-    case is_string($variable):
-        echo '$variable est une chaîne de caractères';
-        echo PHP_EOL;
-    break;
+case is_int($variable);
+echo '$variable est un nombre entier';
+break;
 
-    case is_float($variable):
-        echo '$variable est un nombre à virgule flottante';
-        echo PHP_EOL;
-    break;
+case is_string($variable);
+echo '$variable est une chaîne de caractères';
+break; 
 
-    case is_object($variable):
-        echo '$variable est un objet';
-        echo PHP_EOL;
-    break;
+case is_float($variable);
+echo '$variable est un nombre à virgule flottante';
 
-    case is_null(!$variable) :
-        echo '$variable a la valeur NULL';
-        echo PHP_EOL;
-    break;
-    
-    default:
-        "Type Valeur non repertorier";
-        break;
+case is_object($variable);
+echo '$variable est un objet';
+break;
+
+default:
+echo '$variable a la valeur NULL';
+
 }
 
-/*
-if (is_int($variable)) {
-    echo '$variable est un nombre entier';
-    echo PHP_EOL;
-} else if (is_string($variable)) {
-    echo '$variable est une chaîne de caractères';
-    echo PHP_EOL;
-} else if (is_float($variable)) {
-    echo '$variable est un nombre à virgule flottante';
-    echo PHP_EOL;
-} else if (is_object($variable)) {
-    echo '$variable est un objet';
-    echo PHP_EOL;
-} else if (is_null($variable)) {
-    echo '$variable a la valeur NULL';
-    echo PHP_EOL;
-}
+
+
+echo "\n";
 
 $variable = 'cours de php';
 
-if (is_int($variable)) {
-    echo '$variable est un nombre entier';
-    echo PHP_EOL;
-} else if (is_string($variable)) {
-    echo '$variable est une chaîne de caractères';
-    echo PHP_EOL;
-} else if (is_float($variable)) {
-    echo '$variable est un nombre à virgule flottante';
-    echo PHP_EOL;
-} else if (is_object($variable)) {
-    echo '$variable est un objet';
-    echo PHP_EOL;
-} else if (is_null($variable)) {
-    echo '$variable a la valeur NULL';
-    echo PHP_EOL;
+// if (is_int($variable)) {
+//     echo '$variable est un nombre entier';
+//     echo PHP_EOL;
+// } else if (is_string($variable)) {
+//     echo '$variable est une chaîne de caractères';
+//     echo PHP_EOL;
+// } else if (is_float($variable)) {
+//     echo '$variable est un nombre à virgule flottante';
+//     echo PHP_EOL;
+// } else if (is_object($variable)) {
+//     echo '$variable est un objet';
+//     echo PHP_EOL;
+// } else if (is_null($variable)) {
+//     echo '$variable a la valeur NULL';
+//     echo PHP_EOL;
+// }
+
+//  SWITCH 
+
+switch ($variable) {
+
+case is_int($variable);
+echo '$variable est un nombre entier';
+break;
+
+case is_string($variable);
+echo '$variable est une chaîne de caractères';
+break;
+
+case is_float($variable);
+echo '$variable est un nombre à virgule flottante';
+break;
+
+case is_object($variable);
+echo '$variable est un objet';
+break;
+
+default:
+echo '$variable a la valeur NULL';
+
 }
+
+
+echo "\n";
 
 $variable = 4.2;
 
-if (is_int($variable)) {
-    echo '$variable est un nombre entier';
-    echo PHP_EOL;
-} else if (is_string($variable)) {
-    echo '$variable est une chaîne de caractères';
-    echo PHP_EOL;
-} else if (is_float($variable)) {
-    echo '$variable est un nombre à virgule flottante';
-    echo PHP_EOL;
-} else if (is_object($variable)) {
-    echo '$variable est un objet';
-    echo PHP_EOL;
-} else if (is_null($variable)) {
-    echo '$variable a la valeur NULL';
-    echo PHP_EOL;
+// if (is_int($variable)) {
+//     echo '$variable est un nombre entier';
+//     echo PHP_EOL;
+// } else if (is_string($variable)) {
+//     echo '$variable est une chaîne de caractères';
+//     echo PHP_EOL;
+// } else if (is_float($variable)) {
+//     echo '$variable est un nombre à virgule flottante';
+//     echo PHP_EOL;
+// } else if (is_object($variable)) {
+//     echo '$variable est un objet';
+//     echo PHP_EOL;
+// } else if (is_null($variable)) {
+//     echo '$variable a la valeur NULL';
+//     echo PHP_EOL;
+// }
+
+//  SWITCH 
+
+switch (true) {
+
+case is_int($variable);
+echo '$variable est un nombre entier';
+break;
+
+case is_string($variable);
+echo '$variable est une chaîne de caractères';
+break;
+
+case is_float($variable);
+echo '$variable est un nombre à virgule flottante';
+break;
+
+case is_object($variable);
+echo '$variable est un objet';
+break;
+
+default: 
+echo '$variable a la valeur NULL';
+
 }
+
+
+echo "\n";
+
 
 $variable = new stdClass();
 
-if (is_int($variable)) {
+// if (is_int($variable)) {
+//     echo '$variable est un nombre entier';
+//     echo PHP_EOL;
+// } else if (is_string($variable)) {
+//     echo '$variable est une chaîne de caractères';
+//     echo PHP_EOL;
+// } else if (is_float($variable)) {
+//     echo '$variable est un nombre à virgule flottante';
+//     echo PHP_EOL;
+// } else if (is_object($variable)) {
+//     echo '$variable est un objet';
+//     echo PHP_EOL;
+// } else if (is_null($variable)) {
+//     echo '$variable a la valeur NULL';
+//     echo PHP_EOL;
+// }
+
+//  SWITCH 
+
+switch ($variable) {
+
+    case is_int($variable);
     echo '$variable est un nombre entier';
-    echo PHP_EOL;
-} else if (is_string($variable)) {
+    break;
+
+    case is_string($variable);
     echo '$variable est une chaîne de caractères';
-    echo PHP_EOL;
-} else if (is_float($variable)) {
+    break;
+
+    case is_float($variable);
     echo '$variable est un nombre à virgule flottante';
-    echo PHP_EOL;
-} else if (is_object($variable)) {
+    break;
+
+    case is_object($variable);
     echo '$variable est un objet';
-    echo PHP_EOL;
-} else if (is_null($variable)) {
+    break;
+
+    default: 
     echo '$variable a la valeur NULL';
-    echo PHP_EOL;
+
 }
+
+
+echo "\n";
 
 $variable = null;
 
-if (is_int($variable)) {
-    echo '$variable est un nombre entier';
-    echo PHP_EOL;
-} else if (is_string($variable)) {
-    echo '$variable est une chaîne de caractères';
-    echo PHP_EOL;
-} else if (is_float($variable)) {
-    echo '$variable est un nombre à virgule flottante';
-    echo PHP_EOL;
-} else if (is_object($variable)) {
-    echo '$variable est un objet';
-    echo PHP_EOL;
-} else if (is_null($variable)) {
-    echo '$variable a la valeur null';
-    echo PHP_EOL;
-}*/
+// if (is_int($variable)) {
+//     echo '$variable est un nombre entier';
+//     echo PHP_EOL;
+// } else if (is_string($variable)) {
+//     echo '$variable est une chaîne de caractères';
+//     echo PHP_EOL;
+// } else if (is_float($variable)) {
+//     echo '$variable est un nombre à virgule flottante';
+//     echo PHP_EOL;
+// } else if (is_object($variable)) {
+//     echo '$variable est un objet';
+//     echo PHP_EOL;
+// } else if (is_null($variable)) {
+//     echo '$variable a la valeur null';
+//     echo PHP_EOL;
+// }
 
+//  SWITCH 
+
+switch (true) {
+
+    case is_int($variable);
+    echo '$variable est un nombre entier';
+    break;
+
+    case is_string($variable);
+    echo '$variable est une chaîne de caractères';
+    break;
+
+    case is_float($variable);
+    echo '$variable est un nombre à virgule flottante';
+    break;
+
+    case is_object($variable);
+    echo '$variable est un objet';
+    break;
+
+    default:
+    echo '$variable a la valeur null';
+    break;
+
+}

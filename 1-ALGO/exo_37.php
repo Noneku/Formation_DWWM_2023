@@ -1,12 +1,22 @@
 <?php
 
-    $tab = [];
 
-    for ($i=0; $i < 5; $i++) { 
-        $nbr = readline("Entre un nombre : ");
-        //Add 1 to result of nbr
-        $tab[$i] = $nbr + 1;
-        var_dump($tab);
-    }
-    
+// Ecrivez un algorithme qui permet la saisie d'un nombre quelconque de valeurs. Toutes les valeurs doivent etre ensuite augmentés de 1 et le 
+// nouveau tableau sera affiché à l'écran.
+
+$tableau = array ();
+$nombreSaisie = readline( "Entrez le nombre de saisie : ");
+
+
+for ( $i = 0; $i < $nombreSaisie; $i++) {
+
+// permet d'entrer des valeurs dans un tableau
+
+$tableau[$i] = readline("Entrez une valeur: ") + 1;
+
+}
+
+
+print_r($tableau);
+
 ?>

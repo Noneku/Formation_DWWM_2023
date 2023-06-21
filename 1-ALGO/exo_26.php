@@ -1,19 +1,33 @@
 <?php
 
-$A = readline("Entrer un nombre A : ");
-$B = readline("Entrer un nombre B : ");
-$C = readline("Entrer un nombre C : ");
+// DELTA EXO A FAIRE
 
-// Delta = B² - 4ac
-$delta = $B * $B -4 * $A * $C; //Reponse = Discriminant
-echo $delta."\n";
+// saisie des entiers 
+$a = (int) readline("Entrez le premier nombre: ");
+$b = (int) readline("Entrez le deuxieme nombre: "); 
+$c = (int) readline("Entrez le troisième nombre: "); 
 
-if($delta > 0 || $delta = 0){
 
-    $result = -$B + sqrt($delta) / 2 * $A;
-    echo $result;
-}else{
-    echo "Equation Impossible";
-    
+// calcul de la racine
+// La fonction sqrt() est une fonction intégrée en PHP qui renvoie la racine carrée d’un nombre
+
+$delta = ($b * $b) - (4 * $a * $c);
+
+
+if ($delta < 0){
+
+echo "n'a pas de solution";
+
+}  elseif ($delta == 0){
+
+echo"une unique solution est: ".-$b/(2 *$a);
+
+} else {
+
+echo " première solution: ".(-$b- sqrt($delta)) / (2 * $a);
+echo"\n";
+echo " deuxième solution : ".(-$b+ sqrt($delta)) / (2 * $a);
+
 }
+
 ?>

@@ -1,62 +1,33 @@
 <?php
-// //Déclaration de mes variables
-// $better = 0;
-// $position = 0;
-// $i = 1;
-// $nbr = readline("Entrer un nombre : ");
 
-// //Tant que $nbr est strictement supérieur ou égal à $better, on enregistre le nombre dans $better
-// while ($nbr >= $better) {
-//     $nbr = readline("Entrer un nombre : ");
-//     //Si $nbr est différent de 0, on enregistre
-//     if($nbr != 0){
-//         $better = $nbr;
-//         $position = $i++;
-//     }
-//     else {
-//         //Sinon on arréte la boucle
-//         break;
-//     }
-// }
-// echo "Le nombre le plus grand est $better à la position $position";
+// Réecrire l'algo précédent mais cette fois ci on ne connait pas d'avance combien l'utilisateur va entrer de saisie. Affiche de surcroît en quelle position avait été saisie ce nombre
+// La saisie d'arette lorsque l'utilisateur entre un 0. 
 
-$nb = 0;
-$pg = 0;
-$pos = 0;
-$i = 0;
-do {
-    $i++;
-    $nb = readline("Entre vos nombre : ");
-    if($pg < $nb){
-        $pg = $nb;
-        $pos = $i;
-    }
-} while($nb != 0);
+$nbMax = null; 
+$nb = 1;
+$i=1;
+$position = null;
 
-echo "Le nombre ".$pg." à la position".$pos;
 
-/*
-   Reecrire l'algo de l'exo 22 mais cette fois-ci on ne connaît pas d'avance combien l'utilisateur souhaite saisir de nombres. La saisie des nombres s'arrêyte lorsque l'utilisateur entre un zéro.
+while ($nb != 0) {
+    
+        $nb = readline("Entrez le numéro: ");
 
-    #Déclaration et saisit des variables
-    echo "Entrez un nombre : ";
-    $nbInit = trim(fgets(STDIN));
-    $nbPos = 0;
-    $nbComp = -INF;
-    $i = 1;
+        $position++;
+        
 
-    #Traitement
-    while ($nbComp != 0) {
-        if ($nbInit<$nbComp) {
-            $nbInit = $nbComp;
-            $nbPos = $i ;
+        if ($nb > $nbMax) {
+
+            echo "le chiffre maximum est ".$nbMax = $nb;
+            echo "\n";
+
+    
+        } else {
+    
+            echo "le chiffre $nb n'est pas plus grand que $nbMax en position : $position ";
+            echo "\n";
         }
-        $i++;
-        echo "Entrez un nombre :";
-        $nbComp = trim(fgets(STDIN));
+
     }
 
-    echo "Le nombre le plus grand est ".$nbInit." il se trouve en position ".$nbPos.".";
-
-*/
 ?>

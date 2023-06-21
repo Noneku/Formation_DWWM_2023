@@ -1,0 +1,41 @@
+* {
+    font-family: 'Harry Potter';
+}
+
+body {
+    background-image: url("https://media.sketchfab.com/models/bde62298ac8640588d5a2928b8e113dc/thumbnails/cea9e18e2bc84efdab1c881a6e6d82c6/a778dd7953b34ab9b9bc92dc2a499598.jpeg");
+}
+
+.titre {
+display:flex;
+margin: 10%;
+justify-content: center;
+font-size: 30px;
+color: antiquewhite;
+}
+
+h1 {
+    text-align: center;
+}
+
+.bouton {
+    display: flex;
+    justify-content: center;
+    margin:5%;
+}
+
+#bouton {
+    display:flex;
+    justify-content: space-around;
+    width: 300px;
+    height: 50px;
+    border-style: inset;
+    border-radius: 50px;
+    font-size: 20px;
+    background-color: antiquewhite;
+
+}
+
+.bouton :hover {
+    cursor: pointer;
+}

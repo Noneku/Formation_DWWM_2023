@@ -20,7 +20,21 @@ résultat attendu :
 
 */
 
-for ($i=1 ; $i <= 10; $i++) { 
-    echo $i * 2;
+$nb = null;
+
+for ( $i = 1;  $i <= 100 ; $i++) {
+    
+    if ($i % 2 == 0) {
+        
+        echo $i;
+        $nb++;
+        echo "\n";
+
 }
 
+}
+
+echo "\n";
+echo "il y a : ". $nb." nombres pairs";
+
+?>
