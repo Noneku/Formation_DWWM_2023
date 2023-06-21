@@ -138,15 +138,21 @@ for ($i = 0; $i <= 100; $i++) {
     } else if ($reste_des_dizaines == 5) {
         $unite = 'cinq';
     // @todo il manque 6, 7, 8, et 9, complétez le code
-    } else if ($reste_des_dizaines == 6) {
+    } else if ($reste_des_dizaines == 4) {
+        $unite = 'quatre';
+    } 
+     else if ($reste_des_dizaines == 6) {
         $unite = 'six';
+     
     } else if ($reste_des_dizaines == 7) {
         $unite = 'sept';
+     
     } else if ($reste_des_dizaines == 8) {
         $unite = 'huit';
+     
     } else if ($reste_des_dizaines == 9) {
         $unite = 'neuf';
-    }
+    } 
 
     if ($reste_des_centaines == 0) {
         $dizaine = '';
@@ -161,14 +167,14 @@ for ($i = 0; $i <= 100; $i++) {
     } else if ($reste_des_centaines == 50) {
         $dizaine = 'cinquante';
     // @todo il manque 60, 70, 80 et 90, complétez le code
-    } else if ($reste_des_centaines == 60) {
+    }else if ($reste_des_centaines == 60) {
         $dizaine = 'soixante';
-    } else if ($reste_des_centaines == 70) {
+    }else if ($reste_des_centaines == 70) {
         $dizaine = 'soixante-dix';
-    } else if ($reste_des_centaines == 80) {
-        $dizaine = 'quatre-vingt';
-    } else if ($reste_des_centaines == 90) {
-        $dizaine = 'quatre-vingt-dix';
+    }else if ($reste_des_centaines == 80) {
+        $dizaine = 'quatrevingt';
+    }else if ($reste_des_centaines == 90) {
+        $dizaine = 'quatrevingt-dix';
     }
 
     if ($i == 0) {
@@ -212,38 +218,39 @@ for ($i = 0; $i <= 100; $i++) {
     } else if ($i == 75) {
         $nombre = 'soixante-quinze';
     // @todo il manque 76, 77, 78 et 79, complétez le code
-    } else if ($i == 76) {
+    }else if ($i == 76) {
         $nombre = 'soixante-seize';
-    } else if ($i == 77) {
+    
+    }else if ($i == 77) {
         $nombre = 'soixante-dix-sept';
-    } else if ($i == 78) {
+    
+    }else if ($i == 78) {
         $nombre = 'soixante-dix-huit';
-    } else if ($i == 79) {
+    
+    }else if ($i == 79) {
         $nombre = 'soixante-dix-neuf';
     }
-    
+
     // exceptions 90+
     if ($i == 91) {
-        $nombre = 'quatre-vingt-onze';
+        $nombre = 'quatrevingt-onze';
     } else if ($i == 92) {
-        $nombre = 'quatre-vingt-douze';
+        $nombre = 'quatrevingt-douze';
     } else if ($i == 93) {
-        $nombre = 'quatre-vingt-treize';
+        $nombre = 'quatrevingt-treize';
     } else if ($i == 94) {
-        $nombre = 'quatre-vingt-quatorze';
+        $nombre = 'quatrevingt-quatorze';
     } else if ($i == 95) {
-        $nombre = 'quatre-vingt-quinze';
-    // @todo il manque 76, 77, 78 et 79, complétez le code
+        $nombre = 'quatrevingt-quinze';
     } else if ($i == 96) {
-        $nombre = 'quatre-vingt-seize';
+        $nombre = 'quatrevingt-seize';
     } else if ($i == 97) {
-        $nombre = 'quatre-vingt-dix-sept';
+        $nombre = 'quatrevingt-dix-sept';
     } else if ($i == 98) {
-        $nombre = 'quatre-vingt-dix-huit';
+        $nombre = 'quatrevingt-dix-huit';
     } else if ($i == 99) {
-        $nombre = 'quatre-vingt-dix-neuf';
-    }
-    // exceptions 90+
+        $nombre = 'quatrevingt-dix-neug';
+    } 
     // @todo il manque 91, 92, 93, 94, 95, 96, 97, 98, 99, inspirez vous du bloc "exceptions 70+" et complétez le code
 
     echo "$i : $nombre";

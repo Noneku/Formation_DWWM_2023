@@ -1,12 +1,21 @@
 <?php
 
-    $tab = [];
+// Création du tableau et demande a l'utilisateur quelle taille il doit faire
+$valeur = readline("Combien de valeur voulez vous ? : ");
+$tab = array();
+$tab2 = array();
 
-    for ($i=0; $i < 5; $i++) { 
-        $nbr = readline("Entre un nombre : ");
-        //Add 1 to result of nbr
-        $tab[$i] = $nbr + 1;
-        var_dump($tab);
-    }
-    
+// Boucle
+for ($i=0; $i < $valeur ; $i++) { 
+    $val = readline("Saisir vos valeur : ");
+    $tab[$i] = $val;
+    $tab2[$i] = $tab[$i] +1;
+}
+
+print_r($tab2);
+
+
+
+
+
 ?>

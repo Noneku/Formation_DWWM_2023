@@ -1,0 +1,38 @@
+<?php
+// $nb = 0;
+// $pg = 0;
+// $pos = 0;
+// $i = 0;
+// do {
+//     $i++;
+//     $nb = readline("Entrée votre nombre : ");
+//     if ($pg<$nb) {
+//         $pg = $nb;
+//         $pos = $i;
+        
+//     }
+    
+// } while ($nb != 0);
+// echo "le nombre " .$pg. " la position ".$pos;
+
+ #Déclaration et saisit des variables
+ echo "Entrez un nombre : ";
+ $nbInit = trim(fgets(STDIN));
+ $nbPos = 0;
+ $nbComp = -INF;
+ $i = 1;
+
+ #Traitement
+ while ($nbComp != 0) {
+     if ($nbInit<$nbComp) {
+         $nbInit = $nbComp;
+         $nbPos = $i ;
+     }
+     $i++;
+     echo "Entrez un nombre :";
+     $nbComp = trim(fgets(STDIN));
+ }
+
+ echo "Le nombre le plus grand est ".$nbInit." il se trouve en position ".$nbPos."."
+
+?>

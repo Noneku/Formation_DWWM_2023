@@ -20,8 +20,9 @@ résultat attendu :
 
 */
 
-for ($i=1; $i < 100; $i++) { 
-    if($i % 3){
-        echo $i."\n";
+echo "Les nombres non divisables par 3 sont : " ;
+for ($i = 1; $i < 101; $i++) {
+    if ($i % 3 / 1) {
+        echo $i . " ";
     }
 }

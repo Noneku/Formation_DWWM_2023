@@ -1,52 +1,33 @@
 <?php
-
-//Variables
-$sizeArray = readline("Choisissez la taille de votre tableau : ");
-$tab = [];
-$positif = [];
-$negatif = [];
-
-//Traitement
-for ($i=0; $i < $sizeArray; $i++) {
-    //Insert in $tab the number of loops in $sizeArray
-    $tab[] = $i; //Size of $tab = $sizeArray
-    $insertArray = readline("Entrer votre valeur : ");
-    //Insert number by user in $tab
-    $tab[$i] = $insertArray;
-
-    //Compare negatif and positif numbers
-    if($tab[$i] > 0){
-        //All numbers positif in $tab push in $positif
-        $positif[$i] = $tab[$i];
-    }
-    else{
-        //All numbers positif in $tab push in $negatif
-        $negatif[$i] = $tab[$i];
-    }
-}
-//Display
-echo "Le nombre de negatif est de : ".count($negatif)."\n"."Le nombre de positif est de : ".count($positif);
-
-//Optimisation
-/*
-<?php
-$nbValeurs = readline("Combien de valeurs?");
-
+// Variables pour savoir combien de valeurs ils souhaitent rentré
+$valeurs = readline("Combien de valeurs souhaitez vous saisir ? ");
 $tab = array();
+$neg = 0;
+$pos = 0;
+// Boucles 
+for ($i=0; $i < $valeurs; $i++) { 
+    $val = readline("Saisir valeurs : ");
+   $tab[$i] = $val; 
 
-$negatif = 0;
-$positif = 0;
-for ($i = 0; $i < $nbValeurs; $i++) {
-    $tab[$i] = readline("Entrer une note");    
-
-    if ($tab[$i] < 0) {
-        $negatif++;
-    } else {
-        $positif++;
-    }
+   // Si les valeurs sont négatif
+if ($val < 0) {
+    $neg++;
+   
 }
-echo "Il y a ".$negatif."Nombre negatif et".$positif."Nombre positif\n";
+// Si les valeurs sont positif
+elseif ($val > 0) {
+    $pos++;
 
-?>
- */
+}
+}
+
+// Afficher le tableau
+print_r($tab);
+
+echo "il y a $neg de valeurs négatif \n";
+echo "Il y a $pos de valeurs positif";
+
+
+
+
 ?>

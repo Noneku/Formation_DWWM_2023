@@ -23,24 +23,54 @@ $variable est un nomnbre entier
 */
 
 // bloc 1
-if (true) {
-    echo "c'est vrai";
-    echo PHP_EOL;
+switch (true) {
+    case true:
+        echo "c'est vrai";
+        break;
+
 }
+// if (true) {
+//     echo "c'est vrai";
+//     echo PHP_EOL;
+// }
 
 // bloc 2
 $i = 2;
 
-if ($i == 100) {
-    echo "égal à cent";
-    echo PHP_EOL;
-} else {
-    echo "différent de cent";
-    echo PHP_EOL;
+switch ($i) {
+    case 100:
+        echo "égal à 100";
+        break;
+    
+    default:
+        echo "différent de 100";
+        break;
 }
+// if ($i == 100) {
+//     echo "égal à cent";
+//     echo PHP_EOL;
+// } else {
+//     echo "différent de cent";
+//     echo PHP_EOL;
+// }
 
 // bloc 3
 $password = "toto";
+switch ($password) {
+    case 'toto':
+        echo "Vous êtes loggé";
+        echo PHP_EOL;
+        break;
+     case '1234':
+            echo "êtes-vous un robot ?";
+            echo PHP_EOL;
+            break;
+        
+    
+    default:
+        # code...
+        break;
+}
 
 if ($password == "toto") {
     echo "vous êtes loggé";

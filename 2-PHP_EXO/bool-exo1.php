@@ -19,13 +19,11 @@ echo "stations: $stations\n";
 
 if ($billet == TICKET_NORMAL) {
     echo "en règle\n";
-} else if ($billet == TICKET_ZAP) {
-    if ($stations <= ZAP_MAX) {
+} else if ($billet == TICKET_ZAP && $stations <= ZAP_MAX) {
+    
         echo "en règle\n";
-    } else {
-        echo "en fraude\n";
-    }
-} else {
+    }  else {
     echo "en fraude\n";
 }
+
 

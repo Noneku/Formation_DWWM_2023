@@ -1,7 +1,11 @@
 <?php
-$noms = ["test", "he", "ijr"];
 
-for ($i=0; $i < count($noms); $i++) { 
-    echo $noms[$i]."\n";
-}
+// Variables
+
+$a = readline ("Entrée un Prénom : ");
+$b = readline ("Entrée un prénom : ");
+$c = readline ("Entrée un Prénom : ");
+
+
+
 ?>

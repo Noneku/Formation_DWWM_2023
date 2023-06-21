@@ -19,8 +19,9 @@ résultat attendu :
     ...
 
 */
-
-for ($i=1 ; $i <= 10; $i++) { 
-    echo $i * 2;
+echo "Les nombres pairs sont : " ;
+for ($i = 1; $i < 101; $i++) {
+    if ($i % 2 == 0) {
+        echo $i . " ";
+    }
 }
-

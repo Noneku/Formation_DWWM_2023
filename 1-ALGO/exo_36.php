@@ -1,21 +1,20 @@
 <?php
 
-$tab1 = [2,5,8,4];
-$tab2 = [6,7];
-$result = [];
-$sum = 0;
+// Création de tableau 
+$tab1 = array(2, 5, 8, 4);
+$tab2 = array(6, 7);
+$somme1 = 0;
+$somme2 = 0;
+$somme3 = 0;
 
-for ($i=0; $i < count($tab2) ; $i++) { 
-    
-    for ($j=0; $j < count($tab1); $j++) { 
-
-        $result[$j] = $tab2[$i] * $tab1[$j];
-
-        $sum += $result[$j];
-    }
-      
+// 2 Boucles pour multiplier les valeurs 
+for ($i=0; $i < count($tab1) ; $i++) {
+    $somme1 += $tab2[0] * $tab1[$i];
+    $somme2 += $tab2[1] * $tab1[$i]; 
+   
 }
 
-echo $sum
 
+$somme3 = $somme1 + $somme2;
+echo "le schtroumpf sera : $somme3";
 ?>

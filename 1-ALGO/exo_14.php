@@ -1,26 +1,19 @@
 <?php
+// Variables
 
-//Variables
-$check;
-$nbrUser1 = readline("Entrer un nombre\n");
-$nbrUser2 = readline("Entrer un nombre\n");
+$a = readline("Donnez un nombre : ");
+$b = readline("Donnez un nombre : ");
+// Positif ou Négatif 
 
-//Algo
-if($nbrUser1 >= 1){
-    //Display
-    $result1 = "Votre nombre $nbrUser1 est positif\n";
+if ($a > 0 and $b > 0) {
+    echo "Vôtre nombre est positif";
 }
-else {
-    //Display
-     $result1 = "Votre nombre $nbrUser1 est negatif\n";
-}
-if($nbrUser2 >= 1){
-    //Display
-    $result2 = "Votre nombre $nbrUser2 est positif\n";
-}
-else {
-    $result2 = "Votre nombre $nbrUser2 est negatif\n";
+    
+    else { 
+    echo "Vôtre nombre est négatif";
+    
 }
 
-print("Nombre numéro 1 : ".$result1."Nombre numéro 2 : ".$result2);
+
+
 ?>
