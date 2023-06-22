@@ -20,7 +20,7 @@ class Manager extends Personne
         return $this->salaire;
     }
 
-    public function __toString () {
+    public function __toString () : string {
         return "Le salaire du Manager " .$this->nom. " " .$this->prenom. " est : " .$this->salaire. " €, son service : " .$this->service. ".\n";
     }
 

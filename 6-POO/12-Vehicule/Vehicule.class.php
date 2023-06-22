@@ -6,7 +6,7 @@ abstract class Vehicule
     private int $matricule;
     private int $annee;
     private float $prix;
-    public static int $cpt = 455;
+    public static int $cpt = 999;
 
 
     public function __construct ($annee, $prix) {

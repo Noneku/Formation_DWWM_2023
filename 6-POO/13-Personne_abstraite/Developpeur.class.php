@@ -22,7 +22,7 @@ class Developpeur extends Personne
     }
 
 
-    public function __toString () {
+    public function __toString () : string {
         return "Le salaire du Développeur " .$this->nom. " " .$this->prenom. " est : " .$this->salaire. " €, sa spécialité : " .$this->specialite. ".\n";
     }
 
