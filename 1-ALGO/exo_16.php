@@ -1,22 +1,12 @@
 <?php
 
-//Variables
-$nbr1 = readline("Entrer un nombre : ");
-$nbr2 = readline("Entrer un second nombre : ");
-$total = $nbr1 * $nbr2;
+$nb = readline("Saisissez un nombre : ");
 
-//Traitement
-if($total > 0){
-    echo "Le résultat est $total donc positif";
+if($nb>=0){
+    echo "Le nombre est positif";
+}else{
+    echo "Le nombre est negatif";
 }
-else{
-    if($total === 0){
-        $total = null;
-        echo "Le résultat est null";
-    }
-    else {
-        echo "Le résultat est $total donc négatif";
-    }
-}
+
 
 ?>

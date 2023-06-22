@@ -1,33 +1,32 @@
 <?php
 
-//Déclaration de variable
-    $better = [];
-    $T = [
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8],
-        [1,2,3,4,5,6,7,8]
-    ];
-//loop on size number of element in $T
- for ($i=0; $i < count($T); $i++) {
-        //Browse the elements in 8 array
-        for ($j=0; $j < count($T[$i]) ; $j++) { 
+$tableau = array(
+    array(1,2,3,4,5,6,7,8),
+    array(45,12,9,14,64,6,7,8),
+    array(84,2,3,4,5,6,7,8),
+    array(1,64,3,4,5,6,7,8),
+    array(1,2,45,99,5,6,94,8),
+    array(1,2,3,4,5,6,7,8),
+    array(1,2,3,45,5,6,7,8),
+    array(1,2,3,4,64,6,7,8),
+    array(64,2,45,4,5,6,7,8),
+    array(1,2,3,84,5,6,7,8),
+    array(1,2,65,4,5,64,7,8),
+    array(1,64,3,4,52,6,45,8),
+);
 
-            //Compare element[0] with next element
-            if($T[0][$j] >= $T[0][$j + 1]){
-                //If the first element superior, stock this in $better
-                $better[$i] = $T[0][$j];
-            
-            }
+$pg = 0;
+
+
+for ($i=0; $i < count($tableau) ; $i++) {
+    for ($j=0; $j < count($tableau[$i]); $j++) { 
+        if ($tableau[$i][$j]>$pg) {
+            $pg = $tableau[$i][$j];
         }
- }
-var_dump($better);
+    }
+    
+}
+
+echo $pg;
+
 ?>

@@ -1,14 +1,11 @@
 <?php
 
-//Variables
-$nbrUser = readline("Entre run nombre\n");
-//Algo
-if($nbrUser >= 1){
-    //Display
-    echo "Votre nombre est positif";
+$nb = readline("Saisissez un nombre : ");
+
+if($nb>0){
+    echo "Le nombre est positif";
+}else{
+    echo "Le nombre est negatif";
 }
-else {
-    //Display
-    echo"Votre nombre est négatif";
-}
+
 ?>

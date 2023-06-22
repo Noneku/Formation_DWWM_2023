@@ -1,0 +1,38 @@
+tr,
+td {
+ border: 1px solid black;
+ padding-left: 20px;
+ padding-right: 20px;
+ padding-top: 5px;
+ padding-bottom: 5px;
+ border-radius: 3px;
+}
+h1 {
+  text-align: center;
+}
+body {
+ background-image: url("./classe.jpg");
+}
+
+.relative {
+  margin-bottom: 20%;
+  /* Espacement entre relative1 et relative2 */
+}
+
+
+.relative,.relative2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+}
+
+.color {
+ background-color: burlywood;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  
+}

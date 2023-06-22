@@ -1,12 +1,22 @@
 <?php
 
-    $tab = [];
+$lt = readline("Entrez la valeur pour la longueur du tableau");
 
-    for ($i=0; $i < 5; $i++) { 
-        $nbr = readline("Entre un nombre : ");
-        //Add 1 to result of nbr
-        $tab[$i] = $nbr + 1;
-        var_dump($tab);
-    }
+$tab1 = array();
+$tab2 = array();
+
+for ($i=0; $i < $lt; $i++) { 
+    $tab1[$i] = readline("entrez un nombre dans le tableau : ");
+        $tab2[$i] = $tab1[$i] + 1;
     
+}
+
+
+
+print_r($tab1);
+print_r($tab2);
+
+
+
+
 ?>

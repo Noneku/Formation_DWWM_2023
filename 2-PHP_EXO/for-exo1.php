@@ -20,7 +20,19 @@ résultat attendu :
 
 */
 
-for ($i=1 ; $i <= 10; $i++) { 
-    echo $i * 2;
+$nb = 2;
+$somme = 0;
+
+/*while ($i<50) {
+    $somme = $somme + $nb;
+    $i++;
+    echo "\n $somme";
+}*/
+
+for ($i=0; $i < 50; $i++) { 
+    $somme = $somme + $nb;
+    echo "\n $somme";
 }
+
+
 

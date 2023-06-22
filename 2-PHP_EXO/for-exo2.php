@@ -19,6 +19,15 @@ résultat attendu :
     ...
 
 */
-for ($i=1; $i < 100; $i++) { 
-    echo $i * 3 ."\n";
-}
+
+$nb = 3;
+$somme = 0;
+
+for ($i=1; $somme < 99; $i++) {
+        $somme += $nb;
+        echo "\n $somme";
+    }
+
+    
+
+

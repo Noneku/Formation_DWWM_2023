@@ -1,15 +1,11 @@
 <?php
 
-//Variables
-$nb = readline("Entrer un nombre : ");
+$nb = readline("Entrez un nombre : ");
 $stock = "";
 
-//Traitement
-for ($i=1; $i <= $nb ; $i++) {
-    //Add turn of loop in stock of type String
+for ($i=1; $i <= $nb; $i++) { 
     $stock .= $i;
-    echo $stock."\n";
+    echo "$stock \n";
 }
-
 
 ?>

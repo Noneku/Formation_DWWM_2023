@@ -1,19 +1,21 @@
 <?php
 
-//Variables
+$moyenne = 0;
+$coef1 = 0;
+$coef2 = 0;
+$not1 = readline("Entrez votre note d'oral : ");
+$not2 = readline("Entrez votre note d'ecris : ");
 
-$module = readline("Entrer un module : ");
-$coef1 = readline("Entrer une note (Coef : 1) : "); //Note Oral
-$coef2 = readline("Entrer une note (Coef : 2) : "); //Note écrit
+$coef1 = $not1 * 1;
+$coef2 = $not2 * 2;
 
-//Traitement
-$moyenne = ((2*$coef1)+$coef2) / 3;
+$moyenne = ($not1 + $not2)/3;
 
-//Si la moyenne est >= à 10 alors ADMIS
-if($moyenne >= 10){
-    echo "Vous avez réussis, votre moyenne est de : $moyenne, du module : $module";
-}else {
-    echo "Echec !";
+if ($moyenne>10) {
+    echo "Vous validez le module";
+}else{
+    echo "Vous n'avez pas validez le module";
 }
+
 
 ?>

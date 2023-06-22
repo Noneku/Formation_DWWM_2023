@@ -1,21 +1,22 @@
 <?php
 
-$tab1 = [2,5,8,4];
-$tab2 = [6,7];
-$result = [];
-$sum = 0;
+$schtroumpf = 0;
 
-for ($i=0; $i < count($tab2) ; $i++) { 
-    
-    for ($j=0; $j < count($tab1); $j++) { 
+//creaion tableau
+$tab1 = array('2', '5', '8','4');
+$tab2 = array('6', '7');
 
-        $result[$j] = $tab2[$i] * $tab1[$j];
-
-        $sum += $result[$j];
+for ($i=0; $i <= 3 ; $i++) { 
+   
+    for ($j=0; $j <= 1 ; $j++) { 
+        
+        $schtroumpf = $schtroumpf + ( $tab1[$i] * $tab2[$j]);
     }
-      
 }
 
-echo $sum
+echo $schtroumpf;
+
+
+
 
 ?>

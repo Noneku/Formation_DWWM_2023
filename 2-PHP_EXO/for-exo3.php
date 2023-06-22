@@ -20,8 +20,9 @@ résultat attendu :
 
 */
 
-for ($i=1; $i < 100; $i++) { 
-    if($i % 3){
-        echo $i."\n";
+$nb = 1;
+
+for ($i=1; $nb < 100; $i++) {
+       if($nb%3)
+       echo "$nb\n";
     }
-}
