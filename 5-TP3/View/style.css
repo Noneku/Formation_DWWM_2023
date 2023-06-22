@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;200;1,20&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: #FFF4F4;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    /* grid-gap: 10px 30px; */
+    /* column-gap: 70px; */
+    gap: 70px;
+    margin: 100px;
+}
+
+.grid-item {
+    width: 350px;
+    height: 350px;
+    padding: 70px;
+    padding-top: 100px;
+    background-image: url('laptop_realistic_2.png');
+    background-repeat: no-repeat;
+    background-size: 350px;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-right: 500px;
+    margin-left: 200px;
+    font-weight: bold;
+}
+
+input {
+    width: 150px;
+    height: 75px;
+    background-color: #99DBF5;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+#modif {
+    padding-top: 25px;
+
+}
+
+/* #json {
+    padding-top: 15px;
+} */
+
+
+

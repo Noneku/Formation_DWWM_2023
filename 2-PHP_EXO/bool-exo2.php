@@ -1,10 +1,8 @@
 <?php
 
-/*
+/*simplifier les blocs conditionnels `if` `else if` en utilisant l'opérateur booléen `||`*/
 
-simplifier les blocs conditionnels `if` `else if` en utilisant l'opérateur booléen `||`
 
-*/
 
 define('ZAP_MAX', 3);
 define('TICKET_AUCUN', 0);
@@ -22,14 +20,3 @@ if ($billet == TICKET_NORMAL || $billet == TICKET_ZAP && $stations <= ZAP_MAX) {
 } else {
     echo "en fraude\n";
 }
-
-/*if ($billet == TICKET_NORMAL) {
-    echo "en règle\n";
-} else if ($billet == TICKET_ZAP && $stations <= ZAP_MAX) {
-    echo "en règle\n";
-} else {
-    echo "en fraude\n";
-}
-*/
-
-
