@@ -1,66 +1,45 @@
 <?php
 
-include_once "Personne.classe.php";
-include_once "utilisateur.classe.php";
-include_once "Profil.classe.php";
-
-
-// Création d'un objet Utilisateur ($nom,$prenom,$mail,$telephone,$salaire,$login,$password,$service);
-$utilisateur1 = new Utilisateur( "Sahli", "Asaad", "Sahliasaad2@hotmail.fr", "0123456789", 2000, "Elcorco", "password123", "Manager");
-$utilisateur2 = new Utilisateur( "AFPA", "Dwwm", "Sahliasaad2@hotmail.fr", "0123456789", 4000, "Elcorco", "password123", "Directeur général");
-
-
-
-// Utilisation de la méthode affiche pour afficher toutes les informations de l'utilisateur
-echo $utilisateur1->affiche();
-echo PHP_EOL;
-echo $utilisateur2->affiche();
-echo PHP_EOL;
-echo "******************";echo PHP_EOL;
+include 'Personne.classe.php';
+include 'utilisateur.classe.php';
+include 'Profil.classe.php';
 
 // Création des profils
-//($nom,$prenom,$mail,$telephone,$salaire,$login,$password,$service,$code,$libelle)
-$profil1 = new Profil("Belahacen","Aimane","BelahacenAimane@gmail.com","098765432",4000,"Batman","azerty","Informatique","CP","Chef de projet");
-$profil2 = new Profil("Adjal","Karim","Adjakarim@gmail.com","0987654321",5000,"Lalute","azertyu","Informatique","MN","Manager");
-$profil3 = new Profil("Sarayath","Alissa","SarayaAlissa@gmail.com","09876543211",6000,"Monga","azertyui","Informatique","DP","Directeur de projet");
-$profil4 = new Profil("Azaouadj","Younes","AzaouadjYounes@gmail.com","09876543222",7000,"Spotify","azertyIUY","Informatique","DRH","Directeur des ressources humaines");
-$profil5 = new Profil("Gacem","Nassim","GacemNassim@gmail.com","09876543332",11000,"Sport","azererty","Informatique","DG","Directeur général");
+$profils = [
+    new Profil(1, "CP", "Chef de projet"),
+    new Profil(2, "MN", "Manager"),
+    new Profil(3, "DP", "Directeur de projet"),
+    new Profil(4, "DRH", "Directeur des ressources humaines"),
+    new Profil(5, "DG", "Directeur général")
+];
 
-echo $profil1->Affiche();
-echo PHP_EOL;
-echo $profil2->Affiche();
-echo PHP_EOL;
-echo $profil3->Affiche();
-echo PHP_EOL;
-echo $profil4->Affiche();
-echo PHP_EOL;
-echo $profil5->Affiche();
+// Création des utilisateurs
+$utilisateurs = [
+    new Utilisateur("Aimane", "Belahacen", "Belahacen.aimane@example.com", "123456789", 5000, "CP123", "password123", "CP", $profils[0]),
+    new Utilisateur("Karim", "Adjal", "Karim.Adjal@example.com", "987654321", 6000, "MN123", "password1234", "MN", $profils[1]),
+    new Utilisateur("Alissa", "Sarayath", "alissa.sarayath@example.com", "555555555", 4000, "DP123", "password12345", "DP", $profils[2]),
+    new Utilisateur("Azzaouaj", "Younes", "younes.Azzaouaj@example.com", "777777777", 4500, "DRH123", "password123456", "DRH", $profils[3]),
+    new Utilisateur("Asaad", "Sahli", "Asaad.sahli@example.com", "888888888", 7000, "DP123", "password1234567", "DG", $profils[4]),
+];
 
-// Création des utilisateurs avec les profils métiers
-$utilisateur3 = new Utilisateur("Belahacen","Aimane","BelahacenAimane@gmail.com","098765432", 3000, "Login3", "MotDePasse3", "Informatique", "CP", "Chef de projet");
-$utilisateur4 = new Utilisateur("Adjal","Karim","Adjakarim@gmail.com","0987654321", 4000, "Login4", "MotDePasse4", "Informatique", "MN", "Manager");
-$utilisateur5 = new Utilisateur("Sarayath","Alissa","SarayaAlissa@gmail.com","09876543211", 5000, "Login5", "MotDePasse5", "Informatique", "DP", "Directeur de projet");
-$utilisateur6 = new Utilisateur("Azaouadj","Younes","AzaouadjYounes@gmail.com","09876543222", 6000, "Login6", "MotDePasse6", "Comptabilité", "DRH", "Directeur des ressources humaines");
-$utilisateur7 = new Utilisateur("Gacem","Nassim","GacemNassim@gmail.com","09876543332", 7000, "Login7", "MotDePasse7", "Informatique", "DG", "Directeur général");
-
-echo PHP_EOL;
-
-// Liste des utilisateurs
-$profils = array($profil1, $profil2, $profil3, $profil4, $profil5);
 
 // Affichage de la liste des utilisateurs
-echo "Liste des utilisateurs :" ;echo PHP_EOL;
-echo "******************";echo PHP_EOL;
-foreach ($profils as $profil) {
-    echo $profil->affiche() ;echo PHP_EOL;
+echo "Liste des utilisateurs:" . PHP_EOL;
+echo "*******************". PHP_EOL;
+foreach ($utilisateurs as $utilisateur) {
+    $utilisateur->affiche();
+    echo PHP_EOL;
 }
 
 // Filtrer et afficher la liste des managers
-echo "Liste des managers :" ;echo PHP_EOL;
-echo "******************";echo PHP_EOL;
-foreach ($profils as $profil) {
-    if ($profil->getCode() === "MN") {
-        print_r($profil->Affiche())  ;echo PHP_EOL;
+echo "Liste des managers:" . PHP_EOL;
+echo "*******************". PHP_EOL;
+foreach ($utilisateurs as $utilisateur) {
+    if ($utilisateur->getService() === "MN") {
+        $utilisateur->affiche();
+        echo PHP_EOL;
     }
 }
+
+
 ?>
