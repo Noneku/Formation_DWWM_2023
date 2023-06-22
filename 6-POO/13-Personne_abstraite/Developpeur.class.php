@@ -5,13 +5,13 @@ require_once ("./Personne.class.php");
 class Developpeur extends Personne 
 
 {
-    private string $specialte;
+    private string $specialite;
 
-    public function __construct ($nom, $prenom, $mail, $telephone, $salaire, $specialte) {
+    public function __construct ($nom, $prenom, $mail, $telephone, $salaire, $specialite) {
 
-        Personne::__construct ($nom, $prenom, $mail, $telephone, $salaire, $specialte);
+        Personne::__construct ($nom, $prenom, $mail, $telephone, $salaire, $specialite);
 
-        $this->specialte = $specialte;
+        $this->specialite = $specialite;
     }
 
 
@@ -21,14 +21,19 @@ class Developpeur extends Personne
         return $this->salaire;
     }
 
+
+    public function __toString () {
+        return "Le salaire du Développeur " .$this->nom. " " .$this->prenom. " est : " .$this->salaire. " €, sa spécialité : " .$this->specialite. ".\n";
+    }
+
    
 
     /**
      * Get the value of specialte
      */ 
-    public function getSpecialte()
+    public function getSpecialite()
     {
-        return $this->specialte;
+        return $this->specialite;
     }
 
     /**
@@ -36,9 +41,9 @@ class Developpeur extends Personne
      *
      * @return  self
      */ 
-    public function setSpecialte($specialte)
+    public function setSpecialite($specialite)
     {
-        $this->specialte = $specialte;
+        $this->specialite = $specialite;
 
         return $this;
     }

@@ -7,8 +7,16 @@ $dev1 = new Developpeur ("Lehai", "Patrick", "patrick.lehai@gmail.com", "0685000
 $dev2 = new Developpeur ("Turlufion", "Hervé", "herve.turlufion@gmail.com", "0625100000", 3500, "JAVA");
 
 $man1 = new Manager ("Loulou", "Raoul", "raoul.loulou@gmail.com", "0636800000", 4200, "Informatique");
+$man2 = new Manager ("Momo", "Lili", "lili.momo@gmail.com", "0652400000", 4500, "Réseaux informatiques");
 
 
+echo $dev1->__toString();
+
+echo $dev2->__toString();
+
+echo $man1->__toString();
+
+echo $man2->__toString();
 
 
 ?>
