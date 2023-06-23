@@ -3,6 +3,7 @@
 include("developpeur.php");
 include("manager.php");
 
+// affichage profil developpeur
 $developpeur = new Developpeur ("Dupond", "Louis", "louisDupond@gmail.com", "07.80.56.48.21", 10000, "PHP");
 echo $developpeur->afficher();
 echo "\n";
@@ -12,6 +13,7 @@ echo $developpeur2->afficher();
 echo "\n";
 echo "\n";
 
+// affichage profil manager
 $manager = new Manager ("Dubois", "Pierre", "DuboisPierre@gmail.com", "06.80.16.44.27", 30000, "Informatique");
 echo $manager->afficher();
 echo "\n";

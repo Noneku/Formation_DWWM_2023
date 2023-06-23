@@ -10,7 +10,7 @@ $nombreSaisie = readline( "Entrez le nombre de saisie : ");
 
 for ( $i = 0; $i < $nombreSaisie; $i++) {
 
-// permet d'entrer des valeurs dans un tableau
+// permet d'entrer des valeurs dans un tableau en additionant +1 
 
 $tableau[$i] = readline("Entrez une valeur: ") + 1;
 

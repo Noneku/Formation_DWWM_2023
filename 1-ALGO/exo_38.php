@@ -13,18 +13,22 @@ $position = null;
 
 for ( $i = 0; $i < $nbSaisie; $i++ ) {
 
+    // saisie des chiffres + remplissage tableau 
     $tableau[$i] = readline("Entrez un nombre: ");
  
-
+    // condition : si $tableau[$i] est supérieur à nbMax alors stockage de la saisie dans la variable $nbMax 
     if ( $tableau[$i] > $nbMax ) {
 
         $nbMax = $tableau[$i];
+
+        // stockage de la position
         $position++;
         
     } 
 
 }
 
+// affichage
 print_r($tableau);
 echo "\n";
 echo " le chiffre maximum est : " .$nbMax. " en position ".$position;

@@ -1,10 +1,10 @@
 <?php
 
-
+// Saisie de l'age
 echo " Entrez votre age : ";
 $nb =  trim(fgets(STDIN));
 
-
+// condition 
 if ($nb <6 ) {
     echo " Vous n'entrez pas";
 }

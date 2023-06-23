@@ -24,6 +24,7 @@ public function __toString() : string
     return " La maison se trouve au : ". $this->getAdresse()." de superficie ". $this->getSuperficie()." m²". "avec en nombre de piece(s) : $this->nbPieces";
     // OU: 
     // return parent::__toString(). " avec en nombre de piece(s) : $this->nbPieces";
+    // Le parent::_toString() retourne la fonction dans la classe mère
     
     
 }

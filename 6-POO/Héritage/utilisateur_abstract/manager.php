@@ -2,7 +2,7 @@
 
 include_once('personne.php');
 
-
+// la classe Manager va hériter de la classe Personne
 class Manager extends Personne {
 
     private string $service;
@@ -23,7 +23,7 @@ public function __construct(string $nom, string $prenom, string $mail, string $t
 
 }
 
-
+// fonction qui calcul le salaire avec augmentation 
 public function calculerSalaire() {
 
 $augmentation = $this->salaire * 0.35;
@@ -31,7 +31,7 @@ return $this->salaire + $augmentation;
 
 }
 
-
+// fonction qui affiche les informations du profil manager
 public function afficher() : void {
 
 

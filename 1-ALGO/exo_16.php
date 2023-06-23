@@ -6,6 +6,7 @@
 echo " Entrez votre nombre : ";
 $nb =  trim(fgets(STDIN));
 
+// stokage de la condition ( $nb<=0) dans la variable $condition 
 $condition = $nb <= 0;
 
 if ($condition) {

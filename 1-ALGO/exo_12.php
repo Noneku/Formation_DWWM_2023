@@ -1,5 +1,6 @@
 <?php
 
+// Calcul de la TVA
 $prixHT = readline ("Entrez le prix HT: ");
 $nombreArticle = readline ("Entrez le nombre d'article:  ");
 $tauxTVA = 0.20;

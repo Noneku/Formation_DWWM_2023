@@ -26,7 +26,7 @@ class Camion extends Vehicule {
     
     public function __toString(){
     
-        return parent::__toString();
+        return "Le matricule est : ".$this->getMatricule()." "."l'année est : ".$this->getAnnee()." avec un prix de : ".$this->getPrix();
     
     }
 

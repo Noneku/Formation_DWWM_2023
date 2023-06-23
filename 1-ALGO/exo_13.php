@@ -1,9 +1,13 @@
 <?php
 //  Ecrire un algorithme qui demande un nombre à l'utilisateur et l'informe ensuite si ce nombre est positif ou négatif ( on laisse de coté ou le nombre vaut 0)
 // Permet de demander de saisir un nombre , attention le echo est avant la variable 
+
+
 echo " Entrez votre nombre : ";
+// Autre alternative à readline
 $nb =  trim(fgets(STDIN));
 
+// Condition 
 $condition = $nb < 0;
 
 if ($condition) {

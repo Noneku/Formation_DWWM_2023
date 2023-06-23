@@ -12,6 +12,8 @@ for ($i= 1; $i<=5; $i++) {
     if ($nb > $nbMax) {
 
         echo "le chiffre maximum est ".$nbMax = $nb;
+
+        // stockage de la position , à chaque tour de boucle,  $position va etre incrémenté de +1
         $position++;
 
         echo "\n";
@@ -23,6 +25,5 @@ for ($i= 1; $i<=5; $i++) {
     }
 }
 
-echo $position;
 
 ?>

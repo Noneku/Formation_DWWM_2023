@@ -2,7 +2,7 @@
 
 include("batiment.php");
 
-// ins
+// instanciation
 $batiment = new Batiment ("10 rue de l'AFPA", 12,5 );
 echo $batiment->__toString();
 echo "\n";

@@ -5,9 +5,9 @@
 // tableau modifié à gauche : ecalaged -->
 
 $tableau = array ( "D", "E", "C", "A", "L", "A", "G", "E");
-$nouveauTableau = array ();
 
-//  PREMIERE METHODE: ECRASER LES LETTRES 
+
+//  PREMIERE METHODE: ECRASER LES LETTRES (A REVOIR)
 
 for ($i = 0; $i < count($tableau); $i++) {
 
@@ -15,16 +15,7 @@ for ($i = 0; $i < count($tableau); $i++) {
 
 }
 
-// AFFICHER TABLEAU ORDRE DECROISSANT
 
-
-// for ($i = 7; $i >= 0; $i--) {
-
-//     echo $nouveauTableau [$i] = $tableau[$i];
-
-// }
-
-// $tableau = $nouveauTableau;
 
 
 echo "\n";

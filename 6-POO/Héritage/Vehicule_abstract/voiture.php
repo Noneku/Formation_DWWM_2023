@@ -5,6 +5,13 @@ include("vehicule.php");
 class Voiture extends Vehicule {
 
 
+     //  PAS BESOIN DE REMETTRE LE CONSTRUCT
+    // public function __construct(string $matricule, int $annee, float $prix){
+
+    //     parent::__construct($matricule, $annee, $prix);
+
+    // }
+
 
     public function demarrer(): void {
     
@@ -20,7 +27,7 @@ class Voiture extends Vehicule {
     
     public function __toString(){
     
-    return parent::__toString();
+        return "Le matricule est : ".$this->getMatricule()." "."l'année est : ".$this->getAnnee()." avec un prix de : ".$this->getPrix();
     
     }
 

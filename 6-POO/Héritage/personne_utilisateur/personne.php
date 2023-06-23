@@ -7,7 +7,7 @@ class Personne {
 // -private
 // +public
 
-protected static int $id=0;
+protected static int $id=1;
 protected string $nom;
 protected string $prenom;
 protected string $mail;
@@ -24,21 +24,23 @@ public function __construct(string $nom, string $prenom, string $mail, string $t
     $this->telephone = $telephone;
     $this->salaire = $salaire;
 
-    self::$id++;
+    self::$id;
 
 }
 
-
+// fonction calculer le salaire
 public function calculerSalaire() : float {
 
+// affcihe seulement le salaire au départ
 return $this->salaire;
 
 }
 
 
+// affiche tous les informations Personne
 public function afficher() : void {
 
-    echo "ID: ".self::$id.PHP_EOL;
+    echo "ID: ".self::$id++.PHP_EOL;
     echo "NOM: ".$this->nom.PHP_EOL;
     echo "Prenom: ".$this->prenom.PHP_EOL;
     echo "Mail: ".$this->mail.PHP_EOL;
@@ -49,3 +51,6 @@ public function afficher() : void {
 
 
 }
+
+
+?>

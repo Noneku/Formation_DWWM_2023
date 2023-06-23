@@ -20,7 +20,7 @@ echo "n'a pas de solution";
 
 }  elseif ($delta == 0){
 
-echo"une unique solution est: ".-$b/(2 *$a);
+echo "une unique solution est: ".-$b/(2 *$a);
 
 } else {
 

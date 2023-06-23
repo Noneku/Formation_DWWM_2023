@@ -13,10 +13,13 @@ $resultat2 = null;
 
 for ($i = 0 ;  $i < count($tableau1); $i++) {
 
+// index0 tableau2 + index tableau 1 qui changera à chaque tour de boucle , addition avec le resultat précédent 
 echo $resultat1 += $tableau2[0] * $tableau1[$i];
 echo "\n";
 
 }
+
+// Meme systheme avec l'index1
 
 for ($i = 0 ;  $i < count($tableau1); $i++) {
 
@@ -24,14 +27,17 @@ for ($i = 0 ;  $i < count($tableau1); $i++) {
     echo "\n";
     
 }
-    
+
+// addition résultat1 et résultat 2
 echo "le résultat est : ".$resultat1 + $resultat2; 
 echo "\n";
 
 
 
-// AUTRE METHODE
+// AUTRE METHODE : CORRECTION
 //  BOUCLE DANS UNE BOUCLE 
+// ____________________________________________________________________________________________________________________________________
+
 
 //Initialisation des variables
 
@@ -43,7 +49,9 @@ $res = 0; //Résultat
 
 //Traitement
 for ($i=0; $i < sizeof($tab1) ; $i++) { 
+
     for ($j=0; $j < sizeof($tab2); $j++) { 
+        
         $res = $res + ($tab1[$i] * $tab2[$j]);
     }
 }

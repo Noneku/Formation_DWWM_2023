@@ -1,5 +1,6 @@
 <?php
 
+// affiche les personnes grace à une boucle
 include("personne.php");
 
 $nbSaisie = readline("Entrez le nombre de profil  : ");

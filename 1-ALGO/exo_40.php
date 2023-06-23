@@ -37,6 +37,7 @@ for ( $i=0; $i < count($tableau); $i++ ) {
 
 }
 
+// affichage nb max
 echo "le nombre max est : ".$nbMax; 
 
 ?>

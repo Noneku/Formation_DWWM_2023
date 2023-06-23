@@ -1,0 +1,84 @@
+ * {
+background-color: rgb(252, 252, 252);
+font-family: Arial, Helvetica, sans-serif;
+}
+
+.conteneur1, .conteneur2, .en-tete {
+    display: flex; 
+}
+
+.en-tete, .en-tete2 {
+    border: solid lightgray;
+    width : 50%;
+    height: 200px;
+}
+
+.en-tete li, .en-tete2 li, .bloc_Formation li {
+    list-style: none;
+}
+
+
+.en-tete2 li {
+    color:red;
+    font-weight: bold;
+    text-align: center;
+    padding: 60px; 
+}
+
+.blocPhoto {
+    float: right;
+    border: solid black 1px;
+    width : 25%;
+    height: 200px;
+}
+
+.blocInfos {
+    width : 75%;
+    height: 200px;
+}
+
+.presentation {
+    display: flex;
+    border: solid lightgray;
+    width : 99,5%;
+    height: 200px;
+}
+
+.presentation p {
+    text-align: center;
+    padding: 60px;
+}
+
+
+.bloc_Formation, .bloc_Experience {
+    border: solid lightgray;
+    width : 50%;
+    height: 1000px;
+}
+
+ul#Diplome, #centresInterets {
+padding: 3%;
+}
+
+li#Diplome, #experiences, #nom, #tel, #mail {
+    font-weight: bold;
+    }
+
+
+h2 {
+    text-align: center;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+h3 {
+    margin-top: 5%;
+    margin-left: 5%;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.bloc_Experience ul {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}

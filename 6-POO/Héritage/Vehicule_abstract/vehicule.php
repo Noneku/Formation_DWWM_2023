@@ -15,24 +15,11 @@ public function __construct(string $matricule, int $annee, float $prix){
     
 }
 
+abstract function demarrer();
 
-public function demarrer() {
-    
+abstract function accelerer();
 
-
-}
-
-public function accelerer() {
-
-    
-}
-
-
-public function __toString(){
-
-return "Le matricule est : ".$this->getMatricule()." "."l'année est : ".$this->getAnnee()." avec un prix de : ".$this->getPrix();
-
-}
+abstract function __toString();
 
 
 
