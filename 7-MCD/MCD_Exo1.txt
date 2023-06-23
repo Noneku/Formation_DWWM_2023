@@ -1,0 +1,24 @@
+Question 1 :
+
+Entité : Personne, Animal
+Association : Aimer
+Propriété : Nom_Personne ; Nom_Animal
+Identifiant : Num_Personne ; Num_Animal
+Patte
+Cardinalité : Personne -> 0,n ; Animal -> 1,1
+
+Question 2 :
+
+1.Oui
+2.Non
+3.Non
+4.Oui
+
+Question 3 :
+
+Race 1,n ----posséde---- 0,n Animal
+
+Question 4 :
+
+Personne ---AIMER--- Animal
+	  ---Date---

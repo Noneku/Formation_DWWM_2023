@@ -1,0 +1,12 @@
+Question 1 :
+
+Cas échéant : 
+
+
+
+
+Espece 1,n ---APPARTENIR---- 1,1 Animal
+Animal 0,n ---AIMER---- 0,n Personne
+Animal 1,n ---MANGER---- 0,n Aliment
+
+
