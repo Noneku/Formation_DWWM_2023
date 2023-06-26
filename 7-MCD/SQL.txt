@@ -1,0 +1,4 @@
+/* Sélectionner toutes les colonnes de la table SERV*/
+SELECT * FROM serv;
+/*Sélectionner les colonnes SERVICE et NOSERV de la table SERV*/
+SELECT service,noserv from serv;
