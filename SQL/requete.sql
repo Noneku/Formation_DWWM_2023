@@ -98,3 +98,93 @@ select nom,prenom,sal
 from emp
 where sal>
 (select MIN(sal) from emp where noserv=3) order by sal DESC;
+/*Sélectionner les noms, le numéro de service, l’emplois et le salaires des
+personnes travaillant dans la même ville que HAVET.*/
+select nom,emp.noserv,emploi,sal 
+from emp,serv 
+where emp.noserv=serv.noserv 
+and ville=(select ville
+                from serv,emp
+                where emp.noserv=serv.noserv
+                and nom='HAVET');
+/*Sélectionner les employés du service 1, ayant le même emploi qu'un employé du
+service N°3.*/
+SELECT * from emp 
+where emploi in 
+(select emploi from emp where noserv=3) and noserv=1;
+/*Sélectionner les employés du service 1 dont l'emploi n'existe pas dans le service 3.*/
+SELECT * from emp 
+where emploi not in(select emploi from emp where noserv=3) and noserv=1;
+/*Sélectionner nom, prénom, emploi, salaire pour les employés ayant même emploi et un
+salaire supérieur à celui de CARON.*/
+select nom,prenom,sal from emp
+where emploi =
+(select emploi from emp where nom='CARON') and sal>(select sal from emp where nom='CARON');
+/*Sélectionner les employés du service N°1 ayant le même emploi qu'un employé du
+service des VENTES.*/
+SELECT * from emp where noserv=1 and emploi in
+(select emploi from emp inner join serv on emp.noserv=serv.noserv where service='VENTES');
+/*Sélectionner les employés de LILLE ayant le même emploi que RICHARD, trier le
+résultat dans l'ordre alphabétique des noms.*/
+select * from emp inner join serv on emp.noserv=serv.noserv 
+where ville='LILLE'
+and emploi=(select emploi from emp where nom='RICHARD')
+order by  nom  asc;
+/*Sélectionner les employés dont le salaire est plus élevé que le salaire moyen de leur
+service (moyenne des salaires = avg(sal)), résultats triés par numéros de service.*/
+select nom, prenom, sal, noserv
+from emp e
+where sal > (select avg(sal)
+                from emp m
+                where e.noserv=m.noserv)
+order by noserv;
+ /*Sélectionner les employés du service INFORMATIQUE embauchés la même année
+qu'un employé du service VENTES.
+( année -> oracle : to_char(embauche,’YYYY’)> MYSQL: DATE_FORMAT(embauche,’%Y’)*/
+SELECT * from emp inner join serv on emp.noserv=serv.noserv 
+where service='INFORMATIQUE' 
+and DATE_FORMAT(embauche,"%Y")
+in (select DATE_FORMAT(embauche,"%Y") 
+from emp inner join serv on emp.noserv=serv.noserv where service ='VENTES');
+/*Sélectionner le nom, l’emploi, la ville pour les employés qui ne travaillent pas dans le
+même service que leur supérieur hiérarchique direct.*/
+select nom, emploi, ville
+from emp e, serv s
+where e.noserv = s.noserv
+and e.noserv <> (select noserv
+                 from emp e1
+                 where e1.noemp = e.sup);
+/*Sélectionner le nom, le prénom, le service, le revenu des employés qui ont des
+subalternes, trier le résultat suivant le revenu décroissant.*/
+select nom,prenom,service,sal from emp 
+inner join serv on emp.noserv=serv.noserv
+where noemp in(select sup from emp)
+order by sal desc;
+/*Sélectionner le nom, l’emploi, le revenu mensuel (nommé Revenu) avec deux décimales
+pour tous les employés, dans l’ordre des revenus décroissants*/
+SELECT nom,emploi, ROUND ((sal+nvl(comm,0)),2) AS revenu FROM emp ORDER BY revenu DESC;
+/*Sélectionner nom, prénom, emploi, le pourcentage de commission (deux décimales) par
+rapport au revenu mensuel ( renommé "% Commissions") , pour tous les vendeurs dans l'ordre
+décroissant de ce pourcentage*/
+select nom,prenom,emploi,round((sal*100/comm),2) as " % commission" 
+from emp 
+where emploi='VENDEUR' 
+order by " % commission" desc;
+/*Sélectionner le nom, l’emploi, le service et le revenu annuel ( à l’euro près) de tous les
+vendeurs.*/
+select nom,service,round(12*(sal+comm),0) as revenu from emp 
+inner JOIN serv 
+on emp.noserv=serv.noserv 
+where emploi='VENDEUR';
+/*Sélectionner nom, prénom, emploi, salaire, commissions, revenu mensuel pour les employés
+des services 3,5,6*/
+SELECT nom,prenom,emploi,sal,IFNULL(comm,0),round((sal+IFNULL(comm,0)),0)
+as "revenu mensuel" 
+from emp where noserv=3 or noserv=5 or noserv=6;
+/*Afficher le nom, l'emploi, les salaires journalier et horaire pour les employés des services
+3,5,6 (22 jours/mois et 8 heures/jour), sans arrondi, arrondi au centime près.*/
+SELECT nom,prenom,emploi,round((sal/22),1) "salaire journalier",round((sal/22/8),1) "salaire horraire"
+from emp where noserv=3 or noserv=5 or noserv=6;
+/*Idem sans arrondir mais en tronquant.*/
+SELECT nom,prenom,emploi,TRUNCATE((sal/22),2) "salaire journalier",TRUNCATE((sal/22/8),2) "salaire horraire"
+from emp where noserv=3 or noserv=5 or noserv=6;
