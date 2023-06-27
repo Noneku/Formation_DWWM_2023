@@ -1,0 +1,11 @@
+GNU
+
+
+Le système d'exploitation GNU est un système complet de logiciels libres qui a une compatibilité ascendante avec Unix. « GNU » signifie GNU's Not Unix (GNU N'est pas Unix) et se prononce « gnou » (comme l'animal), avec un g dur. Richard Stallman a fait l'annonce initiale du projet GNU en septembre 1983. Une version plus longue appelée « manifeste GNU » a été publiée en septembre 1985. Il a été traduit dans différentes langues.
+
+Le projet ayant pour but de développer le système d'exploitation GNU est appelé « projet GNU ». Le projet GNU a été conçu en 1983 comme une manière de rétablir l'esprit coopératif qui prévalait dans la communauté informatique aux premiers jours, pour rendre la coopération à nouveau possible en supprimant les barrières imposées par les propriétaires de logiciels privateurs.
+
+
+Au mois de septembre 1983, Richard Stallman annonça le développement d’un système d’exploitation libre qu’il nomme « GNU » et qui a pour but d’être un équivalent libre d’Unix. L’acronyme récursif GNU signifie GNU’s Not Unix (« GNU n’est pas UNIX »)
+
+La naissance du noyau Linux en 1991 (après que celui-ci eut été publié sous licence GPL) permet, en le combinant aux outils GNU, de former le système d’exploitation GNU/Linux. Il y a une controverse et une certaine confusion de nommage du système d’exploitation entre Linux, qui est en réalité le noyau du système d’exploitation, et GNU/Linux qui est le système d’exploitation. L’appellation GNU/Linux est importante pour Richard Stallman, car elle permet entre autres que ne soit pas occulté le but du projet GNU : permettre l’utilisation d’un système entièrement libre et garantir les libertés fondamentales de manière générale. 
