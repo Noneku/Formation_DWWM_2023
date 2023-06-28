@@ -31,13 +31,4 @@ $Users = [
     $user3,
     $user4 
 ];
-
-//Display all Users
-// echo "\n";
-// echo $user1->affiche() . "\n\n";
-// echo $user2->affiche() . "\n";
-// echo $user3->affiche() . "\n";
-// echo $user4->affiche() . "\n";
-// echo "\n";
-
 ?>
