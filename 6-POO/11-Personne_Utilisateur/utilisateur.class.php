@@ -1,7 +1,7 @@
 <?php
 
-include('./Personne.php');
-include('./Profil.php');
+include('Personne.class.php');
+include('Profil.class.php');
 class Utilisateur extends Personne
 {
     private string $login;
@@ -15,6 +15,8 @@ class Utilisateur extends Personne
     	$this->login = $login;
     	$this->password = $password;
     	$this->service = $service;
+
+// constructeur de personne la classe parent
 
         parent::__construct($nom, $prenom, $mail, $telephone, $salaire);
 
@@ -30,7 +32,7 @@ class Utilisateur extends Personne
     public function calculerSalaire() : float {
             $oldSalaire = $this->salaire;
         
-        //Increase 10% or 40 % depending on post code (Manager 10% - DG 40%)
+        //augmentation du salaire en fonction du poste
 
             if($this->profil->getLibelle() === "Manager"){
 

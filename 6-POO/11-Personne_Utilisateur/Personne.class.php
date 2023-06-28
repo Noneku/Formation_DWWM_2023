@@ -12,8 +12,12 @@ class Personne
     protected static int $cptId = 0;
 
     function __construct(string $nom, string $prenom, string $mail, string $telephone, float $salaire) {
-
-    	$this->id = self::$cptId++;
+        
+        
+        
+        
+        $this->id = self::$cptId++; 
+        // auto incrementation de l'ID
     	$this->nom = $nom;
     	$this->prenom = $prenom;
     	$this->mail = $mail;

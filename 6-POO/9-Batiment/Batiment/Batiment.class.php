@@ -11,8 +11,8 @@ Class Batiment
         $this->adresse = $adresse;
         $this->superficie = $superficie;
     }
-
-    public function __toString()
+  // fonction qui transforme en chaine de caractere 
+   public function __toString()
     {
         return "Le bâtiment ce trouve a l'adresse : " . $this->adresse . ", a une superficie de : " . $this->superficie . "mm²";
     }
