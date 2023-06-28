@@ -218,7 +218,8 @@ select AVG(sal+nvl(comm,0))from emp;
 /*Paramétrer la requête qui précède sur l’emploi.*/
 select emploi, AVG(sal+nvl(comm,0)) from emp group by emploi;
 /*Afficher le nombre de lettres du service dont le nom est le plus court.*/
-SELECT min(nom) from emp GROUP by noserv;
+select min(length(service))
+from serv;
 /*Déterminer le nombre d'employés du service 3 qui reçoivent éventuellement une
 commission.*/
 select count(*) from emp where COALESCE(comm,0)is not null and noserv=3;
