@@ -31,5 +31,4 @@ class Personne
             "Telephone: " . $this->telephone . "\n" .
             "salaire: " . $this->salaire . "\n";
     }
-
 }

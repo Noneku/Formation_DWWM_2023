@@ -2,12 +2,12 @@
 
 class Manager extends Personne
 {
-    private $_specialite;
+    private $_service;
 
-    public function __construct(string $nom, string $prenom, string $mail, string $telephone, string $salaire, string $specialite)
+    public function __construct(string $nom, string $prenom, string $mail, string $telephone, string $salaire, string $_service)
     {
         parent::__construct($nom, $prenom, $mail, $telephone, $salaire);
-        $this->_specialite = $specialite;
+        $this->_service = $_service;
     }
 
     public function calculerSalaire(): float
@@ -25,17 +25,17 @@ class Manager extends Personne
             "mail: " . $this->getMail() . "\n" .
             "telephone: " . $this->getTelephone() . "\n" .
             "salaire: " . $this->getSalaire() . "\n" .
-            "specialite: " . $this->getSpecialite() . "\n";
+            "service: " . $this->getService() . "\n";
     }
 
-    public function getSpecialite(): string
+    public function getService(): string
     {
-        return $this->_specialite;
+        return $this->_service;
     }
 
-    public function setSpecialite($specialite): self
+    public function setService($_service): self
     {
-        $this->_specialite = $specialite;
+        $this->_service = $_service;
         return $this;
     }
 
