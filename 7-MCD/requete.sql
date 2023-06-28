@@ -162,6 +162,48 @@ FROM emp;
 /*98 : Sélectionner les employés ayant plus de 12 ans d’ancienneté.*/
 /*100 : Depuis combien de jours êtes-vous nés ?*/
 SELECT DATEDIFF(NOW(), '1987-05-18');
+/*103 : Afficher la somme des salaires et la somme des commissions des vendeurs*/
+SELECT SUM(sal) as Somme_Salaire, SUM(comm) as Somme_Comission from emp where emploi = 'VENDEUR';
+/*104 : Afficher le plus haut salaire, le plus bas salaire, la différence entre les deux.*/
+SELECT MAX(sal) as Max_Sal, MIN(sal) as Min_Sal, ROUND(MAX(sal) - MIN(sal),1) as Difference from emp;
+/*106 : Afficher le nombre de lettres du service dont le nom est le plus court.*/
+SELECT MIN(LENGTH(service)) from serv;
+/*108 : Déterminer le nombre d'employés du service 3 qui reçoivent éventuellement une
+commission.*/
+SELECT COUNT(*) from emp where noserv = 3 and comm is not NULL;
+/*110 : Déterminer le nombre d'employés du service N°3.*/
+SELECT COUNT(*) from emp where noserv = 3;
+/*112 : Pour chaque service donner le salaire annuel moyen de tous les employés qui ne sont ni 
+président, ni directeur.*/
+SELECT avg(sal*12) from emp where emploi <> 'PRESIDENT' and emploi <> 'DIRECTEUR';
+/*116 : Sélectionner les services ayant au mois deux vendeurs.*/
+SELECT EMPLOI, COUNT(EMPLOI) AS "EFFECTIF", SERVICE  FROM SERV INNER JOIN EMP ON EMP.NOSERV = SERV.NOSERV 
+WHERE EMPLOI = 'VENDEUR' GROUP BY EMPLOI, SERVICE HAVING COUNT(EMPLOI) >= 2;
+/*118 : Sélectionner les emplois ayant un salaire moyen supérieur au salaire moyen des directeurs. */
+SELECT EMPLOI, AVG(SAL) AS "SALAIRE MOYEN" 
+FROM EMP GROUP BY EMPLOI 
+HAVING (AVG(SAL) > (SELECT AVG(SAL) 
+FROM EMP WHERE EMPLOI = 'DIRECTEUR')); 
+
+/*120 : Afficher l'effectif, la moyenne et le total pour les salaires et les commissions par emploi. */
+SELECT EMPLOI, COUNT(EMPLOI) AS "EFFECTIF", 
+ROUND(AVG(SAL),2) AS "MOYENNE DE SALAIRE", 
+ROUND(SAL+COALESCE(COMM, 0), 2) AS "TOTAL DE REVENUS" 
+FROM EMP GROUP BY EMPLOI; 
+
+/*122 : Insérez vous comme nouvel employé embauché aujourd’hui au salaire que vous désirez. Validez. */
+INSERT INTO EMP VALUES ('2500','Gacem','nassim','DEVOPS','1000', DATE(NOW()), 7500, 15000,'4');
+
+/*124 : Insérer le salarié dont le nom est MOYEN, prénom Toto, no 1010, embauché le 12/12/99, supérieur 1000, pas de comm, service no 1, salaire vaut le salaire moyen des employés. Validez. */
+SET @SALAIRE = (SELECT AVG(SAL) FROM EMP);
+INSERT INTO EMP VALUES ('1010','MOYEN','TOTO','ASSISTANT','1000', '1999-12-12', @SALAIRE, NULL,'1');
+
+/*126 : Supprimer l’employé créé à l’exercice 122 de votre voisin. */
+DELETE FROM EMP WHERE NOEMP = 2500;
+/*Augmenter son propre salaire de 1000 €. */
+UPDATE EMP
+SET SAL = SAL + 1000
+WHERE NOEMP = 2500;
 
 
 
