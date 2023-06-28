@@ -1,4 +1,4 @@
-/* Sélectionner toutes les colonnes de la table SERV*/
+/*Sélectionner toutes les colonnes de la table SERV*/
 SELECT * FROM serv;
 /*Sélectionner les colonnes SERVICE et NOSERV de la table SERV*/
 SELECT service,noserv from serv;
@@ -17,7 +17,7 @@ select * from emp where sup is null;
 /*Sélectionner les vendeurs du service 6 qui ont un revenu mensuel supérieur ou
 égal à 9500 €.*/
 select * from emp where emploi='VENDEUR' and noserv=6 and sal>=9500;
-/* Sélectionner dans les employés tous les présidents et directeurs. Attention, le
+/*Sélectionner dans les employés tous les présidents et directeurs. Attention, le
 français et la logique sont parfois contradictoires.*/
 select * from emp where emploi='PRESIDENT'OR emploi ='DIRECTEUR';
 /*Sélectionner les directeurs et « les techniciens du service 1 ».*/
@@ -166,13 +166,13 @@ SELECT nom,emploi, ROUND ((sal+nvl(comm,0)),2) AS revenu FROM emp ORDER BY reven
 /*Sélectionner nom, prénom, emploi, le pourcentage de commission (deux décimales) par
 rapport au revenu mensuel ( renommé "% Commissions") , pour tous les vendeurs dans l'ordre
 décroissant de ce pourcentage*/
-select nom,prenom,emploi,round((sal*100/comm),2) as " % commission" 
+select nom,prenom,emploi,round((sal*100+nvl(comm,0)/nvl(comm,0)),2) as " % commission" 
 from emp 
 where emploi='VENDEUR' 
 order by " % commission" desc;
 /*Sélectionner le nom, l’emploi, le service et le revenu annuel ( à l’euro près) de tous les
 vendeurs.*/
-select nom,service,round(12*(sal+comm),0) as revenu from emp 
+select nom,service,round(12*(sal+nvl(comm,0)),0) as revenu from emp 
 inner JOIN serv 
 on emp.noserv=serv.noserv 
 where emploi='VENDEUR';
@@ -188,3 +188,129 @@ from emp where noserv=3 or noserv=5 or noserv=6;
 /*Idem sans arrondir mais en tronquant.*/
 SELECT nom,prenom,emploi,TRUNCATE((sal/22),2) "salaire journalier",TRUNCATE((sal/22/8),2) "salaire horraire"
 from emp where noserv=3 or noserv=5 or noserv=6;
+/*Concaténer les colonnes Service et Ville en les reliant par " ----> ", les premières lettres des noms de villes
+doivent se trouver sur une même verticale.*/
+SELECT GROUP_CONCAT(SERVICE,'---->',VILLE) FROM SERV GROUP BY SERVICE;
+/*Sélectionner les employés en remplaçant les noms par '*****' dans le service n°1, trier le résultat suivant
+le N° de service.*/
+UPDATE emp set nom="*****" WHERE noserv=1;
+/*Sélectionner les employés embauchés en 1988*/
+select * from emp where DATE_FORMAT(embauche,"%Y")=1988;
+/*Sélectionner les positions des premiers M et E dans les noms des employés*/
+select nom, LOCATE('M',nom),LOCATE('E',nom) from emp;
+/*Tracer un Histogramme des salaires avec nom, emploi, salaire triés dans l'ordre décroissant (max de
+l’histogramme avec 30 caractères).*/
+select nom, emploi,sal, rpad('#',sal/2000,'#') as histo
+from emp;
+/* Sélectionner nom, emploi, date d'embauche des employés du service 6,en écrivant la colonne embauche sous la forme ‘dd-mm-yy’, renommée
+embauche.*/
+select nom,emploi,DATE_FORMAT(embauche,"%d/%m/%Y") embauche from emp where noserv=6;
+/*Même chose en écrivant la colonne embauche sous la forme ‘Day-dd-Month-yyyy'*/
+select nom,emploi,DATE_FORMAT(embauche,"%W %M %e %Y") embauche from emp where noserv=6;
+/*Sélectionner les employés avec leur ancienneté en mois dans l'entreprise.*/
+select * from emp order by TIMESTAMPDIFF(MONTH,embauche,SYSDATE());
+/*Sélectionner les employés ayant plus de 12 ans d’ancienneté.*/
+select * from emp where TIMESTAMPDIFF (YEAR,embauche,SYSDATE())>12;
+/*Depuis combien de mois êtes-vous nés ?*/
+select TIMESTAMPDIFF (month,'1989/05/29',SYSDATE());
+/*Paramétrer la requête qui précède sur l’emploi.*/
+select AVG(sal+nvl(comm,0))from emp;
+/*Paramétrer la requête qui précède sur l’emploi.*/
+select emploi, AVG(sal+nvl(comm,0)) from emp group by emploi;
+/*Afficher le nombre de lettres du service dont le nom est le plus court.*/
+SELECT min(nom) from emp GROUP by noserv;
+/*Déterminer le nombre d'employés du service 3 qui reçoivent éventuellement une
+commission.*/
+select count(*) from emp where COALESCE(comm,0)is not null and noserv=3;
+/*Déterminer le nombre d'employés du service N°3.*/
+select count(*) from emp where emploi is not null and noserv=3;
+/*Pour chaque service donner le salaire annuel moyen de tous les employés qui ne sont ni
+président, ni directeur*/
+select service,AVG(sal+nvl(comm,0)*12)as moy_revenu_annuel  from 
+emp inner join serv on emp.noserv=serv.noserv 
+where (emploi <>'DIRECTEUR' and emploi<>'PRESIDENT')group by emp.noserv;
+/*Grouper les employés par service et par emploi à l'intérieur de chaque service, pour
+chaque groupe afficher l'effectif et le salaire moyen en remplaçant le numéro de service par le nom du service*/
+select service,emploi,COUNT(*),AVG(sal+nvl(comm,0)*12)as moy_revenu_annuel  from 
+emp inner join serv on emp.noserv=serv.noserv 
+group by service,emploi;
+/*Sélectionner les services ayant au mois deux vendeurs.*/
+select service , count(noemp) as effectif
+from emp, serv
+where emploi='VENDEUR'
+and emp.noserv=serv.noserv
+group by service
+having count(noemp)>=2;
+/*Sélectionner les emplois ayant un salaire moyen supérieur au salaire moyen des
+directeurs.*/
+SELECT emploi from emp 
+group by emploi
+having avg(sal + COALESCE(comm , 0)) > (SELECT avg(e2.sal + COALESCE(comm , 0)) from emp e2 where e2.emploi = "DIRECTEUR");
+/*Afficher l'effectif, la moyenne et le total pour les salaires et les commissions par emploi.*/
+select emploi,count(*) as effectif,
+avg(sal) as moyenne_sal,sum(sal) 
+as total_sal,avg(nvl(comm,0)) 
+as moyenne_comm,
+sum(nvl(comm,0)) as total_comm 
+from emp group by emploi;
+/*Insérez vous comme nouvel employé embauché aujourd’hui au salaire que vous
+désirez. Valider.*/
+INSERT into emp_1 values(1616,'DEWEIRELD','NICOLAS','SOUS-PRESIDENT',1000,SYSDATE(),50000,20000,1);
+/*Insérer le salarié dont le nom est MOYEN, prénom Toto, no 1010, embauché le 12/12/99,supérieur 1000, pas de comm, service no 1, salaire vaut le salaire moyen des employés.Valider.*/
+SET @salaire_moyen = (SELECT AVG(sal) FROM emp2);
+
+INSERT into emp2 ( noemp , nom , prenom , emploi , sup , embauche , sal , comm , noserv ) 
+VALUES ( 1010, "MOYEN" , "TOTO" , NULL , 1000 , "1999-12-12" , @salaire_moyen , NULL , 1 )
+/*Vérifier que la table PROJ n’existe pas.*/
+select * from proj;
+/*Créer une table PROJET avec les colonnes suivantes:
+numéro de projet (noproj), type numérique 3 chiffres, doit contenir une valeur. nom de projet
+(nomproj), type caractère, longueur = 10
+budget du projet (budget), type numérique, 6 chiffres significatifs et 2 décimales.
+ Vérifier l'existence de la table PROJET.
+ Faire afficher la description de la table PROJET.
+ C’était une erreur!!! Renommez la table PROJET en PROJ*/
+CREATE TABLE projet
+(
+    noproj int(3) not null,
+    nomproj varchar(10),
+    budget float(6,2)
+    );
+    
+  select * from projet;
+DESC projet;
+RENAME TABLE projet to proj;
+/*Insérer trois lignes de données dans la table PROJ: numéros des projets = 101, 102,
+103
+noms des projets = alpha, beta, gamma budgets = 250000, 175000, 950000
+ Afficher le contenu de la table PROJ.
+ Valider les insertions faites dans la table PROJ*/
+insert into proj (nomproj,noproj,budget) values ('ALPHA', 101,250000);
+insert into proj (nomproj,noproj,budget) values ('BETA', 102,175000);
+insert into proj (nomproj,noproj,budget) values ('GAMMA', 103,950000);
+commit;
+select * from proj;
+/*Ajouter une colonne NOPROJ (type numérique) à la table EMP.
+Afficher le contenu de la table EMP*/
+ALTER TABLE emp_1
+ADD COLUMN noproj int(3);
+select * from emp_1;
+/*Affecter les employés dont le numéro est supérieur à 1350 au projet 102, sauf ceux
+qui sont déjà affectés à un projet.*/
+UPDATE emp_1
+SET noproj=102
+where noemp>1350
+and noproj IS null;
+SELECT * from emp_1;
+/*Sélectionner les noms d'employés avec le nom de leur projet et le nom de leur
+service*/
+SELECT nom, nomproj,service from emp_1, serv_1, proj where emp_1.noserv=serv_1.noserv
+and emp_1.noproj=proj.noproj;
+/*Créer la vue EMP1 de la table EMP contenant les colonnes: numéro d'employé, nom et
+emploi et limitée aux employés du service numéro 1*/
+CREATE VIEW emp1 (noemp,nom,emploi) as SELECT noemp,nom,emploi from emp_1 where noserv=1;
+/*Sélectionner les vendeurs de la vue emp1*/
+select * from emp1 where emploi='VENDEUR';
+/*Sélectionner la vue EMP1*/
+select * from emp1;
+
