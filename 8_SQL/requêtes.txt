@@ -87,3 +87,51 @@ SELECT prenom FROM emp WHERE emploi = "DIRECTEUR" UNION SELECT prenom FROM emp W
 
 /*53 : Sélectionner les numéros de services n'ayant pas d'employés sans une jointure externe.*/
 SELECT noserv FROM serv WHERE noserv NOT IN (SELECT DISTINCT noserv FROM emp);
+
+/*54 : Sélectionner les services ayant au moins un employé.*/
+SELECT service FROM serv WHERE noserv IN (SELECT DISTINCT noserv FROM emp);
+
+/*55 : Sélectionner les employés qui travaillent à Lille.*/
+SELECT * FROM emp WHERE noserv IN (SELECT noserv FROM serv WHERE ville = "LILLE");
+
+/*56 : Sélectionner les employés qui ont le même chef que DUBOIS, DUBOIS exclu.*/
+SELECT * FROM emp WHERE nom != "DUBOIS" AND sup IN (SELECT sup FROM emp WHERE nom = "DUBOIS");
+
+/*57 : Sélectionner les employés embauchés le même jour que DUMONT.*/
+SELECT * FROM emp WHERE embauche IN (SELECT embauche FROM emp WHERE nom = "DUMONT");
+
+/*58 : Sélectionner les nom et date d'embauche des employés plus anciens que MINET, dans l’ordre des embauches.*/
+SELECT nom, embauche FROM emp where embauche < (SELECT embauche FROM emp WHERE nom = "MINET") ORDER BY embauche;
+
+/*59 : Sélectionner le nom, le prénom, la date d’embauche des employés plus anciens que tous les employés du service N°6. (Attention MIN)*/
+SELECT nom, prenom, embauche FROM emp WHERE embauche < (SELECT MIN(embauche) FROM emp WHERE noserv = 6);
+
+/*60 : Sélectionner le nom, le prénom, le revenu mensuel des employés qui gagnent plus qu'au moins un employé du service N°3, trier le résultat dans l'ordre croissant des revenus mensuels.*/
+SELECT nom, prenom, sal FROM emp WHERE sal > (SELECT MIN(sal) FROM emp WHERE noserv = 3) ORDER BY sal;
+
+/*61 : Sélectionner les noms, le numéro de service, l’emplois et le salaires des personnes travaillant dans la même ville que HAVET.*/
+SELECT nom, noserv, emploi, sal from emp WHERE noserv IN (SELECT noserv FROM emp WHERE nom = "HAVET");
+
+/*62 : Sélectionner les employés du service 1, ayant le même emploi qu'un employé du service N°3.*/
+SELECT * FROM emp WHERE noserv = 1 AND emploi IN (SELECT emploi FROM emp WHERE noserv = 3);
+
+/*63 : Sélectionner les employés du service 1 dont l'emploi n'existe pas dans le service 3.*/
+SELECT * FROM emp WHERE noserv = 1 AND emploi NOT IN (SELECT emploi FROM emp WHERE noserv = 3);
+
+/*64 : Sélectionner nom, prénom, emploi, salaire pour les employés ayant même emploi et un salaire supérieur à celui de CARON.*/
+SELECT nom, prenom, emploi, sal FROM emp WHERE emploi IN (SELECT emploi FROM emp WHERE nom = "CARON") AND sal > (SELECT sal FROM emp WHERE nom = "CARON");
+
+/*65 : Sélectionner les employés du service N°1 ayant le même emploi qu'un employé du service des VENTES.*/
+SELECT * FROM emp WHERE noserv = 1 AND emploi IN (SELECT emploi FROM emp WHERE noserv IN (SELECT noserv FROM serv WHERE service = "VENTES"));
+
+/*66 : Sélectionner les employés de LILLE ayant le même emploi que RICHARD, trier le résultat dans l'ordre alphabétique des noms.*/
+SELECT * FROM emp WHERE noserv IN (SELECT noserv FROM serv WHERE ville = "LILLE") AND emploi IN (SELECT emploi FROM emp WHERE nom = "RICHARD") ORDER BY nom;
+
+/*67 : Sélectionner les employés dont le salaire est plus élevé que le salaire moyen de leur service (moyenne des salaires = avg(sal)), résultats triés par numéros de service.*/
+SELECT * FROM emp WHERE sal > (SELECT AVG(sal) FROM emp WHERE noserv IN (SELECT noserv FROM emp)) ORDER BY noserv;
+
+/*68 : Sélectionner les employés du service INFORMATIQUE embauchés la même année qu'un employé du service VENTES. ( année -> oracle : to_char(embauche,’YYYY’)> MYSQL: DATE_FORMAT(embauche,’%Y’)*/
+SELECT * FROM emp WHERE noserv IN (SELECT noserv FROM serv WHERE service = "INFORMATIQUE" AND YEAR(embauche) IN (SELECT YEAR(embauche) FROM emp WHERE noserv IN (SELECT noserv FROM serv WHERE service = "VENTES")));
+
+/*69 : Sélectionner le nom, l’emploi, la ville pour les employés qui ne travaillent pas dans le même service que leur supérieur hiérarchique direct.*/
+/*SELECT nom, emploi, ville FROM emp INNER JOIN serv ON emp.noserv = serv.noserv WHERE emp.noserv NOT IN (SELECT noserv FROM emp WHERE sup IN (SELECT noemp FROM emp));*/
