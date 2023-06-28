@@ -159,3 +159,13 @@ WHERE e.noserv <> (SELECT sup.noserv FROM emp sup WHERE sup.noemp = e.sup);
 70:
 SELECT e.nom, e.prenom, s.service, e.sal FROM emp e JOIN serv s ON e.noserv = s.noserv 
 WHERE e.noemp IN (SELECT DISTINCT sup FROM emp) ORDER BY e.sal DESC;
+
+71:
+SELECT NOM, PRENOM, EMPLOI, ROUND(12/2) AS REVENU FROM emp ORDER BY REVENU DESC;
+
+72:
+SELECT NOM, SAL, COMM FROM emp WHERE (comm>2*sal);
+
+73:
+SELECT nom, prenom, emploi, ROUND((comm / sal) * 100, 2) AS "% Commissions" 
+FROM emp WHERE emploi = 'VENDEUR' ORDER BY "% Commissions" DESC;
