@@ -1,0 +1,161 @@
+1:
+SELECT * FROM serv WHERE 1
+
+3:
+SELECT service, noserv from serv;
+
+5:
+SELECT emploi FROM emp;
+
+7:
+SELECT * FROM emp WHERE noserv = 3;
+
+9: 
+SELECT nom, prenom FROM emp WHERE noserv > 2;
+
+11:
+SELECT * FROM `emp` WHERE comm < sal;
+
+13:
+SELECT * FROM `emp` WHERE comm ORDER BY comm ASC;
+
+15:
+SELECT * FROM `emp` WHERE sup is null;
+
+17: 
+SELECT * FROM `emp` WHERE emploi = "VENDEUR" and noserv =6 and sal >9500;
+
+19:
+SELECT * FROM `emp` WHERE emploi = "DIRECTEUR" AND noserv<>3;
+
+21:
+SELECT * FROM `emp` WHERE emploi IN ( "DIRECTEUR", "TECHNICIEN" ) AND noserv=1;
+
+23:  
+SELECT * FROM `emp` WHERE emploi NOT IN( "DIRECTEUR", "TECHNICIEN" ) AND noserv=1;
+
+25: 
+SELECT * FROM `emp` WHERE emploi NOT IN( "COMPTABLE", "TECHNICIEN" );
+
+27:
+select * from emp where sup is not null and noserv not in(1,3,5);
+
+29:
+SELECT * FROM emp WHERE sal BETWEEN 20000 AND 40000;
+
+31:
+SELECT * FROM emp WHERE emploi ="DIRECTEUR" and (noserv = "2" or noserv ="3"or noserv = "4" or noserv= 5);
+
+33:
+SELECT * FROM `emp` WHERE nom like '%T';
+
+35:
+SELECT * FROM `emp` WHERE nom LIKE '%E%'AND nom NOT LIKE '%E%E%';
+
+37:
+SELECT * FROM `emp` WHERE nom LIKE '_____N';
+
+39:
+SELECT * FROM `emp` WHERE nom NOT LIKE '%____N';
+
+41:
+SELECT nom, prenom, noserv, sal FROM emp WHERE noserv = '3'ORDER BY sal DESC;
+
+43:
+SELECT nom, prenom, noserv, sal, emploi FROM emp ORDER BY `emp`.`emploi` ASC,`sal` DESC;
+
+45:
+SELECT nom, prenom, noserv, comm FROM emp WHERE noserv='3' ORDER BY comm ASC;
+
+46:
+SELECT nom, prenom, noserv, emploi,  FROM emp ;
+
+47:
+SELECT emp.nom, emp.prenom, emp.emploi, serv.service FROM emp INNER JOIN serv ON 
+( (emp.emploi = 'PRESIDENT' AND serv.service = 'DIRECTION') OR (emp.emploi = 'DIRECTEUR' AND serv.service = 'DIRECTION') OR 
+(emp.emploi = 'SECRETAIRE' AND serv.service = 'COMPTABLE')
+OR (emp.emploi = 'VENDEUR' AND serv.service = 'VENTES') OR (emp.emploi = 'TECHNICIEN' AND serv.service = 'TECHNIQUE') OR 
+(emp.emploi = 'COMPTABLE' AND serv.service = 'COMPTABILITE') OR (emp.emploi = 'ANALYSTE' AND serv.service = 'TECHNIQUE') OR 
+(emp.emploi = 'BALAYEUR' AND serv.service = 'LOGISTIQUE') OR (emp.emploi = 'PUPITREUR' AND serv.service = 'FORMATION') );
+
+48:
+SELECT emp.nom, emp.emploi, serv.noserv, serv.service FROM emp INNER JOIN serv ON ( (emp.emploi = 'PRESIDENT' AND serv.service = 'DIRECTION')
+OR (emp.emploi = 'DIRECTEUR' AND serv.service = 'DIRECTION') OR (emp.emploi = 'SECRETAIRE' AND serv.service = 'COMPTABLE') OR (emp.emploi = 'VENDEUR' AND serv.service = 'VENTES') 
+OR (emp.emploi = 'TECHNICIEN' AND serv.service = 'TECHNIQUE') OR (emp.emploi = 'COMPTABLE' AND serv.service = 'COMPTABILITE') OR (emp.emploi = 'ANALYSTE' AND serv.service = 'TECHNIQUE') 
+OR (emp.emploi = 'BALAYEUR' AND serv.service = 'LOGISTIQUE') OR (emp.emploi = 'PUPITREUR' AND serv.service = 'FORMATION') );
+
+49:
+SELECT e.nom, e.emploi, s.noserv, s.service FROM emp e, serv s WHERE e.noserv=s.noserv;
+
+50:
+SELECT e.nom, e.emploi, s.service, s.noserv, s.ville FROM emp e, serv s WHERE e.noserv=s.noserv;
+
+51:
+select employe.nom, employe.embauche, superieur.nom, superieur.embauchefrom emp employe, emp superieur
+where employe.sup = superieur.noemp and employe.embauche<superieur.embauche order by employe.nom, superieur.nom;
+
+52:
+SELECT prenom FROM emp WHERE emploi = 'DIRECTEUR' GROUP BY prenom UNION SELECT prenom FROM emp WHERE emploi = 'TECHNICIEN' AND noserv = 1 GROUP BY prenom;
+
+53:
+SELECT noserv from serv where noserv not in (select distinct noserv from emp);
+
+54:
+SELECT * FROM serv WHERE EXISTS ( SELECT 1 FROM emp WHERE emp.noserv = serv.noserv );
+
+55:
+SELECT emp.nom, emp.prenom, emp.emploi, serv.ville FROM emp INNER JOIN serv ON emp.noserv = serv.noserv WHERE serv.ville = 'LILLE';
+
+56:
+
+57:
+SELECT * FROM emp WHERE embauche = ( SELECT embauche FROM emp WHERE nom = 'DUMONT' );
+
+58:
+ SELECT nom, embauche FROM emp WHERE embauche < ( SELECT embauche FROM emp WHERE nom = 'MINET' ) ORDER BY embauche;
+
+59:
+SELECT nom, prenom, embauche FROM emp WHERE embauche < ( SELECT MIN(embauche) FROM emp WHERE noserv = 6 );
+
+60:
+SELECT nom, prenom, sal FROM emp WHERE sal > ( SELECT MIN(sal) FROM emp WHERE noserv = 3 ) ORDER BY sal ASC;
+
+61:
+SELECT e.nom, e.noserv, e.emploi, e.sal FROM emp e JOIN serv s ON e.noserv = s.noserv
+WHERE s.ville = (SELECT s2.ville FROM serv s2 JOIN emp e2 ON e2.noserv = s2.noserv
+ WHERE e2.nom = 'HAVET'
+)
+
+62:
+SELECT e1.nom, e1.prenom, e1.emploi FROM emp e1 JOIN emp e2 ON e1.emploi = e2.emploi 
+WHERE e1.noserv = 1 AND e2.noserv = 3;
+
+63:
+SELECT e1.nom, e1.prenom, e1.emploi FROM emp e1 LEFT JOIN emp e2 ON e1.emploi = e2.emploi AND e2.noserv = 3 
+WHERE e1.noserv = 1 AND e2.noserv IS NULL;
+
+64:
+SELECT nom, prenom, emploi, sal FROM emp WHERE emploi = (SELECT emploi FROM emp WHERE nom = 'CARON') 
+AND sal > (SELECT sal FROM emp WHERE nom = 'CARON');
+
+65:
+SELECT e.nom, e.prenom, e.emploi FROM emp e WHERE e.noserv = 1 AND e.emploi IN
+(SELECT emploi FROM emp WHERE noserv = (SELECT noserv FROM serv WHERE service = 'VENTES'));
+
+66:
+SELECT * FROM emp e JOIN serv s ON e.noserv = s.noserv WHERE s.ville = 'LILLE' 
+AND e.emploi = (SELECT emploi FROM emp WHERE nom = 'RICHARD') ORDER BY e.nom ASC;
+
+67:
+SELECT nom, prenom, emploi, sal FROM emp WHERE sal > (SELECT AVG(sal) 
+FROM emp WHERE noserv = emp.noserv) ORDER BY noserv ASC;
+
+68:
+
+69:
+SELECT e.nom, e.emploi, s.ville FROM emp e JOIN serv s ON e.noserv = s.noserv 
+WHERE e.noserv <> (SELECT sup.noserv FROM emp sup WHERE sup.noemp = e.sup);
+
+70:
+SELECT e.nom, e.prenom, s.service, e.sal FROM emp e JOIN serv s ON e.noserv = s.noserv 
+WHERE e.noemp IN (SELECT DISTINCT sup FROM emp) ORDER BY e.sal DESC;
