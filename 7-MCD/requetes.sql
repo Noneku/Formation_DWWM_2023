@@ -110,48 +110,39 @@ SELECT NOM, EMBAUCHE FROM EMP WHERE EMBAUCHE < (SELECT EMBAUCHE FROM EMP WHERE N
 /* 59 : Sélectionner le nom, le prénom, la date d’embauche des employés plus anciens que tous les employés du service N°6. (Attention MIN) */
 SELECT NOM, PRENOM, EMBAUCHE FROM EMP WHERE EMBAUCHE < (SELECT MIN(EMBAUCHE) FROM EMP WHERE NOSERV = 6); 
 
-/* 60 : Sélectionner le nom, le prénom, le revenu mensuel des employés qui gagnent plus
-qu'au moins un employé du service N°3, trier le résultat dans l'ordre croissant des
-revenus mensuels. */
+/* 60 : Sélectionner le nom, le prénom, le revenu mensuel des employés qui gagnent plus qu'au moins un employé du service N°3, trier le résultat dans l'ordre croissant des revenus mensuels. */
 SELECT NOM, PRENOM, SAL FROM EMP WHERE SAL > (SELECT MIN(SAL) FROM EMP WHERE NOSERV = 3) ORDER BY SAL; 
 
-/* 61 : Sélectionner les noms, le numéro de service, l’emplois et le salaires des
-personnes travaillant dans la même ville que HAVET. */
+/* 61 : Sélectionner les noms, le numéro de service, l’emplois et le salaires des personnes travaillant dans la même ville que HAVET. */
 SELECT E.NOM, E.PRENOM, E.EMPLOI, E.SAL, S.VILLE 
 FROM EMP E, SERV S 
 WHERE E.NOSERV = S.NOSERV 
 AND VILLE = (SELECT SERV.VILLE FROM SERV INNER JOIN EMP 
 WHERE SERV.NOSERV = EMP.NOSERV AND EMP.NOM = 'HAVET'); 
 
-/* 62 : Sélectionner les employés du service 1, ayant le même emploi qu'un employé du
-service N°3. */
+/* 62 : Sélectionner les employés du service 1, ayant le même emploi qu'un employé du service N°3. */
 SELECT NOM, PRENOM, EMPLOI FROM EMP WHERE NOSERV = 1 AND EMPLOI IN (SELECT EMPLOI FROM EMP WHERE NOSERV = 3); 
 
 /* 63 : Sélectionner les employés du service 1 dont l'emploi n'existe pas dans le service 3. */
 SELECT NOM, PRENOM, EMPLOI FROM EMP WHERE NOSERV = 1 AND EMPLOI NOT IN (SELECT EMPLOI FROM EMP WHERE NOSERV = 3); 
 
-/* 64 : Sélectionner nom, prénom, emploi, salaire pour les employés ayant le même emploi et un
-salaire supérieur à celui de CARON. */
+/* 64 : Sélectionner nom, prénom, emploi, salaire pour les employés ayant le même emploi et un salaire supérieur à celui de CARON. */
 SELECT NOM, PRENOM, EMPLOI, SAL FROM EMP WHERE EMPLOI = (SELECT EMPLOI FROM EMP WHERE NOM = 'CARON') AND SAL > (SELECT SAL FROM EMP WHERE NOM = 'CARON'); 
 
-/* 65 : Sélectionner les employés du service N°1 ayant le même emploi qu'un employé du
-service des VENTES. */
+/* 65 : Sélectionner les employés du service N°1 ayant le même emploi qu'un employé du service des VENTES. */
 SELECT E.NOM, E.PRENOM, E.EMPLOI, S.SERVICE FROM EMP E, SERV S WHERE E.NOSERV = 1 AND S.SERVICE IN (SELECT SERVICE FROM SERV WHERE SERVICE = 'VENTES'); 
 
-/* 66 : Sélectionner les employés de LILLE ayant le même emploi que RICHARD, trier le
-résultat dans l'ordre alphabétique des noms. */
+/* 66 : Sélectionner les employés de LILLE ayant le même emploi que RICHARD, trier le résultat dans l'ordre alphabétique des noms. */
 SELECT DISTINCT E.NOM, E.PRENOM, E.EMPLOI, S.VILLE
 FROM EMP E, SERV S
 WHERE S.NOSERV = E.NOSERV AND E.EMPLOI IN (SELECT DISTINCT EMPLOI FROM EMP WHERE NOM = 'RICHARD') AND S.VILLE = 'LILLE' ORDER BY NOM;
 
-/* 67 : Sélectionner les employés dont le salaire est plus élevé que le salaire moyen de leur
-service (moyenne des salaires = avg(sal)), résultats triés par numéros de service. */
+/* 67 : Sélectionner les employés dont le salaire est plus élevé que le salaire moyen de leur service (moyenne des salaires = avg(sal)), résultats triés par numéros de service. */
 SELECT NOM, PRENOM, EMPLOI, SAL, NOSERV 
 FROM EMP WHERE SAL > (SELECT AVG(SAL) 
 FROM EMP WHERE NOSERV IN (SELECT NOSERV FROM EMP)) ORDER BY NOSERV; 
 
-/* 68 : Sélectionner les employés du service INFORMATIQUE embauchés la même année qu'un employé du service VENTES.
-( année -> oracle : to_char(embauche,’YYYY’)> MYSQL: DATE_FORMAT(embauche,’%Y’) */
+/* 68 : Sélectionner les employés du service INFORMATIQUE embauchés la même année qu'un employé du service VENTES. ( année -> oracle : to_char(embauche,’YYYY’)> MYSQL: DATE_FORMAT(embauche,’%Y’) */
 SELECT E.NOM, E.PRENOM, E.EMPLOI, E.EMBAUCHE, S.SERVICE 
 FROM EMP E INNER JOIN SERV S ON E.NOSERV = S.NOSERV 
 WHERE SERVICE = 'INFORMATIQUE' AND DATE_FORMAT(EMBAUCHE, '%Y') IN (SELECT DATE_FORMAT(EMBAUCHE, '%Y') 
@@ -170,44 +161,35 @@ FROM EMP E
 INNER JOIN SERV S ON E.NOSERV = S.NOSERV 
 WHERE NOEMP IN (SELECT DISTINCT SUP FROM EMP) ORDER BY E.SAL+COALESCE(E.COMM,0) DESC;
 
-/* 71 :Sélectionner le nom, l’emploi, le revenu mensuel (nommé Revenu) avec deux décimales
-pour tous les employés, dans l’ordre des revenus décroissants. */
+/* 71 :Sélectionner le nom, l’emploi, le revenu mensuel (nommé Revenu) avec deux décimales pour tous les employés, dans l’ordre des revenus décroissants. */
 SELECT NOM, PRENOM, EMPLOI, ROUND(SAL+COALESCE(COMM,0),2) AS REVENU FROM EMP ORDER BY REVENU DESC; 
 
-/* 72 : Sélectionner le nom, le salaire, commission des employés dont la commission représente
-plus que le double du salaire. */
+/* 72 : Sélectionner le nom, le salaire, commission des employés dont la commission représente plus que le double du salaire. */
 SELECT NOM, PRENOM, SAL, COMM FROM EMP WHERE COMM > SAL*2;
 
-/* 73 : Sélectionner nom, prénom, emploi, le pourcentage de commission (deux décimales) par
-rapport au revenu mensuel ( renommé "% Commissions") , pour tous les vendeurs dans l'ordre
-décroissant de ce pourcentage. */
+/* 73 : Sélectionner nom, prénom, emploi, le pourcentage de commission (deux décimales) par rapport au revenu mensuel ( renommé "% Commissions") , pour tous les vendeurs dans l'ordre décroissant de ce pourcentage. */
 SELECT NOM, PRENOM, EMPLOI, ROUND(COALESCE(COMM,0)/(SAL+COALESCE(COMM,0))*100,2) AS "% COMMISSION" 
 FROM EMP WHERE EMPLOI = 'VENDEUR' ORDER BY "% COMMISSION";
 
-/* 74 : Sélectionner le nom, l’emploi, le service et le revenu annuel ( à l’euro près) de tous les
-vendeurs. */
+/* 74 : Sélectionner le nom, l’emploi, le service et le revenu annuel ( à l’euro près) de tous les vendeurs. */
 SELECT E.NOM, E.PRENOM, E.EMPLOI, SERVICE, ROUND(SAL+COALESCE(COMM,0)*12,0) AS "REVENU ANNUEL" 
 FROM EMP E INNER JOIN SERV ON E.NOSERV = SERV.NOSERV WHERE EMPLOI = 'VENDEUR';
 
-/* 75 : Sélectionner nom, prénom, emploi, salaire, commissions, revenu mensuel pour les employés
-des services 3,5,6 */
+/* 75 : Sélectionner nom, prénom, emploi, salaire, commissions, revenu mensuel pour les employés des services 3,5,6 */
 SELECT NOM, PRENOM, EMPLOI, SAL, COALESCE(COMM,0), ROUND(SAL+COALESCE(COMM,0),2) AS "REVENU MENSUEL", NOSERV 
 FROM EMP WHERE NOSERV IN (3,5,6);
 
-/* 76 : Idem pour les employés des services 3,5,6 en remplaçant les noms des colonnes : SAL par
-SALAIRE, COMM par COMMISSIONS, SAL+IFNULL(COMM,0) par GAIN_MENSUEL. */
+/* 76 : Idem pour les employés des services 3,5,6 en remplaçant les noms des colonnes : SAL par SALAIRE, COMM par COMMISSIONS, SAL+IFNULL(COMM,0) par GAIN_MENSUEL. */
 SELECT NOM, PRENOM, EMPLOI, SAL AS SALAIRE, COALESCE(COMM,0) AS COMMISSIONS, 
 ROUND(SAL+COALESCE(COMM,0),2) AS "GAIN_MENSUEL", NOSERV 
 FROM EMP WHERE NOSERV IN (3,5,6); 
 
-/* 77 : Idem pour les employés des services 3,5,6 en remplaçant GAIN_ MENSUEL par GAIN
-MENSUEL */
+/* 77 : Idem pour les employés des services 3,5,6 en remplaçant GAIN_ MENSUEL par GAIN MENSUEL */
 SELECT NOM, PRENOM, EMPLOI, SAL AS SALAIRE, COALESCE(COMM,0) AS COMMISSIONS, 
 ROUND(SAL+COALESCE(COMM,0),2) AS "GAIN MENSUEL", NOSERV 
 FROM EMP WHERE NOSERV IN (3,5,6); 
 
-/* 78 : Afficher le nom, l'emploi, les salaires journaliers et horaires pour les employés des services
-3,5,6 (22 jours/mois et 8 heures/jour), sans arrondi, arrondi au centime près. */
+/* 78 : Afficher le nom, l'emploi, les salaires journaliers et horaires pour les employés des services 3,5,6 (22 jours/mois et 8 heures/jour), sans arrondi, arrondi au centime près. */
 SELECT NOM, PRENOM, EMPLOI, (SAL/22) AS "SALAIRE JOURNALIER", ROUND(((SAL/22)/8),2) AS "SALAIRE HORAIRE", NOSERV 
 FROM EMP WHERE NOSERV IN (3,5,6); 
 
@@ -215,13 +197,12 @@ FROM EMP WHERE NOSERV IN (3,5,6);
 SELECT NOM, PRENOM, EMPLOI, TRUNCATE((SAL/22),2) AS "SALAIRE JOURNALIER", 
 TRUNCATE(((SAL/22)/8),0) AS "SALAIRE HORAIRE", NOSERV FROM EMP WHERE NOSERV IN (3,5,6); 
 
-/* 80 : Concaténer les colonnes Service et Ville en les reliant par " ----> ", les premières lettres des noms de villes
-doivent se trouver sur une même verticale. */
+/* 80 : Concaténer les colonnes Service et Ville en les reliant par " ----> ", les premières lettres des noms de villes doivent se trouver sur une même verticale. */
 SELECT CONCAT(RPAD(SERVICE, (40-LENGTH(SERVICE)), " -"), "> ", VILLE) AS "SERVICE / VILLE" FROM SERV; 
 
-/* 82 : Sélectionner les employés en remplaçant les noms par '*****' dans le service n°1, trier le résultat suivant
-le N° de service. */
+/* 82 : Sélectionner les employés en remplaçant les noms par '*****' dans le service n°1, trier le résultat suivant le N° de service. */
 UPDATE EMP SET NOM = '*****' WHERE NOSERV = 1;
+/* OU : */
 UPDATE EMP SET NOM = (REPLACE (NOM, NOM, '*****')) WHERE NOSERV = 1; 
 
 /* 84 : Sélectionner les employés embauchés en 1988. */
@@ -230,12 +211,10 @@ SELECT * FROM EMP WHERE DATE_FORMAT(EMBAUCHE, '%Y') = '1988';
 /* 86 : Sélectionner les positions des premiers M et E dans les noms des employés */
 SELECT NOM, PRENOM, LOCATE('M', NOM) AS "POSITION DE LA LETTRE 'M'", LOCATE('E', NOM) AS "POSITION DE LA LETTRE 'E'" FROM EMP;
 
-/* 88 : Tracer un Histogramme des salaires avec nom, emploi, salaire triés dans l'ordre décroissant (max de
-l’histogramme avec 30 caractères) */
+/* 88 : Tracer un Histogramme des salaires avec nom, emploi, salaire triés dans l'ordre décroissant (max de l’histogramme avec 30 caractères) */
 SELECT NOM, PRENOM, EMPLOI, RPAD('€', (SAL/2000), '€') FROM EMP ORDER BY SAL DESC; 
 
-/* 90 : Sélectionner nom, emploi, date d'embauche des employés du service 6 en écrivant la colonne embauche sous la forme ‘dd-mm-yy’, renommée
-embauche */
+/* 90 : Sélectionner nom, emploi, date d'embauche des employés du service 6 en écrivant la colonne embauche sous la forme ‘dd-mm-yy’, renommée embauche */
 SELECT NOM, PRENOM, EMPLOI, NOSERV, DATE_FORMAT(EMBAUCHE, "%d-%m-%Y") AS "EMBAUCHE" FROM EMP WHERE NOSERV = 6; 
 
 /* 92 : Même chose en écrivant la colonne embauche sous la forme ‘day dd month(abv) yy' */
