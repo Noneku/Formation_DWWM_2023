@@ -1,37 +1,46 @@
-.logo {
-    height: 90px;
-    width: 200px;
-}
+/* NAVIGATION BAR */
+    /* General Rules */
 
-nav {
-    display: flex;
+    nav {
+        display: flex;
 
-}
-nav section {
-    display: flex;
+    }
+    nav section {
+        display: flex;
+        width: 90%;
+        flex-direction: row;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 20%;
+    }
+    /* General Rules */
+
+    /* Class Rules */
+    .logo {
+        height: 90px;
+        width: 200px;
+    }
+    .contentConnexion {
+        /* background-color: bisque; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 10%;
+    }
+    .contentConnexion > a {
+        text-align: center;
+    }
+    /* Class Rules */
+/* NAVIGATION BAR */
+
+.banniere > img {
     background-color: aquamarine;
-    width: 90%;
-    flex-direction: row;
+    background-size: cover;
 }
 
-nav ul {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    background-color: brown;
-    justify-content: space-between;
-    width: 20%;
-}
-
-.contentConnexion {
-    background-color: bisque;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 10%;
-}
-.contentConnexion > button {
-    color: blueviolet;
-    width: 100px;
-}
 
