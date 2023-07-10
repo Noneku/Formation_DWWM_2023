@@ -1,0 +1,149 @@
+*{
+    margin : 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "starwars_Hol";
+    src: url(./items/font/Starjhol.ttf);
+}
+@font-face {
+    font-family: "episode";
+    src: url(./style.episode.css);
+}
+@font-face {
+    font-family: "starwars_Regular";
+    src: url(./items/font/Starjedi.ttf);
+}
+
+header{
+    font-family: "starwars_Hol";
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+    padding: 10px;
+}
+
+header a{
+    text-decoration: none;
+    color: #ffe600;
+    background-color: rgba(240, 248, 255, 0);
+    transition: ease-in-out 0.4s;
+    padding: 10px;
+    border-radius: 20px;
+   
+}
+header a:hover{
+    color: black;
+    background-color: aliceblue;
+    box-shadow: 0px 0px 20px #ffe600;
+}
+
+header a:nth-child(2):hover{
+    transform: scale(110%);
+    box-shadow: 0px 0px 20px #ffe600;
+}
+header a:nth-child(3):hover{
+    transform: scale(110%);
+    box-shadow: 0px 0px 20px #ffe600;
+}
+
+#connexion{
+    font-family: "starwars_Regular";
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 20px;
+  border: 5px #ffe600 solid;
+}
+
+
+#hero{
+    background-image: url(./items/héro.jpg);
+    background-position: center;
+    background-size: cover;
+    transition: ease-in-out 0.9s;
+    border-radius: 0px 0 30% 30%;
+}
+#hero img{
+    border-radius: 0px 0px 20px 20px;
+    transition: all 0.8s;
+    opacity: 1;
+}
+#hero img:hover{
+    opacity: 0;
+}
+
+
+body{
+    background-image: url(./items/fond.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+section#liste_episodes{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: black;
+    margin-top: 10%;
+    height: 600px;
+    padding: 30PX;
+}
+
+article.episode{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffe600;
+    width: 25%;
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 0px 0px 10px white;
+}
+
+.episode a{
+    font-family: "starwars_Regular";
+    background-color: #ffe60056;
+    text-decoration: none;
+    color: black;
+    border-radius: 10px;
+    padding: 10px;
+    transition: ease-in-out 0.5s;
+}
+.episode a:hover{
+    box-shadow: 0px 0px 20px #ffe600;
+    background-color: #ffe600;
+    text-decoration: none;
+    color: black;
+    border-radius: 10px;
+    padding: 10px;
+    transform: scale(120%);
+}
+
+article.ep1{
+    background-image: url(./items/epiosde1.jpg);
+    background-size: cover;
+    background-position: center;
+
+}
+article.ep2{
+    background-image: url(./items/epiosde2.jpg);
+    background-size: cover;
+    background-position: center;
+
+}
+article.ep3{
+    background-image: url(./items/epiosde3.jpg);
+    background-size: cover;
+    background-position: center;
+
+}
+
+
+
+
