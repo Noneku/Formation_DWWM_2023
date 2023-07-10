@@ -1,0 +1,330 @@
+*{
+    margin : 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "gilmer_light";
+    src: url(./items/font/Gilmer_Light.otf);
+}
+
+@font-face {
+    font-family: "starwars_Hol";
+    src: url(./items/font/Starjhol.ttf);
+}
+@font-face {
+    font-family: "episode";
+    src: url(./items/font/EPISODE.TTF);
+}
+@font-face {
+    font-family: "starwars_Regular";
+    src: url(./items/font/Starjedi.ttf);
+}
+
+header{
+    font-family: "starwars_Hol";
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+}
+
+header a{
+    text-decoration: none;
+    color: #ffe600;
+    background-color: rgba(240, 248, 255, 0);
+    transition: ease-in-out 0.4s;
+    padding: 10px;
+    border-radius: 20px;
+   
+}
+header a:hover{
+    color: black;
+    background-color: aliceblue;
+    box-shadow: 0px 0px 20px #ffe600;
+}
+
+header:nth-child(2):hover{
+    transform: scale(110%);
+    box-shadow: 0px 0px 20px #ffe600;
+}
+header a:nth-child(3):hover{
+    transform: scale(110%);
+    box-shadow: 0px 0px 20px #ffe600;
+}
+
+
+/*test nav */
+
+ul ul {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0s linear 0.3s;
+  }
+  
+  ul li:hover > ul {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0s;
+  }
+  
+  li:hover {
+    color:#ffe600;
+  }
+  
+  header {
+    background-color: #000000;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Style du menu */
+  header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header nav ul li {
+    display: inline-block;
+    position: relative;
+  }
+  
+  header nav ul li li a {
+    display: block;
+    padding: 10px 20px 2px 20px;
+    color:#000000;
+    text-decoration: none;
+  }
+  
+  header nav ul ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color:#ffe600;
+    border-radius: 15px;
+    padding: 0;
+    transition: ease-in-out 0.5s;
+    width: 100%;
+  }
+  
+  header nav ul ul li {
+    width: 100%;
+    display: block;
+    transition: ease-in-out 0.5s;
+    text-align: center;
+  }
+  
+  header nav ul ul li:hover {
+    background-color: black;
+    color:#ffe600;
+    border-radius: 15px;
+  }
+  
+  header nav ul ul li a {
+    font-family: "starwars_Regular";
+    padding: 10px 40px;
+  }
+  
+#element1 > ul > li >a{
+font-size: 2em;
+transition: ease-in-out 0.3s;
+
+}
+#element2 > ul > li >a{
+font-size: 2em;
+transition: ease-in-out 0.3s;
+}
+#element1 > ul > li >a:hover{
+font-size: 2em;
+background-color: #000000;
+border: #ffe600 3px solid;
+color: #ffe600;
+}
+#element2 > ul > li >a:hover{
+font-size: 2em;
+background-color: #000000;
+border: #ffe600 3px solid;
+color: #ffe600;
+}
+
+#element2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+  nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex: 1;
+  }
+  nav li {
+    transition: ease-in-out 0.1s;
+    padding-bottom: 1px;
+  }
+  nav li:hover {
+    border-bottom: 3px solid rgb(0, 0, 0);
+  }
+
+
+
+#connexion{
+    font-family: "starwars_Regular";
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 20px;
+  border: 5px #ffe600 solid;
+}
+
+
+
+
+body{
+    background-image: url(./items/fond_darkmaul.jpeg);
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+}
+
+
+
+
+#hero{
+    background-image: url(./items/héro.jpg);
+    background-position: center;
+    background-size: cover;
+    transition: ease-in-out 0.9s;
+    border-radius: 0px 0 30% 30%;
+}
+#hero img{
+    border-radius: 0px 0px 20px 20px;
+    transition: all 0.8s;
+    opacity: 1;
+}
+#hero img:hover{
+    opacity: 0;
+}
+
+
+
+video {
+  box-shadow: 0px 20px 20px black;
+}
+
+div > img{
+    width: 300px;
+    height: 100%;
+    border-radius: 0px 0px 30px 30px;
+    border: 10px white solid;
+    transition: ease-in-out 0.4S;
+}
+div > img:hover{
+    width: 300px;
+    height: 100%;
+    border-radius: 30px;
+    border: 10px white solid;
+    position: relative;
+ box-shadow: 0px 0px 40px red;
+    transform: scale(150%);
+}
+
+#bio{
+  margin-top: 10%;
+  transition: ease-in-out 2s;
+    padding: 5%;
+    display: flex;
+    align-items: center;
+}
+#bio > div{
+  display: flex;
+  align-items: center;
+}
+
+
+h1{
+    font-family: "episode";
+    text-align: center;
+    font-size: 2.3em;
+}
+
+section div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+   
+}
+
+section div p{
+    font-family: "gilmer_light";
+    color: white;
+    width: 30%;
+    overflow: hidden;
+    max-height: 9em;
+    background-color:#0000009a;
+    padding: 30px;
+    border-radius: 30px;
+    transition: ALL ease-in-out 1.0s;
+     
+}
+section div p:hover{
+  max-height: 100em;
+ 
+   font-size: 1.2em;
+
+  
+}
+
+.carte{
+  background-image: url(./items/fond_carte_darkmaul.jpg);
+  background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    border:#ffe600 3px solid;
+    border-radius: 25px;
+}
+
+.carte h1{
+    font-family: "episode";
+    color: #ffe600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+    border-radius: 20px 20px 0px 0px;
+    width: 100%;
+    text-align: center;
+    height: 80px;
+}
+.carte > div> UL{
+    clear: both;
+    font-family: "episode";
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #ffe600;
+    border-radius: 0px 0px 20px 20px;
+    padding: 5px;
+    text-align: center;
+    list-style-type: none;
+}
+.carte > div> li:hover{
+    clear: both;
+    color: #000000;
+
+}
