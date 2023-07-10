@@ -1,0 +1,30 @@
+/* Page entière */
+body {
+    margin: 0px;
+    background-color: black;
+}
+/* Header */
+header{
+    display: flex;
+    position: fixed;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    border: solid yellow;
+    background-color: black;
+}
+
+/* Logo */
+header a img{
+    width: 100px;
+}
+
+/* Liens vers les épisodes*/
+header a.episode{
+    text-decoration: none;
+    color: yellow;
+    background-color: gray;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: solid yellow;
+}
