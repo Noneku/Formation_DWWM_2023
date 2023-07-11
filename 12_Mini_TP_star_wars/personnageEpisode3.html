@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personnage</title>
+    <link rel="stylesheet" href="personnageEpisode1.css">
+</head>
+<body>
+    <nav class="navbar">
+    
+        <a href="index.html" class = "logo"> <img class="logo" src="img/star-wars-logo.jpg"> </a>
+<div class = "nav-links">
+   <ul>
+       <li><a href="index.html">Personnages</a></li>
+       <li><a href="#">Episode1 </a></li>
+       <li><a href="#">Episode2 </a></li>
+       <li><a href="#">Episode3 </a></li>
+       <!-- <li><a href="#">Connexion/Inscription </a></li>
+       -->
+   </ul>
+</div>
+<img class = "menu-burger" src="img/burger-bar.png" alt="" >
+</nav>
+<!-- <nav class="breadcrumb">
+    <ul>
+        <li><a href="#">Accueil</a></li>
+        <li><a href="#">Personnages</a></li>
+        <li><a href="#">Episode 1</a></li>
+    </ul>
+</nav> -->
+  <header>
+   </header>
+   <main class="vovo">
+
+    <div data-text ="Race:Zabraks , Affiliation:Sith , planète:Dathomir" class="character">
+       
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/Ahsoka_Tano_costume.jpg">
+        <h2>Ahsoka Tano</h2>
+        <p>Description</p>
+   
+    </div>
+
+
+    <div  data-text ="Race : Humain, Affiliation:Empire, planète:Tatooine"class="character">
+       
+        <img src="https://e0.pxfuel.com/wallpapers/84/76/desktop-wallpaper-anakin-skywalker-star-wars.jpg" alt="Darth Vader">
+        <h2>Darth Vader</h2>
+        <p>Description</p>
+   
+    </div>
+
+
+    <div data-text ="Race:Gungan, Affiliation:grande armée Gungan, planète:Naboo" class="character">
+       
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Dereck_Hard_Yoda_-_Little_Reality_2016_%28cropped%29.jpg/280px-Dereck_Hard_Yoda_-_Little_Reality_2016_%28cropped%29.jpg" alt="Jar Jar Binks">
+        <h2>Yoda</h2>
+        <p>Description</p>
+   
+    </div>
+
+</main>
+</body>
+<footer>
+    <div class = "yoda"><iframe width="560" height="315" src="https://www.youtube.com/embed/bD7bpG-zDJQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>A propos</h3>
+            <p>Star Wars est une franchise cinématographique créée par George Lucas. Elle se déroule dans une galaxie lointaine où s'affrontent les forces du bien et du mal. Les films de Star Wars ont été acclamés par les fans du monde entier et ont donné naissance à une vaste collection de produits dérivés, de séries télévisées, de jeux vidéo et bien plus encore.</p>
+        </div>
+        <div class="footer-section">
+            <h3>Liens utiles</h3>
+            <ul>
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#">Episode1</a></li>
+                <li><a href="#">Episode2</a></li>
+                <li><a href="#">Episode3</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Contacts</h3>
+            <p>Email: SahliAsaad@hotmail.fr</p>
+            <p>Téléphone: 00337777771</p>
+        </div>
+       
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2023 Satr wars. Asaad sahli Elcroco.</p>
+    </div>
+</footer>
+
+<script>
+    const menuburger = document.querySelector('.menu-burger');
+    const navlinks = document.querySelector('.nav-links');
+    menuburger.addEventListener('click', () => {
+        navlinks.classList.toggle('mobile-menu');
+    });
+</script>
+</html>

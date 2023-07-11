@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <link rel = "stylesheet" href = "style.css">
+        
+         <link rel = "icon" type = "image/png" href = "img/star-wars-logo.jpg">
+        <link rel = "apple-touch-icon" type = "image/png" href = "img/star-wars-logo.jpg"/>
+     
+</head>
+        <title>Star Wars</title>
+   
+       
+<body>
+<nav class="navbar">
+    
+        <a href="index.html" class = "logo"> <img class="logo" src="img/star-wars-logo.jpg"> </a>
+<div class = "nav-links">
+   <ul>
+       <li><a href="#">Acceuil</a></li>
+       <li><a href="Episode1.html">Episode1 </a></li>
+       <li><a href="Episode2.html">Episode2 </a></li>
+       <li><a href="Episode3.html">Episode3 </a></li>
+       <li><a href="#">Connexion/Inscription </a></li>
+      
+   </ul>
+</div>
+<img class = "menu-burger" src="img/burger-bar.png" alt="" >
+</nav>
+
+
+  <header>
+    
+   </header>
+
+   <section class="episodes-section">
+    
+    <div class="episode">
+        <img src="img/star wars episode 1.png" alt="Episode 1">
+        <h2>Episode 1</h2>
+        <p>Description de l'épisode 1</p>
+        <a href="Episode1.html">Exploration</a>
+    </div>
+
+    <div class="episode">
+        <img src="img/star wars episode2.jpg" alt="Episode 2">
+        <h2>Episode 2</h2>
+        <p>Description de l'épisode 2</p>
+        <a href="Episode2.html">Exploration</a>
+    </div>
+
+    <div class="episode">
+        <img src="img/star wars episode 3.jpg" alt="Episode 3">
+        <h2>Episode 3</h2>
+        <p>Description de l'épisode 3</p>
+        <a href="Episode3.html">Exploration</a>
+    </div>
+</div>
+</section>
+
+</body>
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>A propos</h3>
+            <p>Star Wars est une franchise cinématographique créée par George Lucas. Elle se déroule dans une galaxie lointaine où s'affrontent les forces du bien et du mal. Les films de Star Wars ont été acclamés par les fans du monde entier et ont donné naissance à une vaste collection de produits dérivés, de séries télévisées, de jeux vidéo et bien plus encore.</p>
+        </div>
+        <div class="footer-section">
+            <h3>Liens utiles</h3>
+            <ul>
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#">Episode1</a></li>
+                <li><a href="#">Episode2</a></li>
+                <li><a href="#">Episode3</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Contacts</h3>
+            <p>Email: SahliAsaad@hotmail.fr</p>
+            <p>Téléphone: 00337777771</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2023 Satr wars. Asaad sahli Elcroco.</p>
+    </div>
+</footer>
+
+<script>
+    const menuburger = document.querySelector('.menu-burger');
+    const navlinks = document.querySelector('.nav-links');
+    menuburger.addEventListener('click', () => {
+        navlinks.classList.toggle('mobile-menu');
+    });
+</script>
+</html>
