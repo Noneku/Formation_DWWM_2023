@@ -1,0 +1,15 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid white;
+    align-items: center;
+    background: black;
+}
+
+section{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid white;
+    align-items: center;
+    
+}

@@ -1,0 +1,10 @@
+header{
+    font-family: "starwars_Hol";
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+}
