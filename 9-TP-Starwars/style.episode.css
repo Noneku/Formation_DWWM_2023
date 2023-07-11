@@ -20,7 +20,7 @@
     font-family: "starwars_Regular";
     src: url(./items/font/Starjedi.ttf);
 }
-
+/*HEADER*/
 header{
     font-family: "starwars_Hol";
     display: flex;
@@ -30,6 +30,7 @@ header{
     padding: 10px;
     position: sticky;
     top: 0;
+    z-index: 10;
 }
 
 header a{
@@ -59,24 +60,23 @@ header a:nth-child(3):hover{
 
 /*test nav */
 
-ul ul {
-    display: none;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease-in-out, visibility 0s linear 0.3s;
-  }
-  
-  ul li:hover > ul {
-    display: block;
-    opacity: 1;
-    visibility: visible;
-    transition-delay: 0s;
-  }
-  
-  li:hover {
-    color:#ffe600;
-  }
-  
+nav ul ul {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0s linear 0.3s;
+}
+
+nav ul li:hover > ul {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0s;
+}
+
+nav li:hover {
+  color:#ffe600;
+}
   header {
     background-color: #000000;
     padding: 20px;
@@ -188,7 +188,7 @@ color: #ffe600;
 }
 
 
-
+/*corps*/
 
 body{
     background-image: url(./items/fond3.png);
@@ -199,6 +199,8 @@ body{
    
 }
 
+
+/*presenation*/
 #ep{
     display: flex;
     justify-content: space-around;
@@ -233,9 +235,26 @@ div#el2:hover{
     max-height: 100em;
 }
 
+
+/*presantation personnage*/
+
 #presentation_Perso{
-    background-color: #000000c0;
+  background-color: #000000c0;
+  background-image: url(./items/fond_perso_episode.png);
+  background-size: 0%;
+  background-repeat: no-repeat;
+  background-position:center;
+  filter: opacity(0.5);
+  transition: ease-in-out 0.3s;
 }
+#presentation_Perso:hover{
+  background-color: #000000c0;
+  background-size: 100%;
+  filter: opacity(1);
+  background-position: center;
+  box-shadow: 0px 20px 40px rgb(141, 141, 141);
+}
+
 section  >h2{
     font-size: 2em;
     font-family: "starwars_Hol";
@@ -262,3 +281,33 @@ section  >h2{
     transform: scale(130%);
     box-shadow: 0px 0px 40px white;
 }
+
+/*video*/
+
+video{
+  margin: 10% 0%;
+}
+
+/*footer*/
+
+footer ul{
+  background-color: #ffe600;
+  height: 150px;
+  display: flex;
+  justify-content: space-around;
+}
+
+
+ footer > ul > ul{
+  display: flex;
+  flex-direction: column;
+ }
+
+ footer ul a{
+  text-decoration: none;
+  color: #000000;
+ }
+
+ footer ul a:hover{
+  border-bottom: 2px solid black;
+ }

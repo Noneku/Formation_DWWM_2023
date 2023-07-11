@@ -1,0 +1,287 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  @font-face {
+    font-family: "gilmer_light";
+    src: url(./items/font/Gilmer_Light.otf);
+  }
+  
+  @font-face {
+    font-family: "starwars_Hol";
+    src: url(./items/font/Starjhol.ttf);
+  }
+  @font-face {
+    font-family: "episode";
+    src: url(./items/font/EPISODE.TTF);
+  }
+  @font-face {
+    font-family: "starwars_Regular";
+    src: url(./items/font/Starjedi.ttf);
+  }
+  
+  header {
+    font-family: "starwars_Hol";
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+    padding: 10px;
+    position: sticky;
+    z-index: 10;
+    top: 0;
+  }
+  
+  header a {
+    text-decoration: none;
+    color: #ffe600;
+    background-color: rgba(240, 248, 255, 0);
+    transition: ease-in-out 0.4s;
+    padding: 10px;
+    border-radius: 20px;
+  }
+  header a:hover {
+    color: black;
+    background-color: aliceblue;
+    box-shadow: 0px 0px 20px #ffe600;
+  }
+  
+  header:nth-child(2):hover {
+    transform: scale(110%);
+    box-shadow: 0px 0px 20px #ffe600;
+  }
+  header a:nth-child(3):hover {
+    transform: scale(110%);
+    box-shadow: 0px 0px 20px #ffe600;
+  }
+  
+  /*test nav */
+  
+  nav ul ul {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0s linear 0.3s;
+  }
+  
+  nav ul li:hover > ul {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0s;
+  }
+  
+  nav li:hover {
+    color: #ffe600;
+  }
+  header {
+    background-color: #000000;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Style du menu */
+  header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header nav ul li {
+    display: inline-block;
+    position: relative;
+  }
+  
+  header nav ul li li a {
+    display: block;
+    padding: 10px 20px 2px 20px;
+    color: #000000;
+    text-decoration: none;
+  }
+  
+  header nav ul ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffe600;
+    border-radius: 15px;
+    padding: 0;
+    transition: ease-in-out 0.5s;
+    width: 100%;
+  }
+  
+  header nav ul ul li {
+    width: 100%;
+    display: block;
+    transition: ease-in-out 0.5s;
+    text-align: center;
+  }
+  
+  header nav ul ul li:hover {
+    background-color: black;
+    color: #ffe600;
+    border-radius: 15px;
+  }
+  
+  header nav ul ul li a {
+    font-family: "starwars_Regular";
+    padding: 10px 40px;
+  }
+  
+  #element1 > ul > li > a {
+    font-size: 2em;
+    transition: ease-in-out 0.3s;
+  }
+  #element2 > ul > li > a {
+    font-size: 2em;
+    transition: ease-in-out 0.3s;
+  }
+  #element1 > ul > li > a:hover {
+    font-size: 2em;
+    background-color: #000000;
+    border: #ffe600 3px solid;
+    color: #ffe600;
+  }
+  #element2 > ul > li > a:hover {
+    font-size: 2em;
+    background-color: #000000;
+    border: #ffe600 3px solid;
+    color: #ffe600;
+  }
+  
+  #element2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex: 1;
+  }
+  nav li {
+    transition: ease-in-out 0.1s;
+    padding-bottom: 1px;
+  }
+  nav li:hover {
+    border-bottom: 3px solid rgb(0, 0, 0);
+  }
+  
+  #connexion {
+    font-family: "starwars_Regular";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 20px;
+    border: 5px #ffe600 solid;
+  }
+
+  #background{
+    position: fixed;
+    z-index: -1;
+    size: cover;
+  }
+
+#corps{
+  display: flex;
+  margin-bottom: 10%;
+}
+
+.form{
+  font-family: "starwars_Regular";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: #ffe600;
+  margin: auto;
+  width: 700px;
+  margin-top: 3%;
+  border-radius: 15px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    padding: 50px;
+    border-radius: 15px;
+
+  }
+form div{
+  padding: 2%;
+}
+  form div label{
+   width: 60%;
+  }
+
+  form div input{
+  background-color: #949494;
+   width: 70%;
+   text-align: center;
+   padding: 3%;
+   border-radius: 20px;
+   font-size: 1.2em;
+   color: white;
+  }
+  form div input::placeholder{
+
+   color: white;
+  }
+
+  .form input[type="submit"]{
+    
+  color: aliceblue;
+  background-color:#000000;
+   width: 50%;
+   text-align: center;
+   padding: 3%;
+   transition: ease-in-out  0.6s;
+   border-radius: 20px;
+  }
+  .form input[type="submit"]:hover{
+  transform: scale(130%);
+  color: rgb(0, 0, 0);
+  background-color:#ffe600;
+ 
+  }
+
+  form div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(248, 255, 240);
+    border-radius: 0px;
+  }
+
+
+  footer ul{
+    background-color: #ffe600;
+    height: 120px;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  
+   footer > ul > ul{
+    display: flex;
+    flex-direction: column;
+   }
+  
+   footer ul a{
+    text-decoration: none;
+    color: #000000;
+   }
+  
+   footer ul a:hover{
+    border-bottom: 2px solid black;
+   }
+  
