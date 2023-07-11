@@ -262,6 +262,10 @@ form div{
     border-radius: 0px;
   }
 
+  footer{
+    font-family: "starwars_Regular";
+  }
+
 
   footer ul{
     background-color: #ffe600;

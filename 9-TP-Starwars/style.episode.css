@@ -290,6 +290,10 @@ video{
 
 /*footer*/
 
+footer{
+  font-family: "starwars_Regular";
+}
+
 footer ul{
   background-color: #ffe600;
   height: 150px;

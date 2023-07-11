@@ -459,6 +459,9 @@ section  >h2{
 
 
 /*footer*/
+footer{
+  font-family: "starwars_Regular";
+}
 
 footer ul{
   background-color: #ffe600;
