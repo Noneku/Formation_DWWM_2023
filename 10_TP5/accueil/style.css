@@ -1,0 +1,88 @@
+body {
+    margin:0;
+    padding: 0;
+    height: 100vh;
+    background-image: url(background_star\ wars.jpg);
+    
+}
+
+/*Nav*/
+.navbar-brand {
+    font-size: 25px;
+}
+
+#navbarCollapse a {
+    font-size: 15px;
+    font-family: 'Star Wars', sans-serif;
+    color: yellow;
+}
+
+/*Header*/
+header {
+    background-image: url(star_wars_wallpaper.jpg);
+    background-size: cover;
+    height: 80vh;
+    filter: brightness(95%);
+    border-radius: 50px;  
+}
+
+.text-intro {
+    padding-top: 300px;
+    padding-bottom: 200px;
+}
+
+.pretext {
+    font-size: 40px;
+ 
+}
+
+h1 {
+    font-size: 90px;
+    color: rgb(247, 245, 241);
+    font-family: 'Lilita One', cursive;
+    font-weight: 700;
+}
+
+/* Icones*/
+
+#home-icons {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    border-top: 1px solid #fffdfd;
+}
+
+/*Appel a l'action */
+
+#start {
+    background-image: url(star-wars-the-last-stand-4k-oq.jpg);
+    position: relative;
+    min-height: 300px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    text-align: center;
+    color: #fff;
+    
+}
+
+.title{
+    color:rgb(21, 21, 24);
+    font-family: 'Star Wars', sans-serif;
+}
+
+.row{
+    color:yellow
+}
+
+.affiche{
+    border-radius: 50px;
+    width: 300px;
+    box-shadow:  30px 30px 40px #141313,
+}
+
+.col{
+    color:yellow
+}
+
+.description{
+    font-family: 'Star Wars', sans-serif;
+}
