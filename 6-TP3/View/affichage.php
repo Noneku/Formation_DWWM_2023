@@ -10,11 +10,11 @@
 <body>
 
 
-   <main>
+<main>
 
-         <h1>Placement des stagiaire !</h1>
+<h1>Placement des stagiaire !</h1>
 <section>
-   
+
         <?php session_start(); ?>
         
 
