@@ -1,0 +1,383 @@
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+font-family: 'Codystar', cursive;
+text-decoration: none;
+list-style: none;
+}
+:root{
+--bg-color: #222327;
+--text-color: #fff;
+--main-color: #000000;
+}
+
+body{
+min-height: 100vh;
+background: var(--bg-color);
+color: var(--text-color);
+background-image: url('/Images/image.png');
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+
+}
+header{
+position: fixed;
+width: 100%;
+top: 0;
+right: 0;
+z-index: 1000;
+display: flex;
+align-items: center;
+justify-content: space-between;
+background: transparent;
+padding: 28px 12%;
+transition: all 0.50s ease;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 200px; /* Adjust the width to your desired size */
+    height: 80px; /* Adjust the height to your desired size */
+  }
+
+.logo i{
+    color: var(--main-color);
+    font-size: 28px;
+    margin-right: 3px;
+}
+
+.logo span{
+    color: var(--text-color);
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.main a:hover,
+.user a:hover {
+  color: var(--main-color);
+}
+
+.navbar{
+    display: flex;
+}
+
+.navbar a{
+color: var(--text-color);
+font-size: 1.1rem;
+font-weight: 500;
+padding: 5px 0;
+margin: 0px 30px;
+transition: all .50s ease;
+}
+
+.navbar a:hover{
+color: var(--main-color);
+}
+.navbar a.actived {
+  color: rgb(241, 121, 9);
+}
+
+
+.main{
+ display: flex; 
+ align-items: center;  
+}
+
+.main a{
+margin-right: 25px;
+margin-left: 10px;
+color: var(--text-color);
+font-size: 1.1rem;
+font-weight: 500;
+transition: all .50s ease;
+}
+.user{
+display: flex;
+align-items: center;
+}
+
+.user i{
+color: var(--main-color);
+font-size: 28px;
+margin-right: 7px;
+}
+
+.main a:hover{
+color: var(--main-color);
+}
+
+#menu-icon{
+    font-size: 35px;
+    color: var(--text-color);
+    cursor: pointer;
+    z-index: 10001;
+    display: none;
+}
+
+@media (max-width: 1280px){
+header{
+    padding: 14px 2%;
+    transition: .2s;
+}
+.navbar a{
+    padding: 5px 0;
+    margin: 0px 20px;
+}
+}
+
+@keyframes blink {
+    0% {
+      border-color: red;
+      box-shadow: 0 0 10px red, 0 0 20px red, 0 0 40px red, 0 0 80px red;
+    }
+    50% {
+      border-color: transparent;
+      box-shadow: none;
+    }
+    100% {
+      border-color: red;
+      box-shadow: 0 0 10px red, 0 0 20px red, 0 0 40px red, 0 0 80px red;
+    }
+  }
+
+  
+  @media (max-width: 1090px) {
+    #menu-icon {
+      display: block;
+    }
+  
+    .navbar {
+      position: absolute;
+      top: 100%;
+      right: 2%;
+      width: 270px;
+      height: 29vh;
+      display: flex;
+      
+      justify-content: flex-start;
+      border-radius: 10px;
+      transition: all .50s ease;
+      background-image: url('/Images/dv.PNG');
+  
+      /* Ajout de la bordure rouge effet néon clignotant */
+      border: 2px solid red;
+      animation: blink 5s infinite;
+    }
+  }
+
+
+.navbar {
+display: block;
+margin: 12px 0;
+padding: 0px 25px;
+transition: all .50s ease;
+}
+
+.navbar a:hover {
+    color: rgb(243, 94, 94);
+    transform: translateY(5px);
+    background-color: rgb(46, 46, 44); /* Adjust the opacity as desired */
+  }
+
+.navbar a.active{
+    color: var(--text-color);
+}
+.navbar.open{
+right: 2%;
+}
+
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #000000;
+  }
+  
+  .navbar-menu {
+    display: flex;
+    list-style-type: none;
+  }
+  
+  .navbar-menu li {
+    margin-right: 10px;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+    }
+  
+    .navbar-menu {
+      flex-direction: column;
+    }
+  
+    .navbar-menu li {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+
+
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #000000;
+  }
+  
+  .navbar-menu {
+    display: flex;
+    list-style-type: none;
+  }
+  
+  .navbar-menu li {
+    margin-right: 10px;
+  }
+  
+  @media screen and (min-width: 769px) and (max-width: 1090px) {
+    .navbar {
+      flex-direction: column;
+    }
+  
+    .navbar-menu {
+      flex-direction: column;
+    }
+  
+    .navbar-menu li {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+
+
+.ban{
+   display: flex; /* Activer le flexbox pour le conteneur */
+  justify-content: center; /* Centrer horizontalement */
+  align-items: center; /* Centrer verticalement */
+  height: 500px; /* Définir une hauteur pour le conteneur */
+    
+
+  }
+  
+  .centered-image {
+    max-width: 100%;
+    max-height: 100%;
+    width: 1500px; /* Modifier la largeur de l'image */
+    height: 800px; /* Garder les proportions d'origine de l'image */
+    margin-top: 400px;
+  align-items: center; /* Centrer verticalement */
+  justify-content: center;
+  border-radius: 10px;
+  border: 2px solid red;
+  }
+
+    
+
+    @media (max-width: 1090px) {
+        .poster {
+          position: absolute;
+          top: 100%;
+          right: 2%;
+          background-image: url('Images/dv2.PNG');
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          border-radius: 10px;
+          transition: all .50s ease;
+          background-repeat: repeat;
+          background-position: center;
+      
+          background-size:  100%;
+          border: 2px solid red;
+          margin-bottom: 1300px;
+          
+        }
+      }
+      
+   .ig, .im, .id{
+    border: 2px solid red;
+    border-radius: 10px;
+   }
+
+  .poster {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 100px;
+
+  }
+  
+  .poster img {
+    width: 300px; /* Modifier la largeur de l'image selon vos besoins */
+    height: 400px; /* Modifier la hauteur de l'image selon vos besoins */
+    object-fit: cover; /* Ajuster l'image pour remplir l'espace sans déformer */
+    margin-right: 150px; /* Ajouter une marge entre les images si nécessaire */
+    margin-top: 400px;
+    margin-left: 150px;
+  }
+
+    @media (max-width: 1090px){
+       
+        .black-footer{
+            position:absolute;
+            top: 100%;
+            right:2%;
+            width: 100%;
+            margin-top: 2515px;
+            display:flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            border-radius: 10px;
+            transition: all .50s ease;
+
+        }
+    }
+
+
+  .black-footer {
+    background-color: black;
+    color: white;
+    padding: 200px;
+   
+  }
+
+
+  .nejma{
+  
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+   
+  }
+   
+  @media screen and (min-width: 768px) and (max-width: 1090px) { 
+     .navbar{
+      flex-direction: column;
+      background-image: url('Images/dv4.png');
+      background-repeat: repeat-x;
+      display: flex;
+          flex-direction: column;
+          justify-content: center;
+          border-radius: 10px;
+          transition: all .50s ease;
+          background-repeat: repeat;
+          background-position: center;
+    }
+}
+
+
+
+
+
+
+
+
+
