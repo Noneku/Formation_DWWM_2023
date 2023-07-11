@@ -1,0 +1,23 @@
+#information{
+    margin-top: 50px;
+    display: flex;
+    margin-bottom: 50px;
+}
+#liste{
+    display: flex;
+    flex-direction: column;
+}
+.portrait{
+    height: 400px;
+    width: 300px;
+}
+#grid{
+    display: grid;
+    gap: 50px 50px;
+    grid-template-columns: repeat(3,auto);
+    grid-template-rows: repeat(2,auto);
+}
+ .item{
+    width: 300px;
+    height: 150px;
+ }

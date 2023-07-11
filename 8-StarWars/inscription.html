@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="connexion.css">
+<link rel="stylesheet" href="inscription.css">
+<link rel="stylesheet" href="style.css">
+
     <title>Document</title>
 </head>
 <body>
@@ -26,18 +27,18 @@
     <div class="wrap">
         <h1 class="register-title">Bienvenue</h1>
         <form class="register">
+           <div class="register-switch">
+              <input type="radio" name="sex" value="F" id="sex_f" class="register-switch-input" checked>
+              <label for="sex_f" class="register-switch-label">Femme</label>
+              <input type="radio" name="sex" value="M" id="sex_m" class="register-switch-input">
+              <label for="sex_m" class="register-switch-label">Homme</label>
+           </div>
            <input type="email" class="register-input" placeholder="Email address">
            <input type="password" class="register-input" placeholder="Password">
-           <input type="submit" value="sign-in" class="register-button">
+           <input type="submit" value="Create Account" class="register-button">
         </form>
      </div>
 
-
-
-
-
-
-    
     <footer>
         <ul id="liste-1">
             <li>Contact</li>

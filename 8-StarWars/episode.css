@@ -1,0 +1,49 @@
+#resume
+{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#main{
+    display: flex;
+    margin-top: 50px;
+    margin-left: 300px;
+}
+.affiche{
+    width: 1000px;
+    height: 1200px;
+    
+}
+
+iframe{
+    margin-top: 10px;
+}
+
+#personnage{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.portrait{
+    display: flex;
+    flex-direction: column;
+}
+
+#obi{
+    height: 400px;
+    width: auto;
+}
+
+#anakin{
+    height: 400px;
+    width: auto;
+}
+
+#padme{
+    height: 400px;
+    width: auto;
+}

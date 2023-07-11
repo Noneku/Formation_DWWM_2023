@@ -9,3 +9,33 @@ Le projet ayant pour but de développer le système d'exploitation GNU est appel
 Au mois de septembre 1983, Richard Stallman annonça le développement d’un système d’exploitation libre qu’il nomme « GNU » et qui a pour but d’être un équivalent libre d’Unix. L’acronyme récursif GNU signifie GNU’s Not Unix (« GNU n’est pas UNIX »)
 
 La naissance du noyau Linux en 1991 (après que celui-ci eut été publié sous licence GPL) permet, en le combinant aux outils GNU, de former le système d’exploitation GNU/Linux. Il y a une controverse et une certaine confusion de nommage du système d’exploitation entre Linux, qui est en réalité le noyau du système d’exploitation, et GNU/Linux qui est le système d’exploitation. L’appellation GNU/Linux est importante pour Richard Stallman, car elle permet entre autres que ne soit pas occulté le but du projet GNU : permettre l’utilisation d’un système entièrement libre et garantir les libertés fondamentales de manière générale. 
+
+Un système GNU/Linux contenant des logiciels pour la plupart des usages
+domestiques et professionnels ne coûte que quelque dizaines d'euros.
+GNU/Linux peut également être téléchargé gratuitement (hors coûts de
+connexions éventuels) sur l'Internet.
+Les mises à jour du sysème et des logiciels sont disponibles gratuitement sur
+l'Internet.
+
+Par Raphaël Bocquet vice-président d'Alpinux
+Les autres avantages de GNU/Linux
+La disponibilité du code source assure l'intégrité du système et permet aux
+utilisateurs avertis d'adapter leur système afin de l'optimiser en fonction de leurs
+besoins.
+
+
+Plus de confidentialité et vie privée.
+Contrairement à Windows et surtout Windows 10, aucune télémétrie et collectes de données, du moins très peu.
+Ainsi, Linux ne nuit pas à votre vie privée.
+Toutefois, Ubuntu et Mozilla peuvent effectuer de la télémétrie sur la configuration matérielle des ordinateurs.
+
+Linux est plus rapide
+Globalement dans l’utilisation de l’ordinateur, Linux est plus réactif et rapide que Windows.
+Les applications se lancent plus rapidement aussi de manière générale.
+
+Une communauté dynamique.
+La communauté Linux est très active.
+Si vous prenez le site d’Ubuntu, un wiki avec des documents pour chaque action est proposée.
+Windows ne propose pas cela, même s’il existe beaucoup de sites dédiés à Windows.
+Un des avantages est que tout le fonctionnement de Linux est documenté et ouvert, alors que celui de Windows est fermé pour des raisons d’espionnage industriel.
+Trouver une solution avec Linux est donc, au final, plus simple.
