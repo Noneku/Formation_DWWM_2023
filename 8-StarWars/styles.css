@@ -1,8 +1,16 @@
 /* NAVIGATION BAR */
     /* General Rules */
-
+    main, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    main {
+        margin-bottom: 5rem;
+    }
     nav {
         display: flex;
+        background-color: black;
 
     }
     nav section {
@@ -18,8 +26,11 @@
         justify-content: space-between;
         width: 20%;
     }
+    footer {
+        height: 20rem;
+    }
     /* General Rules */
-
+    
     /* Class Rules */
     .logo {
         height: 90px;
@@ -36,11 +47,66 @@
         text-align: center;
     }
     /* Class Rules */
-/* NAVIGATION BAR */
+    /* NAVIGATION BAR */
+    
+/* FOOTER */
+    .listContact {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .blockContact > h2 {
+        text-align: center;
+    }
+    .blockContact {
+        width: 40%;
+    }
+    .blockServiceContact {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .blockService {
+        display: flex;
+        justify-content: space-around;
+    }
+/* FOOTER */
+    
+    
+/* INDEX */
 
-.banniere > img {
-    background-color: aquamarine;
-    background-size: cover;
-}
+    .banniere > img {
+        background-color: aquamarine;
+        background-size: cover;
+    }
+    .episodesList {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-top: 5rem;
+    }
+/* INDEX */
 
-
+/* PageEpisode */
+    .containerEpisode {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-top: 5rem;
+    }
+    .descriptionEpisode {
+        text-align: center;
+        width: 30%;
+        overflow: hidden;
+    }
+    .containerPersonnages > ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .videoEpisode {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+/* PageEpisode */
