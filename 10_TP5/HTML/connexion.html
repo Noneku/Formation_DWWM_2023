@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/connexion.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"> -->
+    <title>Connexion</title>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Connexion</title>
+        <!-- CSS de Bootstrap -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link href="https://fonts.cdnfonts.com/css/star-wars?styles=139840" rel="stylesheet">
+    </head>
+        
+    <body>
+        
+        <!--NAV -->
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" id="main-nav">
+            <div class="container">
+                <a href="./index.html" class="navbar-brand"><img src="../IMG/Star_Wars_Logo.jpg" height="100" alt=""></a>
+                
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    
+                    <ul class="navbar-nav ml-auto">
+                        
+                        <li class="nav-item mr-1">
+                            <a href="./index.html" class="nav-link">Accueil</a>
+                        </li>
+                        <li class="nav-item mr-1">
+                            <a href="./episode.html" class="nav-link">episodes i</a>
+                        </li>
+                        <li class="nav-item mr-1">
+                            <a href="./episode2.html" class="nav-link">episode ii</a>
+                        </li> 
+                        <li class="nav-item mr-1">
+                            <a href="./episode3.html" class="nav-link">episode iii</a>
+                        </li>
+                        <li class="nav-item mr-1">
+                            <a href="./connexion.html" class="nav-link">inscription/connexion</a>
+                        </li>
+                       
+                    </ul>
+                    
+                </div>
+            </div>
+        </nav>
+        
+
+
+    </head>
+ 
+    <form class="form" action="../" method="post">
+
+        <h1>Connexion</h1>
+
+        <div class="textbox">
+        <label for="login"><br>
+            <i class="fa fa-user" aria-hidden="true"></i>
+            <input type="text" placeholder="Email / pseudo" name="login" value="">
+        </label>
+        </div>
+
+        <div class="textbox">
+            <label for="Mot de passe"><br>
+                <i class="fa fa-lock" aria-hidden="true"></i>
+                <input type="password" name="mdp" placeholder="Password " class="Password" id="id_password">
+                <i class="far fa-eye" id="togglePassword" style="margin-left: -30px; cursor: pointer;"></i>
+            </label>
+        </div>
+
+        <!-- <p><?php echo $_SESSION['authentification2']; ?></p> -->
+        
+        <br>
+        <input type="submit" class="btn" name="" value="Connexion">
+        
+        <p>Vous n'avez pas de compte ?</p>
+        <br>
+        <a class="btn_fg" href="../V/index.Inscription.php"> Inscrivez-vous </a>
+
+        <a class="btn_pageAccueil" href="../V/index.php"><p>🢀 revenir à la page d'accueil</p>  </a>
+
+    </form>
+
+    <script src="./Connexion Inscription.JS" type="text/javascript"></script>
+
+</body>
+
+</html>

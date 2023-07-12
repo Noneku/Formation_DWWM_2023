@@ -2,10 +2,10 @@ body {
     margin:0;
     padding: 0;
     height: 100vh;
-    background-image: url(background_star\ wars.jpg);
+    background-image: url(../IMG/background_star\ wars.jpg);
     
 }
-
+/* HEADER */
 /*Nav*/
 .navbar-brand {
     font-size: 25px;
@@ -19,7 +19,7 @@ body {
 
 /*Header*/
 header {
-    background-image: url(darth-vader-anakin-skywalker-timeline-star-wars.jpg);
+    background-image: url(../IMG/star_wars_episode_2.0.jpg);
     background-size: cover;
     height: 80vh;
     filter: brightness(95%);
@@ -53,7 +53,7 @@ h1 {
 /*Appel a l'action */
 
 #start {
-    
+    background-image: url(../IMG/star-wars-the-last-stand-4k-oq.jpg);
     position: relative;
     min-height: 300px;
     background-attachment: fixed;
@@ -63,7 +63,7 @@ h1 {
 }
 
 .title{
-    color:rgb(244, 244, 248);
+    color:rgb(248, 248, 250);
     font-family: 'Star Wars', sans-serif;
 }
 
@@ -71,14 +71,21 @@ h1 {
     color:yellow
 }
 
-.affiche{
+.img{
     border-radius: 50px;
     width: 300px;
-    box-shadow:  30px 30px 40px #141313;
+    box-shadow:  30px 30px 40px #fdf7f7;
+    display:flex;
+    flex-direction: row;
+    margin-right: 10%;
+    position: relative;
+   display: flex;
+  
 }
 
 .col{
-    color:yellow
+    color:yellow;
+    text-align: center;
 }
 
 .container2{
@@ -87,6 +94,7 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 10%;
 }
 .cards {
     width: 100%;
@@ -94,16 +102,15 @@ h1 {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+  
 }
-
-
 .card {
     overflow: hidden;
     text-align: center;
     position: relative;
     width: 300px;
     height: 300px;
-    background-image: url("obi_wan_episode1.jpg");
+    background-image: url("../IMG/obi_wan_episode2.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -111,7 +118,7 @@ h1 {
    box-shadow:  30px 30px 40px #141313, 
                 -30px -30px 40px #1c1919;
     transform: scale(1.05);
-    color: yellow; 
+    color: yellow;
     transition: 0.5s;
     box-shadow: 15px 15px 15px white;
 }
@@ -120,39 +127,24 @@ h1 {
     transform:scale(1.5);
 }
 
-.palpatine{
-    background-image: url("PalpatineFree.jpg");
+.anakin{
+    background-image: url("../IMG/anakin_episode_2.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    transition:0.5s;
-    box-shadow: 15px 15px 15px white;
 }
 
-.palpatine:hover{
-transform:scale(1.5);
-}
-
-.rex{
-    background-image: url("perso_clone_rex.jpg");
+.padme{
+    background-image: url("../IMG/padme_episode2.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    transition:0.5s;
-    box-shadow: 15px 15px 15px white;
-}
-
-.rex:hover{
-    transform:scale(1.5);
 }
 
 
-.history {
+  .text-center p{
+    float: right;
     display: flex;
     flex-direction: row;
-    border-radius: 50px;
-    width: 300px;
-    box-shadow:  30px 30px 40px #fffdfd;
-    display:flex;
   }
- 
+  
