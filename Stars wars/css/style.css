@@ -42,6 +42,7 @@ header a {
 .content {
   padding-top: 120px; /* Compense la hauteur du header */
   margin-top: 50px;
+
 }
 
 .img1 {
@@ -51,7 +52,11 @@ header a {
   margin-bottom: 30px;
   opacity: 0.65;
   transition: 0.8s;
+}
 
+.img1 img {
+  animation: nwaaar 2s linear infinite;
+  animation-delay: 0.6s;
 }
 
 .img1:hover {
@@ -125,3 +130,33 @@ hr {
   opacity: 0.65;
   margin-bottom: 30px;
 }
+
+@keyframes nwaaar {
+  0% {
+   box-shadow: 5px 0px 5px rgba(255, 128, 128, 0.5);
+  }
+  12.5% {
+   box-shadow: 5px 5px 5px rgba(255, 165, 128, 0.5);
+  }
+  25% {
+   box-shadow: 0px 5px 5px rgba(255, 255, 128, 0.5);
+  }
+  37.5% {
+   box-shadow: -5px 5px 5px rgba(128, 255, 128, 0.5);
+  }
+  50% {
+   box-shadow: -5px 0px 5px rgba(128, 255, 255, 0.5);
+  }
+  62.5% {
+   box-shadow: -5px -5px 5px rgba(128, 128, 255, 0.5);
+  }
+  75% {
+   box-shadow: 0px -5px 5px rgba(210, 128, 255, 0.5);
+  }
+  87.5% {
+   box-shadow: 5px -5px 5px rgba(255, 128, 192, 0.5);
+  }
+  100% {
+   box-shadow: 5px 0px 5px rgba(255, 128, 192, 0.5);
+  }
+ }

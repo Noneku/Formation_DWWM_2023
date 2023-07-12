@@ -5,7 +5,7 @@
 
 body {
   background-image: url(../img/bg.jpg);
-  margin-top: 150px;
+  margin-top: 230px;
 }
 
 header {
@@ -42,37 +42,45 @@ a:hover {
   color: #d2691e;
 }
 .posterEpisode img {
-    border-radius: 50px;
+  border-radius: 50px;
 }
 section {
-    opacity: 0.65;
+  /* background-color: chocolate; */
+  /* opacity: 0.25; */
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   /* margin-top: 50px; */
+  height: 900px;
 }
-
+.posterEpisode {
+  margin-right: 100px;
+}
 .resume {
-    margin-top: 20px;
+  /* opacity: 0.25; */
+  margin-left: 100px;
+  margin-top: 0px;
   font-family: "Caprasimo", cursive;
   color: rgba(255, 255, 255, 1);
   width: 500px;
-  height: 880px;
+  height: 900px;
   /* background-color: rgb(187, 187, 187); */
-  overflow: scroll;
+  /* overflow: scroll; */
   font-size: 25px;
   max-width: 500px;
   max-height: 900px;
   text-align: center;
+  overflow-x:hidden;
+  overflow-y:auto;
   /* border-radius: 50px; */
-  
 }
 
 .perso {
+  /* height: 900px; */
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 100px;
 }
 
 .perso img {
@@ -90,29 +98,31 @@ section {
   transition: 0.8s;
 }
 .breadcrumb {
-    position: fixed;
-    top: 130px; /* Ajustez cette valeur en fonction de la hauteur de votre en-tête */
-    left: 0;
-    width: 100%;
-    /* background-color: #6b6060; */
-    padding: 10px;
-    font-size: 18px;
-    text-align: center;
-    color: #555;
-    z-index: 1;
-    /* margin-top: 100px; */
-  }
-  
-  .breadcrumb a {
-    text-decoration: none;
-    color: #555;
-  }
-  
-  .breadcrumb a:hover {
-    color: #d2691e;
-  }
+  position: fixed;
+  top: 130px; /* Ajustez cette valeur en fonction de la hauteur de votre en-tête */
+  left: 0;
+  width: 100%;
+  /* background-color: #6b6060; */
+  padding: 10px;
+  font-size: 18px;
+  text-align: center;
+  color: #555;
+  z-index: 1;
+  /* margin-top: 100px; */
+}
 
-  .video {
-    margin-top: 35px;
-    text-align: center;
-  }
+.breadcrumb a {
+  text-decoration: none;
+  color: #555;
+}
+
+.breadcrumb a:hover {
+  color: #d2691e;
+}
+
+.video {
+  margin-top: 35px;
+  text-align: center;
+}
+
+
