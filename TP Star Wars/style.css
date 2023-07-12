@@ -1,0 +1,183 @@
+*{
+    margin:0%;
+    padding:0%;
+}
+body{
+    margin: 0%;
+    border: 0%;
+    background: transparent;
+    /* background: no-repeat;
+    backdrop-filter:  blur(4px);
+    background-color: rgba(6,26,87,255); */
+}
+header,footer{
+    padding : none;
+    margin: none;
+    position: sticky;
+    display: flex;
+    height: 100px;
+    width: auto;
+    background-color:black ;
+    /* background: no-repeat;
+    
+    background-size: cover; */
+    align-items: stretch;
+}
+
+#bg{
+    position: fixed;
+    size: cover;
+    z-index: -1;
+  
+
+}
+nav{
+    display: flex;
+    margin: none;
+    flex: 2;
+    justify-content: space-around;
+    text-align: center;
+    font-size: 25;
+}
+
+nav >a:hover{
+    color:yellow;
+    text-shadow: 1px 1px 2px yellow, 0 0 1em yellow;
+   
+
+}
+nav > a{
+    color:yellow;
+    text-decoration: none;
+    text-align: justify;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input{
+    position: relative;
+    text-align: center;
+    position: center;
+    border-radius: 10%;
+    margin: none;
+    border: none;
+    background-color: transparent;
+    color: rgb(85, 218, 52);
+    font-size: 25; 
+}
+
+input:hover{
+    color: rgb(85, 218, 52);
+    text-shadow: 1px 1px 2px rgb(85, 218, 52), 0 0 1em rgb(85, 218, 52), 0 0 0.2em rgb(85, 218, 52);
+}
+
+.img1{
+    height: 100px;
+    margin: none;
+}
+
+.bannière{
+width: 1900px;
+height: 500px;
+}
+
+.bn{
+    width: 1500px;
+}
+
+main{
+    display: flex;
+    /* border: 20px solid rgba(6,26,87,255); */
+    justify-content: space-around;
+    color: black;
+    font-size: 30px;
+}
+
+.description{
+    font-size:bold;
+    
+}
+
+.main2{
+    border: 20px solid rgba(6,26,87,255);
+
+}
+
+
+.affiche{
+    width: 400px;
+    overflow: hidden;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px  rgb(0, 0, 0, .05);
+
+}
+
+.affiche1{
+    width: 350px;
+    overflow: hidden;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px  rgb(0, 0, 0, .05);
+}
+
+.affiche1{
+    width: 350px;
+    overflow: hidden;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px  rgb(0, 0, 0, .05);
+
+}
+
+.affiche2{
+    width: 200px;
+    overflow: hidden;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px  rgb(0, 0, 0, .05);
+}
+
+.perso{
+    width: 400px;
+    overflow: hidden;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px  rgb(0, 0, 0, .05);
+}
+
+
+.affiche:hover{
+    box-shadow: 1px 1px 10px  yellow, 0 0 1em yellow, 0 0 0.2em yellow;    
+}
+
+.img2{
+    height: 100px;
+    padding-left :45%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+p{
+    float: right;
+    color: white;
+}
+
+h2{
+    float: right;
+    color: white;
+}
+
+h3{
+    float: right;
+    color: green;
+}
+
+h4{
+    float: right;
+    color: green;
+}
+
+iframe{
+   width: 400px;
+   height: 400PX;
+   flex: 1;
+   border: 20px solid rgba(6,26,87,255);
+}
