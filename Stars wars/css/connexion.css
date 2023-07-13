@@ -22,6 +22,7 @@ header {
   border-style: solid;
   border-bottom-color: chocolate;
   border-width: 1px;
+  border-radius: 40px;
   /* border-bottom: chocolate; */
 }
 
@@ -75,7 +76,7 @@ a:hover {
   text-align: center;
 }
 .connexion2 {
-  width: 30%;
+  width: 40%;
   /* height: 300px; */
   padding: 30px 10px;
   margin: auto;
