@@ -1,14 +1,27 @@
-/* NAVIGATION BAR */
-    /* General Rules */
+ /* General Rules */
     main, body {
         margin: 0;
         padding: 0;
         width: 100%;
     }
-    main {
+
+ main {
         margin-bottom: 5rem;
     }
-    nav {
+
+
+footer {
+        height: 30rem;
+        background-color: #000000;
+        color: #fff;
+    }
+    .blockContact:nth-child(1) {
+        margin-top: 8rem;
+    }
+/* General Rules */
+
+/* NAVIGATION BAR */
+   nav {
         position: fixed;
         top: 0;
         left: 0;
@@ -45,17 +58,7 @@
         color: #333;
         padding: 5px 10px;
       }
-    
-    footer {
-        height: 30rem;
-        background-color: #000000;
-        color: #fff;
-    }
-    .blockContact:nth-child(1) {
-        margin-top: 8rem;
-    }
-    /* General Rules */
-    
+
     /* Class Rules */
     .logo {
         height: 70px;
