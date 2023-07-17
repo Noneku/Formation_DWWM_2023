@@ -475,3 +475,191 @@ for (const key in personnages) {
     console.log("Décès : " + personnages[key].infos.deces);
     console.log("--------------------------------");
 }
+
+// for...of
+// On parcourt tous les éléments d'un tableau, la variable qui représente l'élément prend un nouvel élément à chaque tour de boucle
+for (var personnage of personnages) {
+    console.log(personnage.nom + " est un " + personnage.grade + " " + personnage.affiliation);
+    for (var key in personnage.infos) {
+        console.log(key + " : " + personnage.infos[key]);
+    }
+}
+
+/**
+ * Objets
+ */
+/**
+ * Avant ES6, les objets se déclaraient avec des fonctions
+ **/
+ function Voiture(marque, modele, kilometrage, annee) {
+    // mot clé this : symbolise l'instance qui a déclenché l'appel
+    this.marque = marque;
+    this.modele = modele;
+    this.kilometrage = kilometrage;
+    this.annee = annee;
+
+    this.display = function() {
+        var result = this.marque + " - " + this.modele + " - " + this.kilometrage + " - " + this.annee;
+        return result;
+    }
+}
+
+// Instancier un objet
+var v1 = new Voiture("Ferrari", "F40", 100000, 1987);
+console.log(v1.marque + " " + v1.modele);
+console.log(v1.display());
+
+/**
+ * ES6
+ */
+// let
+/**
+ * Jusqu'à présent nous avons déclaré nos variables avec le mot clé var
+ * Dès maintenant nous allons utiliser le mot clé let à la place de var
+ * Voici pourquoi :
+ */
+console.log(testPrenomVar); // Undefined --> pour lui la variable est déjà déclarée --> problème de hoisting (remontée de la déclaration de la variable)
+var testPrenomVar = "Jean";
+
+// console.log(testPrenomLet); // Erreur variable non déclarée
+let testPrenomLet = "Pierre";
+
+// const
+const nbMax = 6;
+// nbMax = 7; // Erreur de syntaxe
+
+const fruits = ["Pomme"];
+// fruits = ["Pomme", "Poire"]; // Erreur de syntaxe
+fruits.push("Poire");
+console.table(fruits);
+
+// .map .find .filter
+const vegetables = [
+    {
+        code: 11,
+        name: "Carotte",
+        price: 1.99
+    },
+    {
+        code: 12,
+        name: "Poivron vert",
+        price: 2.99
+    },
+    {
+        code: 13,
+        name: "Poivron rouge",
+        price: 2.99
+    },
+    {
+        code: 14,
+        name: "Chou",
+        price: 3.99
+    }
+];
+
+// map
+const listeLegumes = vegetables.map(function(vegetable) {
+    return vegetable.name;
+});
+console.log(listeLegumes);
+
+// Trouver un élément --> .find
+const carotte = vegetables.find(function(vegetable) {
+    return vegetable.name.includes("Carotte");
+});
+console.log(carotte);
+
+// Trouver tous les éléments --> filter
+const poivrons = vegetables.filter(function(vegetable) {
+    return vegetable.name.includes("Poivron");
+});
+console.log(poivrons);
+
+// fonctions fléchées --> Arrow functions
+// Pour écrire une fonction fléchée nous allons utiliser un opérateur que l'on appelle fat arrow =>
+// function test() {
+//     return "Toto";
+// };
+
+let test = function() {
+    return "Toto";
+};
+
+test = () => {
+    return "Toto";
+};
+
+test = () => "Toto";
+
+const poivrons2 = vegetables.filter(vegetable => vegetable.name.includes("Poivron"));
+
+const test2 = (nom, prenom) => nom + " " + prenom;
+
+console.log(test2("Boucher", "Alex"));
+
+// rest operator
+// ...
+// let chou = vegetables[3]; // Cause une référence au tableau et la copie n'en est vraiment pas une ...
+
+// Welcome rest operator
+let chou = {...vegetables[3]};
+chou.price = 2.99;
+console.log(chou);
+console.log(vegetables[3]);
+
+// littéraux de gabarits
+/**
+ * Il s'agit d'une sorte de templating en JS permettant de simplifier la concaténation de chaînes et de variables
+ * Avec cette notation on utilise les anti quotes (``) à la place des doubles quotes ("")
+ */
+let monNom = "Boucher";
+let monPrenom = "Alex";
+
+console.log("Bonjour " + monPrenom + " " + monNom); // ça c'était avant
+console.log(`Bonjour ${monPrenom} ${monNom}, tu vas bien ?`); // C'est pas mieux?
+
+// Valeurs par défaut pour les paramètres d'une fonction
+function carre(nb = 10) {
+    return nb*nb;
+}
+
+console.log(carre(5));
+console.log(carre());
+
+/**
+ * Classes
+ * ES6 introduit les classes
+ */
+class Developper{
+    // Constructeur de la classe Developper, on peut le voir comme une "usine" à objets Developper
+    constructor(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    // Méthode de la classe Developper, on ne pourra l'appeler que sur une instance de la classe Developper
+    getName() {
+        return `${this.firstName} ${this.lastName}`;
+    }
+}
+
+/**
+ * Héritage
+ * On va utiliser le mot clé extends suivi de la classe mère
+ */
+class JSDeveloper extends Developper {
+    getJob() {
+        return "Développeur JS";
+    }
+
+    display() {
+        // Le mot clé super fait référence à la classe parente
+        return `${super.getName()} - ${this.getJob()}`;
+    }
+}
+
+let dev = new Developper("Peter", "Mollet"); // Appel du constructeur
+console.log(dev.getName());
+
+let jsDev = new JSDeveloper("Jane", "Foster");
+console.log(jsDev.display());
