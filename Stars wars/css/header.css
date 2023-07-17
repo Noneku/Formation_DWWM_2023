@@ -1,0 +1,101 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+@font-face {
+  font-family: Font;
+  src: url(../Starjedi.ttf);
+}
+
+body {
+  background-image: url(../img/bg.jpg);
+}
+
+header {
+  font-family: Font;
+  max-height: 130px;
+  background-color: rgb(0, 0, 0);
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  border-bottom: 1px solid chocolate;
+  border-radius: 0 0 40px 40px;
+}
+
+header nav {
+  display: flex;
+}
+
+header a {
+  opacity: 0.65;
+  font-family: Font;
+  text-decoration: none;
+  font-size: 30px;
+  color: rgb(126, 126, 126);
+  padding: 10px;
+  border-radius: 20px;
+}
+
+header button {
+  font-family: Font;
+  opacity: 0.65;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+  color: chocolate;
+  transition: 0.5s;
+
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.9);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 20px;
+}
+
+.dropdown-content a {
+  transition: 0.2s;
+
+  float: none;
+  /* color: black; */
+  padding: 12px 16px;
+  /* text-decoration: none; */
+  display: block;
+  text-align: left;
+  color: rgb(126, 126, 126);
+}
+
+.dropdown-content a:hover {
+  background-color: transparent;
+  color: chocolate;
+  transform: scale(1.025);
+  transition: 0.5s;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown .dropbtn,
+header button {
+  font-size: 30px;
+  border: none;
+  outline: none;
+  color: rgb(126, 126, 126);
+  padding: 10px;
+  background-color: transparent;
+}

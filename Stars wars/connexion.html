@@ -1,35 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/connexion.css">
-    <title>Document</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/connexion.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Connexion</title>
+  </head>
+  <body>
     <header>
-        <a href="../index.html"
-          ><img src="../img/logo.png" id="logo" alt="" height="100"
-        /></a>
-        <nav>
-          <a href="#">Personnages</a>
-          <a href="#">Episodes</a>
-          <a href="../Connexion.html">Connexion</a>
-        </nav>
-      </header>
-      <div class="breadcrumb">
-        <a href="index.html">Accueil</a>
-      </div>
-
-
-      <div class="connexion2">
-        <form action="../C/connexion.ctrl.php" method="post">
-
-            <input type="text" id="uname" name="uname" placeholder="Nom d'utilisateur">
-            <input type="password" id="password" name="password" placeholder="Mot de passe">
-            <button class="BtnValider" type="submit">Valider</button>
+      <a href="index.html"
+        ><img src="../img/logo.png" id="logo" alt="" height="100"
+        
+      /></a>
+      <script src="./js/Ici.js"></script>
+      <nav>
+        <div class="dropdown">
+          <button class="dropbtn">
+            Personnage
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="/perso/Anakin.html">Anakin Skywalker</a>
+            <a href="/perso/Luke.html">Luke Skywalker</a>
+            <a href="/perso/Obiwan.html">obi-wan Kenobi</a>
+            <a href="/perso/Chewbacca.html">Chewbacca</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">
+            Episode
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="Episode.html">Episode 1</a>
+            <a href="Episode2.html">Episode 2</a>
+            <a href="Episode3.html">Episode 3</a>
+          </div>
+        </div>
+        <a href="Connexion.html"> Connexion </a>
+      </nav>
+    </header>
+    <div class="breadcrumb">
+      <a href="index.html">Accueil</a>
     </div>
-    </form>
-</div>
-</body>
+
+    <script src="js/localStorage.js"></script>
+
+    <div class="connexion2">
+      <form action="../C/connexion.ctrl.php" method="post">
+        <input
+          type="text"
+          id="uname"
+          name="uname"
+          placeholder="Nom d'utilisateur"
+        />
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Mot de passe"
+        />
+        <button class="BtnValider" type="submit">Valider</button>
+      </form>
+    </div>
+  </body>
 </html>

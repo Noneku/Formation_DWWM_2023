@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/epiode.css" />
+    <link rel="stylesheet" href="../css/header.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,9 +19,30 @@
         ><img src="../img/logo.png" id="logo" alt="" height="100"
       /></a>
       <nav>
-        <a href="#">Personnages</a>
-        <a href="#">Episodes</a>
-        <a href="../Connexion.html">Connexion</a>
+        <div class="dropdown">
+          <button class="dropbtn">
+            Personnage
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="/perso/Anakin.html">Anakin Skywalker</a>
+            <a href="/perso/Luke.html">Luke Skywalker</a>
+            <a href="/perso/Obiwan.html">obi-wan Kenobi</a>
+            <a href="/perso/Chewbacca.html">Chewbacca</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">
+            Episode
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="Episode.html">Episode 1</a>
+            <a href="Episode2.html">Episode 2</a>
+            <a href="Episode3.html">Episode 3</a>
+          </div>
+        </div>
+        <a href="Connexion.html"> Connexion </a>
       </nav>
     </header>
     <div class="breadcrumb">
@@ -35,54 +57,48 @@
 
       <div class="resume">
         <p>
-          Chewbacca, surnommé "Chewie", est un Wookiee originaire de la planète
-          Kashyyyk. Il est connu pour sa stature imposante, sa force surhumaine
-          et son rugissement caractéristique. Chewbacca est un fidèle compagnon
-          du contrebandier Han Solo, et les deux forment un duo légendaire dans
-          la galaxie. Chewbacca a un rôle clé dans la trilogie originale de Star
-          Wars. Il est d'abord présenté dans l'épisode IV, "Un Nouvel Espoir",
-          où il est introduit en tant que partenaire de Han Solo. Les deux sont
-          impliqués dans le conflit entre l'Alliance rebelle et l'Empire
-          galactique. Chewbacca accompagne Han Solo lorsqu'ils rencontrent Luke
-          Skywalker et la princesse Leia Organa, formant ainsi un groupe
-          hétéroclite de héros. Au fil de la trilogie originale, Chewbacca
-          devient un personnage aimé pour sa loyauté, son courage et son sens de
-          l'humour. Sa relation avec Han Solo est profonde et basée sur une
-          confiance mutuelle. Chewbacca est souvent présenté comme le copilote
-          du Faucon Millenium, le célèbre vaisseau spatial de Han Solo, et ses
-          compétences en mécanique sont souvent mises à contribution. Chewbacca
-          est également un guerrier redoutable. En tant que Wookiee, il est doté
-          d'une force physique impressionnante et est capable de se battre avec
-          des armes traditionnelles wookiees telles que le fusil blaster
-          Bowcaster. Il est prêt à risquer sa vie pour protéger ses amis et
-          l'Alliance rebelle dans leur lutte contre l'Empire. Dans l'épisode V,
-          "L'Empire contre-attaque", Chewbacca participe à la bataille de Hoth,
-          où les Rebelles font face à une attaque impériale. Lui et Han Solo
-          sont ensuite poursuivis par Boba Fett, un chasseur de primes
-          mandalorien, mais parviennent à s'échapper. L'épisode VI, "Le Retour
-          du Jedi", montre Chewbacca jouant un rôle essentiel dans le sauvetage
-          de Han Solo, qui est capturé et emprisonné par Jabba le Hutt. Avec
-          l'aide de Leia et Luke, Chewbacca participe à une mission audacieuse
-          pour libérer Han Solo et vaincre Jabba le Hutt. Chewbacca continue à
-          se battre aux côtés de l'Alliance rebelle jusqu'à la fin de la
-          trilogie originale. Il participe à la bataille d'Endor, où il joue un
-          rôle clé dans la destruction de l'Étoile de la Mort II. Après la
-          trilogie originale, Chewbacca apparaît également dans la trilogie de
-          préquelles et la trilogie de suites de Star Wars. Dans les préquelles,
-          il est montré en tant que guerrier et chef wookiee sur Kashyyyk, où il
-          aide les Jedi lors de la guerre des clones. Dans la trilogie de
-          suites, Chewbacca accompagne de nouveau Han Solo et est impliqué dans
-          de nouvelles aventures aux côtés de Rey, Finn et Poe Dameron. Il
-          continue d'être un pilote accompli et un ami loyal. Malheureusement,
-          dans l'épisode VII, "Le Réveil de la Force", Chewbacca subit une
-          grande perte lorsque Han Solo est tué par son propre fils, Kylo Ren.
-          Cette tragédie pèse lourdement sur Chewbacca, renforçant son
-          dévouement envers la cause de la Résistance. En résumé, Chewbacca est
-          un personnage central et bien-aimé de l'univers de Star Wars. Sa force
-          physique, son courage et sa loyauté en font un membre inestimable de
-          l'Alliance rebelle et de la Résistance. Sa relation avec Han Solo et
-          son rôle dans la lutte contre l'Empire en font une icône de la saga
-          Star Wars.
+          Chewbacca, surnommé "Chewie", est un Wookiee originaire de Kashyyyk.
+          Il est connu pour sa stature imposante, sa force surhumaine et son
+          rugissement caractéristique. En tant que fidèle compagnon de Han Solo,
+          il forme un duo légendaire dans la galaxie.
+        </p><br>
+        <p>
+          Chewbacca joue un rôle clé dans la trilogie originale de Star Wars.
+          Dans "Un Nouvel Espoir", il accompagne Han Solo et se joint à
+          l'Alliance rebelle dans leur lutte contre l'Empire galactique. Sa
+          loyauté envers Han Solo est inébranlable, et ils se retrouvent
+          impliqués dans de nombreuses aventures périlleuses.
+        </p><br>
+        <p>
+          Au fil de la trilogie originale, Chewbacca devient un personnage
+          apprécié pour sa loyauté, sa force et son sens de l'humour. En tant
+          que Wookiee, il est un guerrier redoutable, utilisant son
+          impressionnante force physique et son fusil blaster Bowcaster pour se
+          battre contre les forces impériales.
+        </p><br>
+        <p>
+          Chewbacca participe à des batailles cruciales, notamment la bataille
+          de Hoth dans "L'Empire contre-attaque" et la bataille d'Endor dans "Le
+          Retour du Jedi". Il joue un rôle clé dans la libération de Han Solo et
+          contribue à la victoire de l'Alliance rebelle.
+        </p><br>
+        <p>
+          Après la trilogie originale, Chewbacca continue d'apparaître dans les
+          trilogies de préquelles et de suites de Star Wars, apportant son
+          soutien à Han Solo et participant à de nouvelles aventures.
+        </p><br>
+        <p>
+          Chewbacca incarne des qualités telles que la loyauté, la force et le
+          dévouement, ce qui en fait un personnage adoré des fans. Sa relation
+          avec Han Solo est profonde et empreinte d'une confiance mutuelle. Son
+          rôle en tant que guerrier et ami de confiance fait de lui une icône de
+          la saga Star Wars.
+        </p><br>
+        <p>
+          En résumé, Chewbacca est un Wookiee puissant et fidèle, qui joue un
+          rôle essentiel dans la lutte contre l'Empire galactique. Sa force, sa
+          loyauté et son sens de l'humour en font un personnage inoubliable,
+          apprécié par les fans du monde entier.
         </p>
       </div>
     </section>

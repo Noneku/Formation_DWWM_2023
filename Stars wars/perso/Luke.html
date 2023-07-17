@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/epiode.css" />
+    <link rel="stylesheet" href="../css/header.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,9 +19,30 @@
         ><img src="../img/logo.png" id="logo" alt="" height="100"
       /></a>
       <nav>
-        <a href="#">Personnages</a>
-        <a href="#">Episodes</a>
-        <a href="../Connexion.html">Connexion</a>
+        <div class="dropdown">
+          <button class="dropbtn">
+            Personnage
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="/perso/Anakin.html">Anakin Skywalker</a>
+            <a href="/perso/Luke.html">Luke Skywalker</a>
+            <a href="/perso/Obiwan.html">obi-wan Kenobi</a>
+            <a href="/perso/Chewbacca.html">Chewbacca</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">
+            Episode
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="Episode.html">Episode 1</a>
+            <a href="Episode2.html">Episode 2</a>
+            <a href="Episode3.html">Episode 3</a>
+          </div>
+        </div>
+        <a href="Connexion.html"> Connexion </a>
       </nav>
     </header>
     <div class="breadcrumb">
@@ -35,53 +57,49 @@
 
       <div class="resume">
         <p>
-          Luke Skywalker est introduit pour la première fois dans l'épisode IV,
-          "Un Nouvel Espoir". Au début de l'histoire, il est un jeune homme
-          humble vivant sur la planète désertique de Tatooine avec son oncle
-          Owen et sa tante Beru. Luke rêve d'aventure et de quitter sa vie
-          monotone de fermier. Sa vie bascule lorsque son destin est lié à
-          l'arrivée du droïde R2-D2, contenant un message de la princesse Leia
-          Organa demandant l'aide du légendaire Jedi Obi-Wan Kenobi. Luke se
-          joint à Obi-Wan et au contrebandier Han Solo pour sauver Leia et aider
-          l'Alliance rebelle dans sa lutte contre l'Empire galactique. Luke
-          découvre qu'il est le fils d'Anakin Skywalker, également connu sous le
-          nom de Dark Vador, le bras droit de l'Empereur Palpatine. Obi-Wan
-          révèle à Luke qu'il est destiné à devenir un Jedi, un guerrier
-          utilisant la Force pour maintenir l'équilibre et combattre les forces
-          du côté obscur. Dans l'épisode V, "L'Empire contre-attaque", Luke
-          poursuit son entraînement Jedi avec Yoda, un maître Jedi légendaire.
-          Il apprend à maîtriser la Force et à se battre avec un sabre laser.
-          Pendant ce temps, il découvre que Dark Vador est son père, ce qui
-          l'amène à remettre en question son héritage et sa propre destinée.
-          Luke est confronté à de nombreux défis, notamment lors du duel épique
-          avec Dark Vador sur la Cité des Nuages. Lors de ce duel, Dark Vador
-          révèle que Leia est la sœur jumelle de Luke, ce qui ajoute un élément
-          de surprise et de tension à l'histoire. Dans l'épisode VI, "Le Retour
-          du Jedi", Luke se rend sur Tatooine pour sauver Han Solo des griffes
-          de Jabba le Hutt. Il parvient à libérer Han et joue un rôle clé dans
-          la bataille d'Endor, où l'Alliance rebelle affronte l'Empire pour
-          mettre fin à sa tyrannie. Luke est confronté à une décision difficile
-          lorsqu'il est tenté par l'Empereur Palpatine de basculer du côté
-          obscur de la Force. Cependant, il refuse de céder à la tentation et
-          choisit de se sacrifier plutôt que de rejoindre le côté obscur.
-          Finalement, Luke triomphe de Palpatine et aide à restaurer l'équilibre
-          dans la galaxie. Après la trilogie originale, Luke fait une apparition
-          remarquée dans la trilogie de suites de Star Wars. Dans l'épisode VII,
-          "Le Réveil de la Force", il a disparu et est recherché par la
-          Résistance. Il joue un rôle crucial dans la formation de Rey, une
-          jeune aspirante Jedi. Dans l'épisode VIII, "Les Derniers Jedi", Luke
-          est réticent à enseigner à Rey en raison de ses propres échecs passés.
-          Cependant, il finit par lui transmettre ses connaissances et sa
-          sagesse, aidant la Résistance dans sa lutte contre le Premier Ordre.
-          Finalement, dans l'épisode IX, "L'Ascension de Skywalker", Luke
-          apparaît en tant qu'esprit de la Force et inspire Rey à persévérer
-          dans sa quête pour vaincre l'Empereur Palpatine une fois pour toutes.
-          Luke Skywalker est un personnage qui évolue tout au long de la saga
-          Star Wars, passant d'un jeune fermier à un puissant Jedi et à une
-          figure légendaire de l'espoir et du courage. Son parcours personnel et
-          sa détermination à maintenir l'équilibre dans la galaxie en font un
-          personnage aimé et respecté par les fans de Star Wars.
+          Luke Skywalker est un personnage clé de la saga Star Wars, qui évolue
+          tout au long de l'histoire. Dans "Un Nouvel Espoir", il est présenté
+          comme un jeune homme rêveur vivant sur Tatooine. Son destin change
+          lorsqu'il rencontre Obi-Wan Kenobi et se joint à la lutte de
+          l'Alliance rebelle contre l'Empire galactique.
         </p>
+        <br />
+        <p>
+          Au fil des épisodes, Luke découvre qu'il est le fils d'Anakin
+          Skywalker, alias Dark Vador, et qu'il a un lien avec la Force. Il
+          poursuit son entraînement Jedi avec Yoda, maître Jedi légendaire, dans
+          "L'Empire contre-attaque". Il fait face à de nombreux défis et
+          découvre la vérité sur son héritage.
+        </p>
+        <br />
+        <p>
+          Dans "Le Retour du Jedi", Luke joue un rôle crucial dans la bataille
+          d'Endor et confronte l'Empereur Palpatine. Malgré les tentations du
+          côté obscur, il reste fidèle à la voie de la lumière et triomphe du
+          mal.
+        </p>
+        <br />
+        <p>
+          Après la trilogie originale, Luke apparaît dans la trilogie de suites,
+          où il transmet ses connaissances et sa sagesse à Rey, une aspirante
+          Jedi. Il inspire la Résistance dans sa lutte contre le Premier Ordre.
+        </p>
+        <br />
+
+        <p>
+          Luke est un personnage aimé et respecté pour sa détermination à
+          maintenir l'équilibre et à défendre la justice. Son parcours
+          personnel, sa quête de vérité et son rôle de mentor font de lui une
+          figure emblématique de Star Wars.
+        </p>
+        <br />
+        <p>
+          Son personnage montre l'évolution d'un jeune homme ordinaire en un
+          puissant Jedi et une source d'espoir pour la galaxie. Luke Skywalker
+          incarne la lutte contre les forces du mal et inspire les fans de Star
+          Wars par son courage et sa persévérance.
+        </p>
+        <br />
       </div>
     </section>
 
