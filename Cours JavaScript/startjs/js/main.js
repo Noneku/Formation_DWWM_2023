@@ -1,3 +1,7 @@
+import Voiture from "./modules/Voiture.js";
+import Moto from "./modules/Moto.js";
+import Etudiant from "./modules/Etudiant.js"
+
 // Commentaire d'une ligne
 
 /*
@@ -491,23 +495,23 @@ for (var personnage of personnages) {
 /**
  * Avant ES6, les objets se déclaraient avec des fonctions
  **/
- function Voiture(marque, modele, kilometrage, annee) {
-    // mot clé this : symbolise l'instance qui a déclenché l'appel
-    this.marque = marque;
-    this.modele = modele;
-    this.kilometrage = kilometrage;
-    this.annee = annee;
+//  function Voiture(marque, modele, kilometrage, annee) {
+//     // mot clé this : symbolise l'instance qui a déclenché l'appel
+//     this.marque = marque;
+//     this.modele = modele;
+//     this.kilometrage = kilometrage;
+//     this.annee = annee;
 
-    this.display = function() {
-        var result = this.marque + " - " + this.modele + " - " + this.kilometrage + " - " + this.annee;
-        return result;
-    }
-}
+//     this.display = function() {
+//         var result = this.marque + " - " + this.modele + " - " + this.kilometrage + " - " + this.annee;
+//         return result;
+//     }
+// }
 
 // Instancier un objet
-var v1 = new Voiture("Ferrari", "F40", 100000, 1987);
-console.log(v1.marque + " " + v1.modele);
-console.log(v1.display());
+// var v1 = new Voiture("Ferrari", "F40", 100000, 1987);
+// console.log(v1.marque + " " + v1.modele);
+// console.log(v1.display());
 
 /**
  * ES6
@@ -663,3 +667,74 @@ console.log(dev.getName());
 
 let jsDev = new JSDeveloper("Jane", "Foster");
 console.log(jsDev.display());
+
+let voiture = new Voiture("Citroen", "C4", 100000, 2011, true);
+let moto = new Moto("Kawazaki", "Z900", 10000, 2015);
+
+console.log(voiture.display());
+console.log(moto.display());
+
+// Ternaire : ?
+let connected = false;
+if(connected) {
+    console.log("Vous êtes connecté");
+} else {
+    console.log("Vous n'êtes pas connecté");
+}
+
+// Equivalent avec une ternaire
+connected ? console.log("Vous êtes connecté") : console.log("Vous n'êtes pas connecté");
+
+let typeVehicule = "Motos";
+
+const monVehicule = typeVehicule == "Moto" ?
+new Moto("Kawazaki", "Z900", 10000, 2015) :
+typeVehicule =="Voiture" ?
+new Voiture("Citroen", "C4", 100000, 2011, true) :
+null;
+
+// Tips : si l'objet n'existe pas (null) la réponse sera undefined grace au ? car display() est une méthode de vehicule et de ses enfants
+console.log(monVehicule?.display());
+
+// destructuring
+// récupérer des infos d'un objet ou d'un tableau sous forme de variable
+
+const {nom, affiliation} = personnages[0];
+console.log(nom, affiliation);
+
+const [legume1, legume2, legume3] = legumes;
+console.log(legume1, legume2, legume3);
+
+// Spread operator ...
+const notes = [15, 8, 20, 12, 4];
+
+const somme = (v1, v2, v3) => {
+    return v1 + v2 + v3
+}
+
+console.log(somme(...notes));
+
+const [v1, ...reste] = notes;
+
+console.log(v1);
+console.log(reste);
+
+const contact2 = {
+    nom2 : "Johns",
+    prenom2 : "Helen",
+    age2 : 45,
+    profession : "Animatrice",
+    passions : ["tenis", "surf", "tuto beauté"]
+};
+
+const {nom2, prenom2, ...infoContact} = contact2;
+console.log(nom2, prenom2);
+console.log(infoContact);
+
+const etudiant1 = new Etudiant("Alex", "Boucher", "Allemand")
+etudiant1.ajouterNote("français", 10);
+etudiant1.ajouterNote("anglais", 14);
+etudiant1.ajouterNote("math", 12);
+etudiant1.ajouterNote("SVT", 16);
+etudiant1.ajouterNote("Espagnol", 6);
+etudiant1.display();
