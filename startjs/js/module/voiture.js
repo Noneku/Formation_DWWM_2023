@@ -1,4 +1,4 @@
-import Vehicule from "Vehicule.js";
+import Vehicule from "./Vehicule.js";
 
 
 
@@ -8,6 +8,6 @@ export default class Voiture extends Vehicule{
             this.clim = clim;
         }
         display(){
-            return 'Voiture-${super.display()}+${this.clim}';
+            return `Voiture-${super.display()}-${this.clim ? "Oui" : "Non"}`;
         }
 }

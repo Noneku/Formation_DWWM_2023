@@ -58,7 +58,7 @@
   }
   [id^="slide"]:checked + .slide-img {
     left: 0;
-    z-index: 100;
+    z-index: 0;
     transition: left 0.65s ease-out;
   }
   /* Corps Principal */
