@@ -10,8 +10,6 @@
     width: 300px;
     position: relative;
     box-shadow: 0 0 10px rgba(255, 193, 7, 0.8); /* Effet d'ombre */
-    filter: grayscale(100%); /* Noir et blanc */
-    transition: filter 0.3s; /* Ajout de la transition */
   }
 
 .desktop-image::before {
@@ -55,9 +53,6 @@
 .image-wrapper:hover .image-overlay {
   opacity: 1;
 }
-.image-wrapper:hover .desktop-image {
-    filter: grayscale(0%); /* Retour à la couleur normale */
-  }
 /* OPACITY */
 /* IMAGES */
 .image-container {
