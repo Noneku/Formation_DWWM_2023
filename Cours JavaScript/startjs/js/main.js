@@ -1,6 +1,5 @@
 import Voiture from "./modules/Voiture.js";
 import Moto from "./modules/Moto.js";
-import Etudiant from "./modules/Etudiant.js"
 
 // Commentaire d'une ligne
 
@@ -730,11 +729,3 @@ const contact2 = {
 const {nom2, prenom2, ...infoContact} = contact2;
 console.log(nom2, prenom2);
 console.log(infoContact);
-
-const etudiant1 = new Etudiant("Alex", "Boucher", "Allemand")
-etudiant1.ajouterNote("français", 10);
-etudiant1.ajouterNote("anglais", 14);
-etudiant1.ajouterNote("math", 12);
-etudiant1.ajouterNote("SVT", 16);
-etudiant1.ajouterNote("Espagnol", 6);
-etudiant1.display();

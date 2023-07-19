@@ -64,7 +64,8 @@ main hr{
 
 /* Zone affiches épisodes */
 main div{
-    margin: 100px 238px;
+    justify-content: space-between;
+    margin-left: 7%;
 }
 
 /* Affiches épisodes */

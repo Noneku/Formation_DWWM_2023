@@ -1,4 +1,4 @@
-// Classe Personne
+// export default est nécessaire si je veux utiliser ma classe dans un autre fichier
 export default class Personne {
     constructor(prenom, nom) {
         this.prenom = prenom;
@@ -6,6 +6,6 @@ export default class Personne {
     }
 
     display() {
-        return `${this.nom} - ${this.prenom}`;
+        return(`${this.prenom} ${this.nom}`);
     }
 }
