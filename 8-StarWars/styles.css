@@ -217,3 +217,12 @@
     grid-area: 1 / 5 / 2 / 6;
 }
 /* PagePersonnage */
+
+/* RESPONSIVE */
+@media screen and (max-width: 650px) {
+
+    nav .navDesktop {
+        display: none;
+    }
+}
+/* RESPONSIVE */

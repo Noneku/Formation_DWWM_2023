@@ -1,4 +1,19 @@
 <!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -10,7 +25,7 @@
   </head>
   <body>
     <header>
-      <nav class="navDesktop">
+      <nav>
         <section>
           <div>
             <img src="star-wars-logo-1003.png" class="logo" alt="" srcset="" />
@@ -18,35 +33,49 @@
           <ul>
             <li><a href="http://">Home</a></li>
             <li><a href="http://">Episodes</a></li>
-            <li><a href="personnage.html">Personnage</a></li>
+            <li><a href="http://">Personnage</a></li>
             <li class="contentConnexion"><a href="">Connexion</a></li>
           </ul>
         </section>
       </nav>
     </header>
     <main>
-      <div id="video-container">
-        <video autoplay muted style="width: 100%;">
-          <source width="" src="STAR WARS 2 - L'ATTAQUE DES CLONES Bande Annonce VF 2002 HD.mp4" type="video/mp4">
-          Votre navigateur ne supporte pas la balise vidéo.
-        </video>
-        <div id="video-overlay">
-          Bienvenue sur mon site !
-          <div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-          </div>
-        </div>
-      </div>
-      <section class="episodesList" style="width: 100%;">
+      <section class="containerEpisode">
         <div>
-          <a href="episode.html"><img width="300" height="500" src="img/MenacePhantom.jpg" alt=""></a>
+            <img width="400" height="600" src="img/RevengeSith.jpg" alt="">
+        </div>
+        <div class="descriptionEpisode">
+            <h2>Revanche des Sith</h2>
+            <div>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam aliquid ea blanditiis inventore eum debitis maxime laudantium fugiat, deleniti distinctio voluptate ipsa doloribus,
+                     modi quibusdam, nostrum praesentium. Cum, pariatur quo!</p>
+                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam aliquid ea blanditiis inventore eum debitis maxime laudantium fugiat, deleniti distinctio voluptate ipsa doloribus,
+                        modi quibusdam, nostrum praesentium. Cum, pariatur quo!</p>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam aliquid ea blanditiis inventore eum debitis maxime laudantium fugiat, deleniti distinctio voluptate ipsa doloribus,
+                            modi quibusdam, nostrum praesentium. Cum, pariatur quo!</p>
+                            
+            </div>
+        </div>
+      </section>
+      <section class="personnagesListEpisode">
+        <div>
+          <img width="200" height="250" src="personnagesEpisode1/padme.jpg" alt="">
         </div>
         <div>
-          <a href="episode2.html"><img width="300" height="500" src="img/AttackClone.jpg" alt=""></a>
+          <img width="200" height="250" src="personnagesEpisode1/AnakinTcho.jpg" alt="">
         </div>
         <div>
-          <a href="episode3.html"><img width="300" height="500" src="img/RevengeSith.jpg" alt=""></a>
+          <img width="200" height="250" src="personnagesEpisode1/obi wan kenobi phantome.jpg" alt="">
         </div>
+        <div>
+          <img width="200" height="250" src="personnagesEpisode1/sabe.jpg" alt="">
+        </div>
+        <div>
+          <img width="200" height="250" src="personnagesEpisode1/maul.jpg" alt="">
+        </div>
+      </section>
+      <section class="videoEpisode">
+        <iframe width="1189" height="669" src="https://www.youtube.com/embed/G9e3R-vkj_A" title="Star Wars : La Menace fantôme – Episode I - Bande Annonce VF – 1999" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </section>
     </main>
     <footer>
@@ -98,21 +127,11 @@
       </section>
     </footer>
 
-    <script>
-      var videoContainer = document.getElementById("video-container");
-      var videoElement = document.getElementById("video-element");
-  
-      videoElement.addEventListener("click", function() {
-        if (videoElement.requestFullscreen) {
-          videoContainer.requestFullscreen();
-        } else if (videoElement.mozRequestFullScreen) {
-          videoContainer.mozRequestFullScreen();
-        } else if (videoElement.webkitRequestFullscreen) {
-          videoContainer.webkitRequestFullscreen();
-        } else if (videoElement.msRequestFullscreen) {
-          videoContainer.msRequestFullscreen();
-        }
-      });
-    </script>
+    <script src="" async defer></script>
   </body>
+</html>
+
+        
+        <script src="" async defer></script>
+    </body>
 </html>
