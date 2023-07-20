@@ -1,7 +1,9 @@
 /*******************************************************
  *                  Burger Maker
  *******************************************************/
-
+import Personne from './module/Personne.class.js';
+import Etudiant from './module/Etudiant.js';
+import Professeur from './module/Professeur.js';
 var burger = ["Pain", "Cheddar", "Steak Haché (halal ou pas)", "Bacon", "Sauce Burger", "Cornichon", "Salade", "Tomate", "Oignon"];
 
 // 1) rendre le burger Hallal : enlever le bacon
@@ -192,3 +194,47 @@ const age = characters.map(function(character){
     }
 })
 console.log(age);
+
+
+
+let etudiant = new Etudiant("Paul", "LeBouillon", 12.5);
+let professeur = new Professeur("Robert", "LaLouche", ["Français", "Espagnol", "SVT"]);
+
+//Display all class
+
+let etudiant1 = new Etudiant("Nassim", "Gacem");
+let professeur1 = new Professeur("David", "Wils", ["SVT", "Anglais"]);
+
+const nombreAleatoire = Math.floor(Math.random() * 21);
+
+etudiant1.setNotes("français", nombreAleatoire);
+etudiant1.setNotes("anglais", nombreAleatoire);
+etudiant1.setNotes("math", nombreAleatoire);
+etudiant1.setNotes("svt", nombreAleatoire);
+etudiant1.setNotes("espagnol", nombreAleatoire);
+
+let etudiant2 = new Etudiant("Girard", "Fabien");
+
+etudiant2.setNotes("français", nombreAleatoire);
+etudiant2.setNotes("anglais", nombreAleatoire);
+etudiant2.setNotes("math", nombreAleatoire);
+etudiant2.setNotes("svt", nombreAleatoire);
+etudiant2.setNotes("espagnol", nombreAleatoire);
+
+console.log(etudiant1.display());
+console.log(etudiant2.display());
+
+let eleves = [etudiant1, etudiant2];
+const moyennematiere=(eleves,matiere)=>{
+    let moyenne = 0;
+    let lenght=0;
+eleves.map(eleve=>{
+     moyenne+=eleve.notes[matiere];
+     lenght++;
+})
+return moyenne/lenght;
+}
+const matiere=["math", "français", "anglais", "espagnol","SVT"];
+matiere.map(matiere=>{
+    console.log(`Matiere : ${matiere} moyenne : ${moyennematiere(eleves,matiere)}`);
+});
