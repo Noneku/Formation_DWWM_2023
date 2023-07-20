@@ -1,7 +1,8 @@
-export default class Etudiant {
+import Personne from "./Personne.js";
+
+export default class Etudiant extends Personne {
   constructor(nom, prenom, specialite) {
-    this.nom = nom;
-    this.prenom = prenom;
+    super(nom , prenom);
     this.specialite = specialite;
     this.notes = {};
   }
