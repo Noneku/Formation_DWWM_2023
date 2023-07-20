@@ -214,3 +214,20 @@ googleLink.addEventListener("click", e => {
 })
 
 // Evènement submit
+const form = document.querySelector("form");
+const inputs = document.getElementsByTagName("input");
+const [inputNom, inputPrenom, submitBtn] = inputs;
+const ul = document.querySelector("ul");
+
+console.log(inputs);
+console.log(form, inputNom, inputPrenom, submitBtn);
+
+form.addEventListener("submit", e => {
+  e.preventDefault();
+  console.log(inputNom.value + " " + inputPrenom.value);
+  const li = document.createElement("li");
+  li.textContent = inputNom.value + " " + inputPrenom.value;
+  ul.appendChild(li);
+  inputNom.value = "";
+  inputPrenom.value = "";
+})
