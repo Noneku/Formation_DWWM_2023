@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(../IMG/background_star\ wars.jpg);
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/*Nav*/
+.navbar-brand {
+    font-size: 25px;
+}
+
+#navbarCollapse a {
+    font-size: 15px;
+    font-family: 'Star Wars', sans-serif;
+    color: yellow;
+}
+
+.col{
+    color:yellow
+}
+
+h1 {
+    text-align: center;
+}
+
+#characterGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.characterCard {
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgb(245, 244, 244);
+}
+
+.characterImage {
+    max-width: 100px;
+    max-height: 100px;
+    margin-bottom: 10px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Ajoutez la marge en haut pour créer l'espace entre la navbar et la barre de recherche */
+#searchInput {
+    margin-top: 200px;
+}
+
+.centeredText {
+    font-size: 24px; 
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* La hauteur de l'élément pour centrer verticalement */
+  }
+

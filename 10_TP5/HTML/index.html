@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +9,8 @@
     <title>Star Wars</title>
     <!-- CSS de Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../CSS/style.css">
 
@@ -42,6 +43,9 @@
                     </li> 
                     <li class="nav-item mr-1">
                         <a href="./episode3.html" class="nav-link">episode iii</a>
+                    </li>
+                    <li class="nav-item mr-1">
+                        <a href="./recherche.html" class="nav-link">rechercher</a>
                     </li>
                     <li class="nav-item mr-1">
                         <a href="./connexion.html" class="nav-link">inscription/connexion</a>
@@ -94,7 +98,7 @@
   </section>
     
     <!-- Section icones -->
-    
+<!--     
     <section id="home-icons">
         
         <div class="container">
@@ -123,9 +127,44 @@
                  
         </div>
     
+    </section> -->
+    <section id="home-carousel">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+    
+            <!-- Slides -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../IMG/episode1.jpg" class="affiche" alt="Episode i">
+                    
+        
+                   
+                </div>
+                <div class="carousel-item">
+                    <img src="../IMG/episode2.0.jpg" class="affiche" alt="Episode ii">
+                   
+                </div>
+                <div class="carousel-item">
+                    <img src="../IMG/star-wars-episode-iii_-revenge-of-the-sith.jpg" class="affiche" alt="Episode iii">
+                   
+                </div>
+            </div>
+    
+            <!-- Left and right controls -->
+            <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
     </section>
     
-
     <!-- Appel a l'action -->
     <section id="start" class="py-5">
         
