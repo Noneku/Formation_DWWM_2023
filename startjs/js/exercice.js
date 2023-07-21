@@ -1,10 +1,24 @@
 /*******************************************************
  *                  Burger Maker
  *******************************************************/
+<<<<<<< HEAD
 import Etudiant from "./module/Etudiant.js";
 import Professeur from "./module/Professseur.js";
 
 // var burger = ["Pain", "Cheddar", "Steak Haché (halal ou pas)", "Bacon", "Sauce Burger", "Cornichon", "Salade", "Tomate", "Oignon"];
+=======
+import Personne from './module/Personne.class.js';
+import Etudiant from './module/Etudiant.js';
+import Professeur from './module/Professeur.js';
+var burger = ["Pain", "Cheddar", "Steak Haché (halal ou pas)", "Bacon", "Sauce Burger", "Cornichon", "Salade", "Tomate", "Oignon"];
+
+// 1) rendre le burger Hallal : enlever le bacon
+// 2) rendre le burger végétarien : enlever le steak puis remplacer par une rondelle de champignon
+// 3) Les oignons font pleurer, enlevez les !
+// 4) rendre le burger vegan : enlever le fromage
+// 5) personnalisez un peu
+// chaque étapes doivent etre accompagner d'un console.log() décrivant l'action effectué puis un console.table() pour la nouvelle compsoition
+>>>>>>> 1472f091f8c5435bcf11b400866325bfc399a5d5
 
 // // 1) rendre le burger Hallal : enlever le bacon
 // // 2) rendre le burger végétarien : enlever le steak puis remplacer par une rondelle de champignon
@@ -189,6 +203,7 @@ import Professeur from "./module/Professseur.js";
     
 //     if (character.infos.deces==null){
 
+<<<<<<< HEAD
 //     return "encore en vie"; 
 // }else{
 //         return character.infos.deces-character.infos.naissance;
@@ -229,3 +244,55 @@ Paul.display();
 Vanessa.display();
 console.log(Robert.display());
 console.log(Nicolas.display());
+=======
+    return "encore en vie"; 
+}else{
+        return character.infos.deces-character.infos.naissance;
+    }
+})
+console.log(age);
+
+
+
+let etudiant = new Etudiant("Paul", "LeBouillon", 12.5);
+let professeur = new Professeur("Robert", "LaLouche", ["Français", "Espagnol", "SVT"]);
+
+//Display all class
+
+let etudiant1 = new Etudiant("Nassim", "Gacem");
+let professeur1 = new Professeur("David", "Wils", ["SVT", "Anglais"]);
+
+const nombreAleatoire = Math.floor(Math.random() * 21);
+
+etudiant1.setNotes("français", nombreAleatoire);
+etudiant1.setNotes("anglais", nombreAleatoire);
+etudiant1.setNotes("math", nombreAleatoire);
+etudiant1.setNotes("svt", nombreAleatoire);
+etudiant1.setNotes("espagnol", nombreAleatoire);
+
+let etudiant2 = new Etudiant("Girard", "Fabien");
+
+etudiant2.setNotes("français", nombreAleatoire);
+etudiant2.setNotes("anglais", nombreAleatoire);
+etudiant2.setNotes("math", nombreAleatoire);
+etudiant2.setNotes("svt", nombreAleatoire);
+etudiant2.setNotes("espagnol", nombreAleatoire);
+
+console.log(etudiant1.display());
+console.log(etudiant2.display());
+
+let eleves = [etudiant1, etudiant2];
+const moyennematiere=(eleves,matiere)=>{
+    let moyenne = 0;
+    let lenght=0;
+eleves.map(eleve=>{
+     moyenne+=eleve.notes[matiere];
+     lenght++;
+})
+return moyenne/lenght;
+}
+const matiere=["math", "français", "anglais", "espagnol","SVT"];
+matiere.map(matiere=>{
+    console.log(`Matiere : ${matiere} moyenne : ${moyennematiere(eleves,matiere)}`);
+});
+>>>>>>> 1472f091f8c5435bcf11b400866325bfc399a5d5

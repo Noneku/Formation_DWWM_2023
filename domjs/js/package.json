@@ -1,16 +1,12 @@
 {
-  "name": "startjs",
+  "name": "js",
   "version": "1.0.0",
-<<<<<<< HEAD
+  "description": "",
   "main": "main.js",
-=======
-  "main": "index.js",
->>>>>>> 1472f091f8c5435bcf11b400866325bfc399a5d5
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
-  "type": "module",
-  "description": ""
+  "type": "module"
 }
