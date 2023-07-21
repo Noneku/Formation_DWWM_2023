@@ -26,7 +26,7 @@ for (let i = 0; i < characters.length; i++) {
     });
     
     function filterElements(personnages,searchletter) {
-    
+        
         if(searchletter.length>0){
             for(let i=0;i<personnages.length;i++){
                 if(personnages[i].textContent.toLowerCase().includes(searchletter)){
@@ -36,5 +36,10 @@ for (let i = 0; i < characters.length; i++) {
                 }
             }
         }
+        if (searchletter.length==0){
+            for(let i=0;i<personnages.length;i++){
+                personnages[i].style.display='block';
+        }
     }
+}
 
