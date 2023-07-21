@@ -1,0 +1,25 @@
+.color-red{
+    color : red;
+
+}
+
+.text-uppercase{
+    text-transform: uppercase;
+}
+
+#container-form{
+    display: flex; /*raccourcie DF*/
+    justify-content: center;/*raccourcie JCC*/
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    margin: 300px;
+    align-items: center;
+    flex-direction: column;
+    padding : 20px;
+    border : 2px solid black;
+    width: 400px;
+    height: 400px;
+}
