@@ -1,0 +1,134 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --couleurPrincipale: chocolate;
+  --couleurTexte: rgb(126, 126, 126);
+  --headerBg: rgba(0, 0, 0, 0.868);
+
+  /* chocolatyye; */
+  /* rgb(126, 126, 126); */
+}
+@font-face {
+  font-family: Font;
+  src: url(../Starjedi.ttf);
+}
+
+body {
+  background-image: url(../img/bg.jpg);
+}
+
+header {
+  font-family: Font;
+  max-height: 130px;
+  background-color: var(--headerBg);
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  border-bottom: 1px solid var(--couleurPrincipale);
+  border-radius: 0 0 40px 40px;
+}
+
+header nav {
+  display: flex;
+}
+
+header a,
+footer a {
+  opacity: 0.65;
+  font-family: Font;
+  text-decoration: none;
+  font-size: 30px;
+  color: var(--couleurTexte);
+  padding: 10px;
+  border-radius: 20px;
+}
+
+header button {
+  font-family: Font;
+  opacity: 0.65;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+  color: var(--couleurPrincipale);
+  transition: 0.5s;
+}
+.connexion {
+  transition: 0.5s;
+}
+.connexion:hover {
+  color: var(--couleurPrincipale);
+  transition: 0.5s;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.9);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 20px;
+}
+
+.dropdown-content a {
+  transition: 0.2s;
+  float: none;
+  /* color: black; */
+  padding: 12px 16px;
+  /* text-decoration: none; */
+  display: block;
+  text-align: center;
+  color: var(--couleurTexte);
+}
+
+.dropdown-content a:hover {
+  background-color: transparent;
+  color: var(--couleurPrincipale);
+  transform: scale(1.025);
+  transition: 0.5s;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown .dropbtn,
+header button {
+  transition: 0.5s;
+  font-size: 30px;
+  border: none;
+  outline: none;
+  color: var(--couleurTexte);
+  padding: 10px;
+  background-color: transparent;
+}
+
+footer {
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  height: auto;
+  width: 100%;
+  background: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border-top: 1px solid var(--couleurPrincipale);
+  border-radius: 20px 20px 0 0;
+}
+
+footer a {
+  font-size: 22px;
+}

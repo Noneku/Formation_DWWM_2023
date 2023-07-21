@@ -2,6 +2,15 @@
   padding: 0;
   margin: 0;
 }
+
+:root {
+  --couleurPrincipale: chocolate;
+  --couleurTexte: rgb(126, 126, 126);
+  --headerBg: rgba(0, 0, 0, 0.868);
+
+  /* chocolatyye; */
+  /* rgb(126, 126, 126); */
+}
 @font-face {
   font-family: Font;
   src: url(../Starjedi.ttf);
@@ -14,7 +23,7 @@ body {
 header {
   font-family: Font;
   max-height: 130px;
-  background-color: rgb(0, 0, 0);
+  background-color: var(--headerBg);
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -22,7 +31,7 @@ header {
   position: fixed;
   top: 0;
   z-index: 1;
-  border-bottom: 1px solid chocolate;
+  border-bottom: 1px solid var(--couleurPrincipale);
   border-radius: 0 0 40px 40px;
 }
 
@@ -35,7 +44,7 @@ header a {
   font-family: Font;
   text-decoration: none;
   font-size: 30px;
-  color: rgb(126, 126, 126);
+  color: var(--couleurTexte);
   padding: 10px;
   border-radius: 20px;
 }
@@ -52,11 +61,16 @@ header button {
 
 .navbar a:hover,
 .dropdown:hover .dropbtn {
-  color: chocolate;
+  color: var(--couleurPrincipale);
   transition: 0.5s;
-
 }
-
+.connexion {
+  transition: 0.5s;
+}
+.connexion:hover {
+  color: var(--couleurPrincipale);
+  transition: 0.5s;
+}
 .dropdown-content {
   display: none;
   position: absolute;
@@ -69,19 +83,18 @@ header button {
 
 .dropdown-content a {
   transition: 0.2s;
-
   float: none;
   /* color: black; */
   padding: 12px 16px;
   /* text-decoration: none; */
   display: block;
-  text-align: left;
-  color: rgb(126, 126, 126);
+  text-align: center;
+  color: var(--couleurTexte);
 }
 
 .dropdown-content a:hover {
   background-color: transparent;
-  color: chocolate;
+  color: var(--couleurPrincipale);
   transform: scale(1.025);
   transition: 0.5s;
 }
@@ -92,10 +105,11 @@ header button {
 
 .dropdown .dropbtn,
 header button {
+  transition: 0.5s;
   font-size: 30px;
   border: none;
   outline: none;
-  color: rgb(126, 126, 126);
+  color: var(--couleurTexte);
   padding: 10px;
   background-color: transparent;
 }

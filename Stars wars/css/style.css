@@ -48,7 +48,7 @@ img {
   animation: Gazo 2s ease 0s infinite normal forwards;
   opacity: 1;
   border-radius: 50px;
-  background: #d2691e;
+  background: var(--couleurPrincipale);
   box-shadow: 11px 11px 22px #b3591a, -11px -11px 22px #f27923;
   transform: scale(1.05);
 }
@@ -58,7 +58,8 @@ img {
 }
 
 a:hover {
-  color: rgb(210, 105, 30);
+  transition: 0.5s;
+  color: var(--couleurPrincipale);
 }
 
 .breadcrumb {
@@ -69,116 +70,47 @@ a:hover {
   padding: 10px;
   font-size: 18px;
   text-align: center;
-  color: #555;
+  color: var(--couleurPrincipale);
   z-index: 1;
 }
 
 .breadcrumb a {
   text-decoration: none;
-  color: #555;
+  color: var(--couleurPrincipale);
 }
 
-.breadcrumb a:hover {
-  color: #d2691e;
+.breadcrumb a:hover,
+.connexion a:hover {
+  color: var(--couleurPrincipale);
 }
 
 hr {
   width: 80%;
   margin: auto;
   height: 3px;
-  border-color: chocolate;
-  background-color: chocolate;
-  color: chocolate;
+  border-color: transparent;
+  background-color: var(--couleurPrincipale);
+  color: var(--couleurPrincipale);
   border-radius: 50%;
-  opacity: 0.65;
+  opacity: 0.4;
   margin-bottom: 30px;
+  animation: hrAnim 6s ease 0s infinite normal forwards;
+  /* animation: rainbow-bg 5s linear; */
+  animation-iteration-count: infinite;
 }
 
-@keyframes anim1 {
-  0% {
-    box-shadow: 5px 0px 5px rgba(255, 128, 128, 0.5);
-  }
-  12.5% {
-    box-shadow: 5px 5px 5px rgba(255, 165, 128, 0.5);
-  }
-  25% {
-    box-shadow: 0px 5px 5px rgba(255, 255, 128, 0.5);
-  }
-  37.5% {
-    box-shadow: -5px 5px 5px rgba(128, 255, 128, 0.5);
-  }
-  50% {
-    box-shadow: -5px 0px 5px rgba(128, 255, 255, 0.5);
-  }
-  62.5% {
-    box-shadow: -5px -5px 5px rgba(128, 128, 255, 0.5);
-  }
-  75% {
-    box-shadow: 0px -5px 5px rgba(210, 128, 255, 0.5);
-  }
-  87.5% {
-    box-shadow: 5px -5px 5px rgba(255, 128, 192, 0.5);
-  }
-  100% {
-    box-shadow: 5px 0px 5px rgba(255, 128, 192, 0.5);
-  }
-}
-@keyframes Gazo {
-  0% {
-    transform: translate(0);
-  }
-
-  10% {
-    transform: translate(-2px, -2px);
-  }
-
-  20% {
-    transform: translate(2px, -2px);
-  }
-
-  30% {
-    transform: translate(-2px, 2px);
-  }
-
-  40% {
-    transform: translate(2px, 2px);
-  }
-
-  50% {
-    transform: translate(-2px, -2px);
-  }
-
-  60% {
-    transform: translate(2px, -2px);
-  }
-
-  70% {
-    transform: translate(-2px, 2px);
-  }
-
-  80% {
-    transform: translate(-2px, -2px);
-  }
-
-  90% {
-    transform: translate(2px, -2px);
-  }
-
-  100% {
-    transform: translate(0);
-  }
+.navbar {
+  overflow: hidden;
+  background-color: #333;
 }
 
-@keyframes Gazo2 {
-  0% {
-    opacity: 0;
-    transform: translateY(-250px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
 @media only screen and (max-width: 395px) {
@@ -189,12 +121,11 @@ hr {
   header {
     height: 100px;
     width: auto;
-
   }
-.logo {
-  margin-left: 40px;
-  /* margin-top: 10px; */
-}
+  .logo {
+    margin-left: 40px;
+    /* margin-top: 10px; */
+  }
   .img1 img {
     /* display: none; */
     height: 80%;
@@ -212,23 +143,8 @@ hr {
     flex-direction: column;
     justify-content: center;
   }
-.content {
-  padding-top: 60px;
-  margin-top: 50px;
-}
-
-}
-
-.navbar {
-  overflow: hidden;
-  background-color: #333;
-}
-
-.navbar a {
-  float: left;
-  font-size: 16px;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+  .content {
+    padding-top: 60px;
+    margin-top: 50px;
+  }
 }

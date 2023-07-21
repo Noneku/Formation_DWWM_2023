@@ -1,0 +1,117 @@
+body {
+  margin-top: 230px;
+}
+a:hover {
+  color: var(--couleurPrincipale);
+
+}
+.posterEpisode img {
+  border-radius: 15px;
+}
+section {
+  /* background-color: chocolate; */
+  /* opacity: 0.65; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /* margin-top: 50px; */
+  height: 900px;
+}
+.posterEpisode {
+  opacity: 0.65;
+  margin-right: 100px;
+  transition: 0.4s;
+  border-radius: 10px;
+}
+.posterEpisode:hover {
+  opacity: 1;
+  transition: 0.4s;
+}
+.resume {
+  opacity: 0.65;
+  /* opacity: 0.25; */
+  margin-left: 100px;
+  margin-top: 0px;
+  /* font-family: "Caprasimo", cursive; */
+  color: rgba(255, 255, 255, 1);
+  width: 500px;
+  height: 900px;
+  /* background-color: rgb(187, 187, 187); */
+  /* overflow: scroll; */
+  font-size: 25px;
+  max-width: 500px;
+  max-height: 900px;
+  text-align: center;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transition: 0.2s;
+  /* border-radius: 50px; */
+}
+
+.resume:hover {
+  font-size: 23px;
+  width: 1000px;
+  max-width: 1000px;
+  overflow: visible;
+  transition: 0.2s;
+  /* background-color: rgba(210, 105, 30, 0.5); */
+  border-radius: 20px;
+  margin-right: 10%;
+  margin-left: 0px;
+}
+
+.perso {
+  /* height: 900px; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.perso img {
+  opacity: 0.65;
+  margin-left: 100px;
+  margin-right: 100px;
+  border-radius: 50px;
+  transition: 0.8s;
+}
+
+.perso img:hover {
+  animation: Gazo 6s ease 0s infinite normal forwards;
+  opacity: 1;
+  border-radius: 50px;
+  background: var(--couleurPrincipale);
+  box-shadow: 11px 11px 22px #b3591a, -11px -11px 22px #f27923;
+  transform: scale(1.05);
+  transition: 0.8s;
+}
+.breadcrumb {
+  position: fixed;
+  top: 130px; /* Ajustez cette valeur en fonction de la hauteur de votre en-tête */
+  left: 0;
+  width: 20%;
+  margin: auto 11%;
+  /* background-color: #6b6060; */
+  padding: 10px;
+  font-size: 18px;
+  text-align: center;
+  color: var(--couleurTexte);
+  z-index: 1;
+  /* margin-top: 100px; */
+  /* background-color: rgb(0, 0, 0); */
+}
+
+.breadcrumb a {
+  text-decoration: none;
+  color: var(--couleurTexte);
+}
+
+.breadcrumb a:hover {
+  color: var(--couleurPrincipale);
+}
+
+.video {
+  margin-top: 35px;
+  text-align: center;
+}
+

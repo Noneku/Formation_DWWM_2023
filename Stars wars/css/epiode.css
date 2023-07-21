@@ -2,7 +2,8 @@ body {
   margin-top: 230px;
 }
 a:hover {
-  color: #d2691e;
+  color: var(--couleurPrincipale);
+
 }
 .posterEpisode img {
   border-radius: 50px;
@@ -56,7 +57,6 @@ section {
   border-radius: 20px;
   margin-right: 10%;
   margin-left: 0px;
-
 }
 
 .perso {
@@ -79,7 +79,7 @@ section {
   animation: Gazo 6s ease 0s infinite normal forwards;
   opacity: 1;
   border-radius: 50px;
-  background: #d2691e;
+  background: var(--couleurPrincipale);
   box-shadow: 11px 11px 22px #b3591a, -11px -11px 22px #f27923;
   transform: scale(1.05);
   transition: 0.8s;
@@ -94,7 +94,7 @@ section {
   padding: 10px;
   font-size: 18px;
   text-align: center;
-  color: #555;
+  color: var(--couleurTexte);
   z-index: 1;
   /* margin-top: 100px; */
   /* background-color: rgb(0, 0, 0); */
@@ -102,61 +102,15 @@ section {
 
 .breadcrumb a {
   text-decoration: none;
-  color: #555;
+  color: var(--couleurTexte);
 }
 
 .breadcrumb a:hover {
-  color: #d2691e;
+  color: var(--couleurPrincipale);
 }
 
 .video {
   margin-top: 35px;
   text-align: center;
 }
-@keyframes Gazo {
-  0% {
-    transform: translate(0);
-  }
-
-  10% {
-    transform: translate(-2px, -2px);
-  }
-
-  20% {
-    transform: translate(2px, -2px);
-  }
-
-  30% {
-    transform: translate(-2px, 2px);
-  }
-
-  40% {
-    transform: translate(2px, 2px);
-  }
-
-  50% {
-    transform: translate(-2px, -2px);
-  }
-
-  60% {
-    transform: translate(2px, -2px);
-  }
-
-  70% {
-    transform: translate(-2px, 2px);
-  }
-
-  80% {
-    transform: translate(-2px, -2px);
-  }
-
-  90% {
-    transform: translate(2px, -2px);
-  }
-
-  100% {
-    transform: translate(0);
-  }
-}
-
 

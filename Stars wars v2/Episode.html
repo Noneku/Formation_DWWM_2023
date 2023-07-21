@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/animation.css" />
+    <link rel="stylesheet" href="./css/perso.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Connexion</title>
+  </head>
+  <body>
+    <header>
+      <a href="index.html">
+        <img src="../img/logo.png" class="logo" id="logo" alt="" height="100" />
+      </a>
+      <nav>
+        <div class="dropdown">
+          <button class="dropbtn">
+            Personnage
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="/perso/Anakin.html">anakin Skywalker</a>
+            <a href="/perso/Luke.html">luke Skywalker</a>
+            <a href="/perso/Obiwan.html">obi-Wan Kenobi</a>
+            <a href="/perso/Chewbacca.html">chewbacca</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">
+            Episode
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="../Episode1.html">Episode 1</a>
+            <a href="../Episode2.html">Episode 2</a>
+            <a href="../Episode3.html">Episode 3</a>
+          </div>
+        </div>
+        <!-- <a href="../Inscription.html" class="connexion">inscription</a> -->
+        <a href="../Connexion.html" class="connexion">Connexion</a>
+      </nav>
+    </header>
+    <div class="breadcrumb">
+      <a href="index.html">Accueil</a>
+    </div>
+
+    <input type="text" onkeyup="Display()" name="search" id="search">
+
+    <div class="divE" id="divE">
+
+    </div>
+
+    
+
+    <script src="js/Ici.js"></script>
+    <script src="js/data.js"></script>
+  </body>
+</html>

@@ -1,0 +1,98 @@
+a:hover {
+  color: #d2691e;
+}
+
+.Connexion {
+  display: block;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 10%;
+}
+body {
+  margin-top: 180px;
+}
+.breadcrumb {
+  position: fixed;
+  top: 130px; /* Ajustez cette valeur en fonction de la hauteur de votre en-tête */
+  left: 0;
+  width: 20%;
+  margin: auto 11%;
+  /* background-color: #6b6060; */
+  padding: 10px;
+  font-size: 18px;
+  text-align: center;
+  color: #555;
+  z-index: 1;
+  /* margin-top: 100px; */
+  /* background-color: rgb(0, 0, 0); */
+}
+
+.breadcrumb a {
+  text-decoration: none;
+  color: #555;
+}
+
+.breadcrumb a:hover {
+  color: #d2691e;
+}
+.connexion2 ::placeholder {
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
+.connexion2 {
+  width: 40%;
+  /* height: 300px; */
+  padding: 30px 10px;
+  margin: auto;
+  background-color: rgba(210, 105, 30, 0.25);
+  border-radius: 20px;
+}
+.connexion2 input {
+  border-style: solid;
+  background-color: rgba(255, 255, 255, 0.585);
+  border-color: rgb(0, 0, 0);
+  color: chocolate;
+  border-width: 1px;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  width: 80%;
+  margin-top: 30px;
+  border-radius: 10px;
+  font-size: 15px;
+  transition: 0.5s;
+  font-size: 25px;
+}
+.connexion2 input:hover {
+  transform: scale(1.05);
+  transition: 0.5s;
+}
+.connexion2::placeholder:hover {
+  color: chocolate;
+}
+.BtnValider {
+  border-color: rgb(0, 0, 0);
+  border-width: 1px;
+  background-color: rgba(255, 255, 255, 0.5);
+  justify-content: center;
+  text-decoration: none;
+  border-style: solid;
+  color: rgb(0, 0, 0);
+  width: 250px;
+  height: 50px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 30px;
+  transition: 0.5s;
+  font-size: 17px;
+}
+
+.BtnValider:hover {
+  background-color: #d2691e;
+  transform: scale(1.05);
+  transition: 0.5s;
+}
