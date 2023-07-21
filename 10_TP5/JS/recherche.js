@@ -41,7 +41,7 @@ const characters = [
 
 console.log(characters);
 
-
+// Function filter 
 function filterCharacters(searchText) {
     return characters.filter(character =>
         character.name.toLowerCase().includes(searchText.toLowerCase())

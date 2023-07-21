@@ -57,7 +57,7 @@ h1 {
     padding: 20px;
 }
 
-/* Ajouter la marge en haut pour créer l'espace entre la navbar et la barre de recherche */
+/* Ajoutez la marge en haut pour créer l'espace entre la navbar et la barre de recherche */
 #searchInput {
     margin-top: 200px;
 }
