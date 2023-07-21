@@ -146,13 +146,14 @@
     <main>
         <section class="mt-5 d-flex justify-content-around">
             <h4>Listes des Personnages</h4>
-            <form class="formSearch d-flex input-group w-auto">
+            <form id="formSearch" class="d-flex input-group w-auto">
                 <input
-                  type="search"
+                  type="keyup"
                   class="form-control rounded"
                   placeholder="Search"
                   aria-label="Search"
                   aria-describedby="search-addon"
+                  id="searchValue"
                 />
                 <span class="input-group-text border-0" id="search-addon">
                   <i class="fas fa-search"></i>
@@ -160,6 +161,9 @@
               </form>
             </section>
             <section class=" mt-5 blockListPersonnages d-flex justify-content-between flex-wrap">
+              
+            </section>
+            <section class=" mt-5 blockListPersonnagesFilter d-flex justify-content-between flex-wrap">
               
             </section>
     </main>
