@@ -41,14 +41,14 @@ const characters = [
 
 console.log(characters);
 
-// Function to filter characters based on the search input
+
 function filterCharacters(searchText) {
     return characters.filter(character =>
         character.name.toLowerCase().includes(searchText.toLowerCase())
     );
 }
 
-// Function to display characters on the page
+// Function display 
 function displayCharacters(characters) {
     const characterGrid = document.getElementById('characterGrid');
     const noResultsMessage = document.getElementById('noResultsMessage');
@@ -77,7 +77,7 @@ function displayCharacters(characters) {
     }
 }
 
-// Function to handle the search input
+// Function handle 
 function handleSearchInput() {
     const searchInput = document.getElementById('searchInput');
     const searchText = searchInput.value;
@@ -85,9 +85,9 @@ function handleSearchInput() {
     displayCharacters(filteredCharacters);
 }
 
-// Initial display of all characters
+// Initial display 
 displayCharacters(characters);
 
-// Event listener for search input
+// Event listener 
 const searchInput = document.getElementById('searchInput');
 searchInput.addEventListener('input', handleSearchInput);
