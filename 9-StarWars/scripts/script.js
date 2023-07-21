@@ -4,7 +4,7 @@
     const buttonDisconnect = document.querySelector('.buttonConnexion');
     const infoUser = document.createElement('p');
 
-    console.log(buttonDisconnect);
+    // console.log(buttonDisconnect);
 
     formRegister.addEventListener("submit", function(event){
         event.preventDefault();
