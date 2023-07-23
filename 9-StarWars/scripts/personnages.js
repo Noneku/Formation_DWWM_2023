@@ -4,7 +4,6 @@ const listPersonnages = document.querySelector('.blockListPersonnages');
 const listPersonnagesFilter = document.querySelector('.blockListPersonnagesFilter');
 const formSearch = document.querySelector('#formSearch');
 
-console.log();
 
 //Display all elements (Personnages)
 for (let i = 0; i < characters.length; i++) {
@@ -21,35 +20,45 @@ for (let i = 0; i < characters.length; i++) {
     listPersonnages.appendChild(cardPersonnageHTML);
 };
 
-//Filter Elements
-formSearch.addEventListener("keyup", function(event){
-    event.preventDefault();
-    
-    listPersonnages.classList.add("d-none");
-    
-    listPersonnagesFilter.classList.add("d-flex");
-    listPersonnagesFilter.classList.remove("d-none");
-    
-    if(formSearch.searchValue.value.length > 0){
-        let valueSearch = event.target.value;
-        let newArrayFilter = characters.filter(character => character.name.includes(valueSearch)); 
+//Search Bar Filter Personnages
+    formSearch.addEventListener("keyup", function(event){
+        event.preventDefault();
         
-        getArrayFilter(newArrayFilter);
+        //Disappearance of principal block characters
+        listPersonnages.classList.add("d-none");
         
-    }else {
-        listPersonnages.classList.remove("d-none");
+        //Display block Filter characters
+        listPersonnagesFilter.classList.add("d-flex");
+        listPersonnagesFilter.classList.remove("d-none");
         
-        listPersonnagesFilter.classList.add("d-none");
-        listPersonnagesFilter.classList.remove("d-flex");
-    };
-    // console.log(newArrayFilter.length);
-});
+        if(formSearch.searchValue.value.length > 0){
+            let valueSearch = event.target.value;
+            let newArrayFilter = characters.filter(character => character.name.includes(valueSearch)); 
+            
+            // To erase the old characters of blockListePersonnagesFilter for display new characters 
+        while (listPersonnagesFilter.firstChild) {
+            listPersonnagesFilter.removeChild(listPersonnagesFilter.firstChild);
+        }
+            //Display new characters 
+            getArrayFilter(newArrayFilter);
+
+    
+        }else {
+            //Display Basic block Characters
+            listPersonnages.classList.remove("d-none");
+            //To erase blockPersonnagesFilter
+            listPersonnagesFilter.classList.add("d-none");
+            listPersonnagesFilter.classList.remove("d-flex");
+        };
+        // console.log(newArrayFilter.length);
+    });
 
 function getArrayFilter(arrayFilter){ 
     for (let i = 0; i < arrayFilter.length; i++) {
-        
-            const cardPersonnageHTML = document.createElement('div');
-            cardPersonnageHTML.innerHTML = `<div class="card" style="width: 18rem;">
+
+        const cardPersonnageHTML = document.createElement('div');
+            
+            cardPersonnageHTML.innerHTML = `<div class="card ${i}" style="width: 18rem;">
             <img src="Star-Wars-Search/images/${arrayFilter[i].imageLink}" class="card-img-top" alt="...">
             <div class="card-body">
             <h5 class="card-title">${arrayFilter[i].name}</h5>
@@ -58,12 +67,7 @@ function getArrayFilter(arrayFilter){
             </div>
             </div>`;
             
-            listPersonnagesFilter.appendChild(cardPersonnageHTML);
-            while(listPersonnagesFilter.firstChild){
-                listPersonnagesFilter.removeChild(listPersonnagesFilter.firstChild);
-            }
+                listPersonnagesFilter.appendChild(cardPersonnageHTML);
+            
         }
-       
-
-
 }
