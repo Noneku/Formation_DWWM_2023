@@ -1,0 +1,119 @@
+@font-face {
+  font-family: 'STAR'; /* Choose a name for your custom font */
+  src: url('/font/SfDistantGalaxyAlternate-OE4d.ttf') format('truetype'); /* Replace the path with the correct path to your font file */
+  /* Add more src declarations for other font formats (e.g., woff, woff2) for better cross-browser support */
+}
+
+
+body {
+ margin: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100vh;
+  
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}
+
+.grid-item {
+  text-align: center;
+}
+
+
+.search-form {
+  display: flex;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.search-input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+
+}
+
+.search-button {
+  padding: 8px 12px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+
+img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  margin-bottom: 10px;
+}
+
+p {
+  font-weight: bold;
+}
+
+
+h1 {
+  font-family: 'STAR', Arial, sans-serif; /* Apply the custom font to the <h1> element */
+  font-size: 6rem;
+  margin: 30vh auto 0;
+  z-index: 2;
+  color: white;;
+}
+
+
+h1 {
+  font-size: 6rem;
+  margin-top: 30vh;
+  
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+#btnVideo {
+  font-size: 1.5rem;
+  background: 0;
+  border: 0;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  position: relative;
+  z-index: 1; /* Add z-index to move the grid items above the video */
+}
+
+body {
+  background-color: black;
+}
+
+/* Remove the previous video CSS rules and replace them with the following */
+video {
+  position: fixed; /* Set the video to cover the entire viewport */
+  top: 0;
+  left: 0;
+  width: 100vw; /* Use viewport width */
+  height: 100vh; /* Use viewport height */
+  object-fit: cover;
+  z-index: -1;
+}
+
+.content {
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
