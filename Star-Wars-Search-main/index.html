@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Grille d'images de personnages</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" rel="stylesheet"/>
+
+</head>
+<body>
+  <h1> Star Wars </h1>
+
+  <form class="search-form">
+    <input type="text" id="search-input" class="search-input" placeholder="Rechercher un personnage...">
+    <button type="button" class="search-button">
+        <i class="fas fa-search"></i>
+    </button>
+</form>
+
+  <div class="grid-container">
+    <div class="grid-item">
+      <!-- Add your image here -->
+    </div>
+  </div>
+
+  <!-- The video tag with updated attributes -->
+  <video autoplay="true" loop="true" muted="true" id="background-video">
+    <source src="/Video/Star-Wars-Space-Battle-Video-Background.mp4" type="video/mp4">
+  </video>
+
+  <div class="content">
+    <!-- Your content here -->
+  </div>
+
+  <!-- Include your JavaScript files here -->
+  <script src="/data.js"></script>
+  <script src="/app.js"></script>
+  <script src="/video.js"></script>
+</body>
+</html>
