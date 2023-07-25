@@ -1,11 +1,18 @@
 import React from 'react'
 
-const Voiture = props => {
+const Voiture = ({marque, couleur, annee}) => {
+// const {marque, couleur, annee} = props;
   return (
     <div className='voiture'>
-        marque : {props.marque}
-        couleur : {props.couleur}
-        annee : {props.annee}
+        <p>
+          marque : {marque}
+        </p>
+        <p>
+          couleur : {couleur}
+        </p>
+        <p>
+          annee : {annee}
+        </p>
     </div>
   )
 }

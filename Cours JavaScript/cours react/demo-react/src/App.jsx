@@ -1,10 +1,11 @@
 import { useState } from 'react'
 import './App.css'
 import ComposantParent from './components/ComposantParent'
-import ComposantEnfant from './components/ComposantEnfant'
 import ComposantEvent from './components/ComposantEvent'
 import ComposantInput from './components/ComposantInput'
 import Garage from './components/Garage'
+import TestImage from './components/TestImage'
+import Ligue from './components/Ligue'
 
 function App() {
 //   const [prenom,setPrenom] = useState("Alex");
@@ -20,7 +21,9 @@ function App() {
       {/* <ComposantParent/>
       <ComposantEvent/>
       <ComposantInput/> */}
-      <Garage/>
+      {/* <Garage/> */}
+      {/* <TestImage/> */}
+      <Ligue/>
     </>
   )
 }
