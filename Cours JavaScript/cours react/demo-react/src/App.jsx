@@ -1,31 +1,45 @@
-import { useState } from 'react'
-import './App.css'
-import ComposantParent from './components/ComposantParent'
-import ComposantEvent from './components/ComposantEvent'
-import ComposantInput from './components/ComposantInput'
-import Garage from './components/Garage'
-import TestImage from './components/TestImage'
-import Ligue from './components/Ligue'
+import {Routes, Route} from "react-router-dom";
+import Home from "./pages/Home";
+import Services from "./pages/Services";
+import Development from "./pages/Services/Development";
+import Marketing from "./pages/Services/Marketing";
+import Profile from "./pages/Profile";
+import Navbar from "./components/Navbar";
+import Login from "./pages/Login";
+import ComposantEnfant from "./components/ComposantEnfant";
+import ComposantEvent from "./components/ComposantEvent";
+import ComposantInput from "./components/ComposantInput";
+import ComposantParent from "./components/ComposantParent";
+import Garage from "./components/Garage";
+import Hero from "./components/Hero";
+import Ligue from "./components/Ligue";
+import TestImage from "./components/TestImage";
+import Voiture from "./components/Voiture";
 
 function App() {
-//   const [prenom,setPrenom] = useState("Alex");
-//   const [age, setAge] = useState(21);
-
-//   function changeName() {
-//     setPrenom("Nomu");
-//   }
-  return (
-    <>
-      {/* <h1>Hello {prenom} !!!</h1>
-      <h1>Vous avez {age} ans</h1> */}
-      {/* <ComposantParent/>
-      <ComposantEvent/>
-      <ComposantInput/> */}
-      {/* <Garage/> */}
-      {/* <TestImage/> */}
-      <Ligue/>
-    </>
-  )
+    return (
+        <div className="App">
+            <Navbar/>
+            <Routes>
+                <Route path="/" element={<Home/>} />
+                <Route path="/services" element={<Services/>}>
+                    <Route path="/services/development" element={<Development/>} />
+                    <Route path="/services/marketing" element={<Marketing/>} />
+                </Route>
+                <Route path="/profile/:id" element={<Profile/>} />
+                <Route path="/login" element={<Login/>} />
+                <Route path="/composant-enfant" element={<ComposantEnfant/>} />
+                <Route path="/composant-event" element={<ComposantEvent/>} />
+                <Route path="/composant-input" element={<ComposantInput/>} />
+                <Route path="/composant-parent" element={<ComposantParent/>} />
+                <Route path="/garage" element={<Garage/>} />
+                <Route path="/hero" element={<Hero/>} />
+                <Route path="/ligue" element={<Ligue/>} />
+                <Route path="/test-image" element={<TestImage/>} />
+                <Route path="/voiture" element={<Voiture/>} />
+            </Routes>
+        </div>
+    )
 }
 
 export default App
