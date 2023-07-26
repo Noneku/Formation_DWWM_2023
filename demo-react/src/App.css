@@ -77,4 +77,22 @@ color: white;
 nav{
   color: white;
   text-decoration: none;
+  display: flex;
+  justify-content: space-around;
+}
+nav a{
+  text-decoration: none;
+  color: white;
+}
+
+.App{
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+}
+
+h1{
+  text-align: center;
+  color: cornflowerblue;
+  text-transform: uppercase;
 }

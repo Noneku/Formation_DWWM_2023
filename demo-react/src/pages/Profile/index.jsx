@@ -9,7 +9,7 @@ console.log(params);
 
   return (
     <div>
-        <h1>Votre Profile</h1>
+        <h1>Votre Profil</h1>
     </div>
   )
 }

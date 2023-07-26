@@ -9,6 +9,7 @@ import Marketing from './pages/Services/Marketing';
 import Login from './pages/Login';
 import Connexion from './pages/Login/connexion';
 import Inscription from './pages/Login/inscription';
+import ComposantFormulaire from './components/ComposantFormulaire';
 // import './App.css'
 // import ComposantParent from './components/ComposantParent'
 // import ComposantEvent from './components/ComposantEvent'
@@ -34,6 +35,7 @@ return(
         <Route path="connexion" element = {<Connexion/>}/>
         <Route path="Inscription" element = {<Inscription/>}/>
         </Route>
+      <Route path="/formulaire" element = {<ComposantFormulaire/>}/>
      </Routes>
   </div>
 );
