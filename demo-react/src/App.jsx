@@ -1,8 +1,14 @@
 import { Routes , Route } from 'react-router-dom'
+import './App.css';
 import Home from './pages/Home';
 import Services from './pages/Services';
 import Profile from './pages/Profile';
-
+import Navbar from "./components/Navbar"
+import Developpement from './pages/Services/Developpement';
+import Marketing from './pages/Services/Marketing';
+import Login from './pages/Login';
+import Connexion from './pages/Login/connexion';
+import Inscription from './pages/Login/inscription';
 // import './App.css'
 // import ComposantParent from './components/ComposantParent'
 // import ComposantEvent from './components/ComposantEvent'
@@ -12,11 +18,22 @@ import Profile from './pages/Profile';
 function App() {
   
 return(
-  <div className="App">
+  <div className='App'>
+    <Navbar/>
      <Routes>
       <Route path="/" element = {<Home/>} />
-      <Route path="/service" element = {<Services/>} />
-      <Route path="/profile" element = {<Profile/>} />
+
+      <Route path="/services" element = {<Services/>}>
+      <Route path='/services/Developpement' element={<Developpement/>}/>
+      <Route path='/services/Marketing' element={<Marketing/>}/>
+      </Route>
+
+      <Route path="/profile/:id" element = {<Profile/>} />
+
+      <Route path="/login" element = {<Login/>} >
+        <Route path="connexion" element = {<Connexion/>}/>
+        <Route path="Inscription" element = {<Inscription/>}/>
+        </Route>
      </Routes>
   </div>
 );
