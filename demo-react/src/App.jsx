@@ -10,11 +10,13 @@ import Login from './pages/Login';
 import Connexion from './pages/Login/connexion';
 import Inscription from './pages/Login/inscription';
 import ComposantFormulaire from './components/ComposantFormulaire';
-// import './App.css'
-// import ComposantParent from './components/ComposantParent'
-// import ComposantEvent from './components/ComposantEvent'
-// import ComposantInput from './components/ComposantInput'
-// import Garage from './components/Garage'
+import Flags from './pages/Flags';
+import './App.css'
+import ComposantParent from './components/ComposantParent'
+import ComposantEvent from './components/ComposantEvent'
+import ComposantInput from './components/ComposantInput'
+import Garage from './components/Garage';
+import React, {useState , useEffect} from 'react';
 
 function App() {
   
@@ -36,7 +38,15 @@ return(
         <Route path="Inscription" element = {<Inscription/>}/>
         </Route>
       <Route path="/formulaire" element = {<ComposantFormulaire/>}/>
+      <Route path="/flags" element = {<Flags/>}/>
+      <Route path="/flags/:id" element = {<FlagsDescription/>}/>
+
      </Routes>
+
+     
+    <Flags/>
+  
+  
   </div>
 );
 /*
@@ -59,5 +69,8 @@ return(
 //     </>
 //   )
 // }*/
+
+
+
 
 export default App
