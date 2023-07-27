@@ -15,6 +15,8 @@ import Hero from "./components/Hero";
 import Ligue from "./components/Ligue";
 import TestImage from "./components/TestImage";
 import Voiture from "./components/Voiture";
+import Flags from "./pages/Flags";
+import FlagDescription from "./pages/FlagDescription";
 
 function App() {
     return (
@@ -37,6 +39,8 @@ function App() {
                 <Route path="/ligue" element={<Ligue/>} />
                 <Route path="/test-image" element={<TestImage/>} />
                 <Route path="/voiture" element={<Voiture/>} />
+                <Route path="/flags" element={<Flags/>} />
+                <Route path="/flags/:id" element={<FlagDescription/>} />
             </Routes>
         </div>
     )

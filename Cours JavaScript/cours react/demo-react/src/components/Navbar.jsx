@@ -14,8 +14,9 @@ const Navbar = () => {
         <Link to="/garage"> Garage </Link>
         <Link to="/hero"> Hero </Link>
         <Link to="/ligue"> Ligue </Link>
-        <Link to="/test-image">Test Image</Link>
-        <Link to="/voiture">Voiture</Link>
+        <Link to="/test-image"> Test Image </Link>
+        <Link to="/voiture"> Voiture </Link>
+        <Link to="/flags"> Flags </Link>
     </nav>
   )
 }
