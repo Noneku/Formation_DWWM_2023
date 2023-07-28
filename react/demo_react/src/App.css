@@ -1,0 +1,119 @@
+
+
+h1{
+    
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:large;
+
+}
+
+body{
+
+    background-color: rgb(216, 229, 230);
+}
+#parent{
+
+    border: 2px black solid;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(20, 205, 212);
+    width: 100%;
+}
+
+#enfant{
+
+
+    border: 2px black solid;
+    width: 250px;
+    height: 250px;
+    background-color: rgb(220, 143, 26);
+    color: beige;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:large
+  
+}
+
+.text-gold {
+
+    color: gold ;
+    
+}
+
+#garage {
+
+    border : 2px solid  black ;
+    padding: 20px;
+}
+
+.voiture {
+
+color : white;
+background: black;
+font-weight: bold;
+font-size: 30px;
+padding: 20px;
+}
+
+
+/* Style pour centrer les photos au milieu de la page */
+.herocontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Style pour les images des héros */
+  img {
+    display: block;
+    margin: 0 auto;
+    max-width: 200px; /* Vous pouvez ajuster cette valeur en fonction de la taille souhaitée */
+  }
+  
+#herocontainer{
+
+
+
+}
+
+.Navbar  {
+    text-decoration: none;
+    background-color: rgb(241, 93, 93);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  
+}
+
+.flag-card{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid 2px black;
+    border-radius: 10px;
+    margin: 20px;
+    padding :2px;
+    width: 400px;
+
+}
+
+.flag-card img {
+    width: 800px;
+}
+
+.flags {
+
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
