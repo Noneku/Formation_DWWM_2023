@@ -8,13 +8,15 @@ const formSearch = document.querySelector('#formSearch');
 //Display all elements (Personnages)
     for (let i = 0; i < characters.length; i++) {
         const cardPersonnageHTML = document.createElement('div');
-        cardPersonnageHTML.innerHTML = `<div class="card" style="width: 18rem;">
-        <img src="Star-Wars-Search/images/${characters[i].imageLink}" class="card-img-top" alt="...">
-        <div class="card-body">
-        <h5 class="card-title">${characters[i].name}</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Consulter Biographie</a>
-        </div>
+        cardPersonnageHTML.innerHTML = 
+        `   
+        <div class="card" style="width: 18rem;">
+            <img src="Star-Wars-Search/images/${characters[i].imageLink}" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title">${characters[i].name}</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="biographie.html?nameCharacter=${characters[i].name}&imgCharacter=${characters[i].imageLink}&bioCharacter=${characters[i].bio}" class="btn btn-primary">Consulter Biographie</a>
+            </div>
         </div>`;
         
         listPersonnages.appendChild(cardPersonnageHTML);
