@@ -1,0 +1,28 @@
+*{
+    background-image: url("/solution1/images/fond-3.jpg");
+    color: aliceblue;
+    
+}
+
+
+#grid{
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-gap: 50px;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+
+.personnage{
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 20px;
+}
+
+.portrait{
+    width: 100%;
+}
