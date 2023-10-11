@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+
+    {# lien CSS #}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+        type="text/css">
+
+    {# Cette ligne définit un bloc Twig pour le CSS #}
+    {% block stylesheets %}
+
+
+    {# code CSS #}
+    {% endblock %}
+
+</head>
+
+<body>
+
+
+    {# on va intégrer un autre template dans un template, soit le contenu d'une page dans une page #}
+    {% include 'navbar.html.twig' %}
+
+
+    {% block body %}
+    {% endblock %}
+
+
+
+
+
+    {# lien JS #}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
