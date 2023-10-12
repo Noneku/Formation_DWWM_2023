@@ -1,0 +1,90 @@
+.na {
+    
+ padding: 15px 0;
+    
+}
+
+
+#navbarNav{
+    /* background-color: aquamarine; */
+    display: flex;
+    
+    justify-content:space-between;
+}
+
+
+
+.navbar-brand img {
+    max-height: 180px;
+    /* Hauteur maximale du logo */
+}
+
+/* Styles pour les liens de la barre de navigation */
+.navbar-nav .nav-link {
+    color: #ffffff;
+    /* Couleur du texte */
+    font-weight: bold;
+    /* Poids de la police */
+    padding: 0.5rem 1rem;
+    /* Espacement intérieur des liens */
+    margin: 0 10px;
+    /* Marge entre les liens */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #007bff;
+    /* Couleur du texte au survol */
+}
+
+/* Styles pour le lien actif */
+.navbar-nav .nav-item.active .nav-link {
+    color: #007bff;
+    /* Couleur du texte de l'élément actif */
+}
+
+/* Styles pour les liens du menu déroulant */
+.navbar-nav .dropdown-menu {
+    background-color: #343a40;
+    /* Couleur de fond du menu déroulant */
+}
+
+.navbar-nav .dropdown-item {
+    color: #ffffff;
+    /* Couleur du texte du menu déroulant */
+    padding: 0.5rem 1rem;
+    /* Espacement intérieur des éléments du menu déroulant */
+}
+
+.navbar-nav .dropdown-item:hover {
+    background-color: #007bff;
+    /* Couleur de fond au survol du menu déroulant */
+    color: #ffffff;
+    /* Couleur du texte au survol du menu déroulant */
+}
+
+/* Styles pour l'icône du menu mobile */
+.navbar-toggler-icon {
+    background-color: #ffffff;
+    /* Couleur de l'icône du menu mobile */
+}
+
+/* Styles pour le lien de langue et autres éléments */
+.navbar-nav .nav-link img {
+    max-height: 20px;
+    /* Hauteur maximale des icônes */
+    margin-right: 5px;
+    /* Marge à droite des icônes */
+    
+}
+
+/* Styles pour les éléments liés à l'administration */
+.navbar-nav .nav-link.admin {
+    color: #ff9900;
+    /* Couleur du texte */
+}
+
+/* Styles pour les éléments liés à la connexion */
+.navbar-nav .nav-link.login {
+    color: #ffcc00;
+    /* Couleur du texte */
+}
